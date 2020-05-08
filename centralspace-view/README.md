@@ -1,5 +1,4 @@
 # centralspace-view
-centralspace front view on react (redux)
 
 extensions for Visual Studio Code:
 - ES7 React/Redux/GraphQL/React-Native snippets
