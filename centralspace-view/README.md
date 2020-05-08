@@ -16,3 +16,8 @@ extensions for Visual Studio Code:
 - Debugger for Chrome
 - Visual Studio IntelliCode
 - Live Server
+- HTML Snippets
+- HTML CSS Support
+- React Dev Tools - Chrome
+- IntelliSense for CSS class names in HTML
+- Settings Sync (gist ec5578fef14c2236e3f6055b37358ee1)
