@@ -1,0 +1,15 @@
+.users .user img {
+    position: absolute;
+    width:50%; 
+    height: auto;
+    top:-5px;
+    left: -100px;
+    opacity: 0.6;
+    border-radius: 50%;
+
+}
+
+.users .user {
+    overflow: hidden;
+    padding-left: 300px;
+}

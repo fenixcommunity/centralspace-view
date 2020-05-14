@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import Welcome from "./AccountResume.js";
-import AccountRegister from "./AccountRegister.js";
+import React, { Component } from "react"
+import AccountResume from "./AccountResume.js"
+import AccountRegister from "./AccountRegister.js"
 
 class Accounts extends Component {
     state = {
         accounts: [
             { id: 1, code: 4545, name: "basic account", type: "basic", },
-            { id: 2, code: 234, name: "admin account", type: "advanced" },
-        ],
+            { id: 2, code: 234, name: "admin account", type: "advanced" }
+        ]
     }
 
     addAccount = (account) => {
@@ -39,8 +39,8 @@ class Accounts extends Component {
     render() {
         return (
             <div>
-                <h1 className="center blue-text">Centralspace View</h1>
-                <Welcome accounts={this.state.accounts} deleteAccount={this.deleteAccount} />
+                <h1 className="center green-text">Centralspace View</h1>
+                <AccountResume accounts={this.state.accounts} deleteAccount={this.deleteAccount} />
                 <AccountRegister addAccount={this.addAccount} />
             </div>
         );

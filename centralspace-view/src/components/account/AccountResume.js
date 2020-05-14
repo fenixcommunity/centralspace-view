@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 // functional component (we don't need state) - oposite to class(container) component
 function AccountResume({ accounts, deleteAccount }) {
