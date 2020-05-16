@@ -1,6 +1,6 @@
 # centralspace-view
 
-<h3>Extensions:</h3> 
+Extensions:
 for Visual Studio Code:
 - ES7 React/Redux/GraphQL/React-Native snippets
 - Eslint
@@ -22,7 +22,7 @@ for Visual Studio Code:
 - IntelliSense for CSS class names in HTML
 - Settings Sync (gist ec5578fef14c2236e3f6055b37358ee1)
 
-<h3>Links:</h3>
+Links:
 - http://localhost:7773/
 - https://reactjs.org/
 - https://babeljs.io/
@@ -33,7 +33,7 @@ for Visual Studio Code:
 
 
 
-<h3>Env:</h3>
+Env:
 - port: 7773
 - npm install react-router-dom
 - npm install axios
