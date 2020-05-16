@@ -37,5 +37,6 @@ for Visual Studio Code:
 - port: 7773
 - npm install react-router-dom
 - npm install axios
+- npm install http-proxy-middleware --save
 - Eslint formating
-
+- Express vs Axios

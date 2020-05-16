@@ -1,4 +1,4 @@
-.users .user img {
+.accounts .account img {
     position: absolute;
     width:50%; 
     height: auto;
@@ -9,7 +9,7 @@
 
 }
 
-.users .user {
+.accounts .account {
     overflow: hidden;
-    padding-left: 300px;
+    text-align: center;
 }

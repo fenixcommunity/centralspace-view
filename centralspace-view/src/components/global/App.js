@@ -5,8 +5,8 @@ import Accounts from '../account/Accounts'
 import Navbar from "../navigation/Navbar"
 import About from "../home/About"
 import Contact from "../home/Contact"
-import RestData from "../home/RestData"
-import User from "../home/User"
+import AccountRestFetcher from "../home/AccountRestFetcher"
+import AccountRest from "../home/AccountRest"
 
 class App extends Component {
   render() {
@@ -17,11 +17,11 @@ class App extends Component {
           {/* all this route objects have props, look at Contact  */}
           {/* In Nabbar we have empty props. But we can add withRouter */}
           <Switch> {/*switch only one component from top to bottom*/}
-          <Route exact path='/' component={About} />
-          <Route path='/accounts' component={Accounts} />
-          <Route exact path='/rest-data' component={RestData} />
-          <Route path='/rest-data/:user_id' component={User} /> {/*or remov rest-data and use switch */}
-          <Route path='/contact' component={Contact} />
+            <Route exact path='/' component={About} />
+            <Route path='/accounts' component={Accounts} />
+            <Route exact path='/account-rest' component={AccountRestFetcher} />
+            <Route path='/account-rest/:login' component={AccountRest} /> {/*or remove account-rest and use switch */}
+            <Route path='/contact' component={Contact} />
           </Switch>
         </div>
       </BrowserRouter>

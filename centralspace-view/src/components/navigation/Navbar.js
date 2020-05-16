@@ -10,7 +10,7 @@ function Navbar(props) {
                     {/* NavLink vs Link. For NavLink we have "active" class to show current tab */}
                     <li><NavLink to="/">About</NavLink></li>
                     <li><NavLink to="/accounts">Accounts</NavLink></li>
-                    <li><NavLink to="/rest-data">Rest data</NavLink></li>
+                    <li><NavLink to="/account-rest">Accounts Rest</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
             </div>
