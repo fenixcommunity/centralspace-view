@@ -30,6 +30,8 @@ Links:
 - https://jsonplaceholder.typicode.com/
 - https://github.com/facebook/create-react-app
 - https://materializecss.com/getting-started.html
+- https://codepen.io/  -> to training
+- https://redux.js.org/
 
 
 

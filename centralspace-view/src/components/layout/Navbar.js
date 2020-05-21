@@ -5,10 +5,10 @@ function Navbar(props) {
     return (
         <nav className="nav-wrapper green darken-3">
             <div className="container">
-                <a className="brand-logo left">Contralspace App</a>
+                <Link to='/' className="brand-logo">Contralspace App</Link>
                 <ul className="right">
                     {/* NavLink vs Link. For NavLink we have "active" class to show current tab */}
-                    <li><NavLink to="/">About</NavLink></li>
+                    <li><NavLink to="/">Dashboard</NavLink></li>
                     <li><NavLink to="/accounts">Accounts</NavLink></li>
                     <li><NavLink to="/account-rest">Accounts Rest</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
@@ -18,4 +18,4 @@ function Navbar(props) {
     )
 }
 
-export default withRouter(Navbar); //wraping router (Higher Order Component - HOC). Another example of wrapper inside -> About.js
+export default withRouter(Navbar); //wraping router (Higher Order Component - HOC). Another example of wrapper inside -> Dashboard.js
