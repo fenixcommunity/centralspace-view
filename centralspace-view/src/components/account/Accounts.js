@@ -27,13 +27,13 @@ class Accounts extends Component {
     }
     //todo use Hook-s!
     componentDidMount() {
-        console.log("componentDidMount");
     }
 
+
+    //todo useHooks!
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate");
-        console.log(prevProps);
-        console.log(prevState);
+        if(prevProps !== this.props) {
+        }
     }
 
     render() {

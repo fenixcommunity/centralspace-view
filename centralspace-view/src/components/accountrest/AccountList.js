@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux' // to bring higher order component
 import axios from 'axios'
-import { authApi } from '../global/utils/CentralspaceApi'
+import { authApi } from '../utils/CentralspaceApi'
 import { Link } from 'react-router-dom'
-import daVinciImg from '../../resource/da_vinci.jpg'
+import daVinciImg from '../../resources/da_vinci.jpg'
 
 class AccountList extends Component {
     // don't store in component, use redux store
@@ -37,7 +37,7 @@ class AccountList extends Component {
                     <div className="account card" key={account.login}>
                         <img src={daVinciImg} alt="human" />
                         <div className="card-content">
-                            <Link to={'/account-rest/' + account.login}>
+                            <Link to={'/account/' + account.login}>
                                 <span className="card-title"> {account.login}</span>
                             </Link>
                             <p>{account.mail}</p>
@@ -59,9 +59,9 @@ class AccountList extends Component {
 }
 
 const mapStateToProps = (state) => {
-return {
-    accounts : state.accounts
-}
+    return {
+        accounts: state.account.accounts
+    }
 }
 
 export default connect(mapStateToProps)(AccountList); //we connect Redux

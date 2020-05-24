@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getUnique } from '../global/utils/Utils'
+import { getUnique } from '../utils/Utils'
 
 function Contact(props) {
     const [count, setCount] = useState(0); // temporary state that store only during invoking functional component

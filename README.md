@@ -32,6 +32,7 @@ Links:
 - https://materializecss.com/getting-started.html
 - https://codepen.io/  -> to training
 - https://redux.js.org/
+- https://firebase.google.com/
 
 
 
@@ -40,5 +41,14 @@ Env:
 - npm install react-router-dom
 - npm install axios
 - npm install http-proxy-middleware --save
+- npm install redux-thunk
+- npm install firebase
+- npm install react-redux-firebase redux-firestore
+- Cloud Firestore
 - Eslint formating
 - Express vs Axios
+
+Shortcut:
+shift + alt + down arrow
+etc -> class component
+rfce -> functional component

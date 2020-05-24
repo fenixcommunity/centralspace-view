@@ -1,42 +1,42 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { deleteAccount } from '../../actions/accountActions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux'
+import { deleteAccount } from '../../store/actions/accountActions';
 
-class AccountDetails extends Component {
+function AccountDetails(props) {
 
-    handleClick = () => {
-        this.props.deleteAccount(this.props.account.id);
-        this.props.history.push('/account-rest');
+    //todo only for components, move!
+    const handleClick = () => {
+        props.deleteAccount(props.account.id);
+        props.history.push('/account-list');
     }
 
-    render() {
-        const account = this.props.account ? (
-            <div className="account">
-                <h4>account</h4>
-                <p>{JSON.stringify(this.props.account)}</p>
-                <div className="center">
-                    <button className="btn grey" onClick={this.handleClick}>
-                        Delete Account
+    const {account} = props;
+    const accountToRender = account ? (
+        <div className="account">
+            <h4>{account.login}</h4>
+            <p>{JSON.stringify(account)}</p>
+            <div className="center">
+                <button className="btn grey" onClick={handleClick}>
+                    Delete Account
                     </button>
-
-                </div>
             </div>
+        </div>
 
-        ) : (
-                <div className="center">Loading account...</div>
-            )
-
-        return (
-            <div className="container">
-                {account}
-            </div>
+    ) : (
+            <div className="center">Loading account...</div>
         )
-    }
+
+    return (
+        <div className="container section account-details">
+            {accountToRender}
+        </div>
+    )
 }
 
 const mapStateToProps = (state, props) => {
-    let login = props.match.params.login;
-
+    // let login = props.match.params.login;
     // const Api = authApi();
     // Api.get('/account/login/' + login)
     //     .then(response => {
@@ -45,8 +45,17 @@ const mapStateToProps = (state, props) => {
     //         })
     //     })
 
+    // return {
+    //todo we use firebase
+    //  account: state.accounts.find(account => account.login === login)
+
+    // }
+
+    let id = props.match.params.id;
+    const accounts = state.firestore.data.accounts;
+    const account = accounts ? accounts[id] : null;
     return {
-        account: state.accounts.find(account => account.login === login)
+        account: account
     }
 }
 
@@ -57,4 +66,9 @@ const mapDispatchToProps = (dispatch) => { // instead store.dispatch(...
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AccountDetails);
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    firestoreConnect(props => [
+        { collection: 'accounts', doc: props.match.params.id }
+    ])
+)(AccountDetails);
