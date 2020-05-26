@@ -11,6 +11,7 @@ import SignIn from '../auth/SignIn'
 import SignUp from '../auth/SignUp'
 import CreateAccount from '../accountrest/CreateAccount'
 import AccountSummary from "../accountrest/AccountSummary"
+import PrivateRoute from '../../hoc/PrivateRoute';
 
 class App extends Component {
   render() {
@@ -21,15 +22,16 @@ class App extends Component {
           {/* all this route objects have props, look at Contact  */}
           {/* In Nabbar we have empty props. But we can add withRouter */}
           <Switch> {/*switch only one component from top to bottom*/}
-            <Route exact path='/' component={Dashboard} />
-            <Route path='/accounts' component={Accounts} />
-            <Route exact path='/account-list' component={AccountList} />
-            <Route path='/account/:id' component={AccountDetails} /> {/*or remove account-list and use switch order*/}
-            {/* <Route path='/account/:login' component={AccountDetails} /> */}
             <Route path='/contact' component={Contact} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
-            <Route path='/create-account' component={CreateAccount} />
+            <PrivateRoute exact path='/' component={Dashboard} />
+            <PrivateRoute path='/accounts' component={Accounts} />
+            <PrivateRoute exact path='/account-list' component={AccountList} />
+            <PrivateRoute path='/account/:id' component={AccountDetails} /> {/*or remove account-list and use switch order*/}
+            {/* <Route path='/account/:login' component={AccountDetails} /> */}
+
+            <PrivateRoute path='/create-account' component={CreateAccount} />
           </Switch>
         </div>
       </BrowserRouter>

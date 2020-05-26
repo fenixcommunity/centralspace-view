@@ -28,9 +28,7 @@ function Contact(props) {
             <h4 className="center">Contact</h4>
             <p>put you EMAIL -> {count}</p>
             <p>{countriesToRender}</p>
-            <button onClick={() => setCount(count + 1)}>
-                counter
-      </button>
+            <button onClick={() => setCount(count + 1)}>counter</button>
         </div>
     )
 }

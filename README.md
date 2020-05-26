@@ -44,6 +44,7 @@ Env:
 - npm install redux-thunk
 - npm install firebase
 - npm install react-redux-firebase redux-firestore
+- npm i react-router-redux
 - Cloud Firestore
 - Eslint formating
 - Express vs Axios

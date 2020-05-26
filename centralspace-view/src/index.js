@@ -4,7 +4,7 @@ import './styles/global/index.css';
 import App from './components/global/App';
 import * as serviceWorker from './env/serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import globalReducer from './store/reducers/globalReducer';
 import thunk from 'redux-thunk';
 import {
@@ -12,7 +12,7 @@ import {
   getFirestore,
   createFirestoreInstance
 } from "redux-firestore";
-import { ReactReduxFirebaseProvider, getFirebase } from "react-redux-firebase";
+import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from "react-redux-firebase";
 import firebase from "firebase/app";
 import firebaseConfig from './env/firebaseConfig';
 
@@ -22,22 +22,34 @@ const store = createStore(
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirestore, getFirebase })),
     reduxFirestore(firebaseConfig)
+    // render DOM only when we finish this action (when we refresh we have LogOut Panel and next LogIn Panel)
+    // rendering faster than firebase action
   )
 );
 
-const rrfProps = {
+const reactReduxFirebaseProviderProps = {
   firebase,
   config: firebaseConfig,
   dispatch: store.dispatch,
-  createFirestoreInstance
+  createFirestoreInstance,
+  userProfile: 'users', // where profiles are stored in database
+  presence: 'presence', // where list of online users is stored in database
+  sessions: 'sessions'
 };
 
+function AuthIsLoaded({ children }) {
+  const auth = useSelector(state => state.firebase.auth)
+  if (!isLoaded(auth)) return <div>Loading Screen...</div>;
+  return children
+}
 
 ReactDOM.render(
   <Provider store={store}>
-    <ReactReduxFirebaseProvider {...rrfProps}>
+    <ReactReduxFirebaseProvider {...reactReduxFirebaseProviderProps}>
       <React.StrictMode>
-        <App />
+        <AuthIsLoaded>
+          <App />
+        </AuthIsLoaded>
       </React.StrictMode>
     </ReactReduxFirebaseProvider>
   </Provider>,

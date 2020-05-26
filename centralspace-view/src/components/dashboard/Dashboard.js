@@ -8,7 +8,6 @@ import {compose} from 'redux';
 
 class Dashboard extends Component {
     render() {
-
         const { accounts } = this.props;
         return (
             <div className="dashboard container">
