@@ -13,7 +13,7 @@ const accountReducer = (state = initState, action) => {
             return state;
         case 'CREATE_ACCOUNT_ERROR':
             return state;
-        case 'SIGNOUT_SUCCESS' :
+        case 'SIGNOUT_SUCCESS':
             console.log('SIGNOUT_SUCCESS');
             return state;
         default:

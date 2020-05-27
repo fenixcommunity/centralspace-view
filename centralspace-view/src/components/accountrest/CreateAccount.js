@@ -18,6 +18,7 @@ export class CreateAccount extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.createAccount(this.state)
+        this.props.history.push('/');
     }
 
     render() {

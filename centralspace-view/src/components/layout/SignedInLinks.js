@@ -10,7 +10,7 @@ function SignedInLinks(props) {
         props.signOut();
         props.history.push('/signin');
         console.log(props);
-    }   
+    }
     return (
         <ul className="right">
             <li><NavLink to="/">Dashboard</NavLink></li>
@@ -19,7 +19,10 @@ function SignedInLinks(props) {
             <li><NavLink to="/account-list">Accounts Rest</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
             <li><a onClick={signOutAction}>Log out</a></li>
-            <li><NavLink to="/" className='btn btn-floating pink lighten-1'>NN</NavLink></li>
+            <li><NavLink to="/" className='btn btn-floating pink lighten-1'>
+                {props.profile.initials}
+            </NavLink>
+            </li>
         </ul>
 
     )

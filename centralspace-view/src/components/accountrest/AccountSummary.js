@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import moment from 'moment';
 
 
 function AccountSummary({ account }) {
@@ -10,6 +11,8 @@ function AccountSummary({ account }) {
                 </span>
                 <p className="grey-text">{account.login}</p>
                 <p className="grey-text">{account.mail}</p>
+                <p className="grey-text">{account.createdBy}</p>
+                <p className="grey-text">{moment(account.createdAt.toDate()).calendar()}</p>
                 {/* Accounts Panel */}
             </div>
         </div>

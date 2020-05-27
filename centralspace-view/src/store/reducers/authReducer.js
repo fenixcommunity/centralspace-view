@@ -16,6 +16,18 @@ const authReducer = (state = initState, action) => {
                 ...state, //don't overide last state
                 authError: null
             };
+        case 'SIGNUP_SUCCESS':
+            console.log('SIGNUP_SUCCESS');
+            return {
+                ...state,
+                authError: null
+            }
+        case 'SIGNUP_ERROR':
+            console.log('SIGNUP_ERROR');
+            return {
+                ...state,
+                authError: action.error.message
+            }
         default:
             return state;
     }

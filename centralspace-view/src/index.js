@@ -21,18 +21,23 @@ const store = createStore(
   globalReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirestore, getFirebase })),
-    reduxFirestore(firebaseConfig)
+    reduxFirestore(firebase, firebaseConfig)
     // render DOM only when we finish this action (when we refresh we have LogOut Panel and next LogIn Panel)
     // rendering faster than firebase action
   )
 );
 
+// firebase.profile -> user details other than mail,uid ...
+const reactReduxFirebaseProviderConfig = {
+  userProfile: 'users',
+  useFirestoreForProfile: true
+}
+
 const reactReduxFirebaseProviderProps = {
   firebase,
-  config: firebaseConfig,
+  config: reactReduxFirebaseProviderConfig,
   dispatch: store.dispatch,
   createFirestoreInstance,
-  userProfile: 'users', // where profiles are stored in database
   presence: 'presence', // where list of online users is stored in database
   sessions: 'sessions'
 };

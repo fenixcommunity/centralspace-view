@@ -21,6 +21,7 @@ for Visual Studio Code:
 - React Dev Tools - Chrome
 - IntelliSense for CSS class names in HTML
 - Settings Sync (gist ec5578fef14c2236e3f6055b37358ee1)
+- Materialize Snippets 
 
 Links:
 - http://localhost:7773/
@@ -45,6 +46,8 @@ Env:
 - npm install firebase
 - npm install react-redux-firebase redux-firestore
 - npm i react-router-redux
+- npm install moment
+- npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
 - Cloud Firestore
 - Eslint formating
 - Express vs Axios

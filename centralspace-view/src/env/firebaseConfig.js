@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/analytics';
 
 // safe values
 var config = {
@@ -15,8 +16,40 @@ var config = {
 };
 
 firebase.initializeApp(config);
-// firebase.analytics();
+firebase.analytics();
 firebase.firestore().settings({})
 
 // firebase - NoSql document structure
 export default firebase;
+
+// ~~~~~~ DATABASE RULES ~~~~~~ 
+// rules_version = '2';
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+
+//     match /accounts/{account} {
+//       allow read, write: if request.auth.uid != null;
+//     }
+//     match /users/{userId} {
+//     allow create
+//     allow read: if request.auth.uid != null
+//     allow write: if request.auth.uid == userId
+//     }
+//   }
+// }
+
+// ~~~~~~ FUCTIONS RULES ~~~~~~ 
+// rules_version = '2';
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+
+//     match /accounts/{account} {
+//       allow read, write: if request.auth.uid != null;
+//     }
+//     match /users/{userId} {
+//     allow create
+//     allow read: if request.auth.uid != null
+//     allow write: if request.auth.uid == userId
+//     }
+//   }
+// }

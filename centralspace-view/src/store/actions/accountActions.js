@@ -2,10 +2,12 @@ export const createAccount = (account) => {
     return (dispatch, getState, { getFirestore, getFirebase }) => {
         // make async call to database (pausing dispatch)
         const firestore = getFirestore();
+        const profile = getState().firebase.profile;
+        const profileId = getState().firebase.auth.uid;
         firestore.collection('accounts').add({
             ...account,
-            createdBy: 'maxAdmin',
-            adminId: 123,
+            createdBy:  `${profile.firstName} ${profile.lastName}`,
+            adminId: profileId,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_ACCOUNT', account: account });
