@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global/index.css';
+import 'materialize-css/dist/css/materialize.css';
+import 'materialize-css/dist/js/materialize.js';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/global/App';
 import * as serviceWorker from './env/serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux';

@@ -2,30 +2,45 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
-import { deleteAccount } from '../../store/actions/accountActions';
+import { archiveAccount, deleteAccount } from '../../store/actions/accountActions';
+import Loader from '../global/Loader'
 
 function AccountDetails(props) {
 
     //todo only for components, move!
-    const handleClick = () => {
-        props.deleteAccount(props.account.id);
-        props.history.push('/account-list');
+    const id = props.match.params.id;
+    const redirectAfterAction = () => {
+        // props.history.push('/account-list');
+        props.history.push('/');
+    }
+    const deleteAccountClick = () => {
+        props.deleteAccount(id);
+        redirectAfterAction();
     }
 
-    const {account} = props;
+    const archiveAccountClick = () => {
+        props.archiveAccount(id);
+        redirectAfterAction();
+    }
+
+    const { account } = props;
     const accountToRender = account ? (
         <div className="account">
             <h4>{account.login}</h4>
             <p>{JSON.stringify(account)}</p>
-            <div className="center">
-                <button className="btn grey" onClick={handleClick}>
-                    Delete Account
-                    </button>
+            <div className="row right">
+                <div className="col">
+                    <a onClick={deleteAccountClick} className="red waves-effect waves-light btn-large"><i className="material-icons right">send</i> Delete</a>
+                </div>
+                <div className="col">
+                    <a onClick={archiveAccountClick} className="grey red waves-effect waves-light btn-large">
+                        <i className="material-icons right">cloud</i> Archive</a>
+                </div>
             </div>
         </div>
 
     ) : (
-            <div className="center">Loading account...</div>
+            <Loader />
         )
 
     return (
@@ -62,6 +77,8 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch) => { // instead store.dispatch(...
     return {
         // function attached to props
+        // deleteAccount: (id) => { dispatch(deleteAccount(id)) }
+        archiveAccount: (id) => { dispatch(archiveAccount(id)) },
         deleteAccount: (id) => { dispatch(deleteAccount(id)) }
     }
 }

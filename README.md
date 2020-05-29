@@ -44,10 +44,13 @@ Env:
 - npm install http-proxy-middleware --save
 - npm install redux-thunk
 - npm install firebase
+- npm i jquery
 - npm install react-redux-firebase redux-firestore
 - npm i react-router-redux
+- npm install react-bootstrap bootstrap
 - npm install moment
 - npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
+/  npm run build  / firebase deploy / => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
 - Cloud Firestore
 - Eslint formating
 - Express vs Axios

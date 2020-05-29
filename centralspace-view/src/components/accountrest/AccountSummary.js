@@ -3,19 +3,26 @@ import moment from 'moment';
 
 
 function AccountSummary({ account }) {
+    const archivedClass = account.active ? "blue-grey" : "grey"
+ 
     return (
-        <div className="account card z-depth-0 account-summary">
-            <div className="card-content grey-text text-darken-3">
-                <span className="card-title green-text">
-                    Account
-                </span>
-                <p className="grey-text">{account.login}</p>
-                <p className="grey-text">{account.mail}</p>
-                <p className="grey-text">{account.createdBy}</p>
-                <p className="grey-text">{moment(account.createdAt.toDate()).calendar()}</p>
-                {/* Accounts Panel */}
+        <div className="row">
+            <div className="col s12">
+            <div className={`card darken-1 ${archivedClass}`}>
+                    <div className="card-content white-text">
+                        <span className="card-title light-green-text">{account.login}</span>
+                        <p className="grey-text">{account.mail}</p>
+                        <p className="grey-text">{account.createdBy}</p>
+                        <p className="grey-text">{moment(account.createdAt.toDate()).calendar()}</p>
+                    </div>
+                    <div className="card-action">
+                        {/* <a href="#">This is a link</a>
+                        <a href="#">This is a link</a> */}
+                    </div>
+                </div>
             </div>
         </div>
+
     )
 }
 

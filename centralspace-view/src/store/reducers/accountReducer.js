@@ -13,9 +13,20 @@ const accountReducer = (state = initState, action) => {
             return state;
         case 'CREATE_ACCOUNT_ERROR':
             return state;
-        case 'SIGNOUT_SUCCESS':
-            console.log('SIGNOUT_SUCCESS');
+        case 'ARCHIVE_ACCOUNT':
             return state;
+        case 'ARCHIVE_ACCOUNT_ERROR':
+            return {
+                ...state,
+                authError: action.error.message
+            }
+            case 'DELETE_ACCOUNT':
+                return state;
+            case 'DELETE_ACCOUNT_ERROR':
+                return {
+                    ...state,
+                    authError: action.error.message
+                }
         default:
             return state;
     }
