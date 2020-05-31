@@ -54,5 +54,10 @@
   },
   "devDependencies": {
     "http-proxy-middleware": "^1.0.3"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

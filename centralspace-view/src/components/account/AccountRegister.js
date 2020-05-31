@@ -1,7 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import './AccountRegister.css'
 
-class AccountRegister extends Component {
+class AccountRegister extends React.Component {
   constructor(props) {
     super(props)
 

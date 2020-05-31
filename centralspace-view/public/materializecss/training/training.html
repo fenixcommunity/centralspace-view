@@ -1,0 +1,352 @@
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize CSS App</title>
+</head>
+
+<body>
+
+
+    <!-- lesson 8 navbar + lesson 9 budget -->
+    <style>
+        nav .badge {
+            position: relative;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper indigo">
+            <div class="container">
+                <a href="#" class="brand-logo">Site Title</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="" class="btn-floating z-depth-0 indigo darken-4">
+                            <i class="material-icons">notifications</i>
+                        </a></li>
+                    <li><span class="badge white-text new pink">5</span></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <script>
+        $(document).ready(() => {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+    <br><br><br><br><br>
+    <!-- lesson 1 hide-on -->
+
+    <style>
+        h5 {
+            padding: 10px;
+        }
+    </style>
+
+    <div class="container">
+        <h4 class="hide">Hide me on all screen sizes</h4>
+        <h4 class="hide-on-small-only">Hide me on small screen sizes</h4>
+        <h4 class="hide-on-med-only">Hide me on medium screen sizes</h4>
+        <h4 class="hide-on-large-only">Hide me on large screen sizes</h4>
+        <h4 class="hide-on-med-and-down">Hide me on medium & small screen sizes</h4>
+        <h4 class="hide-on-med-and-up">Hide me on medium and large screen sizes</h4>
+        <h4 class="show-only-on-small">Only show me on small screens</h4>
+
+        <!-- lesson 2 colors -->
+        <div class="container">
+            <h5 class="light-blue darken-1">Be yourself, everyone else is already taken</h5>
+            <h5 class="orange lighten-4">We are all in the gutter, but some of us are looking at the stars</h5>
+            <h5 class="purple darken-3 white-text">To live is the rarest thing in the world. Most people exist, that is
+                all</h5>
+            <h5 class="teal darken-2 yellow-text text-lighten-3">Experience is simply the name we give our mistakes</h5>
+            <h5 class="yellow lighten-3 purple-text text-darken-2">Always forgive your enemies - nothing annoys them so
+                much</h5>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- lesson 3 Text Formatting -->
+    <style>
+        .box {
+            height: 200px;
+        }
+    </style>
+
+    <div class="container">
+        <h5 class="center-align">Center alignment</h5>
+        <h5 class="left-align">Left alignment</h5>
+        <h5 class="right-align">Right alignment</h5>
+    </div>
+
+    <div class="container grey lighten-2 box valign-wrapper">
+        <h5>Vertical alignment</h5>
+    </div>
+
+    <!-- ... dots -->
+    <div class="container">
+        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sem dictum, consectetur ex
+            vitae,
+            feugiat quam. Sed quis sodales urna. Donec tincidunt faucibus diam a ullamcorper. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Ut nec sem dictum, consectetur ex vitae,
+            feugiat quam. Sed quis sodales urna. Donec tincidunt faucibus diam a ullamcorper.</p>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- lesson 4 Buttons -->
+    <div class="container">
+        <h4>Buttons</h4>
+        <a href="#" class="btn waves-effect waves-light">Normal button</a>
+        <a href="#" class="btn-small">Small button</a>
+        <a href="#" class="btn-large">Large button</a>
+        <a href="#" class="btn indigo waves-effect waves-light">Indigo button</a>
+        <a href="#" class="btn disabled">Disabled button</a>
+        <h4>Floating button</h4>
+        <a href="#" class="btn-floating pulse pink"></a>
+        <h4>Other elements</h4>
+        <div class="btn pulse">I am a div tag</div>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- lesson 5 Icons -->
+    <!-- shortcut -> i.material-icons ... -->
+    <div class="container">
+        <h4>Icons</h4>
+        <i class="material-icons red-text">error</i>
+        <i class="material-icons yellow-text text-darken-2">warning</i>
+        <i class="material-icons grey-text">cloud</i>
+        <i class="material-icons light-blue-text">folder</i>
+        <h4>Icons on Buttons</h4>
+        <a href="#" class="btn indigo">
+            <span>Send</span>
+            <i class="material-icons right">send</i>
+        </a>
+        <a href="#" class="btn pink waves-effect waves-light">
+            <span>Email</span>
+            <i class="material-icons left">email</i>
+        </a>
+        <h4>Icons on Floating Buttons</h4>
+        <a href="#" class="btn-floating light-blue pulse">
+            <i class="material-icons">add</i>
+        </a>
+        <a href="#" class="btn-floating red pulse">
+            <i class="material-icons">remove</i>
+        </a>
+        <a href="#" class="btn-floating orange pulse">
+            <i class="material-icons">edit</i>
+        </a>
+    </div>
+
+
+    <br><br><br><br><br>
+    <!-- lesson 6 Grid -->
+    <style>
+        .grids .row>div {
+            padding: 10px;
+            background: #ddd;
+            border: 1px solid #fff;
+        }
+
+        .row {
+            margin: 40px auto;
+        }
+    </style>
+    <div class="container grids">
+        <h4>Grids</h4>
+        <div class="row">
+            <div class="col s3">content</div>
+            <div class="col s3">content</div>
+            <div class="col s3">content</div>
+            <div class="col s3">content</div>
+        </div>
+        <div class="row">
+            <!-- for medium screen m3, for small s6 -->
+            <div class="col s6 m3">content</div>
+            <div class="col s6 m3">content</div>
+            <div class="col s6 m3">content</div>
+            <div class="col s6 m3">content</div>
+        </div>
+        <!-- xl -> extra large -->
+        <div class="row">
+            <div class="col s12 m6 l4 xl2">content</div>
+            <div class="col s12 m6 l4 xl2">content</div>
+            <div class="col s12 m6 l4 xl2">content</div>
+            <div class="col s12 m6 l4 xl2">content</div>
+            <div class="col s12 m6 l4 xl2">content</div>
+            <div class="col s12 m6 l4 xl2">content</div>
+        </div>
+        <div class="row">
+            <div class="col s12 m8">content</div>
+            <div class="col s12 m4">content</div>
+            <div class="col s12 m4">content</div>
+            <div class="col s12 m8">content</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- lesson 7 Depth & Shadows -->
+    <style>
+        .col>div {
+            background: lightblue;
+            height: 120px;
+        }
+    </style>
+    <div class="container">
+        <h4>Shadows & Depth</h4>
+        <div class="row">
+            <div class="col s2">
+                <div></div>
+            </div>
+            <div class="col s2">
+                <div class="z-depth-1"></div>
+            </div>
+            <div class="col s2">
+                <div class="z-depth-2"></div>
+            </div>
+            <div class="col s2">
+                <div class="z-depth-3"></div>
+            </div>
+            <div class="col s2">
+                <div class="z-depth-4"></div>
+            </div>
+            <div class="col s2">
+                <div class="z-depth-5"></div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- lesson 10 cards -->
+
+    <div class="container">
+        <h2>Cards</h2>
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/curry.jpg" alt="">
+                        <a href="" class="halfway-fab btn-floating pink pulse">
+                            <i class="material-icons">favorite</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Mango & Chickpea Curry</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">More details</a>
+                        <a href="">View Ingredients</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/pasta.jpg" alt="">
+                        <a href="" class="halfway-fab btn-floating pink pulse">
+                            <i class="material-icons">favorite</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Rainbow Pasta Salad</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">More details</a>
+                        <a href="">View Ingredients</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <br><br><br><br><br>
+    <!-- lesson 11 Collections -->
+
+    <div class="container">
+        <h2>Collections</h2>
+        <ul class="collection with-header">
+          <li class="collection-header"><h4>Customers</h4></li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">person</i>
+            <span class="title">Ryu</span>
+            <p class="grey-text">black-belt</p>
+            <a href="" class="secondary-content">
+              <i class="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">person</i>
+            <span class="title">Yoshi</span>
+            <p class="grey-text">orange-belt</p>
+            <a href="" class="secondary-content">
+              <i class="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">person</i>
+            <span class="title">Crystal</span>
+            <p class="grey-text">brown-belt</p>
+            <a href="" class="secondary-content">
+              <i class="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li class="collection-item">Mario</li>
+        </ul>
+      </div>
+
+      <br><br><br><br><br>
+    <!-- lesson 12 Modal -->
+
+    <div class="container">
+        <h2>Modals</h2>
+    
+        <a class="btn orange modal-trigger" href="#terms">Terms & Conditions</a>
+    
+        <div id="terms" class="modal">
+          <div class="modal-content">
+            <h4>Terms & Conditions</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close btn orange">Agree</a>
+          </div>
+        </div>
+        
+      </div>
+
+      <script>
+        $(document).ready(() => {
+          $('.modal').modal();
+        });
+      </script>
+
+
+    <br><br><br><br><br>
+</body>
+
+</html>

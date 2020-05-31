@@ -6,8 +6,8 @@ function Contact(props) {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        const countriesJson = require("./countries.json");
-        const uniqueCountry = getUnique(countriesJson.countries, "country");
+        let countriesJson = require("./countries.json");
+        let uniqueCountry = getUnique(countriesJson.countries, "country");
         setCountries(uniqueCountry);
     }, []);
 

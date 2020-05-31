@@ -1,14 +1,18 @@
-import React, { Component } from "react"
+import React from "react"
 import AccountResume from "./AccountResume.js"
 import AccountRegister from "./AccountRegister.js"
 
-class Accounts extends Component {
-    state = {
-        accounts: [
-            { id: 1, code: 4545, name: "basic account", type: "basic", },
-            { id: 2, code: 234, name: "admin account", type: "advanced" }
-        ]
-    }
+class Accounts extends React.Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = this.initialState = {
+            accounts: [
+                { id: 1, code: 4545, name: "basic account", type: "basic", },
+                { id: 2, code: 234, name: "admin account", type: "advanced" }
+            ]
+        }
+      }
 
     addAccount = (account) => {
         account.id = Math.random() * 10;

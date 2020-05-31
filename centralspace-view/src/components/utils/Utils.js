@@ -1,5 +1,5 @@
 export const getUnique = (arr, comp) => {
-  const unique = arr
+  let unique = arr
     //store the comparison values in array
     .map(e => e[comp])
 

@@ -45,6 +45,7 @@ Env:
 - npm install redux-thunk
 - npm install firebase
 - npm i jquery
+- npm install -g parcel-bundler  / npm init -y (read about this)
 - npm install react-redux-firebase redux-firestore
 - npm i react-router-redux
 - npm install react-bootstrap bootstrap
@@ -59,3 +60,15 @@ Shortcut:
 shift + alt + down arrow
 etc -> class component
 rfce -> functional component
+
+RULES:
+- use arrow functions instead function()
+- use contructor in class component
+- use IMMUTABLE data like arrays ->  slice() instead push()
+- convention: on[Event], and handle function handle[Event]
+- spread operator:
+let player = {score: 1, name: 'Jeff'};
+let newPlayer = {...player, score: 2};
+- use let instead const if not needed
+- React.Component
+= 

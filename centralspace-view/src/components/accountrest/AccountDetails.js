@@ -13,12 +13,12 @@ function AccountDetails(props) {
         // props.history.push('/account-list');
         props.history.push('/');
     }
-    const deleteAccountClick = () => {
+    const handleDeleteAccountClick = () => {
         props.deleteAccount(id);
         redirectAfterAction();
     }
 
-    const archiveAccountClick = () => {
+    const handleArchiveAccountClick = () => {
         props.archiveAccount(id);
         redirectAfterAction();
     }
@@ -30,10 +30,10 @@ function AccountDetails(props) {
             <p>{JSON.stringify(account)}</p>
             <div className="row right">
                 <div className="col">
-                    <a onClick={deleteAccountClick} className="red waves-effect waves-light btn-large"><i className="material-icons right">send</i> Delete</a>
+                    <a href="#" onClick={handleDeleteAccountClick} className="red waves-effect waves-light btn-large"><i className="material-icons right">send</i> Delete</a>
                 </div>
                 <div className="col">
-                    <a onClick={archiveAccountClick} className="grey red waves-effect waves-light btn-large">
+                    <a href="#" onClick={handleArchiveAccountClick} className="grey red waves-effect waves-light btn-large">
                         <i className="material-icons right">cloud</i> Archive</a>
                 </div>
             </div>
@@ -67,8 +67,8 @@ const mapStateToProps = (state, props) => {
     // }
 
     let id = props.match.params.id;
-    const accounts = state.firestore.data.accounts;
-    const account = accounts ? accounts[id] : null;
+    let accounts = state.firestore.data.accounts;
+    let account = accounts ? accounts[id] : null;
     return {
         account: account
     }

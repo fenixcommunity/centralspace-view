@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
@@ -7,13 +7,17 @@ import Notifications from './Notifications';
 import AccountsPanel from '../accountrest/AccountsPanel';
 import Loader from '../global/Loader'
 
-class Dashboard extends Component {
+class Dashboard extends React.Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = this.initialState = {}
+      }
+
     render() {
         const { accounts, notifications } = this.props;
         return (
-
             <div className="dashboard container">
-
                 <div className="row">
                     <div className="col s12 m6">
                         <AccountsPanel accounts={accounts} />

@@ -1,8 +1,6 @@
-import { push } from 'react-router-redux'
-
 export const signIn = (credencials) => {
     return (dispatch, getState, { getFirebase }) => {
-        const firebase = getFirebase();
+        let firebase = getFirebase();
 
         firebase.auth().signInWithEmailAndPassword(
             credencials.email,
@@ -22,7 +20,7 @@ export const signIn = (credencials) => {
 
 export const signOut = () => {
     return (dispatch, getState, { getFirebase }) => {
-        const firebase = getFirebase();
+        let firebase = getFirebase();
 
         firebase.auth().signOut().then(() => {
             dispatch({ type: 'SIGNOUT_SUCCESS' });
@@ -32,8 +30,8 @@ export const signOut = () => {
 
 export const signUp = (newUser) => {
 return (dispatch, getState, {getFirebase, getFirestore}) => {
-    const firebase = getFirebase();
-    const firestore = getFirestore();
+    let firebase = getFirebase();
+    let firestore = getFirestore();
 
     firebase.auth().createUserWithEmailAndPassword(
         newUser.email,

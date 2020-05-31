@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
-import {signUp} from '../../store/actions/authActions';
+import React from 'react';
+import { signUp } from '../../store/actions/authActions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-export class SignUp extends Component {
-    state = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: ''
+export class SignUp extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = this.initialState = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: ''
+        }
     }
 
     handleChange = (e) => {

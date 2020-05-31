@@ -1,11 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux' // to bring higher order component
 import axios from 'axios'
 import { authApi } from '../utils/CentralspaceApi'
 import { Link } from 'react-router-dom'
 import daVinciImg from '../../resources/da_vinci.jpg'
 
-class AccountList extends Component {
+class AccountList extends React.Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = this.initialState = {}
+      }
     // don't store in component, use redux store
 
     // state = {

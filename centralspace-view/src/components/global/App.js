@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import '../../styles/global/resource.css'
 import Accounts from '../account/Accounts'
@@ -10,10 +10,15 @@ import AccountDetails from "../accountrest/AccountDetails"
 import SignIn from '../auth/SignIn'
 import SignUp from '../auth/SignUp'
 import CreateAccount from '../accountrest/CreateAccount'
-import AccountSummary from "../accountrest/AccountSummary"
 import PrivateRoute from '../../hoc/PrivateRoute';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = this.initialState = {}
+  }
+
   render() {
     return (
       <BrowserRouter>

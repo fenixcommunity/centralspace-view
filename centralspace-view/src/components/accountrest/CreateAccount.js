@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {createAccount} from '../../store/actions/accountActions';
 
-export class CreateAccount extends Component {
-    state = {
-        login: '',
-        mail: '',
-        description: ''
-
-    }
+export class CreateAccount extends React.Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = this.initialState = {
+            login: '',
+            mail: '',
+            description: ''
+        }
+      }
 // todo firebase - NoSql document structure
     handleChange = (e) => {
         this.setState({

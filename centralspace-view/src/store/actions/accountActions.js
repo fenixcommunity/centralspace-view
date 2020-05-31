@@ -1,9 +1,9 @@
 export const createAccount = (account) => {
     return (dispatch, getState, { getFirestore, getFirebase }) => {
         // make async call to database (pausing dispatch)
-        const firestore = getFirestore();
-        const profile = getState().firebase.profile;
-        const profileId = getState().firebase.auth.uid;
+        let firestore = getFirestore();
+        let profile = getState().firebase.profile;
+        let profileId = getState().firebase.auth.uid;
         firestore.collection('accounts').add({
             ...account,
             active: true,
@@ -48,8 +48,3 @@ export const deleteAccount = (id) => {
     }
 }
 
-// export const deleteAccount = (id) => {
-//     return (dispatch, getState, { getFirestore, getFirebase }) => {
-//         dispatch({ type: 'DELETE_ACCOUNT', id: id })
-//     }
-// }

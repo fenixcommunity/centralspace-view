@@ -20,7 +20,6 @@ function Notifications(props) {
                                 </li>
                             )
                         })}
-        
                     </ul>
                 </div>
             </div>

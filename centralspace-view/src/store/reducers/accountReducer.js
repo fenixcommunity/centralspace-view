@@ -20,13 +20,13 @@ const accountReducer = (state = initState, action) => {
                 ...state,
                 authError: action.error.message
             }
-            case 'DELETE_ACCOUNT':
-                return state;
-            case 'DELETE_ACCOUNT_ERROR':
-                return {
-                    ...state,
-                    authError: action.error.message
-                }
+        case 'DELETE_ACCOUNT':
+            return state;
+        case 'DELETE_ACCOUNT_ERROR':
+            return {
+                ...state,
+                authError: action.error.message
+            }
         default:
             return state;
     }

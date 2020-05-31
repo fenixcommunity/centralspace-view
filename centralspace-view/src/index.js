@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global/index.css';
-import 'materialize-css/dist/css/materialize.css';
-import 'materialize-css/dist/js/materialize.js';
+import 'materialize-css/dist/css/materialize.css'; // production 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.js'; // production 'materialize-css/dist/js/materialize.min.js';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/global/App';
 import * as serviceWorker from './env/serviceWorker';
@@ -46,7 +46,7 @@ const reactReduxFirebaseProviderProps = {
 };
 
 function AuthIsLoaded({ children }) {
-  const auth = useSelector(state => state.firebase.auth)
+  let auth = useSelector(state => state.firebase.auth)
   if (!isLoaded(auth)) return <div>Loading Screen...</div>;
   return children
 }

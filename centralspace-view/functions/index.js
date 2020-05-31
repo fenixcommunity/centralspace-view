@@ -20,8 +20,8 @@ const createNotification = (notification => {
 exports.accountCreated = functions.firestore
     .document('accounts/{acccountId}')
     .onCreate(doc => {
-        const account = doc.data();
-        const notification = {
+        let account = doc.data();
+        let notification = {
             content: 'Added a new account',
             user: `${account.createdBy}`,
             time: admin.firestore.FieldValue.serverTimestamp()
@@ -38,8 +38,8 @@ exports.userJoined = functions.auth
             .collection('users')
             .doc(user.uid)
             .get().then(doc => {
-                const newUser = doc.data();
-                const notification = {
+                let newUser = doc.data();
+                let notification = {
                     content: 'Joined new user',
                     user: `${newUser.firstName} ${newUser.lastName}`,
                     time: admin.firestore.FieldValue.serverTimestamp()
