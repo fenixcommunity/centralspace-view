@@ -13,6 +13,16 @@ export class SignIn extends React.Component {
         }
       }
 
+    //todo use Hook-s!
+    componentDidMount() {
+    }
+
+    //todo useHooks!
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps !== this.props) {
+        }
+    }
+
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value

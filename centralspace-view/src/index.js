@@ -18,6 +18,7 @@ import {
 import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from "react-redux-firebase";
 import firebase from "firebase/app";
 import firebaseConfig from './env/firebaseConfig';
+import Loader from './components/global/Loader';
 
 // appling middleware(redux thunk) // list of middleware
 const store = createStore(
@@ -47,7 +48,7 @@ const reactReduxFirebaseProviderProps = {
 
 function AuthIsLoaded({ children }) {
   let auth = useSelector(state => state.firebase.auth)
-  if (!isLoaded(auth)) return <> Loading Screen... </>;
+  if (!isLoaded(auth)) return <div className="container"> <Loader /> </div>
   return children
 }
 

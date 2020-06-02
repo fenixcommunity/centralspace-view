@@ -4,7 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import StyleWrapper from '../../hoc/StyleWrapper';
 import Notifications from './Notifications';
-import AccountsPanel from '../accountrest/AccountsPanel';
+import AccountsPanel from '../account/AccountsPanel';
 import Loader from '../global/Loader'
 
 class Dashboard extends React.Component {

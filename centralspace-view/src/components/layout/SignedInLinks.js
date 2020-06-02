@@ -36,7 +36,6 @@ function SignedInLinks(props) {
             </ul>
             <ul className="right">
                 <li><NavLink to="/">Dashboard</NavLink></li>
-                <li><NavLink to="/accounts">Accounts</NavLink></li>
                 <li><NavLink to="/create-account">Create Account</NavLink></li>
                 <li><NavLink to="/account-list">Accounts Rest</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>

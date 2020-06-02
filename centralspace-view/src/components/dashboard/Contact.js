@@ -6,29 +6,43 @@ function Contact(props) {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        let countriesJson = require("./countries.json");
+        let countriesJson = require("../../resources/countries.json");
         let uniqueCountry = getUnique(countriesJson.countries, "country");
         setCountries(uniqueCountry);
-    }, []);
+    }, [])
 
-    setTimeout(() => {
-        props.history.push('accounts')
-    }, 5000)
+
+    const handleCountryClick = () => {
+        if(count > 0) {
+            setCustomTimeout();
+        }
+        setCount(count + 1)
+    }
+
+    const setCustomTimeout = () => {
+        setTimeout(() => {
+            props.history.push('/')
+        }, 5000)
+    }
+
 
     const countriesToRender = countries.length ? (
         countries.map(item => {
             return (
-                <p>{item.country}</p>
+                <React.Fragment key={item.country.id}>
+                    <p className="text-white">{item.country}</p>
+                    <button className="btn red pulse" onClick={handleCountryClick}>counter</button>
+                </React.Fragment>
             )
         })
     ) : (<p>No country</p>)
-    
+
     return (
         <div className="container">
             <h4 className="center">Contact</h4>
-            <p>put you EMAIL -> {count}</p>
-            <p>{countriesToRender}</p>
-            <button onClick={() => setCount(count + 1)}>counter</button>
+            <p>Click counter -> {count}</p>
+            <div>{countriesToRender}</div>
+
         </div>
     )
 }

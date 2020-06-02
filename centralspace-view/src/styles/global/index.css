@@ -30,3 +30,8 @@ textarea.materialize-textarea:focus:not([readonly]){
   border-color: green;
   box-shadow: none;
 }
+
+.loader {
+  margin-top: 8rem;
+  padding: 1rem
+}
