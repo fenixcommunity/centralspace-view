@@ -27,7 +27,7 @@ function SignedInLinks(props) {
     }
 
     return (
-        <>
+        <div>
             <ul id="dropdown1" className="dropdown-content">
                 <li><a href="#!">one</a></li>
                 <li><a href="#!">two</a></li>
@@ -47,7 +47,7 @@ function SignedInLinks(props) {
                 </li>
                 <li><a className="dropdown-trigger" ref={innerRef} data-target="dropdown1"><i className="material-icons">more_vert</i></a></li>
             </ul>
-        </>
+        </div>
     )
 }
 

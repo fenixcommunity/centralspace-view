@@ -24,7 +24,9 @@ to synchronize state within 2 components use one general component and pass to t
 a) if we pass param to props is not state param (???)
 b) if state is static we don't pass it to state
 c) if we can generate param using another state param we don't pass it to state
-- instead wrapping by <&div> ... <&/div> use <&React.Fragment> or <> ... </> (we can't pass key to it)'- 
+- instead wrapping by <&div> ... <&/div> use <&React.Fragment> or <> ... </> (we can't pass key to it).
+ Warning! In some cases it witt crash app (SignedInLinks)
+ -
 
 Extensions:
 for Visual Studio Code:
