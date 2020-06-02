@@ -35,8 +35,8 @@ class AccountRegister extends React.Component {
     return (
 
       /* todo  GET materializecss VIEW*/
-
-      <div>
+      // or <> .. </>
+      <React.Fragment> 
         <form className="account-register-form" onSubmit={this.handleRegister}>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" value={this.state.name} onChange={this.handleChange} />
@@ -49,7 +49,7 @@ class AccountRegister extends React.Component {
 
           <button>Register</button>
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }

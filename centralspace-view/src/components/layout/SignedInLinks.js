@@ -22,10 +22,8 @@ function SignedInLinks(props) {
     }, []);
 
     const handleSignOutAction = () => {
-        console.log("signOutAction");
         props.signOut();
         props.history.push('/signin');
-        console.log(props);
     }
 
     return (

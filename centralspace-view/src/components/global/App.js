@@ -13,12 +13,6 @@ import CreateAccount from '../accountrest/CreateAccount'
 import PrivateRoute from '../../hoc/PrivateRoute';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = this.initialState = {}
-  }
-
   render() {
     return (
       <BrowserRouter>

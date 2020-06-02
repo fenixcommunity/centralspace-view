@@ -12,9 +12,9 @@ function Navbar(props) {
   return (
     <>
       <nav>
-        <div class="nav-wrapper green darken-3">
+        <div className="nav-wrapper green darken-3">
             <Link to='/' className="brand-logo left">Contralspace App</Link>
-            <ul class="right hide-on-med-and-down">
+            <ul className="right hide-on-med-and-down">
               {/* NavLink vs Link. For NavLink we have "active" class to show current tab */}
               {auth.isLoaded &&
                 links

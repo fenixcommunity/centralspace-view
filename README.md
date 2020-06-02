@@ -1,5 +1,31 @@
 # centralspace-view
 
+RULES:
+- use arrow functions instead function()
+- use contructor in class component
+- use IMMUTABLE data like arrays ->  slice() instead push()
+- convention: on[Event], and handle function handle[Event]
+- spread operator:
+let player = {score: 1, name: 'Jeff'};
+let newPlayer = {...player, score: 2};
+- use let instead const if not needed
+- React.Component
+- this.state.comment =  WRONG /  this.setState({comment: ' ' });  or  ...state, comment GOOD
+- use componentDidMount and componentWillUnmount or Hook-s
+- class Component with state <&Function1 handleAndSetState={...} /> -> Function1 (props.handleAndSetState()), Function2 (props.handleAndSetState())
+to synchronize state within 2 components use one general component and pass to these components
+- data flow from top to bottom. Oposite is WRONG
+- key declaration ->   <&ListItem key={...} />  insted function ListItem ... <&li key={...}>
+- key not exist in component props, you should pass id
+- multiple ansews <&select multiple={true} value={['B', 'C']}>
+- children props: function FancyBorder(props) {  ... props.children  }   ->    <&FancyBorder> <&input value={} onChange={} ...  <&/FancyBorder>
+- IMPORTANT -> how build app. First create static content, later implement state and data flow. First implement components on bottom and go to top.
+- STATE: rules how decide that parametr should be go to state param:
+a) if we pass param to props is not state param (???)
+b) if state is static we don't pass it to state
+c) if we can generate param using another state param we don't pass it to state
+- instead wrapping by <&div> ... <&/div> use <&React.Fragment> or <> ... </> (we can't pass key to it)'- 
+
 Extensions:
 for Visual Studio Code:
 - ES7 React/Redux/GraphQL/React-Native snippets
@@ -61,14 +87,3 @@ shift + alt + down arrow
 etc -> class component
 rfce -> functional component
 
-RULES:
-- use arrow functions instead function()
-- use contructor in class component
-- use IMMUTABLE data like arrays ->  slice() instead push()
-- convention: on[Event], and handle function handle[Event]
-- spread operator:
-let player = {score: 1, name: 'Jeff'};
-let newPlayer = {...player, score: 2};
-- use let instead const if not needed
-- React.Component
-= 

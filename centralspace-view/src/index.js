@@ -47,7 +47,7 @@ const reactReduxFirebaseProviderProps = {
 
 function AuthIsLoaded({ children }) {
   let auth = useSelector(state => state.firebase.auth)
-  if (!isLoaded(auth)) return <div>Loading Screen...</div>;
+  if (!isLoaded(auth)) return <> Loading Screen... </>;
   return children
 }
 

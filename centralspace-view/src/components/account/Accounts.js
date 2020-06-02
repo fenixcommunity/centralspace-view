@@ -5,14 +5,14 @@ import AccountRegister from "./AccountRegister.js"
 class Accounts extends React.Component {
     constructor(props) {
         super(props)
-    
+
         this.state = this.initialState = {
             accounts: [
                 { id: 1, code: 4545, name: "basic account", type: "basic", },
                 { id: 2, code: 234, name: "admin account", type: "advanced" }
             ]
         }
-      }
+    }
 
     addAccount = (account) => {
         account.id = Math.random() * 10;
@@ -36,17 +36,17 @@ class Accounts extends React.Component {
 
     //todo useHooks!
     componentDidUpdate(prevProps, prevState) {
-        if(prevProps !== this.props) {
+        if (prevProps !== this.props) {
         }
     }
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <h1 className="center green-text">Centralspace View</h1>
                 <AccountResume accounts={this.state.accounts} deleteAccount={this.deleteAccount} />
                 <AccountRegister addAccount={this.addAccount} />
-            </div>
+            </React.Fragment>
         );
     }
 }
