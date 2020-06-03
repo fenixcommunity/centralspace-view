@@ -7,12 +7,15 @@ import { connect } from 'react-redux'
 
 function Navbar(props) {
 
-  const { auth, profile } = props;
+  const { auth, profile, location } = props;
+  const showNavbar = location.pathname !== '/materialize';
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
+
   return (
     <>
-      <nav>
-        <div className="nav-wrapper green darken-3">
+      {showNavbar && (
+        <nav>
+          <div className="nav-wrapper green darken-3">
             <Link to='/' className="brand-logo left">Centralspace App</Link>
             <ul className="right hide-on-med-and-down">
               {/* NavLink vs Link. For NavLink we have "active" class to show current tab */}
@@ -20,9 +23,10 @@ function Navbar(props) {
                 links
               }
             </ul>
-        </div>
-      </nav>
-
+          </div>
+        </nav>
+      )
+      }
     </>
   )
 }

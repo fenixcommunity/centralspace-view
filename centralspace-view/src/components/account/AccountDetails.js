@@ -30,10 +30,10 @@ function AccountDetails(props) {
             <p>{JSON.stringify(account)}</p>
             <div className="row right">
                 <div className="col">
-                    <a href="#" onClick={handleDeleteAccountClick} className="red waves-effect waves-light btn-large"><i className="material-icons right">send</i> Delete</a>
+                    <a href="#!" onClick={handleDeleteAccountClick} className="red waves-effect waves-light btn-large"><i className="material-icons right">send</i> Delete</a>
                 </div>
                 <div className="col">
-                    <a href="#" onClick={handleArchiveAccountClick} className="grey red waves-effect waves-light btn-large">
+                    <a href="#!" onClick={handleArchiveAccountClick} className="grey red waves-effect waves-light btn-large">
                         <i className="material-icons right">cloud</i> Archive</a>
                 </div>
             </div>

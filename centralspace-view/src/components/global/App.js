@@ -1,25 +1,28 @@
-import React from "react"
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import '../../styles/global/resource.css'
-import Navbar from "../layout/Navbar"
-import Dashboard from "../dashboard/Dashboard"
-import Contact from "../dashboard/Contact"
-import AccountList from "../accountrest/AccountList"
-import AccountDetails from "../account/AccountDetails"
-import SignIn from '../auth/SignIn'
-import SignUp from '../auth/SignUp'
-import CreateAccount from '../account/CreateAccount'
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import '../../styles/global/resource.css';
+import Navbar from '../layout/Navbar';
+import Dashboard from '../dashboard/Dashboard';
+import Contact from '../dashboard/Contact';
+import AccountList from '../accountrest/AccountList';
+import AccountDetails from '../account/AccountDetails';
+import SignIn from '../auth/SignIn';
+import SignUp from '../auth/SignUp';
+import CreateAccount from '../account/CreateAccount';
 import PrivateRoute from '../../hoc/PrivateRoute';
+import Materialize from '../layout/materializecss/Materialize';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="centralspace-view-app container">
+        {/* <div className="centralspace-view-app container"> */}
+        <div className="centralspace-view-app">
           <Navbar />
           {/* all this route objects have props, look at Contact  */}
           {/* In Nabbar we have empty props. But we can add withRouter */}
           <Switch> {/*switch only one component from top to bottom*/}
+            <Route path='/materialize' component={Materialize} />
             <Route path='/contact' component={Contact} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
