@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 function Navbar(props) {
 
   const { auth, profile, location } = props;
-  const showNavbar = location.pathname !== '/materialize';
+  const showNavbar = !location.pathname.includes('/materializecss');
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
 
   return (

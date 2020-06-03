@@ -10,7 +10,7 @@ import SignIn from '../auth/SignIn';
 import SignUp from '../auth/SignUp';
 import CreateAccount from '../account/CreateAccount';
 import PrivateRoute from '../../hoc/PrivateRoute';
-import Materialize from '../layout/materializecss/Materialize';
+import MaterializeCss from '../layout/materializecss/MaterializeCss';
 
 class App extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class App extends React.Component {
           {/* all this route objects have props, look at Contact  */}
           {/* In Nabbar we have empty props. But we can add withRouter */}
           <Switch> {/*switch only one component from top to bottom*/}
-            <Route path='/materialize' component={Materialize} />
+            <Route exact path='/materializecss' component={MaterializeCss} />
             <Route path='/contact' component={Contact} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />

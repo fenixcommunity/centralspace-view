@@ -39,7 +39,7 @@ export class SignIn extends React.Component {
 
         if (auth.uid) return <Redirect to='/' />
         return (
-            <div className="container">
+            <div className="sign-in container">
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="green-text text-darken-3">Sign In</h5>
                     <div className="input-field">

@@ -1,9 +1,11 @@
 header{
-    background: url(/man.jpg);
+    background: url(/materializecss/project/img/man.jpg);
     background-size: cover;
     background-position: center;
     min-height: 1000px;
   }
+
+  /* mobile */
   @media screen and (max-width: 670px){
     header{
       min-height: 500px;

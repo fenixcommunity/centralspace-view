@@ -7,7 +7,7 @@ function SignedOutLinks() {
             <li><NavLink to="/signup">Sign up</NavLink></li>
             <li><NavLink to="/signin">Login</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
-            <li><NavLink to="/materialize">Materialize</NavLink></li>
+            <li><NavLink to="/materializecss">Materialize</NavLink></li>
         </ul>
     )
 }

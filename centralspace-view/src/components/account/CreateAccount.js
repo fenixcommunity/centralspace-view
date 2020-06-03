@@ -31,7 +31,7 @@ export class CreateAccount extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="create-account container">
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="green-text text-darken-3">Create Account</h5>
                     <div className="input-field">

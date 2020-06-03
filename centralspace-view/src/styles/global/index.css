@@ -14,13 +14,19 @@ html {
   min-height: 100%;
 }
 
-form{
+.sign-in form, .sign-up form, .create-account form {
   padding: 20px;
   margin-top: 60px;
 }
-form button, form h5 {
+.sign-in form button, .sign-up form button, .create-account form button {
   margin: 20px 0;
 }
+
+.sign-in form h5, .sign-up form h5, .create-account form h5 {
+  margin: 20px 0;
+}
+
+
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
@@ -32,6 +38,6 @@ textarea.materialize-textarea:focus:not([readonly]){
 }
 
 .loader {
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   padding: 1rem
 }

@@ -8,6 +8,7 @@ import Parallax2 from './components/Parallax2';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
+// works also for mobile
 function Materialize() {
     // todo change calendar style
     return (
