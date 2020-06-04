@@ -26,7 +26,7 @@ b) if state is static we don't pass it to state
 c) if we can generate param using another state param we don't pass it to state
 - instead wrapping by <&div> ... <&/div> use <&React.Fragment> or <> ... </> (we can't pass key to it).
  Warning! In some cases it witt crash app (SignedInLinks)
- -
+ - React Context (use it only when we want to share data for many children components)
 
 Extensions:
 for Visual Studio Code:
@@ -81,6 +81,7 @@ Env:
 - npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
 /  npm run build  / firebase deploy / => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
 - npm i -g html-to-react-components (html2react index.html)
+- npm install uuid
 - Cloud Firestore
 - Eslint formating
 - Express vs Axios

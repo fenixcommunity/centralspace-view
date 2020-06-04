@@ -38,6 +38,7 @@ function SignedInLinks(props) {
                 <li><NavLink to="/">Dashboard</NavLink></li>
                 <li><NavLink to="/create-account">Create Account</NavLink></li>
                 <li><NavLink to="/account-list">Accounts Rest</NavLink></li>
+                <li><NavLink to="/address-list">Address Rest</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
                 <li><a onClick={handleSignOutAction}>Log out</a></li>
                 <li><NavLink to="/" className='btn btn-floating pink lighten-1'>
