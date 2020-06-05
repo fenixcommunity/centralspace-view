@@ -35,6 +35,55 @@ function ContactForm() {
         <div className="col s12 l5 offset-l2">
           <form>
             <div className="input-field">
+              <p>Services required:</p>
+              <p>
+                <label>
+                  <input
+                    name="groupradio"
+                    type="radio"
+                    defaultValue="Red"
+                    defaultChecked
+                  />
+                  <span>Red</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="groupradio" type="radio" defaultValue="Yellow" />
+                  <span>Yellow</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input
+                    className="with-gap"
+                    name="groupradio"
+                    type="radio"
+                    defaultValue="Green"
+                  />
+                  <span>Green</span>
+                </label>
+              </p>
+            </div>
+
+
+
+
+
+
+            <div className="input-field">
+              <p>Options Select: </p>
+              {/* or <label>Options Select</label> */}
+              <select name="optionselect" id="color">
+                <option value disabled selected>
+                  Choose your option
+              </option>
+                <option value={1}>Option 1</option>
+                <option value={2}>Option 2</option>
+                <option value={3}>Option 3</option>
+              </select>
+            </div>
+            <div className="input-field">
               <i className="material-icons prefix">email</i>
               <input type="email" id="email" />
               <label htmlFor="email">Your Email</label>
@@ -60,19 +109,67 @@ function ContactForm() {
               <p>
                 <label>
                   <input type="checkbox" />
-                  <span>Photography</span>
+                  <span>Photo Editing</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input type="checkbox" />
-                  <span>Photo Editing</span>
+                  <input
+                    type="checkbox"
+                    name="filledin"
+                    defaultValue="filledin"
+                    className="filled-in"
+                    defaultChecked="checked"
+                  />
+                  <span>Filled in</span>
                 </label>
               </p>
+              <p>
+                <label>
+                  <input
+                    type="checkbox"
+                    defaultChecked="checked"
+                    disabled="disabled"
+                    defaultValue="Green"
+                  />
+                  <span>Green</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input
+                    type="checkbox"
+                    disabled="disabled"
+                    defaultValue="disabled"
+                  />
+                  <span>Brown</span>
+                </label>
+              </p>
+
             </div>
             <div className="input-field center">
-              <button className="btn">Submit</button>
+
+              <button
+                id="reset"
+                className="btn waves-effect waves-light grey"
+                type="button"
+                name="reset"
+              >
+                Reset
+            <i className="material-icons right">clear_all</i>
+              </button>
+              <span id="status" />
+              <button
+                id="save"
+                className="btn waves-effect waves-light"
+                type="submit"
+                name="action"
+              >
+                Save
+            <i className="material-icons right">send</i>
+              </button>
             </div>
+
           </form>
         </div>
       </div>

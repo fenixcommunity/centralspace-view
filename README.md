@@ -50,6 +50,8 @@ for Visual Studio Code:
 - IntelliSense for CSS class names in HTML
 - Settings Sync (gist ec5578fef14c2236e3f6055b37358ee1)
 - Materialize Snippets 
+- TabNine
+- Git history
 
 Links:
 - http://localhost:7773/
