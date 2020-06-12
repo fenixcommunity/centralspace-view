@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
+// import 'materialize-css/dist/css/materialize.css'; // production 'materialize-css/dist/css/materialize.min.css';
+// import 'materialize-css/dist/js/materialize.js'; // production 'materialize-css/dist/js/materialize.min.js';
+
 import './styles/global/index.css';
-import 'materialize-css/dist/css/materialize.css'; // production 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.js'; // production 'materialize-css/dist/js/materialize.min.js';
+// import $ from 'jquery';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/global/App';
 import * as serviceWorker from './env/serviceWorker';
@@ -64,6 +68,8 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+
 
 // If you want your app to work offline and load faster, you can change unregister() to register() below.
 // Learn more about service workers: https://bit.ly/CRA-PWA

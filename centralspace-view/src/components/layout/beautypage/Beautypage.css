@@ -1,0 +1,13 @@
+#pages.dropdown-content {
+    left: inherit!important;
+    top: inherit!important;
+    width: inherit!important;
+    border: none!important;
+    z-index: 0 !important;
+    outline: none!important;
+}
+
+.dollars {
+    padding-left: 15px;
+    padding-right: 15px;
+}

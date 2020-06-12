@@ -9,7 +9,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 // works also for mobile
-function Materialize() {
+function MaterializeCss() {
     // todo change calendar style
     return (
         <div>
@@ -24,4 +24,4 @@ function Materialize() {
     )
 }
 
-export default Materialize
+export default MaterializeCss;

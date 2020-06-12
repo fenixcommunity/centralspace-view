@@ -3,14 +3,14 @@ import M from 'materialize-css/dist/js/materialize.js';
 
 function Navbar() {
   const sidenavRef = useRef(null);
-
+  
   useEffect(() => {
     M.AutoInit();
     let sidenav = M.Sidenav.init(sidenavRef.current, {});
   }, []);
 
   return (
-    <header>
+        <header>
       <nav className="nav-wrapper transparent">
         <div className="container">
           <a href="#" className="brand-logo">

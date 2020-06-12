@@ -36,7 +36,7 @@ export class CreateAccount extends React.Component {
                     <h5 className="green-text text-darken-3">Create Account</h5>
                     <div className="input-field">
                         <label htmlFor="login">Login</label>
-                        <input type="text" id="login" value={this.state.login} onChange={this.handleChange} />
+                        <input className="autocomplete" type="text" id="login" value={this.state.login} onChange={this.handleChange} />
                     </div>
                     <div className="input-field">
                         <label htmlFor="mail">Mail</label>

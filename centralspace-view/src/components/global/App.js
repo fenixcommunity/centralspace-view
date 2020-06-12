@@ -11,6 +11,7 @@ import SignUp from '../auth/SignUp';
 import CreateAccount from '../account/CreateAccount';
 import PrivateRoute from '../../hoc/PrivateRoute';
 import MaterializeCss from '../layout/materializecss/MaterializeCss';
+import Beautypage from '../layout/beautypage/Beautypage';
 import AddressList from '../address/AddressList';
 import ThemeContextProvider from '../../contexts/ThemeContext';
 
@@ -27,6 +28,7 @@ class App extends React.Component {
         {/* In Nabbar we have empty props. But we can add withRouter */}
         <Switch> {/*switch only one component from top to bottom*/}
           <Route exact path='/materializecss' component={MaterializeCss} />
+          <Route exact path='/beautypage' component={Beautypage} onUpdate />
           <Route path='/contact' component={Contact} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />

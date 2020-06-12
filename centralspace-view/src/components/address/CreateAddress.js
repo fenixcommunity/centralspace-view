@@ -15,7 +15,7 @@ function CreateAddress({ addAddress }) {
     return (
         <form onSubmit={handleSubmit}>
             <label>Address city: </label>
-            <input type="text" value={city} required onChange={handleOnCityTextChange} />
+            <input className="autocomplete" type="text" value={city} required onChange={handleOnCityTextChange} />
             <input className="btn" type="submit" value="Create address" />
         </form>
     )
