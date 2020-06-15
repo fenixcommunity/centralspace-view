@@ -66,11 +66,6 @@ function ContactForm() {
               </p>
             </div>
 
-
-
-
-
-
             <div className="input-field">
               <p>Options Select: </p>
               {/* or <label>Options Select</label> */}

@@ -1,5 +1,6 @@
 import React from "react";
 import img from '../../../../resources/beautypage/images/1440x90.png';
+import img2 from '../../../../resources/beautypage/images/trees.jpg';
 import M from 'materialize-css/dist/js/materialize.js';
 
 
@@ -12,7 +13,7 @@ class Header extends React.Component {
 
     return (
       <div className="section header">
-        <img className="background" src="http://placehold.it/1440x900"/>
+        <img className="background" src={img2}/>
         {/* <img className="background" src={img} alt="picture" /> */}
         <div className="header-wrapper row valign-wrapper">
           <div className="col s12">

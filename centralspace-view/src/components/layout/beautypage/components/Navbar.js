@@ -1,47 +1,13 @@
 import React, { useEffect, useRef } from "react";
-// import M from 'materialize-css/dist/js/materialize.js';
-import $ from 'jquery';
-import loadjs from 'loadjs';
 
-class Navbar extends React.Component {
-
-  // componentDidMount() {
-  //   loadjs(['/beautypage/js/startup.js']);
- 
-  //   loadjs.ready('foobar', function() {
-  //   console.log("loadjs")
-  //   });
-
-  //   // M.AutoInit();
-
-  //   //     $('.read-more').off('click.read-more').on('click.read-more', function () {
-  //   //   var sectionHeight = $(this).closest('.section').outerHeight();
-  //   //   var offset = sectionHeight || window.innerHeight;
-  //   //   $('html, body').animate({scrollTop: offset }, 1000);
-  //   // });
-  // }
-
-
-//   useEffect(() => {
-//     loadjs(['%PUBLIC_URL%/beautypage/js/startup.js']);
- 
-// loadjs.ready('foobar', function() {
-// console.log("loadjs")
-// });
-
-// //     loadjs('/beautypage/js/startup.js', function() {
-
-// //     })
-//    }, []);
-
-  render() {
+function Navbar()  {
     return (
       <nav className="navbar navbar-solid-transition">
         <div className="nav-wrapper">
           <a href="horizontal-half.html" className="brand-logo">
             <i className="icon-diamond" />
           </a>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul id="mobile-menu" className="right hide-on-med-and-down">
             <li className="active">
               <a
                 className="dropdown-trigger"
@@ -106,10 +72,7 @@ class Navbar extends React.Component {
           </a>
         </div>
       </nav>
-
-      
     );
-  }
 }
 
 export default Navbar;

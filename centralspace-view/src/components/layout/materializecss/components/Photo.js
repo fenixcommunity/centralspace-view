@@ -17,7 +17,7 @@ function Photo() {
         <div className="col s12 l4">
           <img
             src={cityImg}
-            alt
+            alt=""
             className="responsive-img materialboxed"
           />
         </div>
@@ -33,7 +33,7 @@ function Photo() {
         <div className="col s12 l4 offset-l1 push-l7">
           <img
             src={cityImg}
-            alt
+            alt=""
             className="responsive-img materialboxed"
           />
         </div>
@@ -49,7 +49,7 @@ function Photo() {
         <div className="col s12 l4">
           <img
             src={natureImg}
-            alt
+            alt=""
             className="responsive-img materialboxed"
           />
         </div>

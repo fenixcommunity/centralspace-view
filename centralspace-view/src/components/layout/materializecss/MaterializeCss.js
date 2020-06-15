@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import loadjs from 'loadjs';
 import './MaterializeStyle.css'
 import Navbar from './components/Navbar';
 import Photo from './components/Photo';
@@ -10,7 +11,13 @@ import Footer from './components/Footer';
 
 // works also for mobile
 function MaterializeCss() {
-    // todo change calendar style
+    useEffect(() => {
+        loadjs(['/materializecss/project/js/materialize.min.js', '/materializecss/project/css/materialize.min.css']);
+        loadjs.ready('foobar', function () {
+            console.log("loadjs")
+        });
+    }, []);
+
     return (
         <div>
             <Navbar />

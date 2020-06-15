@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
-// import 'materialize-css/dist/css/materialize.css'; // production 'materialize-css/dist/css/materialize.min.css';
-// import 'materialize-css/dist/js/materialize.js'; // production 'materialize-css/dist/js/materialize.min.js';
-
 import './styles/global/index.css';
 // import $ from 'jquery';
 // import 'bootstrap/dist/css/bootstrap.min.css';

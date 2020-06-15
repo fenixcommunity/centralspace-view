@@ -66,7 +66,6 @@ Links:
 - https://firebase.google.com/
 
 
-
 Env:
 - port: 7773
 - npm install react-router-dom
@@ -80,6 +79,7 @@ Env:
 - npm i react-router-redux
 - npm install react-bootstrap bootstrap
 - npm install moment
+- npm i loadjs
 - npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
 /  npm run build  / firebase deploy / => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
 - npm i -g html-to-react-components (html2react index.html)

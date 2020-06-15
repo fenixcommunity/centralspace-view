@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../../../../resources/beautypage/images/materialize-teal.png';
 
 class Footer extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class Footer extends React.Component {
             <div className="col s6 m3">
               <img
                 className="materialize-logo"
-                src="images/materialize-teal.png"
+                src={logo}
                 alt="img"
               />
               <p>Made with love by Materialize.</p>

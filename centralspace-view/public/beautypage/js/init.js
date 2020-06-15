@@ -9,7 +9,7 @@
     $('.parallax').parallax();
     $('.modal').modal();
     $('.scrollspy').scrollSpy();
-    $('.button-collapse').sidenav({edge: 'left'});
+    $('.button-collapse').sideNav({'edge': 'left'});
     $('.datepicker').pickadate({selectYears: 20});
     $('select').not('.disabled').material_select();
     $('input.autocomplete').autocomplete({

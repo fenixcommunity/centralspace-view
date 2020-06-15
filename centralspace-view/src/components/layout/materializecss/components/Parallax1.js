@@ -12,7 +12,7 @@ function Parallax1() {
   return (
     <div className="parallax-container">
       <div className="parallax" ref={parallaxRef}>
-        <img src={streetImg} alt className="responsive-img" />
+        <img src={streetImg} alt="" className="responsive-img" />
       </div>
     </div>
   );

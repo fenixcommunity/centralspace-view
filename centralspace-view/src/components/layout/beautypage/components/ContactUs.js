@@ -13,6 +13,7 @@ class ContactUs extends React.Component {
               <div className="input-field col s6">
                 <input id="first_name" type="text" length="2"/>
                 {/* <input id="first_name" className="autocomplete" type="text" /> */}
+                {/* remove styles from index.css */}
                 <label htmlFor="first_name">First Name</label>
               </div>
               <div className="input-field col s6">

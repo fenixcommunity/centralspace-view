@@ -13,9 +13,7 @@ import GoogleMaps from './components/GoogleMaps';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
-// works also for mobile???
 function Beautypage() {
-
     useEffect(() => {
         loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js']);
         loadjs.ready('foobar', function () {
