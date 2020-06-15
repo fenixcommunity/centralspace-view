@@ -1,28 +1,27 @@
 import React from "react";
 
-function Navbar()  {
+class Navbar extends React.Component {
+  render() {
     return (
       <nav className="navbar navbar-solid-transition">
         <div className="nav-wrapper">
           <a href="horizontal-half.html" className="brand-logo">
             <i className="icon-diamond" />
           </a>
-          <ul id="mobile-menu" className="right hide-on-med-and-down">
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li className="active">
               <a
-                className="dropdown-trigger"
-                href='#'
+                className="dropdown-button"
+                href="#!"
                 data-activates="pages"
                 data-constrainwidth="false"
-                 data-beloworigin="true"
-                data-target="pages"
+                data-beloworigin="true"
               >
-                
                 Pages<i className="material-icons right">arrow_drop_down</i>
               </a>
             </li>
             <li>
-              <a href="/beautyblog">Blog</a>
+              <a href="blog.html">Blog</a>
             </li>
             <li>
               <a href="team.html">Team</a>
@@ -45,15 +44,15 @@ function Navbar()  {
               <a href="circle-reveal.html">Circle Reveal</a>
             </li>
             <li>
-              <a href="/beautywall">Phone Wall</a>
+              <a href="phone-wall.html">Phone Wall</a>
             </li>
             <li>
-              <a href="/beautytransitions">Element Transitions</a>
-            </li>
-            <li>
-              <a className="active" href="basic-elements.html">
-                Basic Elements
+              <a className="active" href="element-transitions.html">
+                Element Transitions
               </a>
+            </li>
+            <li>
+              <a href="basic-elements.html">Basic Elements</a>
             </li>
             <li>
               <a href="card-shuffle.html">Shuffle</a>
@@ -65,7 +64,6 @@ function Navbar()  {
           <a
             href="#"
             data-activates="slide-out"
-            data-target="slide-out"
             className="button-collapse right"
           >
             <i className="material-icons white-text">menu</i>
@@ -73,6 +71,7 @@ function Navbar()  {
         </div>
       </nav>
     );
+  }
 }
 
 export default Navbar;

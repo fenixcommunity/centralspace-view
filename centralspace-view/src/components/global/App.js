@@ -11,8 +11,10 @@ import SignUp from '../auth/SignUp';
 import CreateAccount from '../account/CreateAccount';
 import PrivateRoute from '../../hoc/PrivateRoute';
 import MaterializeCss from '../layout/materializecss/MaterializeCss';
-import Beautyblog from '../layout/beautypage/Beautyblog';
 import Beautypage from '../layout/beautypage/Beautypage';
+import Beautyblog from '../layout/beautypage/Beautyblog';
+import Beautytransitions from '../layout/beautypage/Beautytransitions';
+import Beautywall from '../layout/beautypage/Beautywall';
 import AddressList from '../address/AddressList';
 import ThemeContextProvider from '../../contexts/ThemeContext';
 
@@ -31,6 +33,8 @@ class App extends React.Component {
           <Route exact path='/materializecss' component={MaterializeCss} />
           <Route exact path='/beautypage' component={Beautypage} onUpdate />
           <Route exact path='/beautyblog' component={Beautyblog} />
+          <Route exact path='/beautytransitions' component={Beautytransitions} />
+          <Route exact path='/beautywall' component={Beautywall} />
           <Route path='/contact' component={Contact} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
