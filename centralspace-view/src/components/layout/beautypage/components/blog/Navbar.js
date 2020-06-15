@@ -1,28 +1,30 @@
 import React from "react";
 
+	
 function Navbar()  {
     return (
-      <nav className="navbar navbar-solid-transition">
+      <nav className="navbar dark">
         <div className="nav-wrapper">
           <a href="horizontal-half.html" className="brand-logo">
             <i className="icon-diamond" />
           </a>
           <ul id="mobile-menu" className="right hide-on-med-and-down">
-            <li className="active">
+            <li>
               <a
-                className="dropdown-trigger"
-                href='#'
+                className="dropdown-button"
+                href="#!"
+                data-target="pages"
                 data-activates="pages"
                 data-constrainwidth="false"
-                 data-beloworigin="true"
-                data-target="pages"
+                data-beloworigin="true"
               >
-                
                 Pages<i className="material-icons right">arrow_drop_down</i>
               </a>
             </li>
             <li>
-              <a href="/beautyblog">Blog</a>
+              <a className="active" href="blog.html">
+                Blog
+              </a>
             </li>
             <li>
               <a href="team.html">Team</a>
@@ -51,9 +53,7 @@ function Navbar()  {
               <a href="element-transitions.html">Element Transitions</a>
             </li>
             <li>
-              <a className="active" href="basic-elements.html">
-                Basic Elements
-              </a>
+              <a href="basic-elements.html">Basic Elements</a>
             </li>
             <li>
               <a href="card-shuffle.html">Shuffle</a>
@@ -68,7 +68,7 @@ function Navbar()  {
             data-target="slide-out"
             className="button-collapse right"
           >
-            <i className="material-icons white-text">menu</i>
+            <i className="material-icons black-text">menu</i>
           </a>
         </div>
       </nav>

@@ -12,10 +12,13 @@ import Footer from './components/Footer';
 // works also for mobile
 function MaterializeCss() {
     useEffect(() => {
-        loadjs(['/materializecss/project/js/materialize.min.js', '/materializecss/project/css/materialize.min.css']);
-        loadjs.ready('foobar', function () {
-            console.log("loadjs")
-        });
+        loadjs(['/materializecss/project/js/materialize.min.js', '/materializecss/project/css/materialize.min.css'],
+         'foobar',
+         {async: false, returnPromise: true });
+        loadjs.ready('foobar', {
+            success: function() { /* foo.js & bar.js loaded */ },
+            error: function() { /* foobar bundle load failed */ },
+          });
     }, []);
 
     return (
