@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 import '../../../resources/beautypage/css/startup-materialize.css'
 import './Beautypage.css'
-import Navbar from './components/transitions/Navbar';
+import Navbar from './components/Navbar';
+import SlideOut from './components/SlideOut';
+import Footer from './components/Footer';
 import Header from './components/transitions/Header';
 import Features from './components/transitions/Features';
 import Pricing from './components/transitions/Pricing';
@@ -12,8 +14,8 @@ import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
 import Feature6 from './components/transitions/Feature6';
-import Footer from './components/Footer';
-import SlideOut from './components/SlideOut';
+
+
 
 function Beautytransitions() {
     useEffect(() => {
@@ -29,7 +31,7 @@ function Beautytransitions() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
             <Features />

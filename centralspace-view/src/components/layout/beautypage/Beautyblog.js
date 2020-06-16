@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 import '../../../resources/beautypage/css/startup-materialize.css'
 import './Beautypage.css'
-import Navbar from './components/blog/Navbar';
+import Navbar from './components/Navbar';
+import SlideOut from './components/SlideOut';
+import Footer from './components/Footer';
 import Animation from './components/blog/Animation';
 import Blog from './components/blog/Blog';
-import Footer from './components/Footer';
-import SlideOut from './components/SlideOut';
 
 function Beautyblog() {
     useEffect(() => {
@@ -21,7 +21,7 @@ function Beautyblog() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar isNavbarSolidTransition={false} isDarkMode={true} />
             <SlideOut />
             <Animation />
             <Blog />

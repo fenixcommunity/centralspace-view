@@ -26,7 +26,7 @@ function Beautypage() {
     
     return (
         <div>
-            <Navbar />
+            <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
             <Features />
