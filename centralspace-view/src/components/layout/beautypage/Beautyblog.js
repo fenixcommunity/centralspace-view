@@ -5,7 +5,7 @@ import './Beautypage.css'
 import Navbar from './components/blog/Navbar';
 import Animation from './components/blog/Animation';
 import Blog from './components/blog/Blog';
-import Footer from './components/blog/Footer';
+import Footer from './components/Footer';
 import SlideOut from './components/SlideOut';
 
 function Beautyblog() {
@@ -18,7 +18,6 @@ function Beautyblog() {
             error: function() { /* foobar bundle load failed */ },
           });
     }, []);
-
 
     return (
         <div>

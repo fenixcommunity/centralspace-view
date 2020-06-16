@@ -5,7 +5,7 @@ import './Beautypage.css'
 import Navbar from './components/phonewall/Navbar';
 import PhoneWall from './components/phonewall/PhoneWall';
 import Features from './components/transitions/Features';
-import Footer from './components/phonewall/Footer';
+import Footer from './components/Footer';
 import SlideOut from './components/SlideOut';
 
 function Beautywall() {
@@ -18,7 +18,6 @@ function Beautywall() {
             error: function() { /* foobar bundle load failed */ },
           });
     }, []);
-
 
     return (
         <div>
