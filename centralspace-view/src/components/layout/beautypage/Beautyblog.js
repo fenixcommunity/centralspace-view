@@ -6,6 +6,7 @@ import Navbar from './components/blog/Navbar';
 import Animation from './components/blog/Animation';
 import Blog from './components/blog/Blog';
 import Footer from './components/blog/Footer';
+import SlideOut from './components/SlideOut';
 
 function Beautyblog() {
     useEffect(() => {
@@ -22,6 +23,7 @@ function Beautyblog() {
     return (
         <div>
             <Navbar />
+            <SlideOut />
             <Animation />
             <Blog />
             <Footer />

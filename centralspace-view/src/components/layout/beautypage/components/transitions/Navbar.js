@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import M from 'materialize-css/dist/js/materialize.js';
 
-class Navbar extends React.Component {
-  render() {
+	
+function Navbar()  {
+  useEffect(() => {
+    M.AutoInit();
+}, []);
+
     return (
       <nav className="navbar navbar-solid-transition">
         <div className="nav-wrapper">
           <a href="horizontal-half.html" className="brand-logo">
             <i className="icon-diamond" />
           </a>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul id="mobile-menu" className="right hide-on-med-and-down">
             <li className="active">
-              <a
-                className="dropdown-button"
-                href="#!"
+            <a
+                className="dropdown-trigger"
+                href='#'
                 data-activates="pages"
+                data-target="pages"
                 data-constrainwidth="false"
                 data-beloworigin="true"
               >
@@ -71,7 +77,6 @@ class Navbar extends React.Component {
         </div>
       </nav>
     );
-  }
 }
 
 export default Navbar;

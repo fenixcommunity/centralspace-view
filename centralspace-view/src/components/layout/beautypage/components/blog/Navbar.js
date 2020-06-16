@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import M from 'materialize-css/dist/js/materialize.js';
 
 	
 function Navbar()  {
+  useEffect(() => {
+    M.AutoInit();
+}, []);
     return (
-      <nav className="navbar dark">
+      // <nav className="navbar dark>
+      <nav className="navbar dark navbar-solid-transition">
         <div className="nav-wrapper">
           <a href="horizontal-half.html" className="brand-logo">
             <i className="icon-diamond" />
           </a>
           <ul id="mobile-menu" className="right hide-on-med-and-down">
-            <li>
+          <li className="active">
               <a
-                className="dropdown-button"
-                href="#!"
-                data-target="pages"
+                className="dropdown-trigger"
+                href='#'
                 data-activates="pages"
+                data-target="pages"
                 data-constrainwidth="false"
                 data-beloworigin="true"
               >
@@ -22,7 +27,7 @@ function Navbar()  {
               </a>
             </li>
             <li>
-              <a className="active" href="blog.html">
+            <a className="active" href="blog.html">
                 Blog
               </a>
             </li>
@@ -47,13 +52,15 @@ function Navbar()  {
               <a href="circle-reveal.html">Circle Reveal</a>
             </li>
             <li>
-              <a href="phone-wall.html">Phone Wall</a>
+            <a href="/beautywall">Phone Wall</a>
             </li>
             <li>
               <a href="element-transitions.html">Element Transitions</a>
             </li>
             <li>
-              <a href="basic-elements.html">Basic Elements</a>
+            <a className="active" href="basic-elements.html">
+            Basic Elements
+            </a>
             </li>
             <li>
               <a href="card-shuffle.html">Shuffle</a>

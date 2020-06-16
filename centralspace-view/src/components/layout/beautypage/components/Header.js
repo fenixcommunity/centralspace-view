@@ -3,14 +3,8 @@ import img from '../../../../resources/beautypage/images/1440x90.png';
 import img2 from '../../../../resources/beautypage/images/trees.jpg';
 import M from 'materialize-css/dist/js/materialize.js';
 
-
 class Header extends React.Component {
-  componentDidMount() {
-    M.AutoInit();
-  }
-
   render() {
-
     return (
       <div className="section header">
         <img className="background" src={img2}/>

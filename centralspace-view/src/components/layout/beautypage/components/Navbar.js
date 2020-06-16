@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import M from 'materialize-css/dist/js/materialize.js';
 
 function Navbar()  {
+  useEffect(() => {
+    M.AutoInit();
+}, []);
+
     return (
       <nav className="navbar navbar-solid-transition">
         <div className="nav-wrapper">
@@ -13,9 +18,9 @@ function Navbar()  {
                 className="dropdown-trigger"
                 href='#'
                 data-activates="pages"
-                data-constrainwidth="false"
-                 data-beloworigin="true"
                 data-target="pages"
+                data-constrainwidth="false"
+                data-beloworigin="true"
               >
                 
                 Pages<i className="material-icons right">arrow_drop_down</i>

@@ -24,7 +24,6 @@ function Beautypage() {
           });
     }, []);
     
-
     return (
         <div>
             <Navbar />

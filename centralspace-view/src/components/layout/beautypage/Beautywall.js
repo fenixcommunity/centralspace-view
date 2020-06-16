@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 import '../../../resources/beautypage/css/startup-materialize.css'
 import './Beautypage.css'
-import Navbar from './components/transitions/Navbar';
+import Navbar from './components/phonewall/Navbar';
 import PhoneWall from './components/phonewall/PhoneWall';
 import Features from './components/transitions/Features';
 import Footer from './components/phonewall/Footer';
+import SlideOut from './components/SlideOut';
 
 function Beautywall() {
     useEffect(() => {
@@ -22,6 +23,7 @@ function Beautywall() {
     return (
         <div>
             <Navbar />
+            <SlideOut />
             <PhoneWall />
             <Features />
             <Footer />

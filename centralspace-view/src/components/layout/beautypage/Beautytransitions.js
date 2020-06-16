@@ -13,6 +13,7 @@ import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
 import Feature6 from './components/transitions/Feature6';
 import Footer from './components/transitions/Footer';
+import SlideOut from './components/SlideOut';
 
 function Beautytransitions() {
     useEffect(() => {
@@ -29,6 +30,7 @@ function Beautytransitions() {
     return (
         <div>
             <Navbar />
+            <SlideOut />
             <Header />
             <Features />
             <Pricing />
