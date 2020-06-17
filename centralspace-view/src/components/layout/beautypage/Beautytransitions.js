@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Features from './components/Features';
 import PricingTables from './components/transitions/PricingTables';
-import Blog from './components/transitions/Blog';
+import Blog from './components/Blog';
 import Feature1 from './components/transitions/Feature1';
 import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
@@ -32,7 +32,11 @@ function Beautytransitions() {
             <SlideOut />
             <Header />
             <Features isExtended={true} hasAnimation={true}/>
-            <Blog />
+
+{/* BLOG todo and about.html */}
+{/* the same way like features */}
+
+            <Blog isExtended={true} hasAnimation={true}/>
             <PricingTables />
             <Feature1 />
             <Feature3 />

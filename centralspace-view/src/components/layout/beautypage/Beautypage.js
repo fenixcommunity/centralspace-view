@@ -29,10 +29,10 @@ function Beautypage() {
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
-            <Features isExtended={false}/>
+            <Features isExtended={false} hasAnimation={false}/>
             <Clients />
             <PricingTables />
-            <Blog />
+            <Blog isExtended={false} hasAnimation={false}/>
             <GoogleMaps />
             <ContactUs />
             <Footer />

@@ -19,7 +19,8 @@ function Features(props) {
         <FeaturesBody hasAnimation={props.hasAnimation} />
       </div>
     </div>
-  ) : (
+  ) :
+   (
       <div className="container">
         <div className="row">
           {featureTitle}
