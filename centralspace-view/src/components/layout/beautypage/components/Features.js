@@ -1,69 +1,36 @@
 import React from "react";
+import FeaturesBody from "./FeaturesBody";
 
-function Features() {
-  return (
-    <div className="section valign-wrapper">
+function Features(props) {
+  const isExtended = props.isExtended;
+
+  const featureTitle = (
+    <div className="col s12">
+      <h2 className="section-title">Features</h2>
+    </div>
+  )
+
+  const featuresWrapper = isExtended ? (
+    <div className="row valign">
+      <div className="col s12 m10 offset-m1">
+        <div className="row">
+          {featureTitle}
+        </div>
+        <FeaturesBody hasAnimation={props.hasAnimation} />
+      </div>
+    </div>
+  ) : (
       <div className="container">
         <div className="row">
-          <div className="col s12">
-            <h2 className="section-title">Features</h2>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-light-bulb" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-bolt" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-rocket" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-settings" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-umbrella" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
-          <div className="col s12 m6 l4">
-            <h4>
-              <i className="icon-compass" />
-            </h4>
-            <p className="caption">
-              This is a cool feature about your product! It really separates
-              you from the crowd.
-              </p>
-          </div>
+          {featureTitle}
+          <FeaturesBody hasAnimation={props.hasAnimation} />
         </div>
       </div>
+    );
+
+  return (
+    <div className="section valign-wrapper">
+      {featuresWrapper}
     </div>
   );
 }

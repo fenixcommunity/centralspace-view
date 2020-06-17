@@ -29,7 +29,7 @@ function Beautypage() {
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
-            <Features />
+            <Features isExtended={false}/>
             <Clients />
             <PricingTables />
             <Blog />

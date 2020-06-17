@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pricing() {
+function PricingTables() {
   return (
     <div className="section black valign-wrapper">
       <div className="row valign">
@@ -148,4 +148,4 @@ function Pricing() {
   );
 }
 
-export default Pricing;
+export default PricingTables;

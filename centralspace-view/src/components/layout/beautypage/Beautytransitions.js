@@ -5,17 +5,15 @@ import './Beautypage.css'
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
-import Header from './components/transitions/Header';
-import Features from './components/transitions/Features';
-import Pricing from './components/transitions/Pricing';
+import Header from './components/Header';
+import Features from './components/Features';
+import PricingTables from './components/transitions/PricingTables';
 import Blog from './components/transitions/Blog';
 import Feature1 from './components/transitions/Feature1';
 import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
 import Feature6 from './components/transitions/Feature6';
-
-
 
 function Beautytransitions() {
     useEffect(() => {
@@ -28,15 +26,14 @@ function Beautytransitions() {
         });
     }, []);
 
-
     return (
         <div>
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
-            <Features />
-            <Pricing />
+            <Features isExtended={true} hasAnimation={true}/>
             <Blog />
+            <PricingTables />
             <Feature1 />
             <Feature3 />
             <Feature4 />
