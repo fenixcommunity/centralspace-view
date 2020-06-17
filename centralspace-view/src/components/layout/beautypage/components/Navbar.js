@@ -52,7 +52,7 @@ function Navbar(props) {
                         <a href="/beautytransitions">Element Transitions</a>
                     </li>
                     <li>
-                        <a className="active" href="/beautypage">Home</a>
+                        <a className="active" href="/beautypage">Beautypage</a>
                     </li>
                 </ul>
                 <a

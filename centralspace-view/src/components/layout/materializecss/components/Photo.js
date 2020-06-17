@@ -5,7 +5,7 @@ import natureImg from '../../../../resources/materializecss/project/img/nature.j
 
 function Photo() {
   const scrollspyRef = useRef(null);
-
+  
   useEffect(() => {
     M.AutoInit();
     let scrollspy = M.Sidenav.init(scrollspyRef.current, {});

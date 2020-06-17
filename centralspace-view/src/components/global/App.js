@@ -15,6 +15,7 @@ import Beautypage from '../layout/beautypage/Beautypage';
 import Beautyblog from '../layout/beautypage/Beautyblog';
 import Beautytransitions from '../layout/beautypage/Beautytransitions';
 import Beautywall from '../layout/beautypage/Beautywall';
+import Beautyteam from '../layout/beautypage/Beautyteam';
 import AddressList from '../address/AddressList';
 import ThemeContextProvider from '../../contexts/ThemeContext';
 
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Route exact path='/beautyblog' component={Beautyblog} />
           <Route exact path='/beautytransitions' component={Beautytransitions} />
           <Route exact path='/beautywall' component={Beautywall} />
+          <Route exact path='/beautyteam' component={Beautyteam} />
           <Route path='/contact' component={Contact} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />

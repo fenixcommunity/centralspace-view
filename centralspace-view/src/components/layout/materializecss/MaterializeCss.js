@@ -13,12 +13,12 @@ import Footer from './components/Footer';
 function MaterializeCss() {
     useEffect(() => {
         loadjs(['/materializecss/project/js/materialize.min.js', '/materializecss/project/css/materialize.min.css'],
-         'foobar',
-         {async: false, returnPromise: true });
+            'foobar',
+            { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function() { /* foo.js & bar.js loaded */ },
-            error: function() { /* foobar bundle load failed */ },
-          });
+            success: function () { /* foo.js & bar.js loaded */ },
+            error: function () { /* foobar bundle load failed */ },
+        });
     }, []);
 
     return (

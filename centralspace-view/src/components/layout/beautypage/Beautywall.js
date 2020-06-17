@@ -11,12 +11,12 @@ import SlideOut from './components/SlideOut';
 function Beautywall() {
     useEffect(() => {
         loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js'],
-         'foobar',
-         {async: false, returnPromise: true });
+            'foobar',
+            { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function() { /* foo.js & bar.js loaded */ },
-            error: function() { /* foobar bundle load failed */ },
-          });
+            success: function () { /* foo.js & bar.js loaded */ },
+            error: function () { /* foobar bundle load failed */ },
+        });
     }, []);
 
     return (

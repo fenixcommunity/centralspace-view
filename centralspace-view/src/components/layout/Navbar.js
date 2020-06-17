@@ -4,9 +4,7 @@ import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import { connect } from 'react-redux'
 
-
 function Navbar(props) {
-
   const { auth, profile, location } = props;
   const showNavbar = !location.pathname.includes('/materializecss') && !location.pathname.includes('/beauty');
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
