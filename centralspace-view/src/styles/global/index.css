@@ -35,9 +35,9 @@ html {
 
 
 
-input[type=text]:not(.browser-default):focus:not([readonly]),
+/* input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]), */
 /* 
 textarea.materialize-textarea:focus:not([readonly]){
   border-color: green;

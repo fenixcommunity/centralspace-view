@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 function Beautypage() {
     useEffect(() => {
-        loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js', 'trekkie.storefront.min.js'],
+        loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js'],
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
