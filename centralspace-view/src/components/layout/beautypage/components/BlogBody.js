@@ -10,6 +10,7 @@ function BlogBody(props) {
     const hasAnimation = props.hasAnimation;
     const hasAnimationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
     const animationDataDuration = hasAnimation ? 0 : 'none';
+    // we can also add custom attribute to html node custom-data=xxx
     return (
         <>
             <div className="col s12 center">

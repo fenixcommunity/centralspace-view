@@ -14,8 +14,8 @@ function Beautyblog() {
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function () { /* foo.js & bar.js loaded */ },
-            error: function () { /* foobar bundle load failed */ },
+            success: function () { console.log("scripts loading successed") },
+            error: function () { console.error("scripts loading failed") },
         });
     }, []);
 

@@ -15,12 +15,12 @@ import Footer from './components/Footer';
 
 function Beautypage() {
     useEffect(() => {
-        loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js'],
+        loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js', 'trekkie.storefront.min.js'],
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function () { /* foo.js & bar.js loaded */ },
-            error: function () { /* foobar bundle load failed */ },
+            success: function () { console.log("scripts loading successed") },
+            error: function () { console.error("scripts loading failed") },
         });
     }, []);
 

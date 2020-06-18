@@ -21,8 +21,8 @@ function Beautytransitions() {
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function () { /* foo.js & bar.js loaded */ },
-            error: function () { /* foobar bundle load failed */ },
+            success: function () { console.log("scripts loading successed") },
+            error: function () { console.error("scripts loading failed") },
         });
     }, []);
 
@@ -33,8 +33,6 @@ function Beautytransitions() {
             <Header />
             <Features isExtended={true} hasAnimation={true}/>
 
-{/* BLOG todo and about.html */}
-{/* the same way like features */}
 
             <Blog isExtended={true} hasAnimation={true}/>
             <PricingTables />
