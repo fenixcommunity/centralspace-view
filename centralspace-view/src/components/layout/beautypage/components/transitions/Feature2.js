@@ -1,6 +1,6 @@
 import React from "react";
 
-function Feature6() {
+function Feature2() {
   return (
     <div className="section black full-height">
       <div className="container">
@@ -53,4 +53,4 @@ function Feature6() {
 
 }
 
-export default Feature6;
+export default Feature2;

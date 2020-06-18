@@ -7,13 +7,13 @@ import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Features from './components/Features';
-import PricingTables from './components/transitions/PricingTables';
+import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import Feature1 from './components/transitions/Feature1';
+import Feature2 from './components/transitions/Feature2';
 import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
-import Feature6 from './components/transitions/Feature6';
 
 function Beautytransitions() {
     useEffect(() => {
@@ -35,12 +35,12 @@ function Beautytransitions() {
 
 
             <Blog isExtended={true} hasAnimation={true}/>
-            <PricingTables />
+            <PricingTables isExtended={true}  hasAnimation={true}/>
             <Feature1 />
+            <Feature2 />
             <Feature3 />
             <Feature4 />
             <Feature5 />
-            <Feature6 />
             <Footer />
         </div>
     )
