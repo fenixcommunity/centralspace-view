@@ -1,4 +1,5 @@
 import React from "react";
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
 
 function Feature1() {
   return (
@@ -38,7 +39,7 @@ function Feature1() {
                 <div
                   className="image-container default"
                   style={{
-                    backgroundImage: "url(http://placehold.it/530x990)"
+                    backgroundImage: `url(${poly1})`
                   }}
                 />
               </div>

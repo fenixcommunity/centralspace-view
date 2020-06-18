@@ -27,7 +27,6 @@ function Navbar(props) {
                             data-constrainwidth="false"
                             data-beloworigin="true"
                         >
-
                             Pages<i className="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>
@@ -45,14 +44,14 @@ function Navbar(props) {
                     </li>
                 </ul>
                 <ul id="pages" className="dropdown-content">
+                <li>
+                        <a className="active" href="/beautypage">Beautypage</a>
+                    </li>
                     <li>
                         <a href="/beautywall">Phone Wall</a>
                     </li>
                     <li>
                         <a href="/beautytransitions">Element Transitions</a>
-                    </li>
-                    <li>
-                        <a className="active" href="/beautypage">Beautypage</a>
                     </li>
                 </ul>
                 <a

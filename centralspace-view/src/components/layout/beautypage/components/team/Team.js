@@ -1,4 +1,7 @@
 import React from "react";
+import avatar1 from '../../../../../resources/beautypage/images/people/avatar1.jpg';
+import avatar2 from '../../../../../resources/beautypage/images/people/avatar2.jpg';
+import avatar3 from '../../../../../resources/beautypage/images/people/avatar3.jpg';
 
 class Team extends React.Component {
   render() {
@@ -15,7 +18,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar1} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -26,7 +29,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar2} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -37,7 +40,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar3} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -60,7 +63,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar1} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -71,7 +74,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar2} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -82,7 +85,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar3} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -105,7 +108,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar1} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -116,7 +119,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar2} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">
@@ -127,7 +130,7 @@ class Team extends React.Component {
                   <div className="col s12 m4">
                     <div className="avatar-wrapper">
                       <span className="avatar">
-                        <img src="http://placehold.it/256x256" alt="" />
+                        <img src={avatar3} alt="" />
                       </span>
                     </div>
                     <div className="avatar-name">

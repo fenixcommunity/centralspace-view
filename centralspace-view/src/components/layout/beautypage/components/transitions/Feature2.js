@@ -1,4 +1,7 @@
 import React from "react";
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
+
 
 function Feature2() {
   return (
@@ -22,7 +25,7 @@ function Feature2() {
                 <div
                   className="image-container default"
                   style={{
-                    backgroundImage: "url(http://placehold.it/530x990)"
+                    backgroundImage: `url(${poly6})`
                   }}
                 />
               </div>
@@ -31,7 +34,7 @@ function Feature2() {
                 <div
                   className="image-container default"
                   style={{
-                    backgroundImage: "url(http://placehold.it/530x990)"
+                    backgroundImage: `url(${poly3})`
                   }}
                 />
               </div>
@@ -40,7 +43,7 @@ function Feature2() {
                 <div
                   className="image-container default"
                   style={{
-                    backgroundImage: "url(http://placehold.it/530x990)"
+                    backgroundImage: `url(${poly3})`
                   }}
                 />
               </div>

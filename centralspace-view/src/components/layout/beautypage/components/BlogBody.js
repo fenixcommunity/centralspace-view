@@ -1,10 +1,10 @@
 import React from "react";
-import poly1 from '../../../../resources/beautypage/images/poly1.jpg';
-import poly2 from '../../../../resources/beautypage/images/poly2.jpg';
-import poly3 from '../../../../resources/beautypage/images/poly3.jpg';
-import poly4 from '../../../../resources/beautypage/images/poly4.jpg';
-import poly5 from '../../../../resources/beautypage/images/poly5.jpg';
-import poly6 from '../../../../resources/beautypage/images/poly6.jpg';
+import poly1 from '../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly2 from '../../../../resources/beautypage/images/blog/poly2.jpg';
+import poly3 from '../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly4 from '../../../../resources/beautypage/images/blog/poly4.jpg';
+import poly5 from '../../../../resources/beautypage/images/blog/poly5.jpg';
+import poly6 from '../../../../resources/beautypage/images/blog/poly6.jpg';
 
 function BlogBody(props) {
     const hasAnimation = props.hasAnimation;

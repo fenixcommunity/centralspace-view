@@ -1,10 +1,9 @@
 import React from "react";
-import poly1 from '../../../../../resources/beautypage/images/poly1.jpg';
-import poly2 from '../../../../../resources/beautypage/images/poly2.jpg';
-import poly3 from '../../../../../resources/beautypage/images/poly3.jpg';
-import poly4 from '../../../../../resources/beautypage/images/poly4.jpg';
-import poly5 from '../../../../../resources/beautypage/images/poly5.jpg';
-import poly6 from '../../../../../resources/beautypage/images/poly6.jpg';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
+import avatar1 from '../../../../../resources/beautypage/images/people/avatar1.jpg';
+import avatar2 from '../../../../../resources/beautypage/images/people/avatar2.jpg';
+import avatar3 from '../../../../../resources/beautypage/images/people/avatar3.jpg';
 
 function Blog() {
   return (
@@ -98,7 +97,7 @@ function Blog() {
           <div className="divider" />
           <div className="avatar-wrapper">
             <div className="avatar">
-              <img src="http://placehold.it/128x128" alt="" />
+              <img src={avatar1} alt="" />
             </div>
           </div>
           <div className="author">
@@ -118,7 +117,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                    <img src="http://placehold.it/128x128" alt="" />
+                  <img src={avatar2} alt="" />
                   </span>
                 </span>
                 <span className="title">The Greatest Blog Article</span>
@@ -129,7 +128,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                    <img src="http://placehold.it/128x128" alt="" />
+                  <img src={avatar3} alt="" />
                   </span>
                 </span>
                 <span className="title">Interesting New Technology</span>
@@ -140,7 +139,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                    <img src="http://placehold.it/128x128" alt="" />
+                  <img src={avatar1} alt="" />
                   </span>
                 </span>
                 <span className="title">Just a Quick Update</span>
@@ -151,7 +150,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                    <img src="http://placehold.it/128x128" alt="" />
+                  <img src={avatar2} alt="" />
                   </span>
                 </span>
                 <span className="title">First Blog Post!</span>

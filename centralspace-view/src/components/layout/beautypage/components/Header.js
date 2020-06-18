@@ -1,12 +1,10 @@
 import React from "react";
-import img from '../../../../resources/beautypage/images/1440x90.png';
-import img2 from '../../../../resources/beautypage/images/trees.jpg';
+import img from '../../../../resources/beautypage/images/background.jpg';
 
 function Header() {
   return (
     <div className="section header">
-      <img className="background" src={img2} />
-      {/* <img className="background" src={img} alt="picture" /> */}
+      <img className="background" src={img} />
       <div className="header-wrapper row valign-wrapper">
         <div className="col s12">
           <h1>Basic Elements!</h1>

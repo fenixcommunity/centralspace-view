@@ -4,8 +4,8 @@ import '../../../resources/beautypage/css/startup-materialize.css'
 import './Beautypage.css'
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
-import Header from './components/Header';
 import Footer from './components/Footer';
+import TeamHeader from './components/team/TeamHeader';
 import Team from './components/team/Team';
 
 function Beautyteam() {
@@ -23,7 +23,7 @@ function Beautyteam() {
         <div>
             <Navbar isNavbarSolidTransition={true} isDarkMode={true} />
             <SlideOut />
-            <Header />
+            <TeamHeader />
             <Team />
             <Footer />
         </div>
