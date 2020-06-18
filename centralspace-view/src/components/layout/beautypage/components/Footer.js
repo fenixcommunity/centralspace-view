@@ -12,7 +12,7 @@ function Footer() {
               src={logo}
               alt="img"
             />
-            <p>Made with love by Materialize.</p>
+            <p>Made by Max K.</p>
           </div>
           <div className="col s6 m3">
             <h5>About</h5>

@@ -7,9 +7,9 @@ function Header() {
       <img className="background" src={img} />
       <div className="header-wrapper row valign-wrapper">
         <div className="col s12">
-          <h1>Basic Elements!</h1>
+          <h1>Beauty Page</h1>
           <span className="tagline">
-            Show off your business in a whole new way.
+            Take some motion in your life!
             </span>
           <button className="read-more">
             <i className="icon-caret-down" />

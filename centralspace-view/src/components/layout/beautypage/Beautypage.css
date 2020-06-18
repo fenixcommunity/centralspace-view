@@ -25,3 +25,11 @@ button {
       border-color: rgba(255, 255, 255, 0.5);
       border-width: 2px;
   }
+
+  nav .nav-wrapper i {
+    line-height: inherit;
+  }
+
+  .top-media-icon button {
+      background-color: rgb(29, 233, 195) !important;
+  }

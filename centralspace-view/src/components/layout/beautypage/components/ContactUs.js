@@ -88,14 +88,32 @@ function ContactUs() {
             </div>
 
             <div className="input-field col s12">
-              <a className="waves-effect waves-light btn-large">Button</a>
+              <button
+                id="reset"
+                className="btn waves-effect waves-light grey"
+                type="button"
+                name="reset"
+              >
+                Reset
+              <i className="material-icons right">clear_all</i>
+              </button>
+              <span id="status" />
+              <button
+                id="save"
+                className="btn waves-effect waves-light"
+                type="submit"
+                name="action"
+              >
+                Save
+               <i className="material-icons right">send</i>
+              </button>
             </div>
 
           </div>
         </form>
       </div>
     </div>
-    
+
   );
 }
 

@@ -16,7 +16,7 @@ function Navbar(props) {
     return (
         <nav className={`navbar ${navbarStyle} ${navbarSolidTransitionStyle}`}>
             <div className="nav-wrapper">
-                <a href="horizontal-half.html" className="brand-logo">
+                <a href="/beautypage" className="brand-logo">
                     <i className={`icon-diamond ${textStyle}`} />
                 </a>
                 <ul id="mobile-menu" className="right hide-on-med-and-down">
@@ -45,6 +45,75 @@ function Navbar(props) {
                     <li>
                         <a href="#">Sign Up</a>
                     </li>
+                    <li>
+              <a
+                href="#"
+                className="tooltipped"
+                data-position="bottom"
+                data-tooltip="Instagram"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="tooltipped"
+                data-position="bottom"
+                data-tooltip="Facebook"
+              >
+                <i className="fab fa-facebook" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="tooltipped"
+                data-position="bottom"
+                data-tooltip="Twitter"
+              >
+                <i className="fab fa-twitter" />
+              </a>
+
+
+
+            </li>
+
+            <li className="top-media-icon">
+              <button
+                href="#"
+                className="tooltipped btn-floating btn-small"
+                data-position="bottom"
+                data-tooltip="Instagram"
+              >
+                <i className="fab fa-instagram" />
+              </button>
+            </li>
+            <li className="top-media-icon">
+              <button
+                href="#"
+                className="tooltipped btn-floating btn-small"
+                data-position="bottom"
+                data-tooltip="Facebook"
+              >
+                <i className="fab fa-facebook" />
+              </button>
+            </li>
+            <li className="top-media-icon">
+              <button
+                href="#"
+                className="tooltipped btn-floating btn-small"
+                data-position="bottom"
+                data-tooltip="Twitter"
+              >
+                <i className="fab fa-twitter" />
+              </button>
+            </li>
+
+
+
+
+                    
                 </ul>
                 <ul id="pages" className="dropdown-content">
                 <li>
