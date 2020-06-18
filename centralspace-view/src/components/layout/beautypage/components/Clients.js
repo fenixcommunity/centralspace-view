@@ -1,4 +1,10 @@
 import React from "react";
+import dribbble from '../../../../resources/beautypage/images/clients/dribbble.png';
+import google from '../../../../resources/beautypage/images/clients/google.png';
+import medium from '../../../../resources/beautypage/images/clients/medium.png';
+import messenger from '../../../../resources/beautypage/images/clients/messenger.png';
+import pinterest from '../../../../resources/beautypage/images/clients/pinterest.png';
+import snapchat from '../../../../resources/beautypage/images/clients/snapchat.png';
 
 function Clients() {
   return (
@@ -10,7 +16,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client white">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={google}
             alt="google"
           />
           <span className="title">Google</span>
@@ -18,7 +24,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client yellow">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={snapchat}
             alt="snapchat"
           />
           <span className="title">Snapchat</span>
@@ -26,7 +32,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client light-blue lighten-4">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={messenger}
             alt="messenger"
           />
           <span className="title">Messenger</span>
@@ -34,7 +40,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client red lighten-4">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={pinterest}
             alt="pinterest"
           />
           <span className="title">Pinterest</span>
@@ -42,7 +48,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client pink accent-1">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={dribbble}
             alt="dribbble"
           />
           <span className="title">Dribbble</span>
@@ -50,7 +56,7 @@ function Clients() {
         <a href="#!" className="col s12 m6 l4 client green accent-3">
           <img
             className="logo"
-            src="http://placehold.it/128x128"
+            src={medium}
             alt="medium"
           />
           <span className="title">Medium</span>

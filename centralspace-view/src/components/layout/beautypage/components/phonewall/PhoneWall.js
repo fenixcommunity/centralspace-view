@@ -1,6 +1,13 @@
 import React from "react";
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly4 from '../../../../../resources/beautypage/images/blog/poly4.jpg';
+import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
+import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
 
 function PhoneWall() {
+  //TODO FOR EACH!
   return (
     <div className="phone-wall-intro header white full-height">
       <div className="header-background" />
@@ -23,7 +30,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly1})`
                 }}
               />
             </div>
@@ -32,7 +39,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly2})`
                 }}
               />
             </div>
@@ -41,65 +48,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-          </div>
-          <div className="column-one">
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-          </div>
-          <div className="column-two">
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
-                }}
-              />
-            </div>
-            <div className="phone-preview-sizer">
-              <div className="phone-preview" />
-              <div
-                className="image-container default"
-                style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly3})`
                 }}
               />
             </div>
@@ -110,7 +59,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly4})`
                 }}
               />
             </div>
@@ -119,7 +68,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly5})`
                 }}
               />
             </div>
@@ -128,7 +77,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly6})`
                 }}
               />
             </div>
@@ -139,7 +88,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly1})`
                 }}
               />
             </div>
@@ -148,7 +97,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly2})`
                 }}
               />
             </div>
@@ -157,7 +106,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly3})`
                 }}
               />
             </div>
@@ -168,7 +117,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly4})`
                 }}
               />
             </div>
@@ -177,7 +126,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly5})`
                 }}
               />
             </div>
@@ -186,7 +135,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly6})`
                 }}
               />
             </div>
@@ -197,7 +146,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly1})`
                 }}
               />
             </div>
@@ -206,7 +155,7 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly2})`
                 }}
               />
             </div>
@@ -215,7 +164,65 @@ function PhoneWall() {
               <div
                 className="image-container default"
                 style={{
-                  backgroundImage: "url(http://placehold.it/530x990)"
+                  backgroundImage: `url(${poly3})`
+                }}
+              />
+            </div>
+          </div>
+          <div className="column-one">
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly4})`
+                }}
+              />
+            </div>
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly5})`
+                }}
+              />
+            </div>
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly6})`
+                }}
+              />
+            </div>
+          </div>
+          <div className="column-two">
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly1})`
+                }}
+              />
+            </div>
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly2})`
+                }}
+              />
+            </div>
+            <div className="phone-preview-sizer">
+              <div className="phone-preview" />
+              <div
+                className="image-container default"
+                style={{
+                  backgroundImage: `url(${poly3})`
                 }}
               />
             </div>

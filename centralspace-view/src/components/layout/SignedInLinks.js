@@ -27,7 +27,7 @@ function SignedInLinks(props) {
 
     return (
         <div>
-            <ul id="dropdown1" className="dropdown-content">
+            <ul id="dropdown" className="dropdown-content">
                 <li><a href="#!">one</a></li>
                 <li><a href="#!">two</a></li>
                 <li className="divider"></li>
@@ -44,7 +44,7 @@ function SignedInLinks(props) {
                     {props.profile.initials}
                 </NavLink>
                 </li>
-                <li><a className="dropdown-trigger" ref={dropdownRef} data-target="dropdown1"><i className="material-icons">more_vert</i></a></li>
+                <li><a className="dropdown-trigger" ref={dropdownRef} data-target="dropdown"><i className="material-icons">more_vert</i></a></li>
             </ul>
         </div>
     )
