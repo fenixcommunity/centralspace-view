@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import loadjs from 'loadjs';
-import '../../../resources/beautypage/css/startup-materialize.css'
+import '../../../resources/beautypage/css/startup-materialize.css' //TODO remove unused classes 
 import './Beautypage.css'
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
@@ -11,6 +11,7 @@ import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import GoogleMaps from './components/GoogleMaps';
 import ContactUs from './components/ContactUs';
+import ContactUs2 from './components/ContactUs2';
 import Footer from './components/Footer';
 
 function Beautypage() {
@@ -24,13 +25,13 @@ function Beautypage() {
         });
     }, []);
 
-//     about.html
-// https://materialize-shopify-themes.myshopify.com/collections/dark-theme
-// https://materialize-shopify-themes.myshopify.com/account/register
-// https://github.com/materializegallery/materialize-gallery-theme
-// https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
-// https://github.com/luisolf/materialize-autocomplete
-// file:///C:/Projects/MK/helpers/templates%20css/Materialize-stepper/docs/index.html
+    about.html
+https://materialize-shopify-themes.myshopify.com/collections/dark-theme
+https://materialize-shopify-themes.myshopify.com/account/register
+https://github.com/materializegallery/materialize-gallery-theme
+https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
+https://github.com/luisolf/materialize-autocomplete
+file:///C:/Projects/MK/helpers/templates%20css/Materialize-stepper/docs/index.html
 
     return (
         <div>
@@ -43,6 +44,7 @@ function Beautypage() {
             <Blog isExtended={false} hasAnimation={false}/>
             <GoogleMaps />
             <ContactUs />
+            <ContactUs2 />
             <Footer />
         </div>
     )

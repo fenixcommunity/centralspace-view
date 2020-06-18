@@ -11,3 +11,17 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+button {
+    margin-right: 10px;
+  }
+
+  .select-wrapper .caret {
+      display: none;
+  }
+
+  .select-wrapper input.select-dropdown {
+      border-bottom:  1px solid #9e9e9e;
+      border-color: rgba(255, 255, 255, 0.5);
+      border-width: 2px;
+  }
