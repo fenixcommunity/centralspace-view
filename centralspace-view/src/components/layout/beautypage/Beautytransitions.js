@@ -32,8 +32,6 @@ function Beautytransitions() {
             <SlideOut />
             <Header />
             <Features isExtended={true} hasAnimation={true}/>
-
-
             <Blog isExtended={true} hasAnimation={true}/>
             <PricingTables isExtended={true}  hasAnimation={true}/>
             <Feature1 />

@@ -6,10 +6,9 @@ import M from 'materialize-css/dist/js/materialize.js';
 
 // props in functional, in component we add this.props
 function SignedInLinks(props) {
-    const innerRef = useRef(null);
+    const dropdownRef = useRef(null);
     useEffect(() => {
-        let dropdownRef = innerRef.current;
-        let dropdown = M.Dropdown.init(dropdownRef, {});
+        let dropdown = M.Dropdown.init(dropdownRef.current, {});
         // const openDropdown = (e) => {
         //     // dropdown.open();
         // };
@@ -45,7 +44,7 @@ function SignedInLinks(props) {
                     {props.profile.initials}
                 </NavLink>
                 </li>
-                <li><a className="dropdown-trigger" ref={innerRef} data-target="dropdown1"><i className="material-icons">more_vert</i></a></li>
+                <li><a className="dropdown-trigger" ref={dropdownRef} data-target="dropdown1"><i className="material-icons">more_vert</i></a></li>
             </ul>
         </div>
     )

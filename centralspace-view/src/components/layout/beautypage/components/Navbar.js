@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 
 function Navbar(props) {
+    const dropdownRef = useRef(null);
     useEffect(() => {
-        M.AutoInit();
+        let dropdown = M.Dropdown.init(dropdownRef.current, {});
+        // M.AutoInit();
     }, []);
 
     const darkMode = props.isDarkMode;
@@ -26,6 +28,7 @@ function Navbar(props) {
                             data-target="pages"
                             data-constrainwidth="false"
                             data-beloworigin="true"
+                            ref={dropdownRef}
                         >
                             Pages<i className="material-icons right">arrow_drop_down</i>
                         </a>
