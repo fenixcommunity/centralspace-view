@@ -35,38 +35,6 @@ function ContactForm() {
         <div className="col s12 l5 offset-l2">
           <form>
             <div className="input-field">
-              <p>Services required:</p>
-              <p>
-                <label>
-                  <input
-                    name="groupradio"
-                    type="radio"
-                    defaultValue="Red"
-                    defaultChecked
-                  />
-                  <span>Red</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input name="groupradio" type="radio" defaultValue="Yellow" />
-                  <span>Yellow</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    className="with-gap"
-                    name="groupradio"
-                    type="radio"
-                    defaultValue="Green"
-                  />
-                  <span>Green</span>
-                </label>
-              </p>
-            </div>
-
-            <div className="input-field">
               <p>Options Select: </p>
               {/* or <label>Options Select</label> */}
               <select name="optionselect" id="color">
@@ -94,65 +62,14 @@ function ContactForm() {
               />
               <label htmlFor="message">Your Message</label>
             </div>
+
             <div className="input-field">
               <i className="material-icons prefix">date_range</i>
               <input type="text" id="date" className="datepicker" ref={datepickerRef} />
               <label htmlFor="date">Choose a date you need me for...</label>
             </div>
-            <div className="input-field">
-              <p>Services required:</p>
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Photo Editing</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="filledin"
-                    defaultValue="filledin"
-                    className="filled-in"
-                    defaultChecked="checked"
-                  />
-                  <span>Filled in</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    type="checkbox"
-                    defaultChecked="checked"
-                    disabled="disabled"
-                    defaultValue="Green"
-                  />
-                  <span>Green</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    type="checkbox"
-                    disabled="disabled"
-                    defaultValue="disabled"
-                  />
-                  <span>Brown</span>
-                </label>
-              </p>
-
-            </div>
-            <div className="input-field center">
-
-              <button
-                id="reset"
-                className="btn waves-effect waves-light grey"
-                type="button"
-                name="reset"
-              >
-                Reset
-            <i className="material-icons right">clear_all</i>
-              </button>
+            
+            <div className="input-field left">
               <span id="status" />
               <button
                 id="save"

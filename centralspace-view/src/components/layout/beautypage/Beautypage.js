@@ -11,7 +11,9 @@ import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import GoogleMaps from './components/GoogleMaps';
 import ContactUs from './components/ContactUs';
+import StarsParallax from './components/StarsParallax';
 import ContactUs2 from './components/ContactUs2';
+import ScrollspySection from './components/ScrollspySection';
 import Footer from './components/Footer';
 
 function Beautypage() {
@@ -44,7 +46,9 @@ file:///C:/Projects/MK/helpers/templates%20css/Materialize-stepper/docs/index.ht
             <Blog isExtended={false} hasAnimation={false}/>
             <GoogleMaps />
             <ContactUs />
+            <StarsParallax />
             <ContactUs2 />
+            <ScrollspySection />
             <Footer />
         </div>
     )

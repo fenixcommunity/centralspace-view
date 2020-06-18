@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from "react";
 import '../../../../resources/beautypage/css/radiobutton.css';
 
 function ContactUs2() {
-  useEffect(() => {
-  }, []);
   return (
     <div className="light valign-wrapper">
       <div className="container">
@@ -42,6 +40,51 @@ function ContactUs2() {
               </p>
             </div>
 
+            <div className="col s12">
+              {/* <div className="input-field"> */}
+                <p>Services required:</p>
+                <p>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Photo Editing</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="filledin"
+                      defaultValue="filledin"
+                      className="filled-in"
+                      defaultChecked="checked"
+                    />
+                    <span>Filled in</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      defaultChecked="checked"
+                      disabled="disabled"
+                      defaultValue="Green"
+                    />
+                    <span>Green</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      disabled="disabled"
+                      defaultValue="disabled"
+                    />
+                    <span>Brown</span>
+                  </label>
+                </p>
+              {/* </div> */}
+            </div>
+
             <div className="input-field col s12">
               <a className="waves-effect waves-light btn-large">Button</a>
             </div>
@@ -50,7 +93,6 @@ function ContactUs2() {
         </form>
       </div>
     </div>
-
   );
 }
 
