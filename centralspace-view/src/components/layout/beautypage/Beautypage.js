@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import loadjs from 'loadjs';
-import '../../../resources/beautypage/css/startup-materialize.css' //TODO remove unused classes 
-import './Beautypage.css'
+import React from "react";
+import '../../../resources/beautypage/css/startup-materialize.css';
+import './Beautypage.css';
+import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
 import Header from './components/Header';
@@ -17,17 +17,8 @@ import ScrollspySection from './components/ScrollspySection';
 import Footer from './components/Footer';
 
 function Beautypage() {
-    useEffect(() => {
-        loadjs(['/beautypage/js/materialize.min.js', '/beautypage/js/startup.js', '/beautypage/js/init.js'],
-            'foobar',
-            { async: false, returnPromise: true });
-        loadjs.ready('foobar', {
-            success: function () { console.log("scripts loading successed") },
-            error: function () { console.error("scripts loading failed") },
-        });
-    }, []);
-
     //     about.html
+
     // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
     // https://materialize-shopify-themes.myshopify.com/account/register
     // https://github.com/materializegallery/materialize-gallery-theme
@@ -40,6 +31,7 @@ function Beautypage() {
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
+
             <Features isExtended={false} hasAnimation={false} />
             <Clients />
             <PricingTables isExtended={false} hasAnimation={false} />
@@ -49,6 +41,8 @@ function Beautypage() {
             <StarsParallax />
             <ContactUs2 />
             <ScrollspySection />
+
+            <BeautypageScriptsLoader />
             <Footer />
         </div>
     )

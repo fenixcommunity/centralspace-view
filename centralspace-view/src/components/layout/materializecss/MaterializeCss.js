@@ -28,11 +28,13 @@ function MaterializeCss() {
     return (
         <div>
             <Navbar />
+            
             <Photo />
             <Parallax1 /> {/* works only when we will romove startup-materialize style, but it main styles for beautypage */}
             <Services />
             <Parallax2 /> {/* works only when we will romove startup-materialize style, but it main styles for beautypage*/}
             <ContactForm />
+
             <Footer />
         </div>
     )

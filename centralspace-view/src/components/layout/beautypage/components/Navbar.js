@@ -40,7 +40,10 @@ function Navbar(props) {
             <a href="/beautyteam">Team</a>
           </li>
           <li>
-            <a href="/">Main App</a>
+            <a href="/beautytransitions">Transitions</a>
+          </li>
+          <li>
+            <a href="/beautywall">Phone Wall</a>
           </li>
           <li>
             <a href="#">Sign Up</a>
@@ -111,16 +114,13 @@ function Navbar(props) {
         </ul>
         <ul id="pages" className="dropdown-content">
           <li>
+            <a href="/">Main App</a>
+          </li>
+          <li>
             <a className="active" href="/beautypage">Beautypage</a>
           </li>
           <li>
             <a href="/materializecss">Materialize Css</a>
-          </li>
-          <li>
-            <a href="/beautywall">Phone Wall</a>
-          </li>
-          <li>
-            <a href="/beautytransitions">Element Transitions</a>
           </li>
         </ul>
         <a
