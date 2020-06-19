@@ -1,14 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import M from 'materialize-css/dist/js/materialize.js';
+import React from "react";
 
 function Navbar() {
-  const sidenavRef = useRef(null);
-
-  useEffect(() => {
-    M.AutoInit();
-    let sidenav = M.Sidenav.init(sidenavRef.current, {});
-  }, []);
-
+ 
   return (
     <header>
       <nav className="nav-wrapper transparent">
@@ -20,7 +13,9 @@ function Navbar() {
             <i className="material-icons">menu</i>
           </a>
           <ul className="right hide-on-med-and-down">
-
+          <li>
+              <a href="/beautypage">Beauty Page</a>
+            </li>
             <li>
               <a href="/materializecss/training/index.html">Training</a>
             </li>
@@ -64,7 +59,7 @@ function Navbar() {
               </a>
             </li>
           </ul>
-          <ul className="sidenav grey lighten-2" id="mobile-menu" ref={sidenavRef}>
+          <ul className="sidenav grey lighten-2" id="mobile-menu">
             <li>
               <a href="#">Photo's</a>
             </li>

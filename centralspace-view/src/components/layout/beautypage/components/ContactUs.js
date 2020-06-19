@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '../../../../resources/beautypage/css/datapicker.css';
 import '../../../../resources/beautypage/css/radiobutton.css';
-// import '../../../../resources/beautypage/css/materializenew.css'; //remove after
+// import '../../../../resources/beautypage/css/materializenew.css'; //remove after test
 import M from 'materialize-css/dist/js/materialize.js';
 
 function ContactUs() {

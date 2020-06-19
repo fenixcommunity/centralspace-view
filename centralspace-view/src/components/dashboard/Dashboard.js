@@ -5,7 +5,6 @@ import { compose } from 'redux';
 import StyleWrapper from '../../hoc/StyleWrapper';
 import Notifications from './Notifications';
 import AccountsPanel from '../account/AccountsPanel';
-import Loader from '../global/Loader'
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -26,7 +25,6 @@ class Dashboard extends React.Component {
                         <Notifications notifications={notifications} />
                     </div>
                 </div>
-                <Loader />
             </div>
         )
     }

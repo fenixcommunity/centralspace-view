@@ -8,26 +8,30 @@ import Services from './components/Services';
 import Parallax2 from './components/Parallax2';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import M from 'materialize-css/dist/js/materialize.js';
 
 // works also for mobile
 function MaterializeCss() {
     useEffect(() => {
-        loadjs(['/materializecss/project/js/materialize.min.js', '/materializecss/project/css/materialize.min.css'],
+        loadjs(['/materializecss/project/css/materialize.min.css'],
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
-            success: function () { console.log("scripts loading successed") },
+            success: function () {
+                M.AutoInit();
+            },
             error: function () { console.error("scripts loading failed") },
         });
+
     }, []);
 
     return (
         <div>
             <Navbar />
             <Photo />
-            <Parallax1 />
+            <Parallax1 /> {/* works only when we will romove startup-materialize style, but it main styles for beautypage */}
             <Services />
-            <Parallax2 />
+            <Parallax2 /> {/* works only when we will romove startup-materialize style, but it main styles for beautypage*/}
             <ContactForm />
             <Footer />
         </div>

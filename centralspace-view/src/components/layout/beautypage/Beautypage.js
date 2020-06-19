@@ -27,23 +27,23 @@ function Beautypage() {
         });
     }, []);
 
-    about.html
-https://materialize-shopify-themes.myshopify.com/collections/dark-theme
-https://materialize-shopify-themes.myshopify.com/account/register
-https://github.com/materializegallery/materialize-gallery-theme
-https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
-https://github.com/luisolf/materialize-autocomplete
-file:///C:/Projects/MK/helpers/templates%20css/Materialize-stepper/docs/index.html
+    //     about.html
+    // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
+    // https://materialize-shopify-themes.myshopify.com/account/register
+    // https://github.com/materializegallery/materialize-gallery-theme
+    // https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
+    // https://github.com/luisolf/materialize-autocomplete
+    // file:///C:/Projects/MK/helpers/templates%20css/Materialize-stepper/docs/index.html
 
     return (
         <div>
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
             <Header />
-            <Features isExtended={false} hasAnimation={false}/>
+            <Features isExtended={false} hasAnimation={false} />
             <Clients />
-            <PricingTables isExtended={false}  hasAnimation={false}/>
-            <Blog isExtended={false} hasAnimation={false}/>
+            <PricingTables isExtended={false} hasAnimation={false} />
+            <Blog isExtended={false} hasAnimation={false} />
             <GoogleMaps />
             <ContactUs />
             <StarsParallax />

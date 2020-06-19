@@ -37,8 +37,8 @@ function ContactForm() {
             <div className="input-field">
               <p>Options Select: </p>
               {/* or <label>Options Select</label> */}
-              <select name="optionselect" id="color">
-                <option value disabled selected>
+              <select name="optionselect" id="color" defaultValue={0}>
+                <option value={0} disabled={true}>
                   Choose your option
               </option>
                 <option value={1}>Option 1</option>

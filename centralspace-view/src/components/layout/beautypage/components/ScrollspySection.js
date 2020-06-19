@@ -7,7 +7,7 @@ return(
 <section className="section container scrollspy" id="services">
 <div className="row">
   <div className="col s12 l4">
-    <h2 class="section-title">What I do..</h2>
+    <h2 className="section-title">What I do..</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.

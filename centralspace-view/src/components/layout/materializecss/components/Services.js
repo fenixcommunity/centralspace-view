@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 
 function Services() {
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
 
   return (
     <section className="section container scrollspy" id="services">

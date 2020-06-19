@@ -1,18 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import M from 'materialize-css/dist/js/materialize.js';
+import React from "react";
 import cityImg from '../../../../resources/materializecss/project/img/city.jpg';
 import natureImg from '../../../../resources/materializecss/project/img/nature.jpg';
 
 function Photo() {
-  const scrollspyRef = useRef(null);
-  
-  useEffect(() => {
-    M.AutoInit();
-    let scrollspy = M.Sidenav.init(scrollspyRef.current, {});
-  }, []);
 
   return (
-    <section className="container section scrollspy" id="photos" ref={scrollspyRef}>
+    <section className="container section scrollspy" id="photos">
       <div className="row">
         <div className="col s12 l4">
           <img
