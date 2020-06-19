@@ -3,7 +3,7 @@ import '../../../../resources/beautypage/css/radiobutton.css';
 
 function ContactUs2() {
   return (
-    <div className="light valign-wrapper">
+    <div className="valign-wrapper">
       <div className="container">
         <form>
           <div className="row">

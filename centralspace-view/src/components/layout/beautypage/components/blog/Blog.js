@@ -117,7 +117,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                  <img src={avatar2} alt="" />
+                    <img src={avatar2} alt="" />
                   </span>
                 </span>
                 <span className="title">The Greatest Blog Article</span>
@@ -128,7 +128,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                  <img src={avatar3} alt="" />
+                    <img src={avatar3} alt="" />
                   </span>
                 </span>
                 <span className="title">Interesting New Technology</span>
@@ -139,7 +139,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                  <img src={avatar1} alt="" />
+                    <img src={avatar1} alt="" />
                   </span>
                 </span>
                 <span className="title">Just a Quick Update</span>
@@ -150,7 +150,7 @@ function Blog() {
               <a href="#!">
                 <span className="avatar-wrapper">
                   <span className="avatar">
-                  <img src={avatar2} alt="" />
+                    <img src={avatar2} alt="" />
                   </span>
                 </span>
                 <span className="title">First Blog Post!</span>
@@ -159,6 +159,96 @@ function Blog() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="container">
+        <h4>Articles</h4>
+        <div className="row">
+          <div className="col s12 l6">
+            <div className="card">
+              <div className="card-image">
+                <img src={poly1} alt="" />
+                <a href="" className="halfway-fab btn-floating pink pulse">
+                  <i className="material-icons">favorite</i>
+                </a>
+              </div>
+              <div className="card-content">
+                <span className="card-title">Mango & Chickpea Curry</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div className="card-action">
+                <a className="teal-text text-lighten-2" href="">More details</a>
+                <a className="teal-text text-lighten-2" href="">View Ingredients</a>
+              </div>
+            </div>
+          </div>
+          <div className="col s12 l6">
+            <div className="card">
+              <div className="card-image">
+                <img src={poly2} alt="" />
+                <a href="" className="halfway-fab btn-floating pink pulse">
+                  <i className="material-icons">favorite</i>
+                </a>
+              </div>
+              <div className="card-content">
+                <span className="card-title">Rainbow Pasta Salad</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div className="card-action">
+                <a className="teal-text text-lighten-2" href="">More details</a>
+                <a className="teal-text text-lighten-2" href="">View Ingredients</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <ul className="collection with-header">
+          <li className="collection-header"><h4>Our Authors</h4></li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle blue">person</i>
+            <span className="title">Ryu</span>
+            <p className="grey-text">black-belt</p>
+            <a href="" className="secondary-content">
+              <i className="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle blue">person</i>
+            <span className="title">Yoshi</span>
+            <p className="grey-text">orange-belt</p>
+            <a href="" className="secondary-content">
+              <i className="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle blue">person</i>
+            <span className="title">Crystal</span>
+            <p className="grey-text">brown-belt</p>
+            <a href="" className="secondary-content">
+              <i className="material-icons light-blue-text">email</i>
+            </a>
+          </li>
+          <li className="collection-item">Mario</li>
+        </ul>
+      </div>
+
+      <div className="container">
+        <a className="btn teal lighten-2 modal-trigger" href="#terms">Terms & Conditions</a>
+
+        <div id="terms" className="modal">
+          <div className="modal-content">
+            <h4>Terms & Conditions</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam.</p>
+          </div>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close btn teal lighten-2">Agree</a>
+          </div>
+        </div>
+
       </div>
     </div>
   );

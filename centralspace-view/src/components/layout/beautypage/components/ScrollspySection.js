@@ -4,7 +4,7 @@ function ScrollspySection() {
 
 return(
 
-<section className="section container scrollspy" id="services">
+<section className="container scrollspy" id="services">
 <div className="row">
   <div className="col s12 l4">
     <h2 className="section-title">What I do..</h2>

@@ -17,7 +17,12 @@ import ScrollspySection from './components/ScrollspySection';
 import Footer from './components/Footer';
 
 function Beautypage() {
-    //     about.html
+    // about.html docs/abouts.html AND docs/element-transitions.html AND materializecss docs
+    // we have light,black,white section themes
+
+
+
+    add pulse to heart, avatar to cellection and modal
 
     // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
     // https://materialize-shopify-themes.myshopify.com/account/register

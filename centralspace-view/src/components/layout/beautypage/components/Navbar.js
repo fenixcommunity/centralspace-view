@@ -5,7 +5,6 @@ function Navbar(props) {
   const dropdownRef = useRef(null);
   useEffect(() => {
     let dropdown = M.Dropdown.init(dropdownRef.current, {});
-    // M.AutoInit();
   }, []);
 
   const darkMode = props.isDarkMode;
