@@ -173,7 +173,7 @@ function Blog() {
       <div className="container">
         <h4>Articles</h4>
         <div className="row">
-          <div className="col s12 l6">
+          <div className="col s12 l6 hoverable">
             <div className="card">
               <div className="card-image">
                 <img src={poly1} alt="" />
@@ -217,6 +217,7 @@ function Blog() {
       <div className="container">
         <ul className="collection with-header">
           <li className="collection-header"><h4>Our Authors</h4></li>
+
           <li className="collection-item avatar">
             <div className="avatar-wrapper circle">
             <div className="avatar">
@@ -229,6 +230,7 @@ function Blog() {
               <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
+
           <li className="collection-item avatar">
           <div className="avatar-wrapper circle">
             <div className="avatar">
@@ -236,19 +238,27 @@ function Blog() {
             </div>
           </div>
             <span className="title">Yoshi</span>
-            <p className="grey-text">orange-belt</p>
+            <p className="grey-text truncate ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <a href="" className="secondary-content">
               <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
+
           <li className="collection-item avatar">
-            <i className="material-icons circle blue">person</i>
+            <div className="avatar-wrapper circle">
+            <div className="avatar">
+              <img src={avatar2} alt="" />
+            </div>
+          </div>
             <span className="title">Crystal</span>
             <p className="grey-text">brown-belt</p>
             <a href="" className="secondary-content">
               <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
+
           <li className="collection-item">Mario</li>
         </ul>
       </div>
@@ -262,7 +272,7 @@ function Blog() {
             <h4>Terms & Conditions</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam.</p>
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer hoverable">
             <a href="#!" className="modal-close btn teal lighten-2">Agree</a>
           </div>
         </div>

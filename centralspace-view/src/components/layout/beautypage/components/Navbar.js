@@ -45,7 +45,7 @@ function Navbar(props) {
             <a href="/beautywall">Phone Wall</a>
           </li>
           <li>
-            <a href="#">Sign Up</a>
+            <a href="/beautysignup">Sign Up</a>
           </li>
           <li>
             <a
