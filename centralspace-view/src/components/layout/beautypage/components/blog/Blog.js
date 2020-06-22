@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/modal.css';
+import '../../../../../resources/beautypage/css/pulse.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
 import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
@@ -9,7 +10,7 @@ import avatar3 from '../../../../../resources/beautypage/images/people/avatar3.j
 
 function Blog() {
   const modalRef = useRef(null);
-  
+
   useEffect(() => {
     let modal = M.Modal.init(modalRef.current, { });
   }, []);

@@ -22,6 +22,7 @@ function Beautypage() {
 
 
 
+    
     // add pulse to heart, avatar to cellection and modal
 
     // https://materialize-shopify-themes.myshopify.com/collections/dark-theme

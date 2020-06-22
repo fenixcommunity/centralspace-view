@@ -34,6 +34,10 @@ button {
       background-color: rgb(29, 233, 195) !important;
   }
 
+  .notification-icon button {
+    background-color: rgb(29, 233, 195) !important;
+}
+
   .avatar-wrapper.circle {
        overflow: inherit !important;
        height: 50px !important;
@@ -44,4 +48,15 @@ button {
     left: 0px !important;
     height: 50px !important;
     width: 50px !important;
+}
+
+.pulse.btn-floating i {
+    color: #fff !important;
+  }
+
+  nav .badge {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    background-color: #999 !important;
 }

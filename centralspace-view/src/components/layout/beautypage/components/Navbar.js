@@ -79,7 +79,7 @@ function Navbar(props) {
 
           </li>
 
-          <li className="top-media-icon">
+          {/* <li className="top-media-icon">
             <button
               href="#"
               className="tooltipped btn-floating btn-small"
@@ -108,7 +108,14 @@ function Navbar(props) {
             >
               <i className="fab fa-twitter" />
             </button>
+          </li> */}
+
+          <li className="notification-icon">
+            <button href="" className="btn-floating z-depth-0">
+              <i className="material-icons">notifications</i>
+            </button>
           </li>
+          <li><span className="badge white-text new">5</span></li>
 
         </ul>
         <ul id="pages" className="dropdown-content">
