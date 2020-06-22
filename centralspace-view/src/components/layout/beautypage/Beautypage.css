@@ -33,3 +33,15 @@ button {
   .top-media-icon button {
       background-color: rgb(29, 233, 195) !important;
   }
+
+  .avatar-wrapper.circle {
+       overflow: inherit !important;
+       height: 50px !important;
+       width: 50px !important;
+  }
+
+  .avatar-wrapper .avatar {
+    left: 0px !important;
+    height: 50px !important;
+    width: 50px !important;
+}

@@ -7,7 +7,7 @@
     $('.carousel').carousel();
     $('.slider').slider();
     $('.parallax').parallax();
-    $('.modal').modal();
+    // $('.modal').modal();
     $('.scrollspy').scrollSpy();
     $('.button-collapse').sideNav({'edge': 'left'});
     // $('.datepicker').pickadate({selectYears: 20});

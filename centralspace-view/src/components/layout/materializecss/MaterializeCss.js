@@ -9,18 +9,24 @@ import Parallax2 from './components/Parallax2';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import M from 'materialize-css/dist/js/materialize.js';
+// import '../../../resources/beautypage/css/materializenew.css'; css conflict with startup-materialize.css
 
 // works also for mobile
 function MaterializeCss() {
     useEffect(() => {
         loadjs(['/materializecss/project/css/materialize.css'],
-            'foobar',
-            { async: false, returnPromise: true });
-        loadjs.ready('foobar', {
-            success: function () {
+            'head',
+            { async: false, returnPromise: true })
+            .then(() => console.log("promise passed"))
+            .catch(() => console.log("error"));
+
+        loadjs.ready('head', {
+            success: () => {
                 M.AutoInit();
             },
-            error: function () { console.error("scripts loading failed") },
+            error: () => { 
+                console.error("scripts loading failed") 
+            },
         });
 
     }, []);
@@ -28,7 +34,7 @@ function MaterializeCss() {
     return (
         <div>
             <Navbar />
-            
+
             <Photo />
             <Parallax1 /> {/* works only when we will romove startup-materialize style, but it main styles for beautypage */}
             <Services />

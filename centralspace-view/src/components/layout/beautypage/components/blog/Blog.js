@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import '../../../../../resources/beautypage/css/modal.css';
+import M from 'materialize-css/dist/js/materialize.js';
 import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
 import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
 import avatar1 from '../../../../../resources/beautypage/images/people/avatar1.jpg';
@@ -6,6 +8,12 @@ import avatar2 from '../../../../../resources/beautypage/images/people/avatar2.j
 import avatar3 from '../../../../../resources/beautypage/images/people/avatar3.jpg';
 
 function Blog() {
+  const modalRef = useRef(null);
+  
+  useEffect(() => {
+    let modal = M.Modal.init(modalRef.current, { });
+  }, []);
+
   return (
     <div className="section white full-height">
       <div className="row valign">
@@ -209,19 +217,27 @@ function Blog() {
         <ul className="collection with-header">
           <li className="collection-header"><h4>Our Authors</h4></li>
           <li className="collection-item avatar">
-            <i className="material-icons circle blue">person</i>
+            <div className="avatar-wrapper circle">
+            <div className="avatar">
+              <img src={avatar1} alt="" />
+            </div>
+          </div>
             <span className="title">Ryu</span>
             <p className="grey-text">black-belt</p>
             <a href="" className="secondary-content">
-              <i className="material-icons light-blue-text">email</i>
+              <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
           <li className="collection-item avatar">
-            <i className="material-icons circle blue">person</i>
+          <div className="avatar-wrapper circle">
+            <div className="avatar">
+              <img src={avatar3} alt="" />
+            </div>
+          </div>
             <span className="title">Yoshi</span>
             <p className="grey-text">orange-belt</p>
             <a href="" className="secondary-content">
-              <i className="material-icons light-blue-text">email</i>
+              <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
           <li className="collection-item avatar">
@@ -229,7 +245,7 @@ function Blog() {
             <span className="title">Crystal</span>
             <p className="grey-text">brown-belt</p>
             <a href="" className="secondary-content">
-              <i className="material-icons light-blue-text">email</i>
+              <i className="material-icons primary-color-text">email</i>
             </a>
           </li>
           <li className="collection-item">Mario</li>
@@ -237,9 +253,10 @@ function Blog() {
       </div>
 
       <div className="container">
-        <a className="btn teal lighten-2 modal-trigger" href="#terms">Terms & Conditions</a>
+        <a className="waves-effect waves-light btn teal lighten-2 modal-trigger" href="#terms">Terms & Conditions</a>
 
-        <div id="terms" className="modal">
+
+        <div id="terms" className="modal" ref={modalRef} >
           <div className="modal-content">
             <h4>Terms & Conditions</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam.</p>
@@ -248,8 +265,9 @@ function Blog() {
             <a href="#!" className="modal-close btn teal lighten-2">Agree</a>
           </div>
         </div>
-
       </div>
+
+
     </div>
   );
 }
