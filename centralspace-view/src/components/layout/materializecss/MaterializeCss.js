@@ -13,7 +13,7 @@ import M from 'materialize-css/dist/js/materialize.js';
 // works also for mobile
 function MaterializeCss() {
     useEffect(() => {
-        loadjs(['/materializecss/project/css/materialize.min.css'],
+        loadjs(['/materializecss/project/css/materialize.css'],
             'foobar',
             { async: false, returnPromise: true });
         loadjs.ready('foobar', {
