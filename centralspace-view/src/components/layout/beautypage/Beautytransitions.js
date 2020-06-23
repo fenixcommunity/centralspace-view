@@ -5,7 +5,6 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
-import Header from './components/Header';
 import Features from './components/Features';
 import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
@@ -14,7 +13,9 @@ import Feature2 from './components/transitions/Feature2';
 import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
-import Features6 from './components/transitions/Features6';
+import Feature6 from './components/transitions/Feature6';
+import Feature7 from './components/transitions/Feature7';
+import TransitionsHeader from './components/transitions/TransitionsHeader';
 
 function Beautytransitions() {
 
@@ -22,7 +23,7 @@ function Beautytransitions() {
         <div>
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
             <SlideOut />
-            <Header />
+            <TransitionsHeader />
 
             <Features isExtended={true} hasAnimation={true}/>
             <Blog isExtended={true} hasAnimation={true}/>
@@ -32,7 +33,8 @@ function Beautytransitions() {
             <Feature3 />
             <Feature4 />
             <Feature5 />
-            <Features6 />
+            <Feature7 />
+            <Feature6 />
 
             <BeautypageScriptsLoader />
             <Footer />

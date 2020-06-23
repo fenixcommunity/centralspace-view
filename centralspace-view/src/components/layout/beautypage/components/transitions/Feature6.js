@@ -7,10 +7,9 @@ import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
 import poly4 from '../../../../../resources/beautypage/images/blog/poly4.jpg';
 import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
 
-function Features6() {
+function Feature6() {
     return (
-        <>
-            <div className="container valign-wrapper">
+            <div className="container">
                 <div class="carousel">
                     <a class="carousel-item" href="#one!"><img src={poly1} /></a>
                     <a class="carousel-item" href="#two!"><img src={poly2} /></a>
@@ -19,8 +18,7 @@ function Features6() {
                     <a class="carousel-item" href="#five!"><img src={poly5} /></a>
                 </div>
             </div >
-        </>
     );
 }
 
-export default Features6;
+export default Feature6;

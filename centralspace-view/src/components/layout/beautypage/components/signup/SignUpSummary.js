@@ -118,7 +118,7 @@ function SignUpSummary() {
                         </div>
 
                         <div className="col s12">
-                            <a className="waves-effect waves-light btn" onClick={handleOnClick}>Open tap target</a>
+                            <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
                             <div className="fixed-action-btn direction-top active" >
                                 <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
                                     <i className="material-icons">menu</i>
@@ -137,10 +137,10 @@ function SignUpSummary() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
+
+                </div>
         </>
     );
 }

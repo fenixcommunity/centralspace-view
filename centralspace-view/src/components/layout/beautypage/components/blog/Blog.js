@@ -65,6 +65,7 @@ function Blog() {
           <img
             className="materialboxed"
             src={poly1}
+            data-caption="A picture of a way with a group of trees in a park"
             alt=""
           />
           <p>
@@ -90,6 +91,7 @@ function Blog() {
           <img
             className="materialboxed"
             src={poly2}
+            data-caption="A picture of a way with a group of trees in a park"
             alt=""
           />
           <p>
