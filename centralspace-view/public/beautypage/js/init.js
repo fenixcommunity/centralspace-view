@@ -4,7 +4,7 @@
 
     // Plugin initialization
     $('.carousel.carousel-slider').carousel({fullWidth: true});
-    $('.carousel').carousel();
+    $('.carousel').carousel({}); //some interesting options
     $('.slider').slider();
     $('.parallax').parallax();
     // $('.modal').modal();

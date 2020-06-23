@@ -12,9 +12,7 @@ import SignupHeader from './components/signup/SignupHeader';
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
 
-
 function Beautysignup() {
-
     return (
         <div>
             <Navbar isNavbarSolidTransition={true} isDarkMode={false} />

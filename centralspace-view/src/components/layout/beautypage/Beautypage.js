@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../resources/beautypage/css/startup-materialize.css';
+// import '../../../resources/beautypage/css/materializenew.css';
 import '../../../resources/beautypage/css/search.css';
 import './Beautypage.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
@@ -19,7 +20,7 @@ function Beautypage() {
     // we have light,black,white section themes
 
 
-    // add pulse to heart, avatar to cellection and modal
+    // todo add picture to navbar mobile
 
     // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
     // https://materialize-shopify-themes.myshopify.com/account/register

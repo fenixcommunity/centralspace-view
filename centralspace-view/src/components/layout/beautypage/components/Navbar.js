@@ -133,13 +133,13 @@ function Navbar(props) {
         </ul>
         <ul id="pages" className="dropdown-content">
           <li>
-            <a href="/">Main App</a>
+            <a href="/"><i className="material-icons">home</i>Main App</a>
           </li>
           <li>
-            <a className="active" href="/beautypage">Beautypage</a>
+            <a className="active" href="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</a>
           </li>
           <li>
-            <a href="/materializecss">Materialize Css</a>
+            <a href="/materializecss"><i className="material-icons">grain</i>Materialize Css</a>
           </li>
         </ul>
         <a
