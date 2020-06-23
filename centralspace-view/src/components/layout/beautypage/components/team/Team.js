@@ -7,10 +7,10 @@ class Team extends React.Component {
   render() {
     return (
       <>
-        <div class="video-container">
-          <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+        <div className="video-container">
+          <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameBorder="0" allowFullScreen></iframe>
         </div>
-        {/* <video class="responsive-video" controls>
+        {/* <video className="responsive-video" controls>
           <source src="movie.mp4" type="video/mp4" />
         </video> */}
         

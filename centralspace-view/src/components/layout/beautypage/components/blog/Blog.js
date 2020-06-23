@@ -281,7 +281,7 @@ function Blog() {
       <div className="container">
         <a className="waves-effect waves-light btn teal lighten-2 modal-trigger" href="#terms">Terms & Conditions</a>
 
-
+        {/* modal-fixed-footer */}
         <div id="terms" className="modal" ref={modalRef} >
           <div className="modal-content">
             <h4>Terms & Conditions</h4>

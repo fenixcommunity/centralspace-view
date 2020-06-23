@@ -8,12 +8,14 @@ function SignUpSummary() {
     const collapsibleRef = useRef(null);
     const collapsiblePopupRef = useRef(null);
     const tapTargetRef = useRef(null);
+    const modalRef = useRef(null);
 
     useEffect(() => {
         M.Collapsible.init(collapsibleRef.current, {});
         M.Collapsible.init(collapsiblePopupRef.current, {
             accordion: false
         });
+        M.Modal.init(modalRef.current, {});
     }, []);
 
     const handleOnClick = () => {
@@ -140,7 +142,25 @@ function SignUpSummary() {
                     </div>
                 </div>
 
+                <div classTODOName="container valign-wrapper">
+                    <div className="row">
+                        <div className="col s12">
+                            <a className="waves-effect waves-light btn modal-trigger" href="#modal">Modal</a>
+
+                            <div id="modal" className="modal bottom-sheet" ref={modalRef} >
+                                <div className="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <p>A bunch of text</p>
+                                </div>
+                                <div className="modal-footer">
+                                    <a href="#!" className="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+            </div>
         </>
     );
 }

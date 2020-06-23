@@ -10,12 +10,12 @@ import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
 function Feature6() {
     return (
             <div className="container">
-                <div class="carousel">
-                    <a class="carousel-item" href="#one!"><img src={poly1} /></a>
-                    <a class="carousel-item" href="#two!"><img src={poly2} /></a>
-                    <a class="carousel-item" href="#three!"><img src={poly3} /></a>
-                    <a class="carousel-item" href="#four!"><img src={poly4} /></a>
-                    <a class="carousel-item" href="#five!"><img src={poly5} /></a>
+                <div className="carousel">
+                    <a className="carousel-item" href="#one!"><img src={poly1} /></a>
+                    <a className="carousel-item" href="#two!"><img src={poly2} /></a>
+                    <a className="carousel-item" href="#three!"><img src={poly3} /></a>
+                    <a className="carousel-item" href="#four!"><img src={poly4} /></a>
+                    <a className="carousel-item" href="#five!"><img src={poly5} /></a>
                 </div>
             </div >
     );
