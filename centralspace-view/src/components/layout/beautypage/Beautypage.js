@@ -10,10 +10,7 @@ import Clients from './components/Clients';
 import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import GoogleMaps from './components/GoogleMaps';
-import ContactUs from './components/ContactUs';
-import StarsParallax from './components/StarsParallax';
-import ContactUs2 from './components/ContactUs2';
-import ScrollspySection from './components/ScrollspySection';
+import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/Footer';
 
 function Beautypage() {
@@ -21,8 +18,6 @@ function Beautypage() {
     // we have light,black,white section themes
 
 
-
-    
     // add pulse to heart, avatar to cellection and modal
 
     // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
@@ -43,10 +38,7 @@ function Beautypage() {
             <PricingTables isExtended={false} hasAnimation={false} />
             <Blog isExtended={false} hasAnimation={false} />
             <GoogleMaps />
-            <ContactUs />
-            <StarsParallax />
-            <ContactUs2 />
-            <ScrollspySection />
+            <SignUpForm />
 
             <BeautypageScriptsLoader />
             <Footer />

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
-import starsImg from '../../../../resources/materializecss/project/img/stars.jpg';
+import starsImg from '../../../../resources/beautypage/images/backgroundSignup.jpg';
 
 function StarsParallax() {
   const parallaxRef = useRef(null);
