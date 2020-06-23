@@ -1,18 +1,13 @@
 
 import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/datapicker.css';
+import '../../../../../resources/beautypage/css/table.css';
 import '../../../../../resources/beautypage/css/radiobutton.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 function SignUpSummary() {
-    const datepickerRef = useRef(null);
-    const optionSelectRef1 = useRef(null);
-    const optionSelectRef2 = useRef(null);
 
     useEffect(() => {
-        let datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
-        M.FormSelect.init(optionSelectRef1.current, {});
-        M.FormSelect.init(optionSelectRef2.current, {});
     }, []);
     return (
         <div className="section light valign-wrapper">
@@ -24,7 +19,8 @@ function SignUpSummary() {
                         </div>
 
                         <div className="col s12">
-                            <table>
+                            <table className="highlight centered responsive-table">
+                            {/* <table className="striped highlight"> */}
                                 <thead>
                                     <tr>
                                         <th>Name</th>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/modal.css';
 import '../../../../../resources/beautypage/css/pulse.css';
+import '../../../../../resources/beautypage/css/flowtext.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
 import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
@@ -12,13 +13,16 @@ function Blog() {
   const modalRef = useRef(null);
 
   useEffect(() => {
-    let modal = M.Modal.init(modalRef.current, { });
+    let modal = M.Modal.init(modalRef.current, {});
+    M.AutoInit();
   }, []);
 
   return (
     <div className="section white full-height">
       <div className="row valign">
-        <div className="col s8 offset-s2 m6 offset-m3 blog-body">
+
+        <div id="flow-text-section" className="col s8 offset-s2 m6 offset-m3 blog-body">
+          <a id="flow-toggle" className="teal-text text-lighten-2"><i className="material-icons medium right">zoom_in</i></a>
           <h4>
             Here is your first sentence that should be bold and exciting. Try
             and give a good summary of your blog article.
@@ -183,12 +187,17 @@ function Blog() {
               </div>
               <div className="card-content">
                 <span className="card-title">Mango & Chickpea Curry</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
-                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                  varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+                <blockquote>
+                  This is an example quotation that uses the blockquote tag.
+                </blockquote>
               </div>
               <div className="card-action">
                 <a className="teal-text text-lighten-2" href="">More details</a>
-                <a className="teal-text text-lighten-2" href="">View Ingredients</a>
+                <a className="teal-text text-lighten-2" href="">View Similar</a>
               </div>
             </div>
           </div>
@@ -202,12 +211,17 @@ function Blog() {
               </div>
               <div className="card-content">
                 <span className="card-title">Rainbow Pasta Salad</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
-                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                  varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+                <blockquote>
+                  This is an example quotation that uses the blockquote tag.
+                </blockquote>
               </div>
               <div className="card-action">
                 <a className="teal-text text-lighten-2" href="">More details</a>
-                <a className="teal-text text-lighten-2" href="">View Ingredients</a>
+                <a className="teal-text text-lighten-2" href="">View Similar</a>
               </div>
             </div>
           </div>
@@ -220,10 +234,10 @@ function Blog() {
 
           <li className="collection-item avatar">
             <div className="avatar-wrapper circle">
-            <div className="avatar">
-              <img src={avatar1} alt="" />
+              <div className="avatar">
+                <img src={avatar1} alt="" />
+              </div>
             </div>
-          </div>
             <span className="title">Ryu</span>
             <p className="grey-text">black-belt</p>
             <a href="" className="secondary-content">
@@ -232,14 +246,14 @@ function Blog() {
           </li>
 
           <li className="collection-item avatar">
-          <div className="avatar-wrapper circle">
-            <div className="avatar">
-              <img src={avatar3} alt="" />
+            <div className="avatar-wrapper circle">
+              <div className="avatar">
+                <img src={avatar3} alt="" />
+              </div>
             </div>
-          </div>
             <span className="title">Yoshi</span>
             <p className="grey-text truncate ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
-                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
                             varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <a href="" className="secondary-content">
               <i className="material-icons primary-color-text">email</i>
@@ -248,10 +262,10 @@ function Blog() {
 
           <li className="collection-item avatar">
             <div className="avatar-wrapper circle">
-            <div className="avatar">
-              <img src={avatar2} alt="" />
+              <div className="avatar">
+                <img src={avatar2} alt="" />
+              </div>
             </div>
-          </div>
             <span className="title">Crystal</span>
             <p className="grey-text">brown-belt</p>
             <a href="" className="secondary-content">

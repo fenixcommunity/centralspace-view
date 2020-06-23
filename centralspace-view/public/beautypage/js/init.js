@@ -16,6 +16,16 @@
       data: {"Apple": null, "Microsoft": null, "Google": 'http://placehold.it/250x250'},
     });
 
+    // Toggle Flow Text
+    var toggleFlowTextButton = $('#flow-toggle');
+    toggleFlowTextButton.click(function() {
+      $('#flow-text-section')
+        .children('p')
+        .each(function() {
+          $(this).toggleClass('flow-text');
+        });
+    });
+
     // Chips
     $('.chips').material_chip();
     $('.chips-initial').material_chip({
