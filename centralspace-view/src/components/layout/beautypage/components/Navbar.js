@@ -19,6 +19,19 @@ function Navbar(props) {
           <i className={`icon-diamond ${textStyle}`} />
         </a>
         <ul id="mobile-menu" className="right hide-on-med-and-down">
+
+          {props.searchIsActive && (
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required />
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </li>
+          )}
+
           <li className="active">
             <a
               className="dropdown-trigger"

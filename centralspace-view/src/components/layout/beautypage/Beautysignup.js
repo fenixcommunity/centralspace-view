@@ -1,5 +1,4 @@
 import React from "react";
-// import '../../../resources/beautypage/css/materializenew.css';
 import '../../../resources/beautypage/css/startup-materialize.css';
 import './Beautypage.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';

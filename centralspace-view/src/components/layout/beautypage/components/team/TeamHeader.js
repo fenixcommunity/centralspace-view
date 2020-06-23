@@ -3,7 +3,7 @@ import img from '../../../../../resources/beautypage/images/team/office.jpg';
 
 function TeamHeader() {
   return (
-    <div className="section header white">">
+    <div className="section header white">
       <img className="background" src={img} />
       <div className="header-wrapper row valign-wrapper">
         <div className="col s12 m6 offset-m3 valign">

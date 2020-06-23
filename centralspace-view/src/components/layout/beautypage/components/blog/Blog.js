@@ -14,7 +14,6 @@ function Blog() {
 
   useEffect(() => {
     let modal = M.Modal.init(modalRef.current, {});
-    M.AutoInit();
   }, []);
 
   return (

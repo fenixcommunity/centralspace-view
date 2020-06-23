@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../resources/beautypage/css/startup-materialize.css';
+import '../../../resources/beautypage/css/search.css';
 import './Beautypage.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/Navbar';
@@ -29,7 +30,10 @@ function Beautypage() {
 
     return (
         <div>
-            <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
+            <Navbar
+                isNavbarSolidTransition={true}
+                isDarkMode={false}
+                searchIsActive={true} />
             <SlideOut />
             <Header />
 
