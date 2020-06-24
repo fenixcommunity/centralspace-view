@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../resources/beautypage/css/startup-materialize.css';
-// import '../../../resources/beautypage/css/materializenew.css';
+// import '../../../resources/beautypage/css/materializenew.css'; //remove after test
 import '../../../resources/beautypage/css/search.css';
 import './Beautypage.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';

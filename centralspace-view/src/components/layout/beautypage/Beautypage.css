@@ -60,3 +60,11 @@ button {
     right: 20px;
     background-color: #999 !important;
 }
+
+.basic-top-break {
+    padding-top: 10px !important;
+}
+
+:focus {
+    outline: none !important;
+  }

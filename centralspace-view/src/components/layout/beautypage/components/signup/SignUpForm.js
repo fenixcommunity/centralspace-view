@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/datapicker.css';
 import '../../../../../resources/beautypage/css/radiobutton.css';
-// import '../../../../resources/beautypage/css/materializenew.css'; //remove after test
 import M from 'materialize-css/dist/js/materialize.js';
 
 function SignUpForm() {
@@ -42,7 +41,7 @@ function SignUpForm() {
                 className="materialize-textarea"
                 defaultValue={""}
               />
-              <label htmlFor="message">Description</label>
+              <label htmlFor="description">Description</label>
             </div>
 
             <div className="input-field col s12">

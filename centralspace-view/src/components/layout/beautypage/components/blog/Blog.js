@@ -16,6 +16,17 @@ function Blog() {
     let modal = M.Modal.init(modalRef.current, {});
   }, []);
 
+  const handleToastOnClick = () => {
+    M.toast({
+      html: '<span> Thanks dude! <3 </span>',
+      classes: 'z-depth-5 white-color-text',
+      completeCallback: () => {
+        alert('Your toast was dismissed');
+      }
+    })
+    // M.Toast.dismissAll();
+  }
+
   return (
     <div className="section white full-height">
       <div className="row valign">
@@ -182,7 +193,7 @@ function Blog() {
             <div className="card">
               <div className="card-image">
                 <img src={poly1} alt="" />
-                <a href="" className="halfway-fab btn-floating pink pulse">
+                <a onClick={handleToastOnClick} className="halfway-fab btn-floating pink pulse">
                   <i className="material-icons">favorite</i>
                 </a>
               </div>
@@ -206,7 +217,7 @@ function Blog() {
             <div className="card">
               <div className="card-image">
                 <img src={poly2} alt="" />
-                <a href="" className="halfway-fab btn-floating pink pulse">
+                <a onClick={handleToastOnClick} className="halfway-fab btn-floating pink pulse">
                   <i className="material-icons">favorite</i>
                 </a>
               </div>

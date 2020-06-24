@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundPlanet2 from '../../../../resources/beautypage/images/backgroundPlanet2.jpg';
-import avatar from '../../../../resources/beautypage/images/people/avatar3.jpg';
+import avatar from '../../../../resources/beautypage/images/people/avatar4.jpg';
 import '../../../../resources/beautypage/css/sidenav-helper.css'; // remove sidenav styles from startup css file
 
 function SlideOut() {
@@ -9,19 +9,19 @@ function SlideOut() {
       <li className="no-padding">
         <ul className="collapsible collapsible-accordion">
         <li className="no-padding">
-      <div class="user-view">
-        <div class="background">
+      <div className="user-view">
+        <div className="background">
           <img src={backgroundPlanet2} />
         </div>
-        <a href="#user"><img class="circle" src={avatar} /></a>
-        <a href="#name"><span class="white-text name">John Doe</span></a>
-        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        <a href="#user"><img className="circle" src={avatar} /></a>
+        <a href="#name"><span className="white-text name">John Doe</span></a>
+        <a href="#email"><span className="white-text email">jdandturk@gmail.com</span></a>
       </div>
     </li>
     <li>
-      <a href="#!"><i class="material-icons primary-color-text">cloud</i>First Link With Icon</a>
+      <a href="#!"><i className="material-icons primary-color-text">cloud</i>First Link With Icon</a>
       </li>
-      <li><div class="divider"></div></li>
+      <li><div className="divider"></div></li>
           <li className="bold">
             <a className="collapsible-header waves-effect waves-teal active">
               Pages
@@ -59,7 +59,7 @@ function SlideOut() {
           </li>
         </ul>
       </li>
-      <li><div class="divider"></div></li>
+      <li><div className="divider"></div></li>
       <li>
         <a className="waves-effect waves-teal" href="blog.html">
           Blog
