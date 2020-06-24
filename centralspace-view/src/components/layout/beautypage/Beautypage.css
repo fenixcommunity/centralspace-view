@@ -68,3 +68,38 @@ button {
 :focus {
     outline: none !important;
   }
+
+label[for=autocomplete-input] {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+label[for=autocomplete-input].active {
+    color: #fff;
+}
+
+.chips.input-field.focus {
+    color: #fff;
+}
+
+.chips.chips-autocomplete.input-field.focus {
+    color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+/* Firefox < 19 */
+input:focus:-moz-placeholder {
+    color: #fff;
+}
+
+/* Firefox > 19 */
+input:focus::-moz-placeholder {
+    color: #fff;
+}
+
+/* Internet Explorer 10 */
+input:focus:-ms-input-placeholder {
+    color: #fff;
+}

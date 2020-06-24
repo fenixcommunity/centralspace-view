@@ -301,14 +301,6 @@ function SignUpSummary() {
                                 />
                                 <label htmlFor="message2">Your Message</label>
                             </div>
-                            <div className="input-field col s12">
-                                <textarea
-                                    id="description2"
-                                    className="materialize-textarea"
-                                    defaultValue={""}
-                                />
-                                <label htmlFor="message2">Description</label>
-                            </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">textsms</i>
                                 <input type="text" id="autocomplete-input" class="autocomplete" ref={autocompleteRef} />
