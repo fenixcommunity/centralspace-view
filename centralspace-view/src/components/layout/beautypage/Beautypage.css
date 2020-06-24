@@ -27,7 +27,7 @@ button {
   }
 
   nav .nav-wrapper i {
-    line-height: inherit;
+    line-height: inherit !important;
   }
 
   .top-media-icon button {

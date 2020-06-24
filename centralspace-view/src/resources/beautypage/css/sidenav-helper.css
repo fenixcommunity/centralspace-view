@@ -1,0 +1,289 @@
+
+@media only screen and (min-width: 993px) {
+    nav a.sidenav-trigger {
+      display: none;
+    }
+}
+    @media only screen and (min-width: 993px) {
+        nav a.sidenav-trigger {
+          display: none;
+        }
+      }
+      
+      nav .sidenav-trigger {
+        float: left;
+        position: relative;
+        z-index: 1;
+        height: 56px;
+        margin: 0 18px;
+      }
+      
+      nav .sidenav-trigger i {
+        height: 56px;
+        line-height: 56px;
+      }
+      
+
+      @media only screen and (min-width: 601px) {
+        nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+          height: 64px;
+          line-height: 64px;
+        }
+      }
+
+      
+.sidenav-helper .collapsible,
+.sidenav-helper.fixed .collapsible {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.sidenav-helper .collapsible li,
+.sidenav-helper.fixed .collapsible li {
+  padding: 0;
+}
+
+.sidenav-helper .collapsible-header,
+.sidenav-helper.fixed .collapsible-header {
+  background-color: transparent;
+  border: none;
+  line-height: inherit;
+  height: inherit;
+  padding: 0 16px;
+}
+
+.sidenav-helper .collapsible-header:hover,
+.sidenav-helper.fixed .collapsible-header:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidenav-helper .collapsible-header i,
+.sidenav-helper.fixed .collapsible-header i {
+  line-height: inherit;
+}
+
+.sidenav-helper .collapsible-body,
+.sidenav-helper.fixed .collapsible-body {
+  border: 0;
+  background-color: #fff;
+}
+
+.sidenav-helper .collapsible-body li a,
+.sidenav-helper.fixed .collapsible-body li a {
+  padding: 0 23.5px 0 31px;
+}
+
+.sidenav-helper {
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%);
+  }
+  
+  .sidenav-helper.right-aligned {
+    right: 0;
+    -webkit-transform: translateX(105%);
+            transform: translateX(105%);
+    left: auto;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  
+  .sidenav-helper .collapsible {
+    margin: 0;
+  }
+  
+  .sidenav-helper li {
+    float: none;
+    line-height: 48px;
+  }
+  
+  .sidenav-helper li.active {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidenav-helper li > a {
+    color: rgba(0, 0, 0, 0.87);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+  }
+  
+  .sidenav-helper li > a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidenav-helper li > a.btn, .sidenav-helper li > a.btn-large, .sidenav-helper li > a.btn-small, .sidenav-helper li > a.btn-large, .sidenav-helper li > a.btn-flat, .sidenav-helper li > a.btn-floating {
+    margin: 10px 15px;
+  }
+  
+  .sidenav-helper li > a.btn, .sidenav-helper li > a.btn-large, .sidenav-helper li > a.btn-small, .sidenav-helper li > a.btn-large, .sidenav-helper li > a.btn-floating {
+    color: #fff;
+  }
+  
+  .sidenav-helper li > a.btn-flat {
+    color: #343434;
+  }
+  
+  .sidenav-helper li > a.btn:hover, .sidenav-helper li > a.btn-large:hover, .sidenav-helper li > a.btn-small:hover, .sidenav-helper li > a.btn-large:hover {
+    background-color: #2bbbad;
+  }
+  
+  .sidenav-helper li > a.btn-floating:hover {
+    background-color: #26a69a;
+  }
+  
+  .sidenav-helper li > a > i,
+  .sidenav-helper li > a > [class^="mdi-"], .sidenav-helper li > a li > a > [class*="mdi-"],
+  .sidenav-helper li > a > i.material-icons {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px 0 0;
+    width: 24px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .sidenav-helper .divider {
+    margin: 8px 0 0 0;
+  }
+  
+  .sidenav-helper .subheader {
+    cursor: initial;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  
+  .sidenav-helper .subheader:hover {
+    background-color: transparent;
+  }
+  
+  .sidenav-helper .user-view {
+    position: relative;
+    padding: 32px 32px 0;
+    margin-bottom: 8px;
+  }
+  
+  .sidenav-helper .user-view > a {
+    height: auto;
+    padding: 0;
+  }
+  
+  .sidenav-helper .user-view > a:hover {
+    background-color: transparent;
+  }
+  
+  .sidenav-helper .user-view .background {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .sidenav-helper .user-view .circle, .sidenav-helper .user-view .name, .sidenav-helper .user-view .email {
+    display: block;
+  }
+  
+  .sidenav-helper .user-view .circle {
+    height: 64px;
+    width: 64px;
+  }
+  
+  .sidenav-helper .user-view .name,
+  .sidenav-helper .user-view .email {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .sidenav-helper .user-view .name {
+    margin-top: 16px;
+    font-weight: 500;
+  }
+  
+  .sidenav-helper .user-view .email {
+    padding-bottom: 16px;
+    font-weight: 400;
+  }
+
+  
+  
+.sidenav-helper.sidenav-fixed {
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: fixed;
+  }
+  
+  .sidenav-helper.sidenav-fixed.right-aligned {
+    right: 0;
+    left: auto;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .sidenav-helper.sidenav-fixed {
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
+    }
+    .sidenav-helper.sidenav-fixed.right-aligned {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+    .sidenav-helper > a {
+      padding: 0 16px;
+    }
+    .sidenav-helper .user-view {
+      padding: 16px 16px 0;
+    }
+  }
+  
+  .sidenav-helper .collapsible-body > ul:not(.collapsible) > li.active,
+  .sidenav-helper.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
+    background-color: #ee6e73;
+  }
+  
+  .sidenav-helper .collapsible-body > ul:not(.collapsible) > li.active a,
+  .sidenav-helper.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a {
+    color: #fff;
+  }
+  
+  .sidenav-helper .collapsible-body {
+    padding: 0;
+  }
+  
+  .sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    display: none;
+  }
+

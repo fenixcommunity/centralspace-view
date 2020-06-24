@@ -142,10 +142,10 @@ function SignUpSummary() {
                     </div>
                 </div>
 
-                <div classTODOName="container valign-wrapper">
+                <div className="container valign-wrapper">
                     <div className="row">
                         <div className="col s12">
-                            <a className="waves-effect waves-light btn modal-trigger" href="#modal">Modal</a>
+                            <a className="modal-trigger waves-effect waves-light btn grey" href="#modal">Modal</a>
 
                             <div id="modal" className="modal bottom-sheet" ref={modalRef} >
                                 <div className="modal-content">

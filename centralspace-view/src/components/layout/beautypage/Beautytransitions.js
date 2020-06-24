@@ -14,7 +14,6 @@ import Feature3 from './components/transitions/Feature3';
 import Feature4 from './components/transitions/Feature4';
 import Feature5 from './components/transitions/Feature5';
 import Feature6 from './components/transitions/Feature6';
-import Feature7 from './components/transitions/Feature7';
 import TransitionsHeader from './components/transitions/TransitionsHeader';
 
 function Beautytransitions() {
@@ -33,7 +32,6 @@ function Beautytransitions() {
             <Feature3 />
             <Feature4 />
             <Feature5 />
-            <Feature7 />
             <Feature6 />
 
             <BeautypageScriptsLoader />
