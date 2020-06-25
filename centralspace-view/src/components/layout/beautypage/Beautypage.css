@@ -77,11 +77,14 @@ label[for=autocomplete-input].active {
     color: #fff;
 }
 
+/*input focus start */
 .chips.input-field.focus {
     color: #fff;
+    border-bottom: 2px solid #fff !important;
 }
 
 .chips.chips-autocomplete.input-field.focus {
+    border-bottom: 2px solid #fff !important;
     color: #fff;
 }
 
@@ -103,3 +106,4 @@ input:focus::-moz-placeholder {
 input:focus:-ms-input-placeholder {
     color: #fff;
 }
+/*input focus end */

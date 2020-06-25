@@ -142,7 +142,53 @@ function SignUpSummary() {
                 </div >
             </div >
 
-            <div className="section white">
+            <div className="section valign-wrapper">
+                <div className="container">
+                    <form>
+                        <div class="row">
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">message</i>
+                                <textarea
+                                    id="message2"
+                                    className="materialize-textarea"
+                                    cols={20}
+                                    rows={20}
+                                    defaultValue={""}
+                                />
+                                <label htmlFor="message2">Your Message</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">textsms</i>
+                                <input type="text" id="autocomplete-input" class="autocomplete" ref={autocompleteRef} />
+                                <label for="autocomplete-input">Autocomplete</label>
+                            </div>
+                        </div>
+
+                        <div className="col s12 basic-top-break">
+                            <div class="chips" ref={chipsRef}></div>
+                        </div>
+
+                        <div className="col s12 basic-top-break">
+                            <div class="chips chips-initial" ref={initialChipsRef}></div>
+                        </div>
+
+                        <div className="col s12 basic-top-break">
+                            <div class="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
+                            <div class="chip"> Tag <i class="close material-icons">close</i>
+                            </div>
+                        </div>
+
+                        <div className="col s12 basic-top-break">
+                            <div class="chips " ref={placeholderChipsRef}></div>
+                        </div>
+                        <div className="col s12 basic-top-break">
+                            <div class="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div className="section white valign-wrapper">
                 <div className="container">
                     <div className="row">
                         <div className="col s12">
@@ -259,65 +305,10 @@ function SignUpSummary() {
                             </div>
                         </div>
 
-                        <div className="col s12">
-                            <div class="chips" ref={chipsRef}></div>
-                        </div>
-
-                        <div className="col s12">
-                            <div class="chips chips-initial" ref={initialChipsRef}></div>
-                        </div>
-
-                        <div className="col s12 basic-top-break">
-                            <div class="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
-                            <div class="chip"> Tag <i class="close material-icons">close</i>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
 
-
-            {/* <div className="container valign-wrapper">
-                <div className="row">
-         
-                </div>
-
-            </div> */}
-
-
-            <div className="section light valign-wrapper">
-                <div className="container">
-                    <form>
-                        <div class="row">
-                            <div className="input-field col s12">
-                                <i className="material-icons prefix">message</i>
-                                <textarea
-                                    id="message2"
-                                    className="materialize-textarea"
-                                    cols={20}
-                                    rows={20}
-                                    defaultValue={""}
-                                />
-                                <label htmlFor="message2">Your Message</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">textsms</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete" ref={autocompleteRef} />
-                                <label for="autocomplete-input">Autocomplete</label>
-                            </div>
-                        </div>
-
-                        <div className="col s12">
-                            <div class="chips " ref={placeholderChipsRef}></div>
-                        </div>
-                        <div className="col s12">
-                            <div class="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
         </>
     );
 }
