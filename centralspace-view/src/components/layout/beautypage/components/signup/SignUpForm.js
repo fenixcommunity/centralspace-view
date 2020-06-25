@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import '../../../../../resources/beautypage/css/datapicker.css';
+import '../../../../../resources/beautypage/css/datatimepicker.css';
 import '../../../../../resources/beautypage/css/radiobutton.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
@@ -9,11 +9,29 @@ function SignUpForm() {
   const optionSelectRef2 = useRef(null);
 
   useEffect(() => {
-    let datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
+    initCalendar();
     M.FormSelect.init(optionSelectRef1.current, {});
     M.FormSelect.init(optionSelectRef2.current, {});
     // M.AutoInit();
   }, []);
+
+
+  const initCalendar = () => {
+    return M.Datepicker.init(datepickerRef.current,
+      {
+        autoClose: false,
+        format: "dd/mm/yyyy",
+        disableWeekends: true,
+        yearRange: 5,
+        i18n: {
+          months: ['Styczeń', 'Luty', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          monthsShort: ['Sty', 'Luty', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          weekdaysShort: ['Pon', 'Wt', 'Śr', 'Wed', 'Thu', 'Fri', 'Sat']
+        }
+      }
+    );
+  }
+
   return (
     <div className="section light valign-wrapper">
       <div className="container">

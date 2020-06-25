@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/table.css';
 import '../../../../../resources/beautypage/css/chips.css';
 import '../../../../../resources/beautypage/css/tap-target.css';
+import '../../../../../resources/beautypage/css/nouislider.css';
+import '../../../../../resources/beautypage/css/range.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../../resources/beautypage/images/people/avatar4.jpg';
 
@@ -16,6 +18,7 @@ function SignUpSummary() {
     const initialChipsRef = useRef(null);
     const placeholderChipsRef = useRef(null);
     const autocompleteChipsRef = useRef(null);
+    const timepickerRef = useRef(null);
 
     useEffect(() => {
         M.Collapsible.init(collapsibleRef.current, {});
@@ -26,6 +29,8 @@ function SignUpSummary() {
         const instances = initAutocomplete();
         // instance.updateData({...});
         initChips();
+        M.Timepicker.init(timepickerRef.current,
+            { showClearBtn: true });
     }, []);
 
     const handleOnClick = () => {
@@ -146,6 +151,7 @@ function SignUpSummary() {
                 <div className="container">
                     <form>
                         <div class="row">
+
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">message</i>
                                 <textarea
@@ -157,32 +163,38 @@ function SignUpSummary() {
                                 />
                                 <label htmlFor="message2">Your Message</label>
                             </div>
+
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">textsms</i>
                                 <input type="text" id="autocomplete-input" class="autocomplete" ref={autocompleteRef} />
                                 <label for="autocomplete-input">Autocomplete</label>
                             </div>
-                        </div>
 
-                        <div className="col s12 basic-top-break">
-                            <div class="chips" ref={chipsRef}></div>
-                        </div>
-
-                        <div className="col s12 basic-top-break">
-                            <div class="chips chips-initial" ref={initialChipsRef}></div>
-                        </div>
-
-                        <div className="col s12 basic-top-break">
-                            <div class="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
-                            <div class="chip"> Tag <i class="close material-icons">close</i>
+                            <div class="input-field col s12">
+                                <input id="timepicker" type="text" class="timepicker" ref={timepickerRef} />
+                                <label for="timepicker">Select time</label>
                             </div>
-                        </div>
 
-                        <div className="col s12 basic-top-break">
-                            <div class="chips " ref={placeholderChipsRef}></div>
-                        </div>
-                        <div className="col s12 basic-top-break">
-                            <div class="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
+                            <div className="col s12 basic-top-break">
+                                <div class="chips" ref={chipsRef}></div>
+                            </div>
+
+                            <div className="col s12 basic-top-break">
+                                <div class="chips chips-initial" ref={initialChipsRef}></div>
+                            </div>
+
+                            <div className="col s12 basic-top-break">
+                                <div class="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
+                                <div class="chip"> Tag <i class="close material-icons">close</i>
+                                </div>
+                            </div>
+
+                            <div className="col s12 basic-top-break">
+                                <div class="chips " ref={placeholderChipsRef}></div>
+                            </div>
+                            <div className="col s12 basic-top-break">
+                                <div class="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -303,6 +315,15 @@ function SignUpSummary() {
                                     <a href="#!" className="modal-close btn waves-effect waves-light teal lighten-2 btn-flat">Agree</a>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="col s12 basic-top-break">
+                            <div id="range-slider"></div> {/* initialized in init.js */}
+                            <form className="basic-top-break" action="#">
+                                <p class="range-field">
+                                    <input type="range" id="test5" min="0" max="100" />
+                                </p>
+                            </form>
                         </div>
 
                     </div>
