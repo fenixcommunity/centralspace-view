@@ -6,6 +6,7 @@ import '../../../../../resources/beautypage/css/tap-target.css';
 import '../../../../../resources/beautypage/css/nouislider.css';
 import '../../../../../resources/beautypage/css/range.css';
 import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
+import '../../../../../resources/beautypage/css/helper-text-validator.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../../resources/beautypage/images/people/avatar4.jpg';
 
@@ -50,13 +51,11 @@ function SignUpSummary() {
         initChips();
         M.Timepicker.init(timepickerRef.current,
             { showClearBtn: true });
-        // M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
         M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
         M.FormSelect.init(optionSelectRef2.current, {});
         M.FormSelect.init(optionSelectRef3.current, {});
         M.FormSelect.init(optionSelectRef4.current, {});
         M.FormSelect.init(optionSelectRef5.current, {});
-        // M.AutoInit();
     }, []);
 
     const handleOnClick = () => {
@@ -239,7 +238,6 @@ function SignUpSummary() {
                                 <label for="password">Password</label>
                             </div>
 
-        {/* tum */}
                             <div className="input-field col s12">
                                 <p>Multiple Select</p>
                                 <select multiple ref={optionSelectRef1}>
@@ -302,9 +300,9 @@ function SignUpSummary() {
 
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">playlist_add_check</i>
-                                <select disabled={true}  name="optionselect" id="color" ref={optionSelectRef2} defaultValue={0}>
+                                <select disabled={true} name="optionselect" id="color" ref={optionSelectRef2} defaultValue={0}>
                                     <option value={0} disabled={true}>
-                                        Choose your option
+                                        Disabled option
                                     </option>
                                     <option value={1}>Option 1</option>
                                     <option value={2}>Option 2</option>
@@ -335,6 +333,42 @@ function SignUpSummary() {
                             </div>
 
                         </div>
+                    </form>
+                </div>
+            </div>
+
+            <div className="section valign-wrapper">
+                <div className="container">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate" />
+                                <label htmlFor="email">Email validator</label>
+                                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                            </div>
+                        </div>
+
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" />
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" />
+                            </div>
+                        </div>
+
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" multiple />
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files" />
+                            </div>
+                        </div>
+
+
                     </form>
                 </div>
             </div>

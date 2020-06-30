@@ -10,7 +10,8 @@
     $('.button-collapse').sideNav({ 'edge': 'left' });
 
     var rangeSlider = $('#range-slider')[0];
-    noUiSlider
+    if(rangeSlider) {
+      noUiSlider
       .create(rangeSlider, {
         start: [20, 80],
         connect: true,
@@ -24,6 +25,7 @@
           decimals: 0
         })
       });
+    }
 
     // Toggle Flow Text
     var toggleFlowTextButton = $('#flow-toggle');
@@ -36,4 +38,5 @@
     });
 
   });
+
 })(jQuery); 

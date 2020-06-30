@@ -42,14 +42,12 @@ function SignUpForm() {
             </div>
 
             <div className="input-field col s6">
-              <input id="first_name" type="text" length="2"  class="validate"/>
-              {/* <input id="first_name" className="autocomplete" type="text" /> */}
-              {/* remove styles from index.css */}
+              <input id="first_name" type="text" length="2"  class="validate" data-length="10"/>
               <label htmlFor="first_name">First Name</label>
             </div>
 
             <div className="input-field col s6">
-              <input id="last_name" type="text"  class="validate"/>
+              <input id="last_name" type="text"  class="validate" data-length="10"/>
               <label htmlFor="last_name">Last Name</label>
             </div>
 
@@ -70,6 +68,7 @@ function SignUpForm() {
                 cols={20}
                 rows={20}
                 defaultValue={""}
+                data-length="120"
               />
               <label htmlFor="message">Your Message</label>
             </div>

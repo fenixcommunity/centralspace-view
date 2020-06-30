@@ -140,3 +140,7 @@ input:-webkit-autofill:active {
 .input-field .select-wrapper label {
 position: relative ;
 }
+
+#flow-toggle {
+    cursor: pointer;
+}
