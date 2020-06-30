@@ -19,6 +19,24 @@ function SignUpSummary() {
     const placeholderChipsRef = useRef(null);
     const autocompleteChipsRef = useRef(null);
     const timepickerRef = useRef(null);
+    const optionSelectRef1 = useRef(null);
+    const optionSelectRef2 = useRef(null);
+    const optionSelectRef3 = useRef(null);
+    const optionSelectRef4 = useRef(null);
+    const optionSelectRef5 = useRef(null);
+
+    const selectImages = [
+        { id: 1, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
+        { id: 2, src: 'https://websetnet.net/wp-content/uploads/2018/09/unnamed-file-530.jpg', title: 'foo', description: 'bar' },
+        { id: 3, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
+    ];
+
+    // todo, add helper!
+    //   { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />)
+
+    const getImg = (id) => {
+        return selectImages.find(img => img.id === id);
+    }
 
     useEffect(() => {
         M.Collapsible.init(collapsibleRef.current, {});
@@ -31,6 +49,13 @@ function SignUpSummary() {
         initChips();
         M.Timepicker.init(timepickerRef.current,
             { showClearBtn: true });
+        // M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
+        M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
+        M.FormSelect.init(optionSelectRef2.current, {});
+        M.FormSelect.init(optionSelectRef3.current, {});
+        M.FormSelect.init(optionSelectRef4.current, {});
+        M.FormSelect.init(optionSelectRef5.current, {});
+        // M.AutoInit();
     }, []);
 
     const handleOnClick = () => {
@@ -200,6 +225,119 @@ function SignUpSummary() {
                 </div>
             </div>
 
+            <div className="section light valign-wrapper">
+                <div className="container">
+                    <form>
+                        <div className="row">
+                            <div className="col s12">
+                                <h2 className="section-title">Others</h2>
+                            </div>
+                            
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate" />
+                                <label for="password">Password</label>
+                            </div>
+
+        {/* tum */}
+                            <div className="input-field col s12">
+                                <p>Multiple Select</p>
+                                <select multiple ref={optionSelectRef1}>
+                                    <option value={0} disabled selected>
+                                        Choose your option
+                                    </option>
+                                    <option value={1}>Option 1</option>
+                                    <option value={2}>Option 2</option>
+                                    <option value={3}>Option 3</option>
+                                </select>
+                            </div>
+                            <div className="input-field col s12">
+                                <select ref={optionSelectRef3}>
+                                    <optgroup label="team 1">
+                                        <option value={1}>Option 1</option>
+                                        <option value={2}>Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="team 2">
+                                        <option value={3}>Option 3</option>
+                                        <option value={4}>Option 4</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div className="input-field col s12 m6">
+                                <p>Images in select</p>
+                                <select className="icons" ref={optionSelectRef4}>
+                                    <option value disabled selected>
+                                        Choose your option
+                                    </option>
+                                    <option value data-icon={getImg(1).src}>
+                                        example 1
+                                    </option>
+                                    <option value data-icon={getImg(2).src}>
+                                        example 2
+                                    </option>
+                                    <option value data-icon={getImg(3).src}>
+                                        example 3
+                                    </option>
+                                </select>
+
+                            </div>
+                            <div className="input-field col s12 m6">
+                                <p>Images in select</p>
+                                <select className="icons" ref={optionSelectRef5}>
+                                    <option value={0} disabled selected>
+                                        Choose your option
+                                    </option>
+                                    <option value={1} data-icon={getImg(2).src} className="left">
+                                        example 1
+                                    </option>
+                                    <option value={2} data-icon={getImg(3).src} className="left">
+                                        example 2
+                                    </option>
+                                    <option value={3} data-icon={getImg(1).src} className="left">
+                                        example 3
+                                    </option>
+                                </select>
+                            </div>
+
+
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">playlist_add_check</i>
+                                <select disabled={true}  name="optionselect" id="color" ref={optionSelectRef2} defaultValue={0}>
+                                    <option value={0} disabled={true}>
+                                        Choose your option
+                                    </option>
+                                    <option value={1}>Option 1</option>
+                                    <option value={2}>Option 2</option>
+                                    <option value={3}>Option 3</option>
+                                </select>
+                            </div>
+
+                            <div className="input-field col s12">
+                                <button
+                                    id="reset"
+                                    className="btn waves-effect waves-light grey"
+                                    type="button"
+                                    name="reset"
+                                >
+                                    Reset
+                                <i className="material-icons right">clear_all</i>
+                                </button>
+                                <span id="status" />
+                                <button
+                                    id="save"
+                                    className="btn waves-effect waves-light"
+                                    type="submit"
+                                    name="action"
+                                >
+                                    Save
+                                <i className="material-icons right">send</i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div className="section white valign-wrapper">
                 <div className="container">
                     <div className="row">
@@ -326,6 +464,24 @@ function SignUpSummary() {
                             </form>
                         </div>
 
+                        <div className="col s12 basic-top-break">
+                            <div class="switch">
+                                <label>
+                                    Off
+                                <input type="checkbox" />
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                            <div class="switch">
+                                <label>
+                                    Off
+                                <input disabled={true} type="checkbox" />
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

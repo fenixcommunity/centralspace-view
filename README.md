@@ -80,6 +80,8 @@ Env:
 - npm install react-bootstrap bootstrap
 - npm install moment
 - npm i loadjs
+- npm i leaflet
+- npm i react-leaflet
 - npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
 /  npm run build  / firebase deploy / => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
 - npm i -g html-to-react-components (html2react index.html)

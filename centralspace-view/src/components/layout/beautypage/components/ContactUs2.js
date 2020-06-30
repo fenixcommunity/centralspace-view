@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import '../../../../resources/beautypage/css/radiobutton.css';
+import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
 function ContactUs2() {
   return (

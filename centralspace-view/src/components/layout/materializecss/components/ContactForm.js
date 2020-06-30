@@ -48,7 +48,7 @@ function ContactForm() {
             </div>
             <div className="input-field">
               <i className="material-icons prefix">email</i>
-              <input type="email" id="email" />
+              <input type="email" id="email" className="validate"/>
               <label htmlFor="email">Your Email</label>
             </div>
             <div className="input-field">

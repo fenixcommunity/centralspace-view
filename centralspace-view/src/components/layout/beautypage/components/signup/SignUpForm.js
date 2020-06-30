@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import '../../../../../resources/beautypage/css/datatimepicker.css';
-import '../../../../../resources/beautypage/css/radiobutton.css';
+import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 function SignUpForm() {
@@ -42,14 +42,14 @@ function SignUpForm() {
             </div>
 
             <div className="input-field col s6">
-              <input id="first_name" type="text" length="2" />
+              <input id="first_name" type="text" length="2"  class="validate"/>
               {/* <input id="first_name" className="autocomplete" type="text" /> */}
               {/* remove styles from index.css */}
               <label htmlFor="first_name">First Name</label>
             </div>
 
             <div className="input-field col s6">
-              <input id="last_name" type="text" />
+              <input id="last_name" type="text"  class="validate"/>
               <label htmlFor="last_name">Last Name</label>
             </div>
 
@@ -66,7 +66,7 @@ function SignUpForm() {
               <i className="material-icons prefix">message</i>
               <textarea
                 id="message"
-                className="materialize-textarea"
+                className="materialize-textarea validate"
                 cols={20}
                 rows={20}
                 defaultValue={""}

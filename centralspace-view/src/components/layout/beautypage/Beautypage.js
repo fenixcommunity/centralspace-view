@@ -12,6 +12,7 @@ import Clients from './components/Clients';
 import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import GoogleMaps from './components/GoogleMaps';
+import LeafletMapEmbedded from './components/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/Footer';
 
@@ -42,7 +43,8 @@ function Beautypage() {
             <Clients />
             <PricingTables isExtended={false} hasAnimation={false} />
             <Blog isExtended={false} hasAnimation={false} />
-            <GoogleMaps />
+            {/* <GoogleMaps /> */}
+            <LeafletMapEmbedded />
             <SignUpForm />
 
             <BeautypageScriptsLoader />
