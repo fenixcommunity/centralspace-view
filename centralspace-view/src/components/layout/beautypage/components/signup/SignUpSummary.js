@@ -5,6 +5,7 @@ import '../../../../../resources/beautypage/css/chips.css';
 import '../../../../../resources/beautypage/css/tap-target.css';
 import '../../../../../resources/beautypage/css/nouislider.css';
 import '../../../../../resources/beautypage/css/range.css';
+import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../../resources/beautypage/images/people/avatar4.jpg';
 
@@ -232,7 +233,7 @@ function SignUpSummary() {
                             <div className="col s12">
                                 <h2 className="section-title">Others</h2>
                             </div>
-                            
+
                             <div class="input-field col s12">
                                 <input id="password" type="password" class="validate" />
                                 <label for="password">Password</label>
