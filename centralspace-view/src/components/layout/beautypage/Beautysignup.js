@@ -11,24 +11,39 @@ import ScrollspySection from './components/ScrollspySection';
 import SignupHeader from './components/signup/SignupHeader';
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
+import MaterialUiStepper from './MaterialUiStepper';
 
-function Beautysignup() {
-    return (
-        <div>
-            <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
-            <SlideOut />
-            <SignupHeader />
-            
-            <SignUpForm />
-            <StarsParallax />
-            <ContactUs2 />
-            <ScrollspySection />
-            <SignUpSummary />
+class Beautysignup extends React.Component {
+    constructor(props) {
+        super(props)
 
-            <BeautypageScriptsLoader />
-            <Footer />
-        </div>
-    )
+        this.state = this.initialState = {}
+    }
+
+    componentDidMount() { }
+
+    render() {
+        return (
+            <div>
+                <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
+                <SlideOut />
+                <SignupHeader />
+
+                <SignUpForm />
+                <StarsParallax />
+                <ContactUs2 />
+                <ScrollspySection />
+                <SignUpSummary />
+                {/*
+            TODO - create similar components
+             <MaterialUiStepper /> 
+             */}
+
+                <BeautypageScriptsLoader />
+                <Footer />
+            </div>
+        )
+    }
 }
 
 export default Beautysignup;

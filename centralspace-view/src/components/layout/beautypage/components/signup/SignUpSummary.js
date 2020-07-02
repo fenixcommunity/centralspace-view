@@ -7,6 +7,7 @@ import '../../../../../resources/beautypage/css/nouislider.css';
 import '../../../../../resources/beautypage/css/range.css';
 import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import '../../../../../resources/beautypage/css/helper-text-validator.css';
+import '../../../../../resources/beautypage/css/stepper/mstepper.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../../resources/beautypage/images/people/avatar4.jpg';
 
@@ -26,19 +27,7 @@ function SignUpSummary() {
     const optionSelectRef3 = useRef(null);
     const optionSelectRef4 = useRef(null);
     const optionSelectRef5 = useRef(null);
-
-    const selectImages = [
-        { id: 1, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
-        { id: 2, src: 'https://websetnet.net/wp-content/uploads/2018/09/unnamed-file-530.jpg', title: 'foo', description: 'bar' },
-        { id: 3, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
-    ];
-
-    // todo, add helper!
-    //   { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />)
-
-    const getImg = (id) => {
-        return selectImages.find(img => img.id === id);
-    }
+    const stepperRef = useRef(null);
 
     useEffect(() => {
         M.Collapsible.init(collapsibleRef.current, {});
@@ -57,6 +46,24 @@ function SignUpSummary() {
         M.FormSelect.init(optionSelectRef4.current, {});
         M.FormSelect.init(optionSelectRef5.current, {});
     }, []);
+
+    const selectImages = [
+        { id: 1, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
+        { id: 2, src: 'https://websetnet.net/wp-content/uploads/2018/09/unnamed-file-530.jpg', title: 'foo', description: 'bar' },
+        { id: 3, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
+    ];
+
+    // todo, add helper!
+    //   { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />)
+
+    const getImg = (id) => {
+        return selectImages.find(img => img.id === id);
+    }
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        console.log("submit")
+    }
 
     const handleOnClick = () => {
         let tap = M.TapTarget.getInstance(tapTargetRef.current);
@@ -175,7 +182,7 @@ function SignUpSummary() {
             <div className="section valign-wrapper">
                 <div className="container">
                     <form>
-                        <div class="row">
+                        <div className="row">
 
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">message</i>
@@ -189,36 +196,36 @@ function SignUpSummary() {
                                 <label htmlFor="message2">Your Message</label>
                             </div>
 
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">textsms</i>
-                                <input type="text" id="autocomplete-input" class="autocomplete" ref={autocompleteRef} />
-                                <label for="autocomplete-input">Autocomplete</label>
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">textsms</i>
+                                <input type="text" id="autocomplete-input" className="autocomplete" ref={autocompleteRef} />
+                                <label htmlFor="autocomplete-input">Autocomplete</label>
                             </div>
 
-                            <div class="input-field col s12">
-                                <input id="timepicker" type="text" class="timepicker" ref={timepickerRef} />
-                                <label for="timepicker">Select time</label>
-                            </div>
-
-                            <div className="col s12 basic-top-break">
-                                <div class="chips" ref={chipsRef}></div>
+                            <div className="input-field col s12">
+                                <input id="timepicker" type="text" className="timepicker" ref={timepickerRef} />
+                                <label htmlFor="timepicker">Select time</label>
                             </div>
 
                             <div className="col s12 basic-top-break">
-                                <div class="chips chips-initial" ref={initialChipsRef}></div>
+                                <div className="chips" ref={chipsRef}></div>
                             </div>
 
                             <div className="col s12 basic-top-break">
-                                <div class="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
-                                <div class="chip"> Tag <i class="close material-icons">close</i>
+                                <div className="chips chips-initial" ref={initialChipsRef}></div>
+                            </div>
+
+                            <div className="col s12 basic-top-break">
+                                <div className="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
+                                <div className="chip"> Tag <i className="close material-icons">close</i>
                                 </div>
                             </div>
 
                             <div className="col s12 basic-top-break">
-                                <div class="chips " ref={placeholderChipsRef}></div>
+                                <div className="chips " ref={placeholderChipsRef}></div>
                             </div>
                             <div className="col s12 basic-top-break">
-                                <div class="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
+                                <div className="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
                             </div>
                         </div>
                     </form>
@@ -233,15 +240,15 @@ function SignUpSummary() {
                                 <h2 className="section-title">Others</h2>
                             </div>
 
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate" />
-                                <label for="password">Password</label>
+                            <div className="input-field col s12">
+                                <input id="password" type="password" className="validate" />
+                                <label htmlFor="password">Password</label>
                             </div>
 
                             <div className="input-field col s12">
                                 <p>Multiple Select</p>
-                                <select multiple ref={optionSelectRef1}>
-                                    <option value={0} disabled selected>
+                                <select multiple ref={optionSelectRef1} defaultValue={[1, 3]}>
+                                    <option value={0} disabled>
                                         Choose your option
                                     </option>
                                     <option value={1}>Option 1</option>
@@ -263,17 +270,17 @@ function SignUpSummary() {
                             </div>
                             <div className="input-field col s12 m6">
                                 <p>Images in select</p>
-                                <select className="icons" ref={optionSelectRef4}>
-                                    <option value disabled selected>
+                                <select className="icons" ref={optionSelectRef4} defaultValue={0}>
+                                    <option value={0} disabled>
                                         Choose your option
                                     </option>
-                                    <option value data-icon={getImg(1).src}>
+                                    <option value={1} data-icon={getImg(1).src}>
                                         example 1
                                     </option>
-                                    <option value data-icon={getImg(2).src}>
+                                    <option value={2} data-icon={getImg(2).src}>
                                         example 2
                                     </option>
-                                    <option value data-icon={getImg(3).src}>
+                                    <option value={3} data-icon={getImg(3).src}>
                                         example 3
                                     </option>
                                 </select>
@@ -281,8 +288,8 @@ function SignUpSummary() {
                             </div>
                             <div className="input-field col s12 m6">
                                 <p>Images in select</p>
-                                <select className="icons" ref={optionSelectRef5}>
-                                    <option value={0} disabled selected>
+                                <select className="icons" ref={optionSelectRef5} defaultValue={0}>
+                                    <option value={0} disabled>
                                         Choose your option
                                     </option>
                                     <option value={1} data-icon={getImg(2).src} className="left">
@@ -339,37 +346,36 @@ function SignUpSummary() {
 
             <div className="section valign-wrapper">
                 <div className="container">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate" />
+                    <form className="col s12">
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="email" type="email" className="validate" />
                                 <label htmlFor="email">Email validator</label>
-                                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                                <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
                         </div>
 
-                        <div class="file-field input-field">
-                            <div class="btn">
+                        <div className="file-field input-field">
+                            <div className="btn">
                                 <span>File</span>
                                 <input type="file" />
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" />
+                            <div className="file-path-wrapper">
+                                <input className="file-path validate" type="text" />
                             </div>
                         </div>
 
-                        <div class="file-field input-field">
-                            <div class="btn">
+                        <div className="file-field input-field">
+                            <div className="btn">
                                 <span>File</span>
                                 <input type="file" multiple />
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Upload one or more files" />
+                            <div className="file-path-wrapper">
+                                <input className="file-path validate" type="text" placeholder="Upload one or more files" />
                             </div>
                         </div>
-
-
                     </form>
+
                 </div>
             </div>
 
@@ -493,26 +499,26 @@ function SignUpSummary() {
                         <div className="col s12 basic-top-break">
                             <div id="range-slider"></div> {/* initialized in init.js */}
                             <form className="basic-top-break" action="#">
-                                <p class="range-field">
+                                <p className="range-field">
                                     <input type="range" id="test5" min="0" max="100" />
                                 </p>
                             </form>
                         </div>
 
                         <div className="col s12 basic-top-break">
-                            <div class="switch">
+                            <div className="switch">
                                 <label>
                                     Off
                                 <input type="checkbox" />
-                                    <span class="lever"></span>
+                                    <span className="lever"></span>
                                     On
                                 </label>
                             </div>
-                            <div class="switch">
+                            <div className="switch">
                                 <label>
                                     Off
                                 <input disabled={true} type="checkbox" />
-                                    <span class="lever"></span>
+                                    <span className="lever"></span>
                                     On
                                 </label>
                             </div>
@@ -520,6 +526,116 @@ function SignUpSummary() {
                     </div>
                 </div>
             </div>
+
+
+            <div className="section white valign-wrapper">
+                <div className="container">
+
+                    <div className="row">
+                        <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1">
+                            <h3 className="light center-align blue-text">Sign up form</h3>
+                            <div className="card">
+                                <div className="card-content">
+                                    <form onSubmit={handleFormSubmit}>
+                                        <ul className="stepper linear" ref={stepperRef}>
+                                            {/* <ul data-method="GET" className="stepper linear" ref={stepperRef}> */}
+                                            <li className="step active">
+                                                <div className="step-title waves-effect waves-dark">Basic data</div>
+                                                <div className="step-content">
+                                                    <div className="row">
+
+                                                        <div className="input-field col s12">
+                                                            <i className="material-icons prefix  blue-text">message</i>
+                                                            <input id="first_name" type="text" minLength="2" maxLength="10" data-length="10"
+                                                                className="validate" required={true} autoComplete="off" />
+                                                            <label htmlFor="first_name">Your login</label>
+                                                        </div>
+
+                                                        <div className="input-field col s12">
+                                                            <input id="email" name="email" type="email" className="validate" required={true} autoComplete="off" />
+                                                            <label htmlFor="email">Your e-mail</label>
+                                                            <p className="helper-text" data-error="wrong" data-success="right"></p>
+                                                        </div>
+
+                                                    </div>
+                                                    <div className="step-actions">
+                                                        <button className="waves-effect waves-dark btn blue next-step" onClick={() => ""}>Continue</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="step">
+                                                <div className="step-title waves-effect waves-dark">Password</div>
+                                                <div className="step-content">
+                                                    <div className="row">
+                                                        <div className="input-field col s12">
+                                                            <input id="password" name="password" type="password" className="validate" required={true} autoComplete="off" />
+                                                            <label htmlFor="password">Your password</label>
+                                                        </div>
+                                                        <div className="input-field col s12">
+                                                            <input id="password" name="password" type="password" className="validate" required={true} autoComplete="off" />
+                                                            <label htmlFor="password">Repeat password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div className="step-actions">
+                                                        <button className="waves-effect waves-dark btn blue next-step">Continue</button>
+                                                        <button className="waves-effect waves-dark btn-flat previous-step">Back</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="step">
+                                                <div className="step-title waves-effect waves-dark">Summary</div>
+                                                <div className="step-content">
+                                                    We've just sent you an activation email
+                                        <div className="step-actions">
+                                                        <button className="waves-effect waves-dark btn blue"
+                                                            type="submit">Log in</button>
+                                                        {/* <button className="waves-effect waves-dark btn blue" data-feedback="someFunction">Log in</button> */}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                                    <button className="waves-effect waves-dark btn blue" id="controlled_reset">RESET STEPPER</button>
+                                    {/* btn waves-effect waves-light grey */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div className=" white valign-wrapper">
+                <div className="container">
+                    <div className="row">
+
+                        <div className="col s12 center">
+                            <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
+                            <div className="fixed-action-btn direction-top active" >
+                                <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
+                                    <i className="material-icons">menu</i>
+                                </a>
+                            </div>
+
+                            <div className="tap-target-wrapper">
+                                <div className="tap-target cyan" data-target="menu" ref={tapTargetRef}>
+                                    <div className="tap-target-content white-text" >
+                                        <h5>I am here</h5>
+                                        <p className="white-text">
+                                            Provide value and encourage return visits by introducing users to new features and functionality at contextually
+                                            relevant moments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </>
     );

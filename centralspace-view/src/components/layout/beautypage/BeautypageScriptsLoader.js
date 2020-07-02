@@ -7,7 +7,8 @@ function BeautypageScriptsLoader() {
             '/beautypage/js/materialize.min.js',
             '/beautypage/js/startup.js',
             '/beautypage/js/init.js',
-            '/beautypage/js/nouislider.js'
+            '/beautypage/js/nouislider.js',
+            '/beautypage/js/stepper/mstepper.js'
         ],
         'foobar',
         { async: false, returnPromise: true });
