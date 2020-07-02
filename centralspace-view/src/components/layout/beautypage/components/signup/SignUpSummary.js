@@ -532,7 +532,8 @@ function SignUpSummary() {
                 <div className="container">
 
                     <div className="row">
-                        <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1">
+                        <div className="col l6 m10 s12  offset-l3 offset-m1">
+                        {/* <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1"> */}
                             <h3 className="light center-align blue-text">Sign up form</h3>
                             <div className="card">
                                 <div className="card-content">
@@ -597,8 +598,7 @@ function SignUpSummary() {
                                     </form>
                                 </div>
                             </div>
-                                    <button className="waves-effect waves-dark btn blue" id="controlled_reset">RESET STEPPER</button>
-                                    {/* btn waves-effect waves-light grey */}
+                            <button className="btn waves-effect waves-light grey" id="controlled_reset">Clear form data</button>
                         </div>
                     </div>
                 </div>
