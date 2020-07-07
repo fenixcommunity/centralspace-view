@@ -22,17 +22,22 @@ function Beautypage() {
 
     // todo add picture to navbar mobile
 
-    // https://materialize-shopify-themes.myshopify.com/collections/dark-theme
-    // https://materialize-shopify-themes.myshopify.com/account/register
-    // https://github.com/materializegallery/materialize-gallery-theme
-    // https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/
+
+     rożnica w placeholder, usun zbedne skrytpty
+     fonty popraw
+    popraw placeholder scroll i odleglosc zdjecia
+    popraw placeholder dropdown
+    section popraw
+    let na const
+    
 
     return (
         <div>
             <Navbar
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
-                searchIsActive={true} />
+                basicSearchIsActive={true} 
+                fullScreenSearchIsActive={false}/>
             <SlideOut />
             <Header />
 

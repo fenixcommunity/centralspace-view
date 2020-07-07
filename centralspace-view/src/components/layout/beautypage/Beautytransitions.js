@@ -20,13 +20,16 @@ function Beautytransitions() {
 
     return (
         <div>
-            <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
+            <Navbar
+                isNavbarSolidTransition={true}
+                isDarkMode={false}
+                fullScreenSearchIsActive={true} />
             <SlideOut />
             <TransitionsHeader />
 
-            <Features isExtended={true} hasAnimation={true}/>
-            <Blog isExtended={true} hasAnimation={true}/>
-            <PricingTables isExtended={true}  hasAnimation={true}/>
+            <Features isExtended={true} hasAnimation={true} />
+            <Blog isExtended={true} hasAnimation={true} />
+            <PricingTables isExtended={true} hasAnimation={true} />
             <Feature1 />
             <Feature2 />
             <Feature3 />

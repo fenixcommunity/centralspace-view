@@ -12,10 +12,13 @@ function Beautyteam() {
 
     return (
         <div>
-            <Navbar isNavbarSolidTransition={true} isDarkMode={true} />
-
+            <Navbar
+                isNavbarSolidTransition={true}
+                isDarkMode={true}
+                fullScreenSearchIsActive={true} />
             <SlideOut />
             <TeamHeader />
+
             <Team />
 
             <BeautypageScriptsLoader />

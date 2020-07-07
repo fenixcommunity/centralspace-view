@@ -9,10 +9,13 @@ import Animation from './components/blog/Animation';
 import Blog from './components/blog/Blog';
 
 function Beautyblog() {
- 
+
     return (
         <div>
-            <Navbar isNavbarSolidTransition={false} isDarkMode={true} />
+            <Navbar
+                isNavbarSolidTransition={false}
+                isDarkMode={true}
+                fullScreenSearchIsActive={true} />
 
             <SlideOut />
             <Animation />

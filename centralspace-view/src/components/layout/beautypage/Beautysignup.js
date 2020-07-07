@@ -12,6 +12,7 @@ import SignupHeader from './components/signup/SignupHeader';
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
 import MaterialUiStepper from './MaterialUiStepper';
+import Gallery from './Gallery';
 
 class Beautysignup extends React.Component {
     constructor(props) {
@@ -25,7 +26,10 @@ class Beautysignup extends React.Component {
     render() {
         return (
             <div>
-                <Navbar isNavbarSolidTransition={true} isDarkMode={false} />
+                <Navbar
+                    isNavbarSolidTransition={true}
+                    isDarkMode={false}
+                    fullScreenSearchIsActive={true} />
                 <SlideOut />
                 <SignupHeader />
 
@@ -34,12 +38,13 @@ class Beautysignup extends React.Component {
                 <ContactUs2 />
                 <ScrollspySection />
                 <SignUpSummary />
+                <Gallery />
                 {/*
             TODO - create similar components
              <MaterialUiStepper /> 
              */}
 
-                <BeautypageScriptsLoader />
+                <BeautypageScriptsLoader contextPage="Beautysignup" />
                 <Footer />
             </div>
         )

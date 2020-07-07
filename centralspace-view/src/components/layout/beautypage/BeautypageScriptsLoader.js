@@ -1,17 +1,26 @@
 import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 
-function BeautypageScriptsLoader() {
+function BeautypageScriptsLoader(props) {
+    const basicScripts = [
+        '/beautypage/js/materialize.min.js',
+        '/beautypage/js/startup.js',
+        '/beautypage/js/init.js',
+        '/beautypage/js/nouislider.js',
+        '/beautypage/js/stepper/mstepper.js'
+    ]
+    let contextPageScripts = [];
+    const contextPage = props.contextPage;
+    if (contextPage && contextPage === "Beautysignup") {
+        contextPageScripts = contextPageScripts.concat([
+            '/gallery/js/init.js',
+            '/gallery/js/theme.js'
+        ])
+    }
     useEffect(() => {
-        loadjs([
-            '/beautypage/js/materialize.min.js',
-            '/beautypage/js/startup.js',
-            '/beautypage/js/init.js',
-            '/beautypage/js/nouislider.js',
-            '/beautypage/js/stepper/mstepper.js'
-        ],
-        'foobar',
-        { async: false, returnPromise: true });
+        loadjs([...basicScripts, ...contextPageScripts],
+            'foobar',
+            { async: false, returnPromise: true });
 
         loadjs.ready('foobar', {
             success: function () {

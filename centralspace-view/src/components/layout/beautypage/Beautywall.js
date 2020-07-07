@@ -12,10 +12,13 @@ function Beautywall() {
 
     return (
         <div>
-            <Navbar isDarkMode={true} isPrimaryColor={true} />
-
+            <Navbar
+                isDarkMode={true}
+                isPrimaryColor={true}
+                fullScreenSearchIsActive={true} />
             <SlideOut />
             <PhoneWall />
+
             <Features />
 
             <BeautypageScriptsLoader />

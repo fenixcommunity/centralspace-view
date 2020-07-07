@@ -52,6 +52,7 @@ for Visual Studio Code:
 - Materialize Snippets 
 - TabNine
 - Git history
+- CSS Formatter
 
 Links:
 - http://localhost:7773/

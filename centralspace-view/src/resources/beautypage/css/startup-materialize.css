@@ -5726,8 +5726,10 @@ input[type=search].valid,
 input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
-  border-bottom: 1px solid #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  /* border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50; */
 }
 
 input:not([type]).valid + label:after,
@@ -11306,6 +11308,7 @@ textarea.materialize-textarea + label {
 .white textarea.materialize-textarea {
   color: #444;
   border-color: rgba(0, 0, 0, 0.4);
+  border-width: 1px
 }
 
 .white input[type=text]:focus, .white input[type=text]:focus:not([readonly]),

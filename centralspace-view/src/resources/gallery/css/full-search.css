@@ -1,0 +1,124 @@
+
+.popup-search-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    transition: opacity .2s, visibility 0s .2s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000
+}
+
+.popup-search-wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s, visibility 0s
+}
+
+.popup-search-wrapper form {
+    position: relative;
+    top: 50%;
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.popup-search-wrapper form input {
+    margin: 0;
+    width: calc(100% - 80px);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    height: auto;
+    min-height: 40px
+}
+
+.popup-search-wrapper form input, .popup-search-wrapper form input:focus:not([readonly]) {
+    box-shadow: none;
+    border: 0
+}
+
+.popup-search-wrapper form input, .popup-search-wrapper form button[type="submit"] {
+    vertical-align: middle;
+    color: black;
+}
+
+.popup-search-wrapper form button[type="submit"] {
+    position: absolute;
+    top: 7px;
+    right: 0
+}
+
+.popup-search-wrapper .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer
+}
+
+@media only screen and (max-width: 992px) {
+    .popup-search-wrapper {
+        padding: 20px
+    }
+    .popup-search-wrapper form input {
+        font-size: 24px
+    }
+    .popup-search-wrapper form button[type="submit"] {
+        top: 0
+    }
+}
+
+
+.label-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.no-placeholder .label-hidden {
+    position: inherit !important;
+    overflow: auto;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0
+}
+
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+input[type='search']::-webkit-input-placeholder {
+    color: rgb(118, 118, 118);
+  }
+  
+  input[type='search']:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(118, 118, 118);
+  }
+  
+  input[type='search']::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(118, 118, 118);
+  }
+  
+  input[type='search']:-ms-input-placeholder {
+    color: rgb(118, 118, 118);
+  }
+
+  nav.navbar ul .fullscreen-search::before {
+    background-color: transparent;
+  }
+
+.fullscreen-search i {
+    margin-top: 3px;
+  }

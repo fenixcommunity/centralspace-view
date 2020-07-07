@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import '../../../../resources/gallery/css/full-search.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 function Navbar(props) {
@@ -20,16 +21,26 @@ function Navbar(props) {
         </a>
         <ul id="mobile-menu" className="right hide-on-med-and-down">
 
-          {props.searchIsActive && (
-          <li>
-            <form>
-              <div className="input-field">
-                <input id="search" type="search" required />
-                <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
-                <i className="material-icons">close</i>
-              </div>
-            </form>
-          </li>
+          {props.basicSearchIsActive && (
+            <li>
+              <form>
+                <div className="input-field">
+                  <input id="search" type="search" required />
+                  <label className="label-icon" htmlFor="search">
+                    <i className="material-icons">search</i>
+                  </label>
+                  <i className="material-icons">close</i>
+                </div>
+              </form>
+            </li>
+          )}
+
+          {props.fullScreenSearchIsActive && (
+            <li>
+              <a class="fullscreen-search" href="#">
+                <i class="material-icons">search</i>
+              </a>
+            </li>
           )}
 
           <li className="active">
@@ -150,6 +161,24 @@ function Navbar(props) {
         >
           <i className={`material-icons ${textStyle}`}>menu</i>
         </a>
+
+        <div class="popup-search-wrapper">
+          <form action="/beautypage/search" method="get" role="search">
+            <label htmlFor="search" className="label-hidden active">
+              Search our store
+          </label>
+            <input
+              type="search"
+              name="q"
+              id="search"
+              placeholder="Search my blog"
+            />
+            <button type="submit" class="btn-flat btn-floating waves-effect">
+              <i className="material-icons black-text">search</i>
+            </button>
+          </form>
+          <i class="popup-close material-icons">close</i>
+        </div>
       </div>
     </nav>
   );
