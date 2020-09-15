@@ -33,7 +33,7 @@ function SignUpForm() {
   }
 
   return (
-    <div className="section light valign-wrapper">
+    <div className="section section-large-size light valign-wrapper">
       <div className="container">
         <form>
           <div className="row">

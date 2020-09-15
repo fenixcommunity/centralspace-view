@@ -66,7 +66,7 @@ function SignUpSummary() {
     }
 
     const handleOnClick = () => {
-        const tap = M.TapTarget.getInstance(tapTargetRef.current);
+        let tap = M.TapTarget.getInstance(tapTargetRef.current);
         if (!tap) {
             tap = M.TapTarget.init(tapTargetRef.current);
         }
@@ -179,7 +179,7 @@ function SignUpSummary() {
                 </div >
             </div >
 
-            <div className="section valign-wrapper">
+            <div className="section section-large-size valign-wrapper">
                 <div className="container">
                     <form>
                         <div className="row">
@@ -232,7 +232,7 @@ function SignUpSummary() {
                 </div>
             </div>
 
-            <div className="section light valign-wrapper">
+            <div className="section section-large-size light valign-wrapper">
                 <div className="container">
                     <form>
                         <div className="row">
@@ -382,41 +382,7 @@ function SignUpSummary() {
             <div className="section white valign-wrapper">
                 <div className="container">
                     <div className="row">
-                        <div className="col s12">
-                            <ul className="collapsible" ref={collapsibleRef}>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col s12">
-                            <ul className="collapsible popout" ref={collapsiblePopupRef}>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col s12">
+                    <div className="col s12">
                             <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
                             <div className="fixed-action-btn direction-top active" >
                                 <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
@@ -496,6 +462,40 @@ function SignUpSummary() {
                             </div>
                         </div>
 
+                        <div className="col s12">
+                            <ul className="collapsible" ref={collapsibleRef}>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="col s12">
+                            <ul className="collapsible popout" ref={collapsiblePopupRef}>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                                <li>
+                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
+                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div className="col s12 basic-top-break">
                             <div id="range-slider"></div> {/* initialized in init.js */}
                             <form className="basic-top-break" action="#">
@@ -528,7 +528,7 @@ function SignUpSummary() {
             </div>
 
 
-            <div className="section white valign-wrapper">
+            <div className="section section-large-size white valign-wrapper">
                 <div className="container">
 
                     <div className="row">
@@ -603,39 +603,6 @@ function SignUpSummary() {
                     </div>
                 </div>
             </div>
-
-
-
-
-            <div className=" white valign-wrapper">
-                <div className="container">
-                    <div className="row">
-
-                        <div className="col s12 center">
-                            <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
-                            <div className="fixed-action-btn direction-top active" >
-                                <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
-                                    <i className="material-icons">menu</i>
-                                </a>
-                            </div>
-
-                            <div className="tap-target-wrapper">
-                                <div className="tap-target cyan" data-target="menu" ref={tapTargetRef}>
-                                    <div className="tap-target-content white-text" >
-                                        <h5>I am here</h5>
-                                        <p className="white-text">
-                                            Provide value and encourage return visits by introducing users to new features and functionality at contextually
-                                            relevant moments.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
         </>
     );

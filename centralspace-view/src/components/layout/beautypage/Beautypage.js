@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../resources/beautypage/css/startup-materialize.css';
-// import '../../../resources/beautypage/css/materializenew.css'; //remove after test
+// import '../../../resources/beautypage/css/materializenew.css'; //remove after tests
 import '../../../resources/beautypage/css/search.css';
 import './Beautypage.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
@@ -20,16 +20,9 @@ function Beautypage() {
     // about.html docs/abouts.html AND docs/element-transitions.html AND materializecss docs
     // we have light,black,white section themes
 
-    // todo add picture to navbar mobile
 
-
-    //  rożnica w placeholder, usun zbedne skrytpty
+    //  usun zbedne skrytpty
     //  fonty popraw
-    // wywal init i stworz nowy plik search i dawaj go wszedzie albo przenies do init
-    // popraw placeholder scroll i odleglosc zdjecia
-    // popraw placeholder dropdown
-    // section popraw
-// modal sign up popraw
 // podziel na mniejsze
 
     return (

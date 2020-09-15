@@ -2759,7 +2759,10 @@ video.responsive-video {
 }
 
 .pinned {
+  /*  note - we don't need pinned navbar
   position: fixed !important;
+   */
+  position: inherit;
 }
 
 /*********************
