@@ -6,7 +6,7 @@ function Parallax2() {
   const parallaxRef = useRef(null);
 
   useEffect(() => {
-    let parallax = M.Parallax.init(parallaxRef.current, {});
+    const parallax = M.Parallax.init(parallaxRef.current, {});
   }, []);
 
   return (

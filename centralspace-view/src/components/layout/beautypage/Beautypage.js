@@ -29,8 +29,6 @@ function Beautypage() {
     // popraw placeholder scroll i odleglosc zdjecia
     // popraw placeholder dropdown
     // section popraw
-    // let na const
-    // nie działa search na wszyskich
 // modal sign up popraw
 // podziel na mniejsze
 

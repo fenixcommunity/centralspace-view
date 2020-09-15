@@ -10,7 +10,7 @@ function ContactUs() {
   const optionSelectRef2 = useRef(null);
 
   useEffect(() => {
-    let datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
+    const datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
     M.FormSelect.init(optionSelectRef1.current, {});
     M.FormSelect.init(optionSelectRef2.current, {});
     // M.AutoInit();

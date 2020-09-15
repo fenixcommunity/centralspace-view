@@ -66,7 +66,7 @@ function SignUpSummary() {
     }
 
     const handleOnClick = () => {
-        let tap = M.TapTarget.getInstance(tapTargetRef.current);
+        const tap = M.TapTarget.getInstance(tapTargetRef.current);
         if (!tap) {
             tap = M.TapTarget.init(tapTargetRef.current);
         }

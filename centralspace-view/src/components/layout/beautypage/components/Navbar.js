@@ -5,7 +5,7 @@ import M from 'materialize-css/dist/js/materialize.js';
 function Navbar(props) {
   const dropdownRef = useRef(null);
   useEffect(() => {
-    let dropdown = M.Dropdown.init(dropdownRef.current, {});
+    const dropdown = M.Dropdown.init(dropdownRef.current, {});
   }, []);
 
   const darkMode = props.isDarkMode;

@@ -6,9 +6,8 @@ RULES:
 - use IMMUTABLE data like arrays ->  slice() instead push()
 - convention: on[Event], and handle function handle[Event]
 - spread operator:
-let player = {score: 1, name: 'Jeff'};
-let newPlayer = {...player, score: 2};
-- use let instead const if not needed
+const player = {score: 1, name: 'Jeff'};
+const newPlayer = {...player, score: 2};
 - React.Component
 - this.state.comment =  WRONG /  this.setState({comment: ' ' });  or  ...state, comment GOOD
 - use componentDidMount and componentWillUnmount or Hook-s

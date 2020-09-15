@@ -51,7 +51,7 @@ function AccountDetails(props) {
 }
 
 const mapStateToProps = (state, props) => {
-    // let login = props.match.params.login;
+    // const login = props.match.params.login;
     // const Api = authApi();
     // Api.get('/account/login/' + login)
     //     .then(response => {
@@ -66,9 +66,9 @@ const mapStateToProps = (state, props) => {
 
     // }
 
-    let id = props.match.params.id;
-    let accounts = state.firestore.data.accounts;
-    let account = accounts ? accounts[id] : null;
+    const id = props.match.params.id;
+    const accounts = state.firestore.data.accounts;
+    const account = accounts ? accounts[id] : null;
     return {
         account: account
     }

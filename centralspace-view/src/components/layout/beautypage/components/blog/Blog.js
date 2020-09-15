@@ -13,7 +13,7 @@ function Blog() {
   const modalRef = useRef(null);
 
   useEffect(() => {
-    let modal = M.Modal.init(modalRef.current, {});
+    const modal = M.Modal.init(modalRef.current, {});
   }, []);
 
   const handleToastOnClick = () => {

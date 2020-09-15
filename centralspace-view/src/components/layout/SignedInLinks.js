@@ -8,7 +8,7 @@ import M from 'materialize-css/dist/js/materialize.js';
 function SignedInLinks(props) {
     const dropdownRef = useRef(null);
     useEffect(() => {
-        let dropdown = M.Dropdown.init(dropdownRef.current, {});
+        const dropdown = M.Dropdown.init(dropdownRef.current, {});
         // const openDropdown = (e) => {
         //     // dropdown.open();
         // };

@@ -5,7 +5,7 @@ function ContactForm() {
   const datepickerRef = useRef(null);
 
   useEffect(() => {
-    let datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
+    const datepicker = M.Datepicker.init(datepickerRef.current, { disableWeekends: true, yearRange: 1 });
   }, []);
 
   return (

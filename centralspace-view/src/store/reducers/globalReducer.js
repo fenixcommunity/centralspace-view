@@ -13,7 +13,7 @@ const globalReducer = combineReducers({
 
 // const globalReducer = (state = initState, action) => {
 //     if (action.type === 'DELETE_ACCOUNT') {
-//         let newAccounts = state.accounts.filter(account => {
+//         const newAccounts = state.accounts.filter(account => {
 //             return account.id !== action.id
 //         });
 //         return {
