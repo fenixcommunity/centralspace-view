@@ -21,7 +21,7 @@ function Beautywall() {
 
             <Features />
 
-            <BeautypageScriptsLoader />
+            <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />
         </div>
     )

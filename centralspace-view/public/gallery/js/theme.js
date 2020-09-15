@@ -700,271 +700,6 @@ slate.Variants = (function() {
 })();
 
 
-/*================ Sections ================*/
-/**
- * Product Template Script
- * ------------------------------------------------------------------------------
- * A file that contains scripts highly couple code to the Product template.
- *
-   * @namespace product
- */
-
-theme.Product = (function() {
-
-  var selectors = {
-    addToCart: '[data-add-to-cart]',
-    addToCartText: '[data-add-to-cart-text]',
-    comparePrice: '[data-compare-price]',
-    comparePriceText: '[data-compare-text]',
-    originalSelectorId: '[data-product-select]',
-    priceWrapper: '[data-price-wrapper]',
-    productFeaturedImage: '[data-product-featured-image]',
-    productJson: '[data-product-json]',
-    productPrice: '[data-product-price]',
-    productThumbs: '[data-product-single-thumbnail]',
-    singleOptionSelector: '[data-single-option-selector]'
-  };
-
-  /**
-   * Product section constructor. Runs on page load as well as Theme Editor
-   * `section:load` events.
-   * @param {string} container - selector for the section container DOM element
-   */
-  function Product(container) {
-    this.$container = $(container);
-    var sectionId = this.$container.attr('data-section-id');
-
-    this.settings = {};
-    this.namespace = '.product';
-
-    // Stop parsing if we don't have the product json script tag when loading
-    // section in the Theme Editor
-    if (!$(selectors.productJson, this.$container).html()) {
-      return;
-    }
-
-    this.productSingleObject = JSON.parse($(selectors.productJson, this.$container).html());
-    this.settings.imageSize = slate.Image.imageSize($(selectors.productFeaturedImage, this.$container).attr('src'));
-
-    slate.Image.preload(this.productSingleObject.images, this.settings.imageSize);
-
-    this.initVariants();
-  }
-
-  Product.prototype = $.extend({}, Product.prototype, {
-
-    /**
-     * Handles change events from the variant inputs
-     */
-    initVariants: function() {
-      var options = {
-        $container: this.$container,
-        enableHistoryState: this.$container.data('enable-history-state') || false,
-        singleOptionSelector: selectors.singleOptionSelector,
-        originalSelectorId: selectors.originalSelectorId,
-        product: this.productSingleObject
-      };
-
-      this.variants = new slate.Variants(options);
-
-      this.$container.on('variantChange' + this.namespace, this.updateAddToCartState.bind(this));
-      this.$container.on('variantImageChange' + this.namespace, this.updateProductImage.bind(this));
-      this.$container.on('variantPriceChange' + this.namespace, this.updateProductPrices.bind(this));
-    },
-
-    /**
-     * Updates the DOM state of the add to cart button
-     *
-     * @param {boolean} enabeled - Decides whether cart is enabled or disabled
-     * @param {string} text - Updates the text notification content of the cart
-     */
-    updateAddToCartState: function(evt) {
-      var variant = evt.variant;
-
-      if (variant) {
-        $(selectors.priceWrapper, this.$container).removeClass('hide');
-      } else {
-        $(selectors.addToCart, this.$container).prop('disabled', true);
-        $(selectors.addToCartText, this.$container).html(theme.strings.unavailable);
-        $(selectors.priceWrapper, this.$container).addClass('hide');
-        return;
-      }
-
-      if (variant.available) {
-        $(selectors.addToCart, this.$container).prop('disabled', false);
-        $(selectors.addToCartText, this.$container).html(theme.strings.addToCart);
-      } else {
-        $(selectors.addToCart, this.$container).prop('disabled', true);
-        $(selectors.addToCartText, this.$container).html(theme.strings.soldOut);
-      }
-    },
-
-    /**
-     * Updates the DOM with specified prices
-     *
-     * @param {string} productPrice - The current price of the product
-     * @param {string} comparePrice - The original price of the product
-     */
-    updateProductPrices: function(evt) {
-      var variant = evt.variant;
-      var $comparePrice = $(selectors.comparePrice, this.$container);
-      var $compareEls = $comparePrice.add(selectors.comparePriceText, this.$container);
-
-      $(selectors.productPrice, this.$container)
-        .html(slate.Currency.formatMoney(variant.price, theme.moneyFormat));
-
-      if (variant.compare_at_price > variant.price) {
-        $comparePrice.html(slate.Currency.formatMoney(variant.compare_at_price, theme.moneyFormat));
-        $compareEls.removeClass('hide');
-      } else {
-        $comparePrice.html('');
-        $compareEls.addClass('hide');
-      }
-    },
-
-    /**
-     * Updates the DOM with the specified image URL
-     *
-     * @param {string} src - Image src URL
-     */
-    updateProductImage: function(evt) {
-      var variant = evt.variant;
-      var sizedImgUrl = slate.Image.getSizedImageUrl(variant.featured_image.src, this.settings.imageSize);
-
-      $(selectors.productFeaturedImage, this.$container).attr('src', sizedImgUrl);
-    },
-
-    /**
-     * Event callback for Theme Editor `section:unload` event
-     */
-    onUnload: function() {
-      this.$container.off(this.namespace);
-    }
-  });
-
-  return Product;
-})();
-
-
-/*================ Templates ================*/
-/**
- * Customer Addresses Script
- * ------------------------------------------------------------------------------
- * A file that contains scripts highly couple code to the Customer Addresses
- * template.
- *
- * @namespace customerAddresses
- */
-
-theme.customerAddresses = (function() {
-  var $newAddressForm = $('#AddressNewForm');
-
-  if (!$newAddressForm.length) {
-    return;
-  }
-
-  // Initialize observers on address selectors, defined in shopify_common.js
-  if (Shopify) {
-    new Shopify.CountryProvinceSelector('AddressCountryNew', 'AddressProvinceNew', {
-      hideElement: 'AddressProvinceContainerNew'
-    });
-  }
-
-  // Initialize each edit form's country/province selector
-  $('.address-country-option').each(function() {
-    var formId = $(this).data('form-id');
-    var countrySelector = 'AddressCountry_' + formId;
-    var provinceSelector = 'AddressProvince_' + formId;
-    var containerSelector = 'AddressProvinceContainer_' + formId;
-
-    new Shopify.CountryProvinceSelector(countrySelector, provinceSelector, {
-      hideElement: containerSelector
-    });
-  });
-
-  // Toggle new/edit address forms
-  $('.address-new-toggle').on('click', function() {
-    $newAddressForm.toggleClass('hide');
-  });
-
-  $('.address-edit-toggle').on('click', function() {
-    var formId = $(this).data('form-id');
-    $('#EditAddress_' + formId).toggleClass('hide');
-  });
-
-  $('.address-delete').on('click', function() {
-    var $el = $(this);
-    var formId = $el.data('form-id');
-    var confirmMessage = $el.data('confirm-message');
-    if (confirm(confirmMessage || 'Are you sure you wish to delete this address?')) {
-      Shopify.postLink('/account/addresses/' + formId, {parameters: {_method: 'delete'}});
-    }
-  });
-})();
-
-/**
- * Password Template Script
- * ------------------------------------------------------------------------------
- * A file that contains scripts highly couple code to the Password template.
- *
- * @namespace password
- */
-
-theme.customerLogin = (function() {
-  var config = {
-    recoverPasswordForm: '#RecoverPassword',
-    hideRecoverPasswordLink: '#HideRecoverPasswordLink'
-  };
-
-  if (!$(config.recoverPasswordForm).length) {
-    return;
-  }
-
-  checkUrlHash();
-  resetPasswordSuccess();
-
-  $(config.recoverPasswordForm).on('click', onShowHidePasswordForm);
-  $(config.hideRecoverPasswordLink).on('click', onShowHidePasswordForm);
-
-  function onShowHidePasswordForm(evt) {
-    evt.preventDefault();
-    toggleRecoverPasswordForm();
-  }
-
-  function checkUrlHash() {
-    var hash = window.location.hash;
-
-    // Allow deep linking to recover password form
-    if (hash === '#recover') {
-      toggleRecoverPasswordForm();
-    }
-  }
-
-  /**
-   *  Show/Hide recover password form
-   */
-  function toggleRecoverPasswordForm() {
-    $('#RecoverPasswordForm').toggleClass('hide');
-    $('#CustomerLoginForm').toggleClass('hide');
-  }
-
-  /**
-   *  Show reset password success message
-   */
-  function resetPasswordSuccess() {
-    var $formState = $('.reset-password-success');
-
-    // check if reset password form was successfully submited.
-    if (!$formState.length) {
-      return;
-    }
-
-    // show success message
-    $('#ResetSuccess').removeClass('hide');
-  }
-})();
-
-
 /*================ Vendor ================*/
 /*!
  * imagesLoaded PACKAGED v4.1.0
@@ -1841,19 +1576,12 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
 
 $(document).ready(function() {
-  var sections = new slate.Sections();
-  sections.register('product', theme.Product);
-
   // Common a11y fixes
   slate.a11y.pageLinkFocus($(window.location.hash));
 
   $('.in-page-link').on('click', function(evt) {
     slate.a11y.pageLinkFocus($(evt.currentTarget.hash));
   });
-
-  // Wrap videos in div to force responsive layout.
-  slate.rte.wrapTable();
-  slate.rte.iframeReset();
 
   // Apply a specific class to the html element for browser support of cookies.
   if (slate.cart.cookiesEnabled()) {
@@ -1870,88 +1598,6 @@ $(document).ready(function() {
     $(this).closest('.popup-search-wrapper').removeClass('active');
   });
 
-  // Quantity counter
-  $('.quantity-counter .add').on('click.quantity-add', function(e) {
-    var $counter = $(this).closest('.quantity-counter');
-    var id = $(e.target).closest('.gallery-item').attr('data-item-id');
-    var input = $(this).siblings('input[type=number]');
-    var newQuantity = parseInt(input.val()) + 1;
-    input.val(newQuantity);
-    input.trigger('change');
-
-    var inCart = $(this).closest('.cart-container').length;
-    if (inCart) {
-      $counter.addClass('disabled');
-      Shopify.changeItem(id, newQuantity, function() {
-        $counter.removeClass('disabled');
-      });
-    }
-  });
-
-  $('.quantity-counter .remove').on('click.quantity-remove', function(e) {
-    var $counter = $(this).closest('.quantity-counter');
-    var id = $(e.target).closest('.gallery-item').attr('data-item-id');
-    var input = $(this).siblings('input[type=number]');
-    var newQuantity = parseInt(input.val()) - 1;
-    input.val(newQuantity);
-    input.trigger('change');
-
-    var inCart = $(this).closest('.cart-container').length;
-    if (inCart) {
-      $counter.addClass('disabled');
-      Shopify.changeItem(id, newQuantity, function() {
-        $counter.removeClass('disabled');
-      });
-    }
-  });
-
-  $('.quantity-counter input[type=number]').on('change.quantity-change', function(e) {
-    var $counter = $(this).closest('.quantity-counter');
-    var id = $(e.target).closest('.gallery-item').attr('data-item-id');
-    var newQuantity = parseInt($(this).val());
-    if (newQuantity <= 0) {
-      $(this).siblings('.remove').addClass('disabled');
-    } else {
-      $(this).siblings('.remove').removeClass('disabled');
-    }
-
-    var inCart = $(this).closest('.cart-container').length;
-    if (inCart) {
-      $counter.addClass('disabled');
-      Shopify.changeItem(id, newQuantity, function(item) {
-        var price = item.total_price.toString();
-        var len = price.length;
-        price = price.substring(0, len-2) + "." + price.substring(len-2);
-        $counter.removeClass('disabled');
-        $('.cart-summary .subtotal .price').text('$' + price);
-      });
-    }
-  });
-
-  Shopify.addComment = function(author, email, body) {
-    var params = {
-      type: 'POST',
-      url: '/blogs/news/second-blog-post/comments#comment_form',
-      data: `comment[author]=${author}&comment[email]=${email}&comment[body]=${body}`,
-      dataType: 'json'
-    };
-    jQuery.ajax(params);
-  };
-
-
-  // go to ratings btn
-  $('.go-to-ratings').on('click.go-to-ratings', function(e) {
-    var $placeholder = $(e.target).closest('.placeholder');
-    var $reviews = $placeholder.find('#shopify-product-reviews');
-
-    if ($placeholder.length) {
-      var offset = $reviews.offset().top - $placeholder.offset().top;
-
-      $placeholder.animate({
-        scrollTop: offset
-      }, 1000);
-    }
-  });
 
   // go to comments btn
   $('.go-to-comments').on('click.go-to-comments', function(e) {
@@ -1992,7 +1638,6 @@ $(document).ready(function() {
     }
   });
 
-
   // Masonry Grid
   var $masonry = $('.gallery.gallery-masonry');
   $masonry.masonry({
@@ -2009,16 +1654,6 @@ $(document).ready(function() {
   });
   $('a.filter').click(function (e) {
     e.preventDefault();
-  });
-
-
-
-  // Contact Form Icon
-  $("form .form-control").focus(function() {
-    $(this).siblings("label").first().children("i").first().css({"color": "#aaa", "left": 0});
-  });
-  $("form .form-control").blur(function() {
-    $(this).siblings("label").first().children("i").first().css({"color": "transparent", "left": "-20px"});
   });
 
 

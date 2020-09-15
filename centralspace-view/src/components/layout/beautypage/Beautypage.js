@@ -23,13 +23,16 @@ function Beautypage() {
     // todo add picture to navbar mobile
 
 
-     rożnica w placeholder, usun zbedne skrytpty
-     fonty popraw
-    popraw placeholder scroll i odleglosc zdjecia
-    popraw placeholder dropdown
-    section popraw
-    let na const
-    
+    //  rożnica w placeholder, usun zbedne skrytpty
+    //  fonty popraw
+    // wywal init i stworz nowy plik search i dawaj go wszedzie albo przenies do init
+    // popraw placeholder scroll i odleglosc zdjecia
+    // popraw placeholder dropdown
+    // section popraw
+    // let na const
+    // nie działa search na wszyskich
+// modal sign up popraw
+// podziel na mniejsze
 
     return (
         <div>
@@ -49,7 +52,7 @@ function Beautypage() {
             <LeafletMapEmbedded />
             <SignUpForm />
 
-            <BeautypageScriptsLoader />
+            <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />
         </div>
     )

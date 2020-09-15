@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import '../../../resources/gallery/css/gallery.css';
+import M from 'materialize-css/dist/js/materialize.js';
 import GalleryItems from "./GalleryItems.js"
 
 function Gallery() {
-
+  const optionSelectRef1 = useRef(null);
+  const optionSelectRef2 = useRef(null);
+  
   useEffect(() => {
+    M.FormSelect.init(optionSelectRef1.current, {});
+    M.FormSelect.init(optionSelectRef2.current, {});
   }, []);
 
   return (
@@ -14,17 +19,17 @@ function Gallery() {
         <div className="categories-wrapper">
           <div className="categories-container pin-top">
             <ul className="categories container" data-filter="type">
-              <li className>
+              <li>
                 <a href="#all">
                   All
               </a>
               </li>
-              <li className>
+              <li>
                 <a href="#overhead">
                   Big Bang
               </a>
               </li>
-              <li className>
+              <li>
                 <a href="#sintel">
                   poly
               </a>
@@ -36,7 +41,7 @@ function Gallery() {
               </li>
             </ul>
             <ul className="categories container" data-filter="tag">
-              <li className>
+              <li>
                 <a href="#all">
                   All
               </a>
@@ -46,7 +51,7 @@ function Gallery() {
                   circle
               </a>
               </li>
-              <li className>
+              <li>
                 <a href="#overhead">
                   Hexagon
               </a>
@@ -59,7 +64,7 @@ function Gallery() {
                   <input
                     type="text"
                     className="select-dropdown"
-                    readOnly="true"
+                    readOnly={true}
                     data-activates="select-options-dcbb1aa5-825e-6232-dede-47054304aba6"
                     defaultValue="Color dropdown"
                   />
@@ -67,21 +72,21 @@ function Gallery() {
                     id="select-options-dcbb1aa5-825e-6232-dede-47054304aba6"
                     className="dropdown-content select-dropdown "
                   >
-                    <li className>
+                    <li>
                       <span>Color dropdown</span>
                     </li>
-                    <li className>
+                    <li>
                       <span>red</span>
                     </li>
-                    <li className>
+                    <li>
                       <span>white</span>
                     </li>
-                    <li className>
+                    <li>
                       <span>blue</span>
                     </li>
                   </ul>
-                  <select name="color" className="initialized">
-                    <option selected value="all">
+                  <select name="color" className="initialized" defaultValue="all" ref={optionSelectRef1}>
+                    <option value="all">
                       color
                   </option>
                     <option value="red">red</option>
@@ -96,7 +101,7 @@ function Gallery() {
                   <input
                     type="text"
                     className="select-dropdown"
-                    readOnly="true"
+                    readOnly={true}
                     data-activates="select-options-daafc9a8-ceb8-e267-c556-01cc39cdc8bd"
                     defaultValue="size dropdown"
                   />
@@ -104,18 +109,18 @@ function Gallery() {
                     id="select-options-daafc9a8-ceb8-e267-c556-01cc39cdc8bd"
                     className="dropdown-content select-dropdown "
                   >
-                    <li className>
+                    <li>
                       <span>size dropdown</span>
                     </li>
-                    <li className>
+                    <li>
                       <span>small</span>
                     </li>
-                    <li className>
+                    <li>
                       <span>medium</span>
                     </li>
                   </ul>
-                  <select name="size" className="initialized">
-                    <option selected value="all">
+                  <select name="size" className="initialized" defaultValue="small" ref={optionSelectRef2}>
+                    <option value="all">
                       size
                   </option>
                     <option value="small">small</option>

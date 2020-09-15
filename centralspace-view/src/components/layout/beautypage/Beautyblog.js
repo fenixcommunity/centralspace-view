@@ -21,7 +21,7 @@ function Beautyblog() {
             <Animation />
             <Blog />
 
-            <BeautypageScriptsLoader />
+            <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />
         </div>
     )

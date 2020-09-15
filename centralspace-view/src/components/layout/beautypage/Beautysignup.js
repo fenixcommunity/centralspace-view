@@ -44,7 +44,7 @@ class Beautysignup extends React.Component {
              <MaterialUiStepper /> 
              */}
 
-                <BeautypageScriptsLoader contextPage="Beautysignup" />
+<BeautypageScriptsLoader contextOfScripts="galleryTheme" />
                 <Footer />
             </div>
         )

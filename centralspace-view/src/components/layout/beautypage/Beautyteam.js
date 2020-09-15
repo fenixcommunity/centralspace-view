@@ -21,7 +21,7 @@ function Beautyteam() {
 
             <Team />
 
-            <BeautypageScriptsLoader />
+            <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />
         </div>
     )

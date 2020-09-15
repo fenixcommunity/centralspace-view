@@ -10,8 +10,8 @@ function BeautypageScriptsLoader(props) {
         '/beautypage/js/stepper/mstepper.js'
     ]
     let contextPageScripts = [];
-    const contextPage = props.contextPage;
-    if (contextPage && contextPage === "Beautysignup") {
+    const contextOfScripts = props.contextOfScripts;
+    if (contextOfScripts && contextOfScripts === "galleryTheme") {
         contextPageScripts = contextPageScripts.concat([
             '/gallery/js/init.js',
             '/gallery/js/theme.js'

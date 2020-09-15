@@ -37,8 +37,8 @@ function Navbar(props) {
 
           {props.fullScreenSearchIsActive && (
             <li>
-              <a class="fullscreen-search" href="#">
-                <i class="material-icons">search</i>
+              <a className="fullscreen-search" href="#">
+                <i className="material-icons">search</i>
               </a>
             </li>
           )}
@@ -162,7 +162,7 @@ function Navbar(props) {
           <i className={`material-icons ${textStyle}`}>menu</i>
         </a>
 
-        <div class="popup-search-wrapper">
+        <div className="popup-search-wrapper">
           <form action="/beautypage/search" method="get" role="search">
             <label htmlFor="search" className="label-hidden active">
               Search our store
@@ -173,11 +173,11 @@ function Navbar(props) {
               id="search"
               placeholder="Search my blog"
             />
-            <button type="submit" class="btn-flat btn-floating waves-effect">
+            <button type="submit" className="btn-flat btn-floating waves-effect">
               <i className="material-icons black-text">search</i>
             </button>
           </form>
-          <i class="popup-close material-icons">close</i>
+          <i className="popup-close material-icons">close</i>
         </div>
       </div>
     </nav>

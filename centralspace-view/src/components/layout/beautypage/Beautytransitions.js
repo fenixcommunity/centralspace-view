@@ -37,7 +37,7 @@ function Beautytransitions() {
             <Feature5 />
             <Feature6 />
 
-            <BeautypageScriptsLoader />
+            <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />
         </div>
     )
