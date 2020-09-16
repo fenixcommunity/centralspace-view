@@ -17,12 +17,9 @@ import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/Footer';
 
 function Beautypage() {
-    // about.html docs/abouts.html AND docs/element-transitions.html AND materializecss docs
-    // we have light,black,white section themes
 
-
-    //  usun zbedne skrytpty
-    //  fonty popraw
+//      usun zbedne skrytpty
+//      fonty popraw
 // podziel na mniejsze
 
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import poly1 from '../../../resources/beautypage/images/blog/poly1-560x400.jpg';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1-560x400.jpg';
 
 function GalleryItemSpecial() {
     return (

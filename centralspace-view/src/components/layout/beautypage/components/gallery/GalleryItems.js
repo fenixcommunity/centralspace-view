@@ -1,11 +1,11 @@
 import React from "react";
 import GalleryItemSpecial from './GalleryItemSpecial';
-import poly1 from '../../../resources/beautypage/images/blog/poly1-560x400.jpg';
-import poly2 from '../../../resources/beautypage/images/blog/poly2-560x400.jpg';
-import poly3 from '../../../resources/beautypage/images/blog/poly3-560x400.jpg';
-import poly4 from '../../../resources/beautypage/images/blog/poly4-560x400.jpg';
-import poly5 from '../../../resources/beautypage/images/blog/poly5-560x400.jpg';
-import poly6 from '../../../resources/beautypage/images/blog/poly6-560x400.jpg';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1-560x400.jpg';
+import poly2 from '../../../../../resources/beautypage/images/blog/poly2-560x400.jpg';
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3-560x400.jpg';
+import poly4 from '../../../../../resources/beautypage/images/blog/poly4-560x400.jpg';
+import poly5 from '../../../../../resources/beautypage/images/blog/poly5-560x400.jpg';
+import poly6 from '../../../../../resources/beautypage/images/blog/poly6-560x400.jpg';
 
 function GalleryItems() {
     return (

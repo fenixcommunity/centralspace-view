@@ -2,19 +2,20 @@ import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 
 function BeautypageScriptsLoader(props) {
+    //  TODO - if only beautypage (without materializecss) than set all scripts as global there
     const basicScripts = [
-        '/beautypage/js/materialize.min.js',
-        '/beautypage/js/startup.js',
-        '/beautypage/js/init.js',
-        '/beautypage/js/nouislider.js',
+        '/beautypage/js/main/materialize.min.js',
+        '/beautypage/js/main/startup.js',
+        '/beautypage/js/main/init.js',
+        '/beautypage/js/helpers/nouislider.js',
         '/beautypage/js/stepper/mstepper.js'
     ]
     let contextPageScripts = [];
     const contextOfScripts = props.contextOfScripts;
     if (contextOfScripts && contextOfScripts === "galleryTheme") {
         contextPageScripts = contextPageScripts.concat([
-            '/gallery/js/init.js',
-            '/gallery/js/theme.js'
+            '/beautypage/js/gallery/init.js',
+            '/beautypage/js/gallery/theme.js'
         ])
     }
     useEffect(() => {

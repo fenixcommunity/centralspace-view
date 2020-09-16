@@ -11,8 +11,8 @@ import ScrollspySection from './components/ScrollspySection';
 import SignupHeader from './components/signup/SignupHeader';
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
-import MaterialUiStepper from './MaterialUiStepper';
-import Gallery from './Gallery';
+import MaterialUiStepper from './components/other/MaterialUiStepper';
+import Gallery from './components/gallery/Gallery';
 
 class Beautysignup extends React.Component {
     constructor(props) {

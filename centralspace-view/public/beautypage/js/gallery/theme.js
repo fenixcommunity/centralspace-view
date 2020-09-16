@@ -1664,10 +1664,11 @@ $(document).ready(function() {
     unitializedSelects.material_select();
 
     // Register product if needed
-    if (!el.hasClass('registered')) {
-      el.addClass('registered');
-      sections._createInstance(el, theme.Product);
-    }
+    // removed
+    // if (!el.hasClass('registered')) {
+    //   el.addClass('registered');
+    //   sections._createInstance(el, theme.Product);
+    // }
   };
   $('.gallery-expand').galleryExpand({
     onShow: Window.GalleryExpandOnShow,
