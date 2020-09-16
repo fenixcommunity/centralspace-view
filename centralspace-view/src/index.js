@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/global/index.css';
+import './styles/index.css';
 // import $ from 'jquery';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './components/global/App';
+import App from './app/App';
 import * as serviceWorker from './env/serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider, useSelector } from 'react-redux';
-import globalReducer from './store/reducers/globalReducer';
+import globalReducer from './app/centralspace/store/reducers/globalReducer';
 import thunk from 'redux-thunk';
 import {
   reduxFirestore,
@@ -17,7 +17,7 @@ import {
 import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from "react-redux-firebase";
 import firebase from "firebase/app";
 import firebaseConfig from './env/firebaseConfig';
-import Loader from './components/global/Loader';
+import Loader from './app/Loader';
 
 // appling middleware(redux thunk) // list of middleware
 const store = createStore(
