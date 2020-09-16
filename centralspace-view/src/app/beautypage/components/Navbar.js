@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import '../../../resources/beautypage/gallery/css/full-search.css';
+import '../../../resources/gallery/css/full-search.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 function Navbar(props) {

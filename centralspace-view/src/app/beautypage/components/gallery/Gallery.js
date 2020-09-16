@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import '../../../../resources/beautypage/gallery/css/gallery.css';
+import '../../../../resources/gallery/css/gallery.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import GalleryItems from "./GalleryItems.js"
 

@@ -1,6 +1,6 @@
 import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
-import './Beautypage.css';
+import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Features from './components/Features';
 import Navbar from './components/Navbar';

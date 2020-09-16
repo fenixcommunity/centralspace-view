@@ -1,8 +1,7 @@
 import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
-// import '../../resources/beautypage/css/materializenew.css'; //remove after tests
 import '../../resources/beautypage/css/search.css';
-import './Beautypage.css';
+import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/Navbar';
 import SlideOut from './components/SlideOut';
@@ -18,10 +17,7 @@ import Footer from './components/Footer';
 
 function Beautypage() {
 
-//      usun zbedne skrytpty
-//      fonty popraw
-// podziel na mniejsze
-
+podziel na mniejsze
     return (
         <div>
             <Navbar
