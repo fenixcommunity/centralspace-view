@@ -2,7 +2,7 @@ import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
 import Features from './components/Features';

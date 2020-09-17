@@ -3,7 +3,7 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 import SlideOut from './components/SlideOut';
 import Header from './components/Header';
 import Features from './components/Features';
@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 
 function Beautypage() {
 
-podziel na mniejsze
+// podziel na mniejsze
     return (
         <div>
             <Navbar
