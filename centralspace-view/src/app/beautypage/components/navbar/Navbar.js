@@ -1,12 +1,13 @@
 import React from "react";
 import '../../../../resources/gallery/css/full-search.css';
-import Searcher from './Searcher';
+import Searcher from './searcher/Searcher';
 import Logo from "./Logo";
 import PagesDropdown from "./PagesDropdown";
 import NavbarTooltip from "./NavbarTooltip";
 import NotificationIcon from "./NotificationIcon";
 import NavbarPagesList from "./NavbarPagesList";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "./slideout/HamburgerMenu";
+import NavbarSlideOut from "./slideout/NavbarSlideOut";
 
 function Navbar(props) {
   const darkMode = props.isDarkMode;
@@ -15,6 +16,7 @@ function Navbar(props) {
   const navbarSolidTransitionStyle = props.isNavbarSolidTransition ? 'navbar-solid-transition' : '';
 
   return (
+    <>
     <nav className={`navbar ${navbarStyle} ${navbarSolidTransitionStyle}`}>
       <div className="nav-wrapper">
         <Logo textStyle={textStyle} />
@@ -27,9 +29,12 @@ function Navbar(props) {
           <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
           <NotificationIcon notificationIconName="notifications" notificationCount={5} />
         </ul>
+        {/* HamburgerMenu refers to NavbarSlideOut */}
         <HamburgerMenu textStyle={textStyle} />
       </div>
     </nav>
+    <NavbarSlideOut />
+    </>
   );
 }
 

@@ -4,7 +4,6 @@ import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import SlideOut from './components/SlideOut';
 import Header from './components/Header';
 import Features from './components/Features';
 import Clients from './components/Clients';
@@ -25,7 +24,6 @@ function Beautypage() {
                 isDarkMode={false}
                 basicSearchIsActive={true} 
                 fullScreenSearchIsActive={false}/>
-            <SlideOut />
             <Header />
 
             <Features isExtended={false} hasAnimation={false} />

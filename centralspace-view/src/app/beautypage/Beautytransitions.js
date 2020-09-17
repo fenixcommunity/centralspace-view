@@ -3,7 +3,6 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
 import Features from './components/Features';
 import PricingTables from './components/PricingTables';
@@ -24,7 +23,6 @@ function Beautytransitions() {
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
                 fullScreenSearchIsActive={true} />
-            <SlideOut />
             <TransitionsHeader />
 
             <Features isExtended={true} hasAnimation={true} />

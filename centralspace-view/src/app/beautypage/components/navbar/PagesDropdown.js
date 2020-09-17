@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
+import PagesListForDropdown from "./dropdown/PagesListForDropdown";
 
 function PagesDropdown() {
     const dropdownRef = useRef(null);
@@ -24,15 +25,7 @@ function PagesDropdown() {
             </li>
 
             <ul id="pages" className="dropdown-content">
-                <li>
-                    <a href="/"><i className="material-icons">home</i>Main App</a>
-                </li>
-                <li>
-                    <a className="active" href="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</a>
-                </li>
-                <li>
-                    <a href="/materializecss"><i className="material-icons">grain</i>Materialize Css</a>
-                </li>
+                <PagesListForDropdown />
             </ul>
         </>
     )

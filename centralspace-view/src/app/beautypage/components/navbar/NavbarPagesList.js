@@ -1,22 +1,23 @@
 import React from 'react';
 
-function NavbarPagesList() {
+function NavbarPagesList(props) {
+    const wavesEffect = props.waves ? "waves-effect waves-teal" : ""
     return (
         <>
             <li>
-                <a href="/beautyblog">Blog</a>
+                <a className={wavesEffect} href="/beautyblog">Blog</a>
             </li>
             <li>
-                <a href="/beautyteam">Team</a>
+                <a className={wavesEffect} href="/beautyteam">Team</a>
             </li>
             <li>
-                <a href="/beautytransitions">Transitions</a>
+                <a className={wavesEffect} href="/beautytransitions">Transitions</a>
             </li>
             <li>
-                <a href="/beautywall">Phone Wall</a>
+                <a className={wavesEffect} href="/beautywall">Phone Wall</a>
             </li>
             <li>
-                <a href="/beautysignup">Sign Up</a>
+                <a className={wavesEffect} href="/beautysignup">Sign Up</a>
             </li>
         </>
     )

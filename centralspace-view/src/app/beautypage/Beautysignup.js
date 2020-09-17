@@ -3,7 +3,6 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import SlideOut from './components/SlideOut';
 import ContactUs2 from './components/ContactUs2';
 import Footer from './components/Footer';
 import StarsParallax from './components/StarsParallax';
@@ -30,7 +29,6 @@ class Beautysignup extends React.Component {
                     isNavbarSolidTransition={true}
                     isDarkMode={false}
                     fullScreenSearchIsActive={true} />
-                <SlideOut />
                 <SignupHeader />
 
                 <SignUpForm />

@@ -3,7 +3,6 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import SlideOut from './components/SlideOut';
 import Footer from './components/Footer';
 import Animation from './components/blog/Animation';
 import Blog from './components/blog/Blog';
@@ -16,8 +15,6 @@ function Beautyblog() {
                 isNavbarSolidTransition={false}
                 isDarkMode={true}
                 fullScreenSearchIsActive={true} />
-
-            <SlideOut />
             <Animation />
             <Blog />
 

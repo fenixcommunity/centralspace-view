@@ -5,7 +5,6 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Features from './components/Features';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
-import SlideOut from './components/SlideOut';
 import PhoneWall from './components/phonewall/PhoneWall';
 
 function Beautywall() {
@@ -16,7 +15,6 @@ function Beautywall() {
                 isDarkMode={true}
                 isPrimaryColor={true}
                 fullScreenSearchIsActive={true} />
-            <SlideOut />
             <PhoneWall />
 
             <Features />

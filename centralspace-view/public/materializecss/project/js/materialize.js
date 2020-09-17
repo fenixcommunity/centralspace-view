@@ -5973,15 +5973,15 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _animateSidenavIn() {
         var _this32 = this;
 
-        var slideOutPercent = this.options.edge === 'left' ? -1 : 1;
+        var NavbarSlideOutPercent = this.options.edge === 'left' ? -1 : 1;
         if (this.isDragged) {
-          slideOutPercent = this.options.edge === 'left' ? slideOutPercent + this.percentOpen : slideOutPercent - this.percentOpen;
+          NavbarSlideOutPercent = this.options.edge === 'left' ? NavbarSlideOutPercent + this.percentOpen : NavbarSlideOutPercent - this.percentOpen;
         }
 
         anim.remove(this.el);
         anim({
           targets: this.el,
-          translateX: [slideOutPercent * 100 + "%", 0],
+          translateX: [NavbarSlideOutPercent * 100 + "%", 0],
           duration: this.options.inDuration,
           easing: 'easeOutQuad',
           complete: function () {
@@ -6024,15 +6024,15 @@ $jscomp.polyfill = function (e, r, p, m) {
         var _this33 = this;
 
         var endPercent = this.options.edge === 'left' ? -1 : 1;
-        var slideOutPercent = 0;
+        var NavbarSlideOutPercent = 0;
         if (this.isDragged) {
-          slideOutPercent = this.options.edge === 'left' ? endPercent + this.percentOpen : endPercent - this.percentOpen;
+          NavbarSlideOutPercent = this.options.edge === 'left' ? endPercent + this.percentOpen : endPercent - this.percentOpen;
         }
 
         anim.remove(this.el);
         anim({
           targets: this.el,
-          translateX: [slideOutPercent * 100 + "%", endPercent * 105 + "%"],
+          translateX: [NavbarSlideOutPercent * 100 + "%", endPercent * 105 + "%"],
           duration: this.options.outDuration,
           easing: 'easeOutQuad',
           complete: function () {
