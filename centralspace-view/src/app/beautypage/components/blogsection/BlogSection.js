@@ -1,20 +1,20 @@
 import React from "react";
-import BlogBody from './BlogBody';
+import BlogList from './BlogList';
 
-function Blog(props) {
+function BlogSection(props) {
   const isExtended = props.isExtended;
 
   const blogContent = isExtended ? (
     <div className="row">
       <div className="col s12 m10 offset-m1 center">
-        <BlogBody hasAnimation={props.hasAnimation} />
+        <BlogList hasAnimation={props.hasAnimation} />
       </div>
     </div>
   ) :
     (
       <div className="container">
         <div className="row">
-          <BlogBody hasAnimation={props.hasAnimation} />
+          <BlogList hasAnimation={props.hasAnimation} />
         </div>
       </div>
 
@@ -27,4 +27,4 @@ function Blog(props) {
   );
 }
 
-export default Blog;
+export default BlogSection;

@@ -9,11 +9,11 @@ import Header from './components/helpers/Header';
 import Features from './components/feature/Features';
 import Clients from './components/clients/Clients';
 import PricingTables from './components/PricingTables';
-import Blog from './components/Blog';
+import Blog from './components/blogsection/BlogSection';
 import GoogleMaps from './components/GoogleMaps';
 import LeafletMapEmbedded from './components/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 
 function Beautypage() {
 

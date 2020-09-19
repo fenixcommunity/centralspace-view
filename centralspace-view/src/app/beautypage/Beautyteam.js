@@ -3,7 +3,7 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import TeamHeader from './components/team/TeamHeader';
 import Team from './components/team/Team';
 

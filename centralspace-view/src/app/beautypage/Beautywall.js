@@ -4,7 +4,7 @@ import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Features from './components/feature/Features';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import PhoneWall from './components/phonewall/PhoneWall';
 
 function Beautywall() {

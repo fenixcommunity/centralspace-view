@@ -5,7 +5,7 @@ import backgroundStars from '../../resources/beautypage/images/backgroundStars.j
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import ContactUs2 from './components/ContactUs2';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import StarsParallax from './components/StarsParallax';
 import ScrollspySection from './components/ScrollspySection';
 import Header from './components/helpers/Header';

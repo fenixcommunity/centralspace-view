@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import loadjs from 'loadjs';
 
 function BeautypageScriptsLoader(props) {
-    //  TODO - if only beautypage (without materializecss) than set all scripts as global there
+    //  TODO - if only beautypage (without materializecss) than set all scripts as global(index.html)
     const basicScripts = [
         '/beautypage/js/main/materialize.min.js',
         '/beautypage/js/main/startup.js',

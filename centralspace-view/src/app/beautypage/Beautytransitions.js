@@ -3,10 +3,10 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import Features from './components/feature/Features';
 import PricingTables from './components/PricingTables';
-import Blog from './components/Blog';
+import BlogSection from './components/blogsection/BlogSection';
 import Feature1 from './components/transitions/Feature1';
 import Feature2 from './components/transitions/Feature2';
 import Feature3 from './components/transitions/Feature3';
@@ -26,7 +26,7 @@ function Beautytransitions() {
             <TransitionsHeader />
 
             <Features isExtended={true} hasAnimation={true} />
-            <Blog isExtended={true} hasAnimation={true} />
+            <BlogSection isExtended={true} hasAnimation={true} />
             <PricingTables isExtended={true} hasAnimation={true} />
             <Feature1 />
             <Feature2 />
