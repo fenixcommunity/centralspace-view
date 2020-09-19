@@ -1,7 +1,7 @@
 import React from "react";
-import LowPricingTable from "./LowPricingTable";
-import MediumPricingTable from "./MediumPricingTable";
-import HighPricingTable from "./HighPricingTable";
+import LowPricingTable from "./pricing/LowPricingTable";
+import MediumPricingTable from "./pricing/MediumPricingTable";
+import HighPricingTable from "./pricing/HighPricingTable";
 
 function PricingTables(props) {
 

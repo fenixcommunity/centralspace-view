@@ -4,7 +4,7 @@ import FeaturesBody from "./FeaturesBody";
 function Features(props) {
   const isExtended = props.isExtended;
 
-  const featureTitle = (
+  const featuresTitle = (
     <div className="col s12">
       <h2 className="section-title">Features</h2>
     </div>
@@ -14,7 +14,7 @@ function Features(props) {
     <div className="row valign">
       <div className="col s12 m10 offset-m1">
         <div className="row">
-          {featureTitle}
+          {featuresTitle}
         </div>
         <FeaturesBody hasAnimation={props.hasAnimation} />
       </div>
@@ -23,7 +23,7 @@ function Features(props) {
    (
       <div className="container">
         <div className="row">
-          {featureTitle}
+          {featuresTitle}
           <FeaturesBody hasAnimation={props.hasAnimation} />
         </div>
       </div>

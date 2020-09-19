@@ -2,11 +2,12 @@ import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
+import treeFogg from '../../resources/beautypage/images/background.jpg';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import Header from './components/Header';
-import Features from './components/Features';
-import Clients from './components/Clients';
+import Header from './components/helpers/Header';
+import Features from './components/feature/Features';
+import Clients from './components/clients/Clients';
 import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import GoogleMaps from './components/GoogleMaps';
@@ -16,15 +17,23 @@ import Footer from './components/Footer';
 
 function Beautypage() {
 
-// podziel na mniejsze
+
+
+    // podziel na mniejsze
+
+
+
     return (
         <div>
             <Navbar
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
-                basicSearchIsActive={true} 
-                fullScreenSearchIsActive={false}/>
-            <Header />
+                basicSearchIsActive={true}
+                fullScreenSearchIsActive={false} />
+            <Header
+                headerImg={treeFogg}
+                headerMessage="Beauty Page"
+                headerSentence="Take some motion in your life!" />
 
             <Features isExtended={false} hasAnimation={false} />
             <Clients />

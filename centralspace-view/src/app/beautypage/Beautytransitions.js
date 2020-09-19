@@ -4,7 +4,7 @@ import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
-import Features from './components/Features';
+import Features from './components/feature/Features';
 import PricingTables from './components/PricingTables';
 import Blog from './components/Blog';
 import Feature1 from './components/transitions/Feature1';

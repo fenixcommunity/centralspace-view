@@ -1,13 +1,14 @@
 import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
+import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import ContactUs2 from './components/ContactUs2';
 import Footer from './components/Footer';
 import StarsParallax from './components/StarsParallax';
 import ScrollspySection from './components/ScrollspySection';
-import SignupHeader from './components/signup/SignupHeader';
+import Header from './components/helpers/Header';
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
 import MaterialUiStepper from './components/other/MaterialUiStepper';
@@ -29,8 +30,11 @@ class Beautysignup extends React.Component {
                     isNavbarSolidTransition={true}
                     isDarkMode={false}
                     fullScreenSearchIsActive={true} />
-                <SignupHeader />
-
+                <Header
+                headerImg={backgroundStars}
+                headerMessage="Sign Up"
+                headerSentence="Join with us and discover the unknown!" />
+                
                 <SignUpForm />
                 <StarsParallax />
                 <ContactUs2 />
