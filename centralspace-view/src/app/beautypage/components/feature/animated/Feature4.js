@@ -1,62 +1,25 @@
+
 import React from "react";
+import '../../../../../resources/beautypage/css/carousel.css';
 import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
-import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
+import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly4 from '../../../../../resources/beautypage/images/blog/poly4.jpg';
+import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
+import CarouselItem from "./CarouselItem";
 
 function Feature4() {
-  return (
-    <div className="section black full-height">
-      <div className="container">
-        <div className="row valign-wrapper">
-          <div className="col s12 m8">
-            <div className="device-pair right-side">
-              <div className="tablet-preview-sizer white">
-                <div className="tablet-preview" />
-                <div
-                  className="image-container default"
-                  style={{
-                    backgroundImage: `url(${poly1})`
-                  }}
-                />
-              </div>
-              <div className="tablet-preview-sizer white right-in-out">
-                <div className="tablet-preview" />
-                <div
-                  className="image-container default"
-                  style={{
-                    backgroundImage: `url(${poly6})`
-                  }}
-                />
-              </div>
+    return (
+        <div className="container">
+            <div className="carousel">
+                <CarouselItem img={poly1} reference="#one!" />
+                <CarouselItem img={poly2} reference="#two!" />
+                <CarouselItem img={poly3} reference="#three!" />
+                <CarouselItem img={poly4} reference="#four!" />
+                <CarouselItem img={poly5} reference="#five!" />
             </div>
-          </div>
-          <div className="col s12 m4">
-            <div className="staggered-transition-wrapper">
-              <div className="feature fade-left-in-out">
-                <h3>This is a cool feature</h3>
-                <p>
-                  Locavore drinking vinegar quinoa seitan church-key, tilde
-                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
-                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
-                  90's distillery, truffaut sapiente trust fund fashion axe
-                    officia selvage occaecat locavore accusamus.{" "}
-                </p>
-              </div>
-              <div className="feature fade-left-in-out">
-                <h3>This is a cool feature</h3>
-                <p>
-                  Locavore drinking vinegar quinoa seitan church-key, tilde
-                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
-                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
-                  90's distillery, truffaut sapiente trust fund fashion axe
-                    officia selvage occaecat locavore accusamus.{" "}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        </div >
+    );
 }
 
 export default Feature4;

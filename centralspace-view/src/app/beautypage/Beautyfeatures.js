@@ -11,8 +11,6 @@ import Feature1 from './components/feature/animated/Feature1';
 import Feature2 from './components/feature/animated/Feature2';
 import Feature3 from './components/feature/animated/Feature3';
 import Feature4 from './components/feature/animated/Feature4';
-import Feature5 from './components/feature/animated/Feature5';
-import Feature6 from './components/feature/animated/Feature6';
 import SliderHeader from './components/helpers/header/SliderHeader';
 
 function Beautyfeatures() {
@@ -29,12 +27,11 @@ function Beautyfeatures() {
             <Features isExtended={true} hasAnimation={true} />
             <BlogSection isExtended={true} hasAnimation={true} />
             <PricingTables isExtended={true} hasAnimation={true} />
+
             <Feature1 />
             <Feature2 />
             <Feature3 />
             <Feature4 />
-            <Feature5 />
-            <Feature6 />
 
             <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
             <Footer />

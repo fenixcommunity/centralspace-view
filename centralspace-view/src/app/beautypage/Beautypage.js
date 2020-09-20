@@ -20,7 +20,7 @@ function Beautypage() {
 
 
     // podziel na mniejsze
-
+// wywal materialize css??? lub refactoring. Warto?
 
 
     return (
