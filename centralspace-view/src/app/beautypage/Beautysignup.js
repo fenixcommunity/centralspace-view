@@ -4,7 +4,7 @@ import './BeautypageStyleModification.css';
 import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import ContactUs2 from './components/ContactUs2';
+import ContactUs from './components/ContactUs';
 import Footer from './components/footer/Footer';
 import StarsParallax from './components/StarsParallax';
 import ScrollspySection from './components/ScrollspySection';
@@ -31,13 +31,13 @@ class Beautysignup extends React.Component {
                     isDarkMode={false}
                     fullScreenSearchIsActive={true} />
                 <Header
-                headerImg={backgroundStars}
-                headerMessage="Sign Up"
-                headerSentence="Join with us and discover the unknown!" />
-                
+                    headerImg={backgroundStars}
+                    headerMessage="Sign Up"
+                    headerSentence="Join with us and discover the unknown!" />
+
                 <SignUpForm />
                 <StarsParallax />
-                <ContactUs2 />
+                <ContactUs />
                 <ScrollspySection />
                 <SignUpSummary />
                 <Gallery />
@@ -46,7 +46,7 @@ class Beautysignup extends React.Component {
              <MaterialUiStepper /> 
              */}
 
-<BeautypageScriptsLoader contextOfScripts="galleryTheme" />
+                <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
                 <Footer />
             </div>
         )
