@@ -6,7 +6,7 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Team from './components/team/Team';
-import Header from "./components/helpers/Header";
+import Header from "./components/helpers/header/Header";
 
 function Beautyteam() {
 

@@ -5,17 +5,17 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Features from './components/feature/Features';
-import PricingTables from './components/PricingTables';
+import PricingTables from './components/pricing/PricingTables';
 import BlogSection from './components/blogsection/BlogSection';
-import Feature1 from './components/transitions/Feature1';
-import Feature2 from './components/transitions/Feature2';
-import Feature3 from './components/transitions/Feature3';
-import Feature4 from './components/transitions/Feature4';
-import Feature5 from './components/transitions/Feature5';
-import Feature6 from './components/transitions/Feature6';
-import TransitionsHeader from './components/transitions/TransitionsHeader';
+import Feature1 from './components/feature/animated/Feature1';
+import Feature2 from './components/feature/animated/Feature2';
+import Feature3 from './components/feature/animated/Feature3';
+import Feature4 from './components/feature/animated/Feature4';
+import Feature5 from './components/feature/animated/Feature5';
+import Feature6 from './components/feature/animated/Feature6';
+import SliderHeader from './components/helpers/header/SliderHeader';
 
-function Beautytransitions() {
+function Beautyfeatures() {
 
     return (
         <div>
@@ -23,7 +23,8 @@ function Beautytransitions() {
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
                 fullScreenSearchIsActive={true} />
-            <TransitionsHeader />
+
+            <SliderHeader />
 
             <Features isExtended={true} hasAnimation={true} />
             <BlogSection isExtended={true} hasAnimation={true} />
@@ -41,4 +42,4 @@ function Beautytransitions() {
     )
 }
 
-export default Beautytransitions;
+export default Beautyfeatures;

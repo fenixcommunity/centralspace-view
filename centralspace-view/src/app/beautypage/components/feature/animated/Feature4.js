@@ -1,55 +1,55 @@
 import React from "react";
-import poly3 from '../../../../resources/beautypage/images/blog/poly3.jpg';
-import poly5 from '../../../../resources/beautypage/images/blog/poly5.jpg';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
 
-function Feature3() {
+function Feature4() {
   return (
-    <div className="section light full-height">
+    <div className="section black full-height">
       <div className="container">
         <div className="row valign-wrapper">
-          <div className="col s12 m4">
-            <div className="staggered-transition-wrapper">
-              <div className="feature fade-right-in-out">
-                <h3>This is a cool feature</h3>
-                <p>
-                  Locavore drinking vinegar quinoa seitan church-key, tilde
-                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
-                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
-                  90's distillery, truffaut sapiente trust fund fashion axe
-                    officia selvage occaecat locavore accusamus.{" "}
-                </p>
+          <div className="col s12 m8">
+            <div className="device-pair right-side">
+              <div className="tablet-preview-sizer white">
+                <div className="tablet-preview" />
+                <div
+                  className="image-container default"
+                  style={{
+                    backgroundImage: `url(${poly1})`
+                  }}
+                />
               </div>
-              <div className="feature fade-right-in-out">
-                <h3>This is a cool feature</h3>
-                <p>
-                  Locavore drinking vinegar quinoa seitan church-key, tilde
-                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
-                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
-                  90's distillery, truffaut sapiente trust fund fashion axe
-                    officia selvage occaecat locavore accusamus.{" "}
-                </p>
+              <div className="tablet-preview-sizer white right-in-out">
+                <div className="tablet-preview" />
+                <div
+                  className="image-container default"
+                  style={{
+                    backgroundImage: `url(${poly6})`
+                  }}
+                />
               </div>
             </div>
           </div>
-          <div className="col s12 m8">
-            <div className="device-pair">
-              <div className="tablet-preview-sizer">
-                <div className="tablet-preview" />
-                <div
-                  className="image-container default"
-                  style={{
-                    backgroundImage: `url(${poly3})`
-                  }}
-                />
+          <div className="col s12 m4">
+            <div className="staggered-transition-wrapper">
+              <div className="feature fade-left-in-out">
+                <h3>This is a cool feature</h3>
+                <p>
+                  Locavore drinking vinegar quinoa seitan church-key, tilde
+                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
+                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
+                  90's distillery, truffaut sapiente trust fund fashion axe
+                    officia selvage occaecat locavore accusamus.{" "}
+                </p>
               </div>
-              <div className="tablet-preview-sizer left-in-out">
-                <div className="tablet-preview" />
-                <div
-                  className="image-container default"
-                  style={{
-                    backgroundImage: `url(${poly5})`
-                  }}
-                />
+              <div className="feature fade-left-in-out">
+                <h3>This is a cool feature</h3>
+                <p>
+                  Locavore drinking vinegar quinoa seitan church-key, tilde
+                  aliqua. Hoodie mustache aliquip, selfies bitters poutine
+                  adipisicing scenester man braid jean shorts. Aliqua mlkshk
+                  90's distillery, truffaut sapiente trust fund fashion axe
+                    officia selvage occaecat locavore accusamus.{" "}
+                </p>
               </div>
             </div>
           </div>
@@ -59,4 +59,4 @@ function Feature3() {
   );
 }
 
-export default Feature3;
+export default Feature4;

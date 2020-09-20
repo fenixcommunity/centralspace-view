@@ -1,6 +1,6 @@
 import React from "react";
 import LeafletMap from './LeafletMap';
-import '../../../resources/beautypage/css/leaflet-map.css';
+import '../../../../resources/beautypage/css/leaflet-map.css';
 
 class LeafletMapEmbedded extends React.Component {
   constructor() {

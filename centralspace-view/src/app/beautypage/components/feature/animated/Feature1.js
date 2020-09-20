@@ -1,5 +1,5 @@
 import React from "react";
-import poly1 from '../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
 
 function Feature1() {
   return (

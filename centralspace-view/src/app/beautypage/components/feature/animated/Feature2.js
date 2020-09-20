@@ -1,6 +1,6 @@
 import React from "react";
-import poly3 from '../../../../resources/beautypage/images/blog/poly3.jpg';
-import poly6 from '../../../../resources/beautypage/images/blog/poly6.jpg';
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
 
 
 function Feature2() {

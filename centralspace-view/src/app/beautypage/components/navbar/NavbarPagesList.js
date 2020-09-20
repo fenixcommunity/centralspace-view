@@ -11,7 +11,7 @@ function NavbarPagesList(props) {
                 <a className={wavesEffect} href="/beautyteam">Team</a>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautytransitions">Transitions</a>
+                <a className={wavesEffect} href="/beautyfeatures">Features</a>
             </li>
             <li>
                 <a className={wavesEffect} href="/beautywall">Phone Wall</a>

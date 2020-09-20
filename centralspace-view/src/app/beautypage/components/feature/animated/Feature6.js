@@ -1,11 +1,11 @@
 
 import React from "react";
-import '../../../../resources/beautypage/css/carousel.css';
-import poly1 from '../../../../resources/beautypage/images/blog/poly1.jpg';
-import poly2 from '../../../../resources/beautypage/images/blog/poly2.jpg';
-import poly3 from '../../../../resources/beautypage/images/blog/poly3.jpg';
-import poly4 from '../../../../resources/beautypage/images/blog/poly4.jpg';
-import poly5 from '../../../../resources/beautypage/images/blog/poly5.jpg';
+import '../../../../../resources/beautypage/css/carousel.css';
+import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
+import poly2 from '../../../../../resources/beautypage/images/blog/poly2.jpg';
+import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
+import poly4 from '../../../../../resources/beautypage/images/blog/poly4.jpg';
+import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
 
 function Feature6() {
     return (

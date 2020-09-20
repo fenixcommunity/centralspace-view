@@ -8,7 +8,7 @@ import ContactUs2 from './components/ContactUs2';
 import Footer from './components/footer/Footer';
 import StarsParallax from './components/StarsParallax';
 import ScrollspySection from './components/ScrollspySection';
-import Header from './components/helpers/Header';
+import Header from "./components/helpers/header/Header";
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
 import MaterialUiStepper from './components/other/MaterialUiStepper';

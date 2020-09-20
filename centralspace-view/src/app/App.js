@@ -13,7 +13,7 @@ import PrivateRoute from './centralspace/hoc/PrivateRoute';
 import MaterializeCss from '../app/materializecss/MaterializeCss';
 import Beautypage from '../app/beautypage/Beautypage';
 import Beautyblog from '../app/beautypage/Beautyblog';
-import Beautytransitions from '../app/beautypage/Beautytransitions';
+import Beautyfeatures from '../app/beautypage/Beautyfeatures';
 import Beautywall from '../app/beautypage/Beautywall';
 import Beautyteam from '../app/beautypage/Beautyteam';
 import Beautysignup from '../app/beautypage/Beautysignup';
@@ -35,7 +35,7 @@ class App extends React.Component {
           <Route exact path='/materializecss' component={MaterializeCss} />
           <Route exact path='/beautypage' component={Beautypage} onUpdate />
           <Route exact path='/beautyblog' component={Beautyblog} />
-          <Route exact path='/beautytransitions' component={Beautytransitions} />
+          <Route exact path='/beautyfeatures' component={Beautyfeatures} />
           <Route exact path='/beautywall' component={Beautywall} />
           <Route exact path='/beautyteam' component={Beautyteam} />
           <Route exact path='/beautysignup' component={Beautysignup} />
