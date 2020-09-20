@@ -11,11 +11,11 @@ function NavbarSlideOut() {
       <li className="no-padding">
         <ul className="collapsible collapsible-accordion">
           <NavbarSlideOutHeader />
-          <Divider />
+          <li><Divider /></li>
           <NavbarSlideOutPagesList waves={false} />
         </ul>
       </li>
-      <Divider />
+      <li><Divider /></li>
       <NavbarSlideOutFooter waves={true} />
     </ul>
 

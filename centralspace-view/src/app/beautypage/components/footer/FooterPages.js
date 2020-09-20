@@ -8,7 +8,7 @@ function FooterPages(props) {
                     <a href={page.ref}>{page.name}</a>
                 </li>
             )
-        })) : null
+        })) : ""
 
     return (
         <div className="col s6 m3">

@@ -4,7 +4,7 @@ import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import Animation from './components/blog/Animation';
+import IntroductionAnimation from './components/blog/IntroductionAnimation';
 import Blog from './components/blog/Blog';
 
 function Beautyblog() {
@@ -15,7 +15,7 @@ function Beautyblog() {
                 isNavbarSolidTransition={false}
                 isDarkMode={true}
                 fullScreenSearchIsActive={true} />
-            <Animation />
+            <IntroductionAnimation headerMessage="Something Interesting" sentenceMessage="January 31, 2016" />
             <Blog />
 
             <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
