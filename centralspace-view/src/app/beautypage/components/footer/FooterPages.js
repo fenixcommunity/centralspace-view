@@ -4,7 +4,7 @@ function FooterPages(props) {
     const pages = props.pages ? (
         props.pages.map(page => {
             return (
-                <li>
+                <li key={page.name}>
                     <a href={page.ref}>{page.name}</a>
                 </li>
             )

@@ -21,6 +21,8 @@ function Beautypage() {
 
 //      podziel na mniejsze
 //    wywal materialize css??? lub refactoring. Warto?
+// wywal errory i warning
+// dodaj required props https://stackoverflow.com/questions/45288511/set-required-props-on-component
 
 
     return (

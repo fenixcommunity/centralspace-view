@@ -4,8 +4,7 @@ import loadjs from 'loadjs';
 function BeautypageScriptsLoader(props) {
     //  TODO - if only beautypage (without materializecss) than set all scripts as global(index.html)
     const basicScripts = [
-        '/beautypage/js/main/materialize.min.js',
-        '/beautypage/js/main/startup.js',
+        '/beautypage/js/main/materialize_v2.min.js',
         '/beautypage/js/main/init.js',
         '/beautypage/js/helpers/nouislider.js',
         '/beautypage/js/stepper/mstepper.js'
