@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 // todo remove after refactoring
 import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import InputText from "../form/InputText";
@@ -51,7 +51,8 @@ function SignUpForm() {
       <div className="container">
         {/* todo wrapper class */}
         <FormTemplate
-          headerText="Contact Us"
+          formId="sign_up_form"
+          headerText="Sign up"
           formContent={formContent} />
       </div>
     </div>

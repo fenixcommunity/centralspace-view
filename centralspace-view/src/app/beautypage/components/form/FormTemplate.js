@@ -2,15 +2,19 @@ import React from 'react'
 
 function FormTemplate(props) {
     return (
-        <div className="container">
-            <form>
-                <div className="row">
-                    <div className="col s12">
-                        <h2 className="section-title">{props.header}</h2>
-                        {props.formContent}
+        <div className="valign-wrapper">
+            <div className="container">
+                <form id={props.formId}>
+                    <div className="row">
+                        <div className="col s12">
+                            <h2 className="section-title">{props.headerText}</h2>
+                        </div>
+                        <div className="col s12">
+                            {props.formContent}
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     )
 }
