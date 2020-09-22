@@ -6,7 +6,7 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';
-import StarsParallax from './components/others/StarsParallax';
+import StarsParallax from './components/other/StarsParallax';
 import ScrollspySection from './components/ScrollspySection';
 import Header from "./components/helpers/header/Header";
 import SignUpForm from './components/signup/SignUpForm';

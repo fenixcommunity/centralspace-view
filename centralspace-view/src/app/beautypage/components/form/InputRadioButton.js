@@ -13,8 +13,9 @@ function InputRadioButton(props) {
             {props.groupName && options && options.map(option => {
                 return (
                     <p>
-                        <label className={`radio-label ${withGapStyle}`}>
+                        <label className="radio-label">
                             <input name={props.groupName} type="radio"
+                                className={`${withGapStyle}`}
                                 disabled={option.disabled} defaultChecked={option.checked}
                                 onChange={props.onChange} />
                             <span>{option.label}</span>
