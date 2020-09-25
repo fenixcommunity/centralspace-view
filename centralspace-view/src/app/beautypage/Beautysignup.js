@@ -7,7 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';
 import StarsParallax from './components/other/StarsParallax';
-import ScrollspySection from './components/ScrollspySection';
+import TabsSection from './components/other/TabsSection';
 import Header from "./components/helpers/header/Header";
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
@@ -38,7 +38,7 @@ class Beautysignup extends React.Component {
                 <SignUpForm />
                 <StarsParallax />
                 <ContactUs />
-                <ScrollspySection />
+                <TabsSection />
                 <SignUpSummary />
                 <Gallery />
                 {/*

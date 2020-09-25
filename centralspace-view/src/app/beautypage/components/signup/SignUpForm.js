@@ -46,8 +46,9 @@ function SignUpForm() {
     </>
   )
 
+  // section-large-size
   return (
-    <div className="section section-large-size light valign-wrapper">
+    <div className="section light valign-wrapper"> 
       <div className="container">
         {/* todo wrapper class */}
         <FormTemplate

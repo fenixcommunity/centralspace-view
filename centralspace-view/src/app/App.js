@@ -1,24 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './centralspace/styles/resource.css';
-import Navbar from './centralspace/components/navigation/Navbar';
-import Dashboard from './centralspace/components/dashboard/Dashboard';
-import Contact from './centralspace/components/dashboard/Contact';
-import AccountList from './centralspace/components/accountrest/AccountList';
-import AccountDetails from './centralspace/components/account/AccountDetails';
-import SignIn from './centralspace/components/auth/SignIn';
-import SignUp from './centralspace/components/auth/SignUp';
-import CreateAccount from './centralspace/components/account/CreateAccount';
-import PrivateRoute from './centralspace/hoc/PrivateRoute';
-import MaterializeCss from '../app/materializecss/MaterializeCss';
+import './centralspace-training/styles/resource.css';
+import Navbar from './centralspace-training/components/navigation/Navbar';
+import Dashboard from './centralspace-training/components/dashboard/Dashboard';
+import Contact from './centralspace-training/components/dashboard/Contact';
+import AccountList from './centralspace-training/components/accountrest/AccountList';
+import AccountDetails from './centralspace-training/components/account/AccountDetails';
+import SignIn from './centralspace-training/components/auth/SignIn';
+import SignUp from './centralspace-training/components/auth/SignUp';
+import CreateAccount from './centralspace-training/components/account/CreateAccount';
+import PrivateRoute from './centralspace-training/hoc/PrivateRoute';
 import Beautypage from '../app/beautypage/Beautypage';
 import Beautyblog from '../app/beautypage/Beautyblog';
 import Beautyfeatures from '../app/beautypage/Beautyfeatures';
 import Beautywall from '../app/beautypage/Beautywall';
 import Beautyteam from '../app/beautypage/Beautyteam';
 import Beautysignup from '../app/beautypage/Beautysignup';
-import AddressList from './centralspace/components/address/AddressList';
-import ThemeContextProvider from './centralspace/contexts/ThemeContext';
+import AddressList from './centralspace-training/components/address/AddressList';
+import ThemeContextProvider from './centralspace-training/contexts/ThemeContext';
 
 class App extends React.Component {
   render() {
@@ -32,7 +31,6 @@ class App extends React.Component {
         {/* all this route objects have props, look at Contact  */}
         {/* In Nabbar we have empty props. But we can add withRouter */}
         <Switch> {/*switch only one component from top to bottom*/}
-          <Route exact path='/materializecss' component={MaterializeCss} />
           <Route exact path='/beautypage' component={Beautypage} onUpdate />
           <Route exact path='/beautyblog' component={Beautyblog} />
           <Route exact path='/beautyfeatures' component={Beautyfeatures} />

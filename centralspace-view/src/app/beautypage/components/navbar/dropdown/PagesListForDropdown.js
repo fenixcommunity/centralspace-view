@@ -11,7 +11,7 @@ function PagesListForDropdown(props) {
                 <a className={`active ${wavesEffect}`} href="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</a>
             </li>
             <li>
-                <a className={wavesEffect} href="/materializecss"><i className="material-icons">grain</i>Materialize Css</a>
+                <a className={wavesEffect} href="/beautypage"><i className="material-icons">grain</i>Materialize Css</a>
             </li>
         </>
     )

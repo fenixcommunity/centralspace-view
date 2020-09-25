@@ -7,7 +7,7 @@ import App from './app/App';
 import * as serviceWorker from './env/serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider, useSelector } from 'react-redux';
-import globalReducer from './app/centralspace/store/reducers/globalReducer';
+import globalReducer from './app/centralspace-training/store/reducers/globalReducer';
 import thunk from 'redux-thunk';
 import {
   reduxFirestore,
