@@ -10,6 +10,8 @@ import '../../../../resources/beautypage/css/helper-text-validator.css';
 import '../../../../resources/beautypage/css/stepper/mstepper.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../resources/beautypage/images/people/avatar4.jpg';
+import BasicSection from "../helpers/BasicSection";
+import FormTemplate from "../form/FormTemplate";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
@@ -127,6 +129,15 @@ function SignUpSummary() {
 
     return (
         <>
+            <BasicSection
+                theme="light"
+                wrappedSection={(
+                    <FormTemplate
+                        formId="form1"
+                        headerText="Summary"
+                        formContent="" />
+                )}
+            />
             <div className="section light valign-wrapper">
                 <div className="container">
                     <form>
@@ -179,6 +190,14 @@ function SignUpSummary() {
                 </div >
             </div >
 
+            <BasicSection
+                large={true}
+                wrappedSection={(
+                    <FormTemplate
+                        formId="form2"
+                        formContent="" />
+                )}
+            />
             <div className="section section-large-size valign-wrapper">
                 <div className="container">
                     <form>
@@ -232,6 +251,16 @@ function SignUpSummary() {
                 </div>
             </div>
 
+
+            <BasicSection
+                theme="light" large={true}
+                wrappedSection={(
+                    <FormTemplate
+                        formId="form3"
+                        headerText="Others"
+                        formContent="" />
+                )}
+            />
             <div className="section section-large-size light valign-wrapper">
                 <div className="container">
                     <form>
@@ -344,6 +373,13 @@ function SignUpSummary() {
                 </div>
             </div>
 
+            <BasicSection
+                wrappedSection={(
+                    <FormTemplate
+                        formId="form4"
+                        formContent="" />
+                )}
+            />
             <div className="section valign-wrapper">
                 <div className="container">
                     <form className="col s12">
@@ -379,10 +415,18 @@ function SignUpSummary() {
                 </div>
             </div>
 
+            <BasicSection
+                theme="white"
+                wrappedSection={(
+                    <FormTemplate
+                        formId="form5"
+                        formContent="" />
+                )}
+            />
             <div className="section white valign-wrapper">
                 <div className="container">
                     <div className="row">
-                    <div className="col s12">
+                        <div className="col s12">
                             <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
                             <div className="fixed-action-btn direction-top active" >
                                 <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
@@ -527,13 +571,16 @@ function SignUpSummary() {
                 </div>
             </div>
 
-
+            <BasicSection
+                theme="white" large={true}
+                wrappedSection=""
+            />
             <div className="section section-large-size white valign-wrapper">
                 <div className="container">
 
                     <div className="row">
                         <div className="col l6 m10 s12  offset-l3 offset-m1">
-                        {/* <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1"> */}
+                            {/* <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1"> */}
                             <h3 className="light center-align blue-text">Sign up form</h3>
                             <div className="card">
                                 <div className="card-content">

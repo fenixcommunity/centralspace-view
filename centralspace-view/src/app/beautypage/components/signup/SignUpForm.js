@@ -7,6 +7,7 @@ import Inputdatepicker from "../form/Inputdatepicker";
 import InputSelectOptions from "../form/InputSelectOptions";
 import ActionButton from "../form/ActionButton";
 import FormTemplate from "../form/FormTemplate";
+import BasicSection from "../helpers/BasicSection";
 
 function SignUpForm() {
 
@@ -46,18 +47,17 @@ function SignUpForm() {
     </>
   )
 
-  // section-large-size
   return (
-    <div className="section light valign-wrapper"> 
-      <div className="container">
-        {/* todo wrapper class */}
+    <BasicSection
+      theme="light"
+      wrappedSection={(
         <FormTemplate
           formId="sign_up_form"
           headerText="Sign up"
           formContent={formContent} />
-      </div>
-    </div>
-  );
+      )}
+    />
+  )
 }
 
 export default SignUpForm;

@@ -3,6 +3,7 @@ import ActionButton from "../form/ActionButton";
 import InputCheckbox from "../form/InputCheckbox";
 import InputRadioButton from "../form/InputRadioButton";
 import FormTemplate from "../form/FormTemplate";
+import BasicSection from "../helpers/BasicSection";
 
 function ContactUs() {
   const handleInputRadioChange = () => {
@@ -52,11 +53,15 @@ function ContactUs() {
   )
 
   return (
-    <FormTemplate
-      formId="contact_us"
-      headerText="Contact Us"
-      formContent={formContent} />
-  );
+    <BasicSection
+      wrappedSection={(
+        <FormTemplate
+          formId="contact_us"
+          headerText="Contact Us"
+          formContent={formContent} />
+      )}
+    />
+  )
 }
 
 export default ContactUs;
