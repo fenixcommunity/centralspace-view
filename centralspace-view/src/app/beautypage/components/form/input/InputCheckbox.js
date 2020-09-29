@@ -1,6 +1,6 @@
 import React from 'react'
 //todo as global css?
-import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
+import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
 function InputCheckbox(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"

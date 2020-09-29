@@ -1,8 +1,8 @@
 import React from 'react'
 //todo as global css?
-import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
+import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
-function InputRadioButton(props) {
+function InputRadioButtons(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const withGapStyle = props.withGapStyle ? "with-gap" : "";
     const options = props.options;
@@ -27,4 +27,4 @@ function InputRadioButton(props) {
     )
 }
 
-export default InputRadioButton
+export default InputRadioButtons

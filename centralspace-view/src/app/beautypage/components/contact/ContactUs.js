@@ -1,7 +1,7 @@
 import React from "react";
-import ActionButton from "../form/ActionButton";
-import InputCheckbox from "../form/InputCheckbox";
-import InputRadioButton from "../form/InputRadioButton";
+import ActionButton from "../form/button/ActionButton";
+import InputCheckbox from "../form/input/InputCheckbox";
+import InputRadioButtons from "../form/input/InputRadioButtons";
 import FormTemplate from "../form/FormTemplate";
 import BasicSection from "../helpers/BasicSection";
 
@@ -16,15 +16,15 @@ function ContactUs() {
 
   const formContent = (
     <>
-      <InputRadioButton
+      <InputRadioButtons
         groupName="radio_group"
         onChange={handleInputRadioChange}
         options=
         {[
-          { "label": "Red", "checked": true },
-          { "label": "Yellow" },
-          { "label": "Green" },
-          { "label": "Brown", "disabled": true }
+          { label: "Red", checked: true },
+          { label: "Yellow" },
+          { label: "Green" },
+          { label: "Brown", disabled: true }
         ]}
         headerText="Services required:" withGapStyle={true}
       />

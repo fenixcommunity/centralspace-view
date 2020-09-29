@@ -1,11 +1,11 @@
 import React from "react";
 // todo remove after refactoring
 import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
-import InputText from "../form/InputText";
-import InputTextArea from "../form/InputTextArea";
-import Inputdatepicker from "../form/Inputdatepicker";
-import InputSelectOptions from "../form/InputSelectOptions";
-import ActionButton from "../form/ActionButton";
+import InputText from "../form/input/InputText";
+import InputTextArea from "../form/input/InputTextArea";
+import Inputdatepicker from "../form/input/Inputdatepicker";
+import InputSelectOptions from "../form/input/InputSelectOptions";
+import ActionButton from "../form/button/ActionButton";
 import FormTemplate from "../form/FormTemplate";
 import BasicSection from "../helpers/BasicSection";
 
@@ -15,16 +15,16 @@ function SignUpForm() {
     <>
       <InputText
         id="first_name" label="First Name" defaultValue="Vader"
-        isDuplicated={true} validate={{ "dataLength": 10 }} />
+        isDuplicated={true} validate={{ dataLength: 10 }} />
       <InputText
         id="last_name" label="Last Name"
-        isDuplicated={true} validate={{ "dataLength": 10 }} />
+        isDuplicated={true} validate={{ dataLength: 10 }} />
       <InputTextArea headerText="Text"
         id="description" label="Description" defaultValue={""}
         validate={{}} />
       <InputTextArea
         id="message" label="Your Message" defaultValue={""}
-        icon="message" validate={{ "dataLength": 120 }} />
+        icon="message" validate={{ dataLength: 120 }} />
       <Inputdatepicker
         id="date" label="Choose a date"
         icon="date_range" validate={{}} />
@@ -32,7 +32,7 @@ function SignUpForm() {
         id="basic_select" label="Choose your option" headerText="Options Select:"
         icon="playlist_add_check" validate={{}}
         options={
-          [{ "value": 1, "label": "Option 1" }, { "value": 2, "label": "Option 2" }, { "value": 3, "label": "Option 3" }]
+          [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }, { value: 3, label: "Option 3" }]
         } />
       <div className="input-field col s12">
         <ActionButton

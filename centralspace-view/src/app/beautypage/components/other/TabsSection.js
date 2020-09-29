@@ -1,14 +1,14 @@
 import React from "react";
 import SectionDivided from "../helpers/SectionDivided";
-import Tabs from "../form/Tabs";
+import Tabs from "../form/tab/Tabs";
 
 function TabsSection() {
 
   return (
     <SectionDivided
       contentLeft={{
-        "division": "l4",
-        "content": (
+        division: "l4",
+        content: (
           <>
             <h2 className="section-title">What I do..</h2>
             <p>
@@ -24,15 +24,15 @@ function TabsSection() {
         )
       }}
       contentRight={{
-        "division": "l6", "offset": "l2",
-        "content": (
+        division: "l6", offset: "l2",
+        content: (
           <Tabs
             tabs={[
               {
-                "id": "photography",
-                "label": "Photography",
-                "active": true,
-                "content": (
+                id: "photography",
+                label: "Photography",
+                active: true,
+                content: (
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.
@@ -40,9 +40,9 @@ function TabsSection() {
                 )
               },
               {
-                "id": "editing",
-                "label": "Editing",
-                "content": (
+                id: "editing",
+                label: "Editing",
+                content: (
                   <p>
                     Mauris dolor augue, vulputate in pharetra ac, facilisis nec
                     libero. Fusce condimentum gravida urna, vitae scelerisque erat

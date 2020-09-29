@@ -12,6 +12,8 @@ import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../resources/beautypage/images/people/avatar4.jpg';
 import BasicSection from "../helpers/BasicSection";
 import FormTemplate from "../form/FormTemplate";
+import Table from "../form/table/Table";
+import Pagination from "../form/table/Pagination";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
@@ -147,43 +149,27 @@ function SignUpSummary() {
                             </div>
 
                             <div className="col s12">
-                                <table className="highlight centered responsive-table">
-                                    {/* <table className="striped highlight"> */}
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Item Name</th>
-                                            <th>Item Price</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>Alvin</td>
-                                            <td>Eclair</td>
-                                            <td>$0.87</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alan</td>
-                                            <td>Jellybean</td>
-                                            <td>$3.76</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jonathan</td>
-                                            <td>Lollipop</td>
-                                            <td>$7.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <ul className="pagination">
-                                    <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
-                                    <li className="active"><a href="#!">1</a></li>
-                                    <li className="waves-effect"><a href="#!">2</a></li>
-                                    <li className="waves-effect"><a href="#!">3</a></li>
-                                    <li className="waves-effect"><a href="#!">4</a></li>
-                                    <li className="waves-effect"><a href="#!">5</a></li>
-                                    <li className="waves-effect"><a href="#!"><i className="material-icons">chevron_right</i></a></li>
-                                </ul>
+                                <Table
+                                    headers={["Name", "Item Name", "Item Price"]}
+                                    columns={[
+                                        ["Alvin", "Eclair", "$0.87"],
+                                        ["Alan", "Jellybean", "$3.76"],
+                                        ["Jonathan", "Lollipop", "$7.00"]
+                                    ]} />
+                                <Pagination
+                                    pages={[
+                                        { number: 1, ref: "#!", active: true },
+                                        { number: 2, ref: "#!", waves: true },
+                                        { number: 3, ref: "#!", waves: true },
+                                        { number: 4, ref: "#!", waves: true },
+                                        { number: 5, ref: "#!", waves: true }
+                                    ]}
+                                    arrows={
+                                        {
+                                            left: { ref: "#!", disabled: true, icon: "chevron_left" },
+                                            right: { ref: "#!", icon: "chevron_right" }
+                                        }
+                                    } />
                             </div>
                         </div>
                     </form>

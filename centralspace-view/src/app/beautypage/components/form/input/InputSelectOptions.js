@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
-import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
+import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
 function InputSelectOptions(props) {
     const optionSelectRef = useRef(null);
