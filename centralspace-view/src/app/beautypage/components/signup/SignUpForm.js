@@ -2,7 +2,7 @@ import React from "react";
 import InputText from "../form/input/InputText";
 import InputTextArea from "../form/input/InputTextArea";
 import Inputdatepicker from "../form/input/InputDatepicker";
-import InputSelectOptions from "../form/input/InputSelectOptions";
+import InputSelect from "../form/input/InputSelect";
 import ActionButton from "../form/button/ActionButton";
 import FormTemplate from "../form/FormTemplate";
 import BasicSection from "../helper/BasicSection";
@@ -26,9 +26,9 @@ function SignUpForm() {
       <Inputdatepicker
         id="date" label="Choose a date"
         icon="date_range" validate={{}} />
-      <InputSelectOptions
+      <InputSelect
         id="basic_select" label="Choose your option" headerText="Options Select:"
-        icon="playlist_add_check" validate={{}}
+        icon="playlist_add_check" properties={{}} validate={{}}
         options={
           [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }, { value: 3, label: "Option 3" }]
         } />

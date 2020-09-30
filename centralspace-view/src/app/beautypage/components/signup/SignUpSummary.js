@@ -17,6 +17,8 @@ import InputText from "../form/input/InputText";
 import InputTimepicker from "../form/input/InputTimepicker";
 import InputTags from "../form/tag/InputTags";
 import Tags from "../form/tag/Tags";
+import InputSelect from "../form/input/InputSelect";
+import ActionButton from "../form/button/ActionButton";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
@@ -173,124 +175,61 @@ function SignUpSummary() {
                     <FormTemplate
                         formId="form3"
                         headerText="Others"
-                        formContent="" />
+                        formContent={
+                            <>
+                                <InputText
+                                    id="password" label="Password" password={true}
+                                    validate={{}} />
+                                <InputSelect
+                                    id="multiple_select" label="Choose your option" headerText="Multiple Select"
+                                    multiple={true} defaultValue={[1, 3]} validate={{}}
+                                    properties={{ isMultiple: true }}
+                                    options={
+                                        [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }, { value: 3, label: "Option 3" }]
+                                    } />
+                                <InputSelect
+                                    id="group_select" validate={{}}
+                                    optionGroups={[
+                                        { id: "group1", label: "team 1", options: [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }] },
+                                        { id: "group2", label: "team 2", options: [{ value: 3, label: "Option 3" }, { value: 4, label: "Option 4" }] }
+                                    ]} />
+                                <InputSelect
+                                    id="image_select1" label="Choose your option" headerText="Images in select"
+                                    isDuplicated={true} defaultValue={[0]} validate={{}}
+                                    options={[
+                                        { value: 1, label: "example 1", icon: getImg(1).src },
+                                        { value: 2, label: "example 2", icon: getImg(2).src },
+                                        { value: 3, label: "example 3", icon: getImg(2).src }
+                                    ]} />
+                                <InputSelect
+                                    id="image_select2" label="Choose your option" headerText="Images in select"
+                                    isDuplicated={true} defaultValue={[0]} validate={{}}
+                                    options={[
+                                        { value: 1, label: "example 1", icon: getImg(1).src },
+                                        { value: 2, label: "example 2", icon: getImg(2).src },
+                                        { value: 3, label: "example 3", icon: getImg(2).src }
+                                    ]} />
+                                <InputSelect
+                                    id="image_disabled" label="Disabled option" icon="playlist_add_check"
+                                    disabled={true} defaultValue={[0]} validate={{}}
+                                    options={
+                                        [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }, { value: 3, label: "Option 3" }]
+                                    } />
+
+                                <div className="input-field col s12">
+                                    <ActionButton
+                                        id="reset" label="Reset"
+                                        icon="clear_all" color="grey" hasWaves={true}
+                                        disabled={false} />
+                                    <ActionButton
+                                        id="save" label="Save"
+                                        icon="send" hasWaves={true}
+                                        disabled={false} type="submit" />
+                                </div>
+                            </>
+                        } />
                 )}
             />
-            <div className="section section-large-size light valign-wrapper">
-                <div className="container">
-                    <form>
-                        <div className="row">
-                            <div className="col s12">
-                                <h2 className="section-title">Others</h2>
-                            </div>
-
-                            <InputText
-                                id="password" label="Password" password={true}
-                                validate={{}} />
-
-                            <div className="input-field col s12">
-                                <input id="password2" type="password" className="validate" />
-                                <label htmlFor="password2">Password</label>
-                            </div>
-
-                            <div className="input-field col s12">
-                                <p>Multiple Select</p>
-                                <select multiple ref={optionSelectRef1} defaultValue={[1, 3]}>
-                                    <option value={0} disabled>
-                                        Choose your option
-                                    </option>
-                                    <option value={1}>Option 1</option>
-                                    <option value={2}>Option 2</option>
-                                    <option value={3}>Option 3</option>
-                                </select>
-                            </div>
-                            <div className="input-field col s12">
-                                <select ref={optionSelectRef3}>
-                                    <optgroup label="team 1">
-                                        <option value={1}>Option 1</option>
-                                        <option value={2}>Option 2</option>
-                                    </optgroup>
-                                    <optgroup label="team 2">
-                                        <option value={3}>Option 3</option>
-                                        <option value={4}>Option 4</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div className="input-field col s12 m6">
-                                <p>Images in select</p>
-                                <select className="icons" ref={optionSelectRef4} defaultValue={0}>
-                                    <option value={0} disabled>
-                                        Choose your option
-                                    </option>
-                                    <option value={1} data-icon={getImg(1).src}>
-                                        example 1
-                                    </option>
-                                    <option value={2} data-icon={getImg(2).src}>
-                                        example 2
-                                    </option>
-                                    <option value={3} data-icon={getImg(3).src}>
-                                        example 3
-                                    </option>
-                                </select>
-
-                            </div>
-                            <div className="input-field col s12 m6">
-                                <p>Images in select</p>
-                                <select className="icons" ref={optionSelectRef5} defaultValue={0}>
-                                    <option value={0} disabled>
-                                        Choose your option
-                                    </option>
-                                    <option value={1} data-icon={getImg(2).src} className="left">
-                                        example 1
-                                    </option>
-                                    <option value={2} data-icon={getImg(3).src} className="left">
-                                        example 2
-                                    </option>
-                                    <option value={3} data-icon={getImg(1).src} className="left">
-                                        example 3
-                                    </option>
-                                </select>
-                            </div>
-
-
-                            <div className="input-field col s12">
-                                <i className="material-icons prefix">playlist_add_check</i>
-                                <select disabled={true} name="optionselect" id="color" ref={optionSelectRef2} defaultValue={0}>
-                                    <option value={0} disabled={true}>
-                                        Disabled option
-                                    </option>
-                                    <option value={1}>Option 1</option>
-                                    <option value={2}>Option 2</option>
-                                    <option value={3}>Option 3</option>
-                                </select>
-                            </div>
-
-                            <div className="input-field col s12">
-                                <button
-                                    id="reset"
-                                    className="btn waves-effect waves-light grey"
-                                    type="button"
-                                    name="reset"
-                                >
-                                    Reset
-                                <i className="material-icons right">clear_all</i>
-                                </button>
-                                <span id="status" />
-                                <button
-                                    id="save"
-                                    className="btn waves-effect waves-light"
-                                    type="submit"
-                                    name="action"
-                                >
-                                    Save
-                                <i className="material-icons right">send</i>
-                                </button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
 
             <BasicSection
                 wrappedSection={(
