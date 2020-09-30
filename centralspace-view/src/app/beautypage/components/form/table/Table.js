@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../../../../resources/beautypage/css/table.css';
 import TableColumn from './TableColumn';
 import TableHeader from './TableHeader';
 

@@ -1,31 +1,28 @@
 
 import React, { useEffect, useRef } from "react";
-import '../../../../resources/beautypage/css/table.css';
-import '../../../../resources/beautypage/css/chips.css';
 import '../../../../resources/beautypage/css/tap-target.css';
 import '../../../../resources/beautypage/css/nouislider.css';
 import '../../../../resources/beautypage/css/range.css';
-import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
+//todo css where?
 import '../../../../resources/beautypage/css/helper-text-validator.css';
 import '../../../../resources/beautypage/css/stepper/mstepper.css';
 import M from 'materialize-css/dist/js/materialize.js';
 import avatar from '../../../../resources/beautypage/images/people/avatar4.jpg';
-import BasicSection from "../helpers/BasicSection";
+import BasicSection from "../helper/BasicSection";
 import FormTemplate from "../form/FormTemplate";
 import Table from "../form/table/Table";
 import Pagination from "../form/table/Pagination";
+import InputTextArea from "../form/input/InputTextArea";
+import InputText from "../form/input/InputText";
+import InputTimepicker from "../form/input/InputTimepicker";
+import InputTags from "../form/tag/InputTags";
+import Tags from "../form/tag/Tags";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
     const collapsiblePopupRef = useRef(null);
     const tapTargetRef = useRef(null);
     const modalRef = useRef(null);
-    const autocompleteRef = useRef(null);
-    const chipsRef = useRef(null);
-    const initialChipsRef = useRef(null);
-    const placeholderChipsRef = useRef(null);
-    const autocompleteChipsRef = useRef(null);
-    const timepickerRef = useRef(null);
     const optionSelectRef1 = useRef(null);
     const optionSelectRef2 = useRef(null);
     const optionSelectRef3 = useRef(null);
@@ -39,11 +36,7 @@ function SignUpSummary() {
             accordion: false
         });
         M.Modal.init(modalRef.current, {});
-        const instances = initAutocomplete();
         // instance.updateData({...});
-        initChips();
-        M.Timepicker.init(timepickerRef.current,
-            { showClearBtn: true });
         M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
         M.FormSelect.init(optionSelectRef2.current, {});
         M.FormSelect.init(optionSelectRef3.current, {});
@@ -86,49 +79,6 @@ function SignUpSummary() {
         "Google": 'https://websetnet.net/wp-content/uploads/2018/09/unnamed-file-530.jpg'
     };
 
-    const initAutocomplete = () => {
-        return M.Autocomplete.init(
-            autocompleteRef.current,
-            {
-                data: dataToAutocomplete,
-                minLength: 1,
-                limit: 20,
-                sortFunction: (a, b, inputString) => {
-                    return a.indexOf(inputString) - b.indexOf(inputString);
-                },
-                onAutocomplete: (inputString) => { alert("Done!") }
-            }
-        );
-    }
-
-    const initChips = () => {
-        M.Chips.init(chipsRef.current, {
-            placeholder: 'Enter a tag',
-        });
-        M.Chips.init(initialChipsRef.current,
-            {
-                placeholder: 'Enter a tag',
-                readOnly: true,
-                data: [{ tag: 'Apple' }, { tag: 'Microsoft' }, { tag: 'Google' }],
-            }
-        );
-        M.Chips.init(placeholderChipsRef.current,
-            {
-                placeholder: 'Enter a placeholder tag',
-                secondaryPlaceholder: '+Tag',
-            }
-        );
-        M.Chips.init(autocompleteChipsRef.current,
-            {
-                placeholder: 'Enter a autocomplete tag',
-                autocompleteOptions: {
-                    data: dataToAutocomplete
-                },
-                limit: Infinity,
-                minLength: 1
-            });
-    }
-
     return (
         <>
             <BasicSection
@@ -137,18 +87,8 @@ function SignUpSummary() {
                     <FormTemplate
                         formId="form1"
                         headerText="Summary"
-                        formContent="" />
-                )}
-            />
-            <div className="section light valign-wrapper">
-                <div className="container">
-                    <form>
-                        <div className="row">
-                            <div className="col s12">
-                                <h2 className="section-title">Summary</h2>
-                            </div>
-
-                            <div className="col s12">
+                        formContent={
+                            <>
                                 <Table
                                     headers={["Name", "Item Name", "Item Price"]}
                                     columns={[
@@ -170,73 +110,62 @@ function SignUpSummary() {
                                             right: { ref: "#!", icon: "chevron_right" }
                                         }
                                     } />
-                            </div>
-                        </div>
-                    </form>
-                </div >
-            </div >
+                            </>
+                        } />
+                )}
+            />
 
             <BasicSection
                 large={true}
                 wrappedSection={(
                     <FormTemplate
                         formId="form2"
-                        formContent="" />
+                        formContent={
+                            <>
+                                <InputTextArea
+                                    id="message_sign" label="Your Message" defaultValue={""}
+                                    icon="message" validate={{ dataLength: 120 }} />
+                                <InputText
+                                    id="autocomplete-input" label="Autocomplete" icon="textsms"
+                                    validate={{}} autocomplete={{ dataToAutocomplete }} />
+                                <InputTimepicker
+                                    id="timepicker_sign" label="Select time"
+                                    validate={{}} properties={{ showClearBtn: true }} />
+                                <InputTags id="tags_basic"
+                                    validate={{}}
+                                    properties={{ placeholder: 'Enter a tag' }} />
+                                <InputTags id="tags_initial"
+                                    validate={{}} initial={true}
+                                    properties={
+                                        {
+                                            secondaryPlaceholder: '+Tag',
+                                            readOnly: true,
+                                            data: [{ tag: 'Apple' }, { tag: 'Microsoft' }, { tag: 'Google' }],
+                                        }
+                                    } />
+                                <Tags validate={{}}
+                                    tags={
+                                        [
+                                            { id: "tag1", image: avatar, label: "Jane Doe" },
+                                            { id: "tag2", close: true, label: "Tag" }
+                                        ]
+                                    } />
+                                <InputTags id="tags_autocomplete"
+                                    validate={{}} autocomplete={true}
+                                    properties={
+                                        {
+                                            placeholder: 'Enter a autocomplete tag',
+                                            autocompleteOptions: {
+                                                data: dataToAutocomplete
+                                            },
+                                            limit: Infinity,
+                                            minLength: 1
+                                        }
+                                    } />
+                            </>
+                        } />
                 )}
             />
-            <div className="section section-large-size valign-wrapper">
-                <div className="container">
-                    <form>
-                        <div className="row">
-
-                            <div className="input-field col s12">
-                                <i className="material-icons prefix">message</i>
-                                <textarea
-                                    id="message2"
-                                    className="materialize-textarea"
-                                    cols={20}
-                                    rows={20}
-                                    defaultValue={""}
-                                />
-                                <label htmlFor="message2">Your Message</label>
-                            </div>
-
-                            <div className="input-field col s12">
-                                <i className="material-icons prefix">textsms</i>
-                                <input type="text" id="autocomplete-input" className="autocomplete" ref={autocompleteRef} />
-                                <label htmlFor="autocomplete-input">Autocomplete</label>
-                            </div>
-
-                            <div className="input-field col s12">
-                                <input id="timepicker" type="text" className="timepicker" ref={timepickerRef} />
-                                <label htmlFor="timepicker">Select time</label>
-                            </div>
-
-                            <div className="col s12 basic-top-break">
-                                <div className="chips" ref={chipsRef}></div>
-                            </div>
-
-                            <div className="col s12 basic-top-break">
-                                <div className="chips chips-initial" ref={initialChipsRef}></div>
-                            </div>
-
-                            <div className="col s12 basic-top-break">
-                                <div className="chip"> <img src={avatar} alt="Contact Person" /> Jane Doe</div>
-                                <div className="chip"> Tag <i className="close material-icons">close</i>
-                                </div>
-                            </div>
-
-                            <div className="col s12 basic-top-break">
-                                <div className="chips " ref={placeholderChipsRef}></div>
-                            </div>
-                            <div className="col s12 basic-top-break">
-                                <div className="chips chips-autocomplete" ref={autocompleteChipsRef}></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
 
             <BasicSection
                 theme="light" large={true}
@@ -255,9 +184,13 @@ function SignUpSummary() {
                                 <h2 className="section-title">Others</h2>
                             </div>
 
+                            <InputText
+                                id="password" label="Password" password={true}
+                                validate={{}} />
+
                             <div className="input-field col s12">
-                                <input id="password" type="password" className="validate" />
-                                <label htmlFor="password">Password</label>
+                                <input id="password2" type="password" className="validate" />
+                                <label htmlFor="password2">Password</label>
                             </div>
 
                             <div className="input-field col s12">

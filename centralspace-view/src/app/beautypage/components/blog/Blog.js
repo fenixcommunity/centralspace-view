@@ -7,10 +7,10 @@ import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg'
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
 import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 import BlogSectionItem from "./BlogSectionItem";
-import Divider from "../helpers/Divider";
+import Divider from "../helper/Divider";
 import BlogSectionFooter from "./BlogSectionFooter";
 import ProposedArticle from "./ProposedArticle";
-import Modal from "../helpers/Modal";
+import Modal from "../helper/Modal";
 import CommentsSection from "./CommentsSection";
 import ActiclesSection from "./ArticlesSection";
 

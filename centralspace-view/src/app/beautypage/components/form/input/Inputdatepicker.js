@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../resources/beautypage/css/datatimepicker.css';
 
-function Inputdatepicker(props) {
+function InputDatepicker(props) {
     const datepickerRef = useRef(null);
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
@@ -42,4 +42,4 @@ function Inputdatepicker(props) {
     )
 }
 
-export default Inputdatepicker
+export default InputDatepicker

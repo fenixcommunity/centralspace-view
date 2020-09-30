@@ -1,7 +1,7 @@
 import React from "react";
 import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
 import poly6 from '../../../../../resources/beautypage/images/blog/poly6.jpg';
-import FullHeightSection from "../../helpers/slider/FullHeightSection";
+import FullHeightSection from "../../helper/slider/FullHeightSection";
 import FeatureHeader from "./FeatureHeader";
 import PhonePreviewSize from "./PhonePreviewSize";
 

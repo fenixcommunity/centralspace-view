@@ -1,5 +1,5 @@
 import React from "react";
-import SectionDivided from "../helpers/SectionDivided";
+import SectionDivided from "../helper/SectionDivided";
 import Tabs from "../form/tab/Tabs";
 
 function TabsSection() {

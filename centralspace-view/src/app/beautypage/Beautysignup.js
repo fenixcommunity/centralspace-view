@@ -8,7 +8,7 @@ import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';
 import StarsParallax from './components/other/StarsParallax';
 import TabsSection from './components/other/TabsSection';
-import Header from "./components/helpers/header/Header";
+import Header from "./components/helper/header/Header";
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
 import MaterialUiStepper from './components/other/MaterialUiStepper';

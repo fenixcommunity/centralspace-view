@@ -5,13 +5,13 @@ import './BeautypageStyleModification.css';
 import treeFogg from '../../resources/beautypage/images/background.jpg';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import Header from './components/helpers/header/Header';
+import Header from './components/helper/header/Header';
 import Features from './components/feature/Features';
 import Clients from './components/clients/Clients';
 import PricingTables from './components/pricing/PricingTables';
 import Blog from './components/blogsection/BlogSection';
-import GoogleMaps from './components/maps/GoogleMaps';
-import LeafletMapEmbedded from './components/maps/LeafletMapEmbedded';
+import GoogleMaps from './components/map/GoogleMaps';
+import LeafletMapEmbedded from './components/map/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/footer/Footer';
 

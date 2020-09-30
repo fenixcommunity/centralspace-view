@@ -1,5 +1,5 @@
 import React from 'react';
-import Divider from '../helpers/Divider';
+import Divider from '../helper/Divider';
 import { getImageFromResources } from '../../utils/ImageLazyFinder';
 
 function BlogSectionFooter(props) {

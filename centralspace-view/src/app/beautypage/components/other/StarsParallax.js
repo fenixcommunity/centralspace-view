@@ -1,7 +1,7 @@
 
 import React from "react";
 import backgroundStars from '../../../../resources/beautypage/images/backgroundStars.jpg';
-import Parallax from "../helpers/Parallax";
+import Parallax from "../helper/Parallax";
 
 function StarsParallax() {
 

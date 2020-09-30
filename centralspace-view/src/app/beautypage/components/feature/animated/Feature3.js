@@ -1,7 +1,7 @@
 import React from "react";
 import poly3 from '../../../../../resources/beautypage/images/blog/poly3.jpg';
 import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
-import FullHeightSection from "../../helpers/slider/FullHeightSection";
+import FullHeightSection from "../../helper/slider/FullHeightSection";
 import FeatureFadeRightInOut from "./FeatureFadeRightInOut";
 import ImagePair from "./ImagePair";
 

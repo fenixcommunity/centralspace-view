@@ -3,7 +3,7 @@ import ActionButton from "../form/button/ActionButton";
 import InputCheckbox from "../form/input/InputCheckbox";
 import InputRadioButtons from "../form/input/InputRadioButtons";
 import FormTemplate from "../form/FormTemplate";
-import BasicSection from "../helpers/BasicSection";
+import BasicSection from "../helper/BasicSection";
 
 function ContactUs() {
   const handleInputRadioChange = () => {

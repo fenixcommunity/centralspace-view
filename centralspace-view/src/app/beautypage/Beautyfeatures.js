@@ -11,7 +11,7 @@ import Feature1 from './components/feature/animated/Feature1';
 import Feature2 from './components/feature/animated/Feature2';
 import Feature3 from './components/feature/animated/Feature3';
 import Feature4 from './components/feature/animated/Feature4';
-import SliderHeader from './components/helpers/header/SliderHeader';
+import SliderHeader from './components/helper/header/SliderHeader';
 
 function Beautyfeatures() {
 

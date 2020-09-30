@@ -1,13 +1,11 @@
 import React from "react";
-// todo remove after refactoring
-import '../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import InputText from "../form/input/InputText";
 import InputTextArea from "../form/input/InputTextArea";
-import Inputdatepicker from "../form/input/Inputdatepicker";
+import Inputdatepicker from "../form/input/InputDatepicker";
 import InputSelectOptions from "../form/input/InputSelectOptions";
 import ActionButton from "../form/button/ActionButton";
 import FormTemplate from "../form/FormTemplate";
-import BasicSection from "../helpers/BasicSection";
+import BasicSection from "../helper/BasicSection";
 
 function SignUpForm() {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../../../resources/beautypage/css/sidenav-helper.css'; // remove sidenav styles from startup css file
-import Divider from "../../helpers/Divider";
+import Divider from "../../helper/Divider";
 import NavbarSlideOutHeader from "./NavbarSlideOutHeader";
 import NavbarSlideOutPagesList from "./NavbarSlideOutPagesList";
 import NavbarSlideOutFooter from "./NavbarSlideOutFooter";

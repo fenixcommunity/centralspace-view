@@ -6,7 +6,7 @@ function BeautypageScriptsLoader(props) {
     const basicScripts = [
         '/beautypage/js/main/materialize_v2.min.js',
         '/beautypage/js/main/init.js',
-        '/beautypage/js/helpers/nouislider.js',
+        '/beautypage/js/helper/nouislider.js',
         '/beautypage/js/stepper/mstepper.js'
     ]
     let contextPageScripts = [];
