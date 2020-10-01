@@ -8,7 +8,7 @@ function Tabs(props) {
             <ul className="tabs">
                 {tabs && tabs.map(tab => {
                     return (
-                        <li className={`tab col s${tabsDivision}`}>
+                        <li key={tab.id} className={`tab col s${tabsDivision}`}>
                             <a href={`#${tab.id}`}
                                 className={`#${tab.active ? "active" : ""} indigo-text text-darken-4`}>
                                 {tab.label}
@@ -20,7 +20,7 @@ function Tabs(props) {
 
             {tabs && tabs.map(tab => {
                 return (
-                    <div id={tab.id} className="col s12">
+                    <div key={tab.id} id={tab.id} className="col s12">
                         <p className="flow-text section-title">{tab.label}</p>
                         {tab.content}
                     </div>

@@ -94,9 +94,9 @@ function SignUpSummary() {
                                 <Table
                                     headers={["Name", "Item Name", "Item Price"]}
                                     columns={[
-                                        ["Alvin", "Eclair", "$0.87"],
-                                        ["Alan", "Jellybean", "$3.76"],
-                                        ["Jonathan", "Lollipop", "$7.00"]
+                                        { id: 1, elements: ["Alvin", "Eclair", "$0.87"] },
+                                        { id: 2, elements: ["Alan", "Jellybean", "$3.76"] },
+                                        { id: 3, elements: ["Jonathan", "Lollipop", "$7.00"] }
                                     ]} />
                                 <Pagination
                                     pages={[
@@ -195,7 +195,7 @@ function SignUpSummary() {
                                     ]} />
                                 <InputSelect
                                     id="image_select1" label="Choose your option" headerText="Images in select"
-                                    isDuplicated={true} defaultValue={[0]} validate={{}}
+                                    isDuplicated={true} defaultValue={0} validate={{}}
                                     options={[
                                         { value: 1, label: "example 1", icon: getImg(1).src },
                                         { value: 2, label: "example 2", icon: getImg(2).src },
@@ -203,7 +203,7 @@ function SignUpSummary() {
                                     ]} />
                                 <InputSelect
                                     id="image_select2" label="Choose your option" headerText="Images in select"
-                                    isDuplicated={true} defaultValue={[0]} validate={{}}
+                                    isDuplicated={true} defaultValue={0} validate={{}}
                                     options={[
                                         { value: 1, label: "example 1", icon: getImg(1).src },
                                         { value: 2, label: "example 2", icon: getImg(2).src },
@@ -211,7 +211,7 @@ function SignUpSummary() {
                                     ]} />
                                 <InputSelect
                                     id="image_disabled" label="Disabled option" icon="playlist_add_check"
-                                    disabled={true} defaultValue={[0]} validate={{}}
+                                    disabled={true} defaultValue={0} validate={{}}
                                     options={
                                         [{ value: 1, label: "Option 1" }, { value: 2, label: "Option 2" }, { value: 3, label: "Option 3" }]
                                     } />

@@ -1,6 +1,6 @@
 import React from 'react';
 import Divider from '../helper/Divider';
-import { getImageFromResources } from '../../utils/ImageLazyFinder';
+import { getImageFromResources } from '../../utils/imageLazyFinder';
 
 function BlogSectionFooter(props) {
     const author = props.authorOfArticles

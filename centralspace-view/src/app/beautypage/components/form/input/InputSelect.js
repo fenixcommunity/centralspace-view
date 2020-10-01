@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../resources/beautypage/css/radiobutton-checkbox.css';
+import { generateKey } from '../../../utils/keyGenerator';
 
 function InputSelect(props) {
     const defaultValue = props.defaultValue ? props.defaultValue : 0;
@@ -29,7 +30,7 @@ function InputSelect(props) {
                             {props.options.map(option => {
                                 const iconAttr = option.icon ? { "data-icon": option.icon } : {};
                                 return (
-                                    <option value={option.value} {...iconAttr}>
+                                    <option key={generateKey(option.value)} value={option.value} {...iconAttr}>
                                         {option.label}
                                     </option>
                                 )
@@ -39,9 +40,9 @@ function InputSelect(props) {
                     ) : (
                         <>
                             {props.optionGroups && props.optionGroups.map(group => (
-                                <optgroup id={group.id} label={group.label}>
+                                <optgroup key={group.id} id={group.id} label={group.label}>
                                     {group.options && group.options.map(option => (
-                                        <option value={option.value}>
+                                        <option key={generateKey(option.value)} value={option.value}>
                                             {option.label}
                                         </option>
                                     ))}

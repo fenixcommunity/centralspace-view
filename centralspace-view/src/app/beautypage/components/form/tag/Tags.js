@@ -9,7 +9,7 @@ function Tags(props) {
     return (
         <div className={`basic-top-break col ${duplicatedClass}`}>
             {tags && tags.map(tag => (
-                <div id={tag.id} className="chip">
+                <div key={tag.id} id={tag.id} className="chip">
                     {tag.image && (<img src={tag.image} alt="tag" />)}
                     {tag.label}
                     {tag.close && (<i className="close material-icons">close</i>)}

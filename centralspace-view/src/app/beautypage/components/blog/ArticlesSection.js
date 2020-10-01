@@ -9,6 +9,7 @@ function ArticlesSection(props) {
             <h4>Articles</h4>
             <div className="row">
                 <ArticleCard
+                    id={1}
                     isHoverable={true}
                     handleToastOnClick={props.handleToastOnClick}
                     articleImg={poly1}
@@ -22,6 +23,7 @@ function ArticlesSection(props) {
                     finalQuote={<blockquote> This is an example quotation that uses the blockquote tag.</blockquote>}
                     cardAction={[{ "title": "More details", "ref": "/" }, { "title": "Find similar", "ref": "/" }]} />
                 <ArticleCard
+                    id={2}
                     isHoverable={false}
                     handleToastOnClick={props.handleToastOnClick}
                     articleImg={poly2}

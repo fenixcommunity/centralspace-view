@@ -1,4 +1,5 @@
 import React from 'react';
+import { generateKey } from '../../utils/keyGenerator';
 
 function ArticleCard(props) {
     const hoverableClass = props.isHoverable ? 'hoverable' : "";
@@ -21,7 +22,7 @@ function ArticleCard(props) {
                 <div className="card-action">
                    {props.cardAction && props.cardAction.map(action => {
                        return (
-                       <a className="teal-text text-lighten-2" href={action.ref}>{action.title}</a>
+                       <a key={generateKey(action.title)} className="teal-text text-lighten-2" href={action.ref}>{action.title}</a>
                        )
                    })}
                 </div>

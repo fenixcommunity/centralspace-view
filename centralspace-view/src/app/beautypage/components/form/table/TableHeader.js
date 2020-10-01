@@ -1,11 +1,12 @@
 import React from 'react';
+import { generateKey } from '../../../utils/keyGenerator';
 
 function TableHeader(props) {
     const headers = props.headers;
     return (
         <tr>
             {headers && headers.map(header =>
-                (<th>{header}</th>)
+                (<th key={generateKey(header)}>{header}</th>)
             )}
         </tr>
     )

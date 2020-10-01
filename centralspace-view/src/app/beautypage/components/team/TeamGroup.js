@@ -1,5 +1,6 @@
 import React from 'react'
 import TeamPerson from './TeamPerson';
+import { generateKey } from '../../utils/keyGenerator';
 
 function TeamGroup(props) {
     const peoples = props.peoples;
@@ -11,7 +12,7 @@ function TeamGroup(props) {
             <div className="col s12 l9">
                 <div className="row">
                     {peoples && peoples.map(people => (
-                        <TeamPerson name={people.name} teamTitle={people.teamTitle} avatar={people.avatar.img} />
+                        <TeamPerson key={generateKey(people.name)} name={people.name} teamTitle={people.teamTitle} avatar={people.avatar.img} />
                     )
                     )}
                 </div>

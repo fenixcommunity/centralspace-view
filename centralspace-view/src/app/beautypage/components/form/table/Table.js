@@ -14,7 +14,7 @@ function Table(props) {
             </thead>
             <tbody>
                 {columns && columns.map(column =>
-                    <TableColumn rows={column} />
+                    <TableColumn key={column.id} rows={column.elements} />
                 )}
             </tbody>
         </table>

@@ -9,7 +9,7 @@ function Pagination(props) {
         <ul className="pagination">
             <PaginationArrow arrow={arrows.left} />
             {pages && pages.map(page =>
-                <PaginationItem page={page} />
+                <PaginationItem key={page.number} page={page} />
             )}
             <PaginationArrow arrow={arrows.right} />
         </ul>

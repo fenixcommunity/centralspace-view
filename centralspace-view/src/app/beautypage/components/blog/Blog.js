@@ -41,13 +41,13 @@ function Blog() {
         <div id="flow-text-section" className="col s8 offset-s2 m6 offset-m3 blog-body">
           {articles && articles.map(article => {
             return (
-              <>
+              <React.Fragment key={article.id}>
                 <BlogSectionItem
                   sectionHeader={article.header}
                   paragraphs={article.paragraphs}
                   hasZoom={article.hasZoom} />
                 {article.withDivider && <Divider />}
-              </>
+              </React.Fragment>
             )
           })}
         </div>

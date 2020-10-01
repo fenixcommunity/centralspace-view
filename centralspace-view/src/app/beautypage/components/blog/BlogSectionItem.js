@@ -1,18 +1,18 @@
 import React from 'react';
-import { getImageFromResources } from '../../utils/ImageLazyFinder';
+import { getImageFromResources } from '../../utils/imageLazyFinder';
 
 function BlogSectionItem(props) {
     const paragraphs = props.paragraphs ? props.paragraphs.map(paragraph => {
-        if (typeof (paragraph) === 'string') {
+        if (typeof (paragraph.content) === 'string') {
             return (
-                <p>{paragraph}</p>
+                <p key={paragraph.id}>{paragraph.content}</p>
             )
         }
-        if (typeof (paragraph) === 'object' && paragraph.image) {
-            const image = paragraph.image;
+        if (typeof (paragraph) === 'object' && paragraph.content.image) {
+            const image = paragraph.content.image;
             const img = getImageFromResources('blog', image.name);
             return (
-                <img
+                <img key={paragraph.id}
                     className="materialboxed"
                     src={img}
                     data-caption={image.dataCaption}
