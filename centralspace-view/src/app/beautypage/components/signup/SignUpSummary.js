@@ -7,7 +7,10 @@ import '../../../../resources/beautypage/css/range.css';
 import '../../../../resources/beautypage/css/helper-text-validator.css';
 import '../../../../resources/beautypage/css/stepper/mstepper.css';
 import M from 'materialize-css/dist/js/materialize.js';
-import avatar from '../../../../resources/beautypage/images/people/avatar4.jpg';
+import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg';
+import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
+import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
+import avatar4 from '../../../../resources/beautypage/images/people/avatar4.jpg';
 import BasicSection from "../helper/BasicSection";
 import FormTemplate from "../form/FormTemplate";
 import Table from "../form/table/Table";
@@ -19,17 +22,16 @@ import InputTags from "../form/tag/InputTags";
 import Tags from "../form/tag/Tags";
 import InputSelect from "../form/input/InputSelect";
 import ActionButton from "../form/button/ActionButton";
+import FileInput from "../form/input/FileInput";
+import TapTargetButton from "../other/taptarget/TapTargetButton";
+import TapTargetModal from "../other/taptarget/TapTargetModal";
+import Comment from "../blog/Comment";
+import Modal from "../helper/modal/Modal";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
     const collapsiblePopupRef = useRef(null);
     const tapTargetRef = useRef(null);
-    const modalRef = useRef(null);
-    const optionSelectRef1 = useRef(null);
-    const optionSelectRef2 = useRef(null);
-    const optionSelectRef3 = useRef(null);
-    const optionSelectRef4 = useRef(null);
-    const optionSelectRef5 = useRef(null);
     const stepperRef = useRef(null);
 
     useEffect(() => {
@@ -37,13 +39,6 @@ function SignUpSummary() {
         M.Collapsible.init(collapsiblePopupRef.current, {
             accordion: false
         });
-        M.Modal.init(modalRef.current, {});
-        // instance.updateData({...});
-        M.FormSelect.init(optionSelectRef1.current, { isMultiple: true });
-        M.FormSelect.init(optionSelectRef2.current, {});
-        M.FormSelect.init(optionSelectRef3.current, {});
-        M.FormSelect.init(optionSelectRef4.current, {});
-        M.FormSelect.init(optionSelectRef5.current, {});
     }, []);
 
     const selectImages = [
@@ -64,14 +59,18 @@ function SignUpSummary() {
         console.log("submit")
     }
 
-    const handleOnClick = () => {
+    const handleOnClickTapTargetAction = () => {
         let tap = M.TapTarget.getInstance(tapTargetRef.current);
         if (!tap) {
             tap = M.TapTarget.init(tapTargetRef.current);
         }
 
-        if (tap.isOpen) { tap.close(); }
-        else { tap.open(); }
+        if (tap.isOpen) {
+            tap.close();
+        }
+        else {
+            tap.open();
+        }
     }
 
     const dataToAutocomplete = {
@@ -126,7 +125,7 @@ function SignUpSummary() {
                             <>
                                 <InputTextArea
                                     id="message_sign" label="Your Message" defaultValue={""}
-                                    icon="message" validate={{ dataLength: 120 }} />
+                                    icon="message" validate={{ dataLength: 120, errorMessage: "Text is to long" }} />
                                 <InputText
                                     id="autocomplete-input" label="Autocomplete" icon="textsms"
                                     validate={{}} autocomplete={{ dataToAutocomplete }} />
@@ -148,7 +147,7 @@ function SignUpSummary() {
                                 <Tags validate={{}}
                                     tags={
                                         [
-                                            { id: "tag1", image: avatar, label: "Jane Doe" },
+                                            { id: "tag1", image: avatar4, label: "Jane Doe" },
                                             { id: "tag2", close: true, label: "Tag" }
                                         ]
                                     } />
@@ -178,7 +177,7 @@ function SignUpSummary() {
                         formContent={
                             <>
                                 <InputText
-                                    id="password" label="Password" password={true}
+                                    id="password" label="Password" type="password"
                                     validate={{}} />
                                 <InputSelect
                                     id="multiple_select" label="Choose your option" headerText="Multiple Select"
@@ -235,133 +234,113 @@ function SignUpSummary() {
                 wrappedSection={(
                     <FormTemplate
                         formId="form4"
-                        formContent="" />
+                        formContent={
+                            <>
+                                <InputText
+                                    id="email" label="Email validator" type="email"
+                                    validate={{ successMessage: "Right email", errorMessage: "Wrong email" }} />
+                                <FileInput label="File" multiple={false} />
+                                <FileInput multiple={true} label="Attachments" placeholder="Upload one or more files" />
+                            </>
+                        } />
                 )}
             />
-            <div className="section valign-wrapper">
-                <div className="container">
-                    <form className="col s12">
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <input id="email" type="email" className="validate" />
-                                <label htmlFor="email">Email validator</label>
-                                <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                            </div>
-                        </div>
-
-                        <div className="file-field input-field">
-                            <div className="btn">
-                                <span>File</span>
-                                <input type="file" />
-                            </div>
-                            <div className="file-path-wrapper">
-                                <input className="file-path validate" type="text" />
-                            </div>
-                        </div>
-
-                        <div className="file-field input-field">
-                            <div className="btn">
-                                <span>File</span>
-                                <input type="file" multiple />
-                            </div>
-                            <div className="file-path-wrapper">
-                                <input className="file-path validate" type="text" placeholder="Upload one or more files" />
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
 
             <BasicSection
                 theme="white"
                 wrappedSection={(
                     <FormTemplate
                         formId="form5"
-                        formContent="" />
+                        formContent={
+                            <>
+
+                                <ActionButton
+                                    id="tap_button" label="Open tap target"
+                                    color="teal lighten-2" hasWaves={true}
+                                    actions={{ onClick: handleOnClickTapTargetAction }} />
+                                <TapTargetButton isActive={true} actionButton={
+                                    <ActionButton
+                                        id="menu" icon="menu"
+                                        color="cyan" buttonLarge="true" buttonFloating="true"
+                                        actions={{ onClick: handleOnClickTapTargetAction }} />
+                                } />
+
+                                <TapTargetModal
+                                    tapTargetRef={tapTargetRef}
+                                    modalTheme="cyan"
+                                    content={
+                                        <>
+                                            <h5>I am here</h5>
+                                            <p className="white-text">
+                                                Provide value and encourage return visits by introducing users to new features and functionality at contextually
+                                                relevant moments.
+                                            </p>
+                                        </>
+                                    } />
+
+                                <div className="basic-top-break ">
+                                    <ActionButton
+                                        id="modal_trigger" label="Terms & Conditions"
+                                        reference="#modal"
+                                        classes="modal-trigger"
+                                        color="grey" hasWaves={true}
+                                    />
+                                    <Modal
+                                        modalBottom={true}
+                                        title="Modal Header"
+                                        content={
+                                            <>
+                                                <ul className="collection">
+                                                    <Comment
+                                                        authorAvatar={avatar1}
+                                                        title="Title"
+                                                        content={
+                                                            <>
+                                                                <p>First Line<br />
+                                                  Second Line
+                                                </p>
+                                                            </>
+                                                        }
+                                                        rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
+                                                    <Comment
+                                                        authorAvatar={avatar3}
+                                                        title="Title"
+                                                        content={
+                                                            <>
+                                                                <p>First Line<br />
+                                                      Second Line
+                                                    </p>
+                                                            </>
+                                                        }
+                                                        rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
+                                                </ul>
+                                            </>
+                                        }
+                                        modalActions={
+                                            [<ActionButton
+                                                id="modal_close" label="Agree"
+                                                //todo classes -> use another way
+                                                classes="modal-close"
+                                                color="teal lighten-2" hasWaves={true}
+                                                actions={{}} />
+                                            ]
+                                        } />
+                                </div>
+
+                            </>
+                        } />
+
                 )}
             />
+
             <div className="section white valign-wrapper">
                 <div className="container">
                     <div className="row">
-                        <div className="col s12">
-                            <a className="btn waves-effect waves-light teal lighten-2" onClick={handleOnClick}>Open tap target</a>
-                            <div className="fixed-action-btn direction-top active" >
-                                <a id="menu" className="btn btn-floating btn-large cyan" onClick={handleOnClick}>
-                                    <i className="material-icons">menu</i>
-                                </a>
-                            </div>
-
-                            <div className="tap-target-wrapper">
-                                <div className="tap-target cyan" data-target="menu" ref={tapTargetRef}>
-                                    <div className="tap-target-content white-text" >
-                                        <h5>I am here</h5>
-                                        <p className="white-text">
-                                            Provide value and encourage return visits by introducing users to new features and functionality at contextually
-                                            relevant moments.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div className="col s12 basic-top-break ">
-                            <a className="modal-trigger waves-effect waves-light btn grey" href="#modal">Modal</a>
 
-                            <div id="modal" className="modal bottom-sheet" ref={modalRef} >
-                                <div className="modal-content">
-                                    <h3 className="header">Modal Header</h3>
-                                    <ul className="collection">
-                                        <li className="collection-item avatar">
-                                            <img src={avatar} alt="" className="circle" />
-                                            <span className="title">Title</span>
-                                            <p>First Line
-                                            <br />
-                                            Second Line
-                                            </p>
-                                            <a href="#!" className="secondary-content">
-                                                <i className="material-icons">grade</i>
-                                            </a>
-                                        </li>
-                                        <li className="collection-item avatar">
-                                            <i className="material-icons circle">folder</i>
-                                            <span className="title">Title</span>
-                                            <p>First Line
-                                            <br />
-                                            Second Line
-                                            </p>
-                                            <a href="#!" className="secondary-content">
-                                                <i className="material-icons">grade</i>
-                                            </a>
-                                        </li>
-                                        <li className="collection-item avatar">
-                                            <i className="material-icons circle green">assessment</i>
-                                            <span className="title">Title</span>
-                                            <p>First Line
-                                            <br />
-                                            Second Line
-                                            </p>
-                                            <a href="#!" className="secondary-content">
-                                                <i className="material-icons">grade</i>
-                                            </a>
-                                        </li>
-                                        <li className="collection-item avatar">
-                                            <i className="material-icons circle red">play_arrow</i>
-                                            <span className="title">Title</span>
-                                            <p>First Line
-                                            <br />
-                                            Second Line
-                                            </p>
-                                            <a href="#!" className="secondary-content">
-                                                <i className="material-icons">grade</i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="modal-footer">
-                                    <a href="#!" className="modal-close btn waves-effect waves-light teal lighten-2 btn-flat">Agree</a>
-                                </div>
-                            </div>
+
+
                         </div>
 
                         <div className="col s12">

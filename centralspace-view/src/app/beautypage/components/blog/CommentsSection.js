@@ -14,15 +14,19 @@ function CommentsSection() {
                     authorAvatar={avatar1}
                     title="Ryu"
                     content="black-belt"
-                    emailRef="/" />
+                    rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
                 <Comment
                     authorAvatar={avatar3}
                     title="Yoshi"
                     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
                              varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
                              varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                    emailRef="/" />
-                <Comment authorAvatar={avatar2} title="Max" content="green-belt" emailRef="/" />
+                    rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
+                <Comment
+                    authorAvatar={avatar2}
+                    title="Max"
+                    content="green-belt"
+                    rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
             </ul>
         </div>
     )

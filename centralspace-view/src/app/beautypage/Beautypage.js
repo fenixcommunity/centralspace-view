@@ -7,7 +7,7 @@ import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Header from './components/helper/header/Header';
 import Features from './components/feature/Features';
-import Clients from './components/clients/Clients';
+import Clients from './components/client/Clients';
 import PricingTables from './components/pricing/PricingTables';
 import Blog from './components/blogsection/BlogSection';
 import GoogleMaps from './components/map/GoogleMaps';
@@ -17,8 +17,7 @@ import Footer from './components/footer/Footer';
 
 function Beautypage() {
 
-
-
+// pisz tak jak w revamipie?
 //      podziel na mniejsze
 //    wywal materialize css??? lub refactoring. Warto?
 // centralspace training

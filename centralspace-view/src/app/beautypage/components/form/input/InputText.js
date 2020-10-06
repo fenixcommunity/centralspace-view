@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
+import ValidateMessage from "../validation/ValidateMessage";
 
 function InputText(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
@@ -14,6 +15,7 @@ function InputText(props) {
         if (props.autocomplete) {
             const dataToAutocomplete = props.autocomplete.dataToAutocomplete;
             const instance = initAutocomplete(dataToAutocomplete ? dataToAutocomplete : {});
+            // instance.updateData({...});
         }
     }, []);
 
@@ -37,7 +39,7 @@ function InputText(props) {
             {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
             <input
                 id={props.id}
-                type={`${props.password ? "password" : "text"}`}
+                type={`${props.type ? props.type : "text"}`}
                 {...defaultValueAttr}
                 className={`
                 ${validate ? "validate" : ""} 
@@ -47,6 +49,7 @@ function InputText(props) {
                 ref={autocompleteRef}
             />
             <label htmlFor={props.id}>{props.label}</label>
+            <ValidateMessage validate={validate} />
         </div>
     )
 }

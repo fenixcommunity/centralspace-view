@@ -1,4 +1,5 @@
 import React from 'react'
+import ValidateMessage from '../validation/ValidateMessage';
 
 function InputTextArea(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
@@ -16,6 +17,7 @@ function InputTextArea(props) {
                 {...validateLengthAttribute}
             />
             <label htmlFor={props.id}>{props.label}</label>
+            <ValidateMessage validate={validate} />
         </div>
     )
 }

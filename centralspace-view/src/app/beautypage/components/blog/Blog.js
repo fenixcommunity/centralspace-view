@@ -10,9 +10,10 @@ import BlogSectionItem from "./BlogSectionItem";
 import Divider from "../helper/Divider";
 import BlogSectionFooter from "./BlogSectionFooter";
 import ProposedArticle from "./ProposedArticle";
-import Modal from "../helper/Modal";
+import Modal from "../helper/modal/Modal";
 import CommentsSection from "./CommentsSection";
 import ActiclesSection from "./ArticlesSection";
+import ActionButton from "../form/button/ActionButton";
 
 function Blog() {
   const [articles, setArticles] = useState([]);
@@ -66,10 +67,27 @@ function Blog() {
 
       <ActiclesSection handleToastOnClick={handleToastOnClick} />
       <CommentsSection />
+
+      <div className="container">
+        <ActionButton
+          id="modal_trigger" label="Terms & Conditions"
+          reference="#modal"
+          classes="modal-trigger"
+          color="teal lighten-2" hasWaves={true}
+        />
+      </div>
       <Modal
         title="Terms & Conditions"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam."
-        agreeAction={{ title: "Agree", ref: "#!" }} />
+        modalActions={
+          [<ActionButton
+            id="modal_close" label="Agree"
+            //todo classes -> use another way
+            classes="modal-close"
+            color="teal lighten-2" hasWaves={true}
+            actions={{}} />
+          ]
+        } />
     </div>
   );
 }
