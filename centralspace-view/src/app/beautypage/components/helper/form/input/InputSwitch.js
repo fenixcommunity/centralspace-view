@@ -4,10 +4,10 @@ function InputSwitch(props) {
     return (
         <div className="switch">
             <label>
-                {props.labelNegative}
-                <input type="checkbox" disabled={props.disabled} />
+                {props.labelUnchecked}
+                <input type="checkbox" checked={props.checked} disabled={props.disabled} />
                 <span className="lever"></span>
-                {props.labelPositive}
+                {props.labelChecked}
             </label>
         </div>
     )

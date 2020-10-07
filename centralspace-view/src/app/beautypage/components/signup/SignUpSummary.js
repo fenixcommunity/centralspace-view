@@ -355,7 +355,7 @@ function SignUpSummary() {
                                 </div>
 
                                 <div className="col s12 basic-top-break">
-                                    <InputSwitch labelNegative="Off" labelPositive="On" />
+                                    <InputSwitch checked={true} labelUnchecked="Off" labelChecked="On" />
                                     <InputSwitch labelNegative="Disabled" labelPositive="Enabled" disabled={true} />
                                 </div>
                             </>
