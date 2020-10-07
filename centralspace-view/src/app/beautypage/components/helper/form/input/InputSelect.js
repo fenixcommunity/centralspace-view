@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import { generateKey } from '../../../../utils/keyGenerator';
+import Icon from "../../Icon";
 
 function InputSelect(props) {
     const defaultValue = props.defaultValue ? props.defaultValue : 0;
@@ -16,7 +17,7 @@ function InputSelect(props) {
     return (
         <div className={`input-field col ${duplicatedClass}`}>
             {props.headerText && (<p>{props.headerText}</p>)} {/* or <label>Options Select</label> */}
-            {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
+            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
             <select id={props.id} name="optionselect" disabled={props.disabled}
                 ref={optionSelectRef} defaultValue={props.defaultValue} {...multipleAttr}>
                 {!props.optionGroups ?

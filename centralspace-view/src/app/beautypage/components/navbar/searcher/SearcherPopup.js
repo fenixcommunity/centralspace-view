@@ -1,4 +1,5 @@
 import React from 'react'
+import ActionButton from '../../helper/form/button/ActionButton';
 
 function SearcherPopup(props) {
     return (
@@ -6,16 +7,19 @@ function SearcherPopup(props) {
             <form action="/beautypage/search" method="get" role="search">
                 <label htmlFor="search" className="label-hidden active">
                     Search our store
-        </label>
+                </label>
                 <input
                     type="search"
                     name="q"
                     id="search"
                     placeholder={props.popupSearcherText}
                 />
-                <button type="submit" className="btn-flat btn-floating waves-effect">
-                    <i className="material-icons black-text">search</i>
-                </button>
+
+                <ActionButton
+                    id="searcher_popup" type="submit"
+                    buttonFlat={true} buttonFloating={true} hasWaves={true}
+                    icon="search" iconColor="black-text"
+                />
             </form>
             <i className="popup-close material-icons">close</i>
         </div>

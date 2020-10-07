@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import ValidateMessage from "../validation/ValidateMessage";
+import Icon from "../../Icon";
 
 function InputText(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
+    const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}
 
     const validate = props.validate;
     const validateLengthAttr = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
+    const validateMinLengthAttr = validate && validate.minLength ? { "minLength": validate.minLength } : {}
+    const validateMaxLengthAttr = validate && validate.maxLength ? { "maxLength": validate.maxLength } : {}
 
     const autocompleteRef = useRef(null);
 
@@ -36,7 +40,7 @@ function InputText(props) {
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
+            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor} />}
             <input
                 id={props.id}
                 type={`${props.type ? props.type : "text"}`}
@@ -45,7 +49,12 @@ function InputText(props) {
                 ${validate ? "validate" : ""} 
                 ${props.autocomplete ? "autocomplete" : ""}
                 `}
+                required={props.required}
+                disabled={props.disabled}
+                {...autoCompleteAttr}
                 {...validateLengthAttr}
+                {...validateMinLengthAttr}
+                {...validateMaxLengthAttr}
                 ref={autocompleteRef}
             />
             <label htmlFor={props.id}>{props.label}</label>

@@ -3,7 +3,7 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import treeFogg from '../../resources/beautypage/images/background.jpg';
-import BeautypageScriptsLoader from './BeautypageScriptsLoader';
+import BeautypageScriptsLoader from './loader/BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
 import Features from './components/feature/Features';
@@ -18,12 +18,10 @@ import Footer from './components/footer/Footer';
 function Beautypage() {
 
 // pisz tak jak w revamipie?
-//      podziel na mniejsze
 //    wywal materialize css??? lub refactoring. Warto?
 // centralspace training
 // wywal errory i warning
 // dodaj required props https://stackoverflow.com/questions/45288511/set-required-props-on-component
-
 
     return (
         <div>

@@ -2,7 +2,7 @@ import React from "react";
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
-import BeautypageScriptsLoader from './BeautypageScriptsLoader';
+import BeautypageScriptsLoader from './loader/BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';

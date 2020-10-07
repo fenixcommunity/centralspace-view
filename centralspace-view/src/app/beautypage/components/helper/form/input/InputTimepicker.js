@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
+import Icon from "../../Icon";
 
 function InputTimepicker(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
@@ -13,10 +14,9 @@ function InputTimepicker(props) {
         }
     }, []);
 
-
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
+            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
             <input
                 id={props.id}
                 type="text"

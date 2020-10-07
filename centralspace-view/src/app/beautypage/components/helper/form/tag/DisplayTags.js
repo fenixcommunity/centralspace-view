@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../../../../resources/beautypage/css/chips.css';
 
-function Tags(props) {
+function DisplayTags(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
     const tags = props.tags;
@@ -20,4 +20,4 @@ function Tags(props) {
     )
 }
 
-export default Tags;
+export default DisplayTags;

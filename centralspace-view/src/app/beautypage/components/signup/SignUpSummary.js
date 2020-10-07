@@ -1,44 +1,42 @@
 
 import React, { useEffect, useRef } from "react";
-import '../../../../resources/beautypage/css/tap-target.css';
-import '../../../../resources/beautypage/css/nouislider.css';
-import '../../../../resources/beautypage/css/range.css';
-//todo css where?
-import '../../../../resources/beautypage/css/helper-text-validator.css';
-import '../../../../resources/beautypage/css/stepper/mstepper.css';
 import M from 'materialize-css/dist/js/materialize.js';
+import '../../../../resources/beautypage/css/nouislider.css';
+//todo css where?
+import '../../../../resources/beautypage/css/range.css';
+import '../../../../resources/beautypage/css/stepper/mstepper.css';
 import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg';
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
-import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 import avatar4 from '../../../../resources/beautypage/images/people/avatar4.jpg';
 import BasicSection from "../helper/section/BasicSection";
 import FormTemplate from "../helper/form/FormTemplate";
+import FormCard from "../helper/form/FormCard";
 import Table from "../helper/form/table/Table";
 import Pagination from "../helper/form/table/Pagination";
 import InputTextArea from "../helper/form/input/InputTextArea";
 import InputText from "../helper/form/input/InputText";
 import InputTimepicker from "../helper/form/input/InputTimepicker";
 import InputTags from "../helper/form/tag/InputTags";
-import Tags from "../helper/form/tag/Tags";
+import DisplayTags from "../helper/form/tag/DisplayTags";
 import InputSelect from "../helper/form/input/InputSelect";
 import ActionButton from "../helper/form/button/ActionButton";
-import FileInput from "../helper/form/input/FileInput";
+import InputFile from "../helper/form/input/InputFile";
 import TapTargetButton from "../taptarget/TapTargetButton";
 import TapTargetModal from "../taptarget/TapTargetModal";
 import Comment from "../blog/Comment";
 import Modal from "../modal/Modal";
+import Collapsible from "../collapsible/Collapsible";
+import RangeSlider from "../rangeslider/RangeSlider";
+import RangePointer from "../rangeslider/RangePointer";
+import InputSwitch from "../helper/form/input/InputSwitch";
+import Step from "../stepper/Step";
+import StepperLinear from "../stepper/StepperLinear";
 
 function SignUpSummary() {
-    const collapsibleRef = useRef(null);
-    const collapsiblePopupRef = useRef(null);
     const tapTargetRef = useRef(null);
-    const stepperRef = useRef(null);
 
     useEffect(() => {
-        M.Collapsible.init(collapsibleRef.current, {});
-        M.Collapsible.init(collapsiblePopupRef.current, {
-            accordion: false
-        });
+
     }, []);
 
     const selectImages = [
@@ -144,7 +142,7 @@ function SignUpSummary() {
                                             data: [{ tag: 'Apple' }, { tag: 'Microsoft' }, { tag: 'Google' }],
                                         }
                                     } />
-                                <Tags validate={{}}
+                                <DisplayTags validate={{}}
                                     tags={
                                         [
                                             { id: "tag1", image: avatar4, label: "Jane Doe" },
@@ -237,10 +235,10 @@ function SignUpSummary() {
                         formContent={
                             <>
                                 <InputText
-                                    id="email" label="Email validator" type="email"
+                                    id="email" type="email" label="Email validator"
                                     validate={{ successMessage: "Right email", errorMessage: "Wrong email" }} />
-                                <FileInput label="File" multiple={false} />
-                                <FileInput multiple={true} label="Attachments" placeholder="Upload one or more files" />
+                                <InputFile label="File" multiple={false} />
+                                <InputFile multiple={true} label="Attachments" placeholder="Upload one or more files" />
                             </>
                         } />
                 )}
@@ -253,7 +251,6 @@ function SignUpSummary() {
                         formId="form5"
                         formContent={
                             <>
-
                                 <ActionButton
                                     id="tap_button" label="Open tap target"
                                     color="teal lighten-2" hasWaves={true}
@@ -289,26 +286,26 @@ function SignUpSummary() {
                                         modalBottom={true}
                                         title="Modal Header"
                                         content={
-                                                <ul className="collection">
-                                                    <Comment
-                                                        authorAvatar={avatar1}
-                                                        title="Title"
-                                                        content={
-                                                                <p>
-                                                                First Line <br /> Second Line
+                                            <ul className="collection">
+                                                <Comment
+                                                    authorAvatar={avatar1}
+                                                    title="Title"
+                                                    content={
+                                                        <p>
+                                                            First Line <br /> Second Line
                                                                 </p>
-                                                        }
-                                                        rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
-                                                    <Comment
-                                                        authorAvatar={avatar3}
-                                                        title="Title"
-                                                        content={
-                                                                <p>
-                                                                First Line <br /> Second Line
+                                                    }
+                                                    rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
+                                                <Comment
+                                                    authorAvatar={avatar2}
+                                                    title="Title"
+                                                    content={
+                                                        <p>
+                                                            First Line <br /> Second Line
                                                                 </p>
-                                                        }
-                                                        rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
-                                                </ul>
+                                                    }
+                                                    rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
+                                            </ul>
                                         }
                                         modalActions={
                                             [<ActionButton
@@ -321,161 +318,140 @@ function SignUpSummary() {
                                         } />
                                 </div>
 
+                                <div className="col s12 basic-top-break">
+                                    <Collapsible items={[
+                                        {
+                                            headerIcon: "filter_drama", headerMessage: "First",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        },
+                                        {
+                                            headerIcon: "place", headerMessage: "Second",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        },
+                                        {
+                                            headerIcon: "whatshot", headerMessage: "Third",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        }
+                                    ]} />
+                                    <Collapsible pulledOut={true} items={[
+                                        {
+                                            headerIcon: "filter_drama", headerMessage: "First",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        },
+                                        {
+                                            headerIcon: "place", headerMessage: "Second",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        },
+                                        {
+                                            headerIcon: "whatshot", headerMessage: "Third",
+                                            content: (<span>Lorem ipsum dolor sit amet.</span>)
+                                        }
+                                    ]} />
+                                </div>
+
+                                <div className="col s12 basic-top-break">
+                                    <RangeSlider />
+                                    <div className="basic-top-break">
+                                        <RangePointer id="range_pointer" min="0" max="100" />
+                                    </div>
+                                </div>
+
+                                <div className="col s12 basic-top-break">
+                                    <InputSwitch labelNegative="Off" labelPositive="On" />
+                                    <InputSwitch labelNegative="Disabled" labelPositive="Enabled" disabled={true} />
+                                </div>
                             </>
                         } />
                 )}
             />
 
-            <div className="section white valign-wrapper">
-                <div className="container">
-                    <div className="row">
-
-
-                        <div className="col s12">
-                            <ul className="collapsible" ref={collapsibleRef}>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col s12">
-                            <ul className="collapsible popout" ref={collapsiblePopupRef}>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">filter_drama</i>First</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">place</i>Second</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                                <li>
-                                    <div className="collapsible-header"><i className="material-icons">whatshot</i>Third</div>
-                                    <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col s12 basic-top-break">
-                            <div id="range-slider"></div> {/* initialized in init.js */}
-                            <form className="basic-top-break" action="#">
-                                <p className="range-field">
-                                    <input type="range" id="test5" min="0" max="100" />
-                                </p>
-                            </form>
-                        </div>
-
-                        <div className="col s12 basic-top-break">
-                            <div className="switch">
-                                <label>
-                                    Off
-                                <input type="checkbox" />
-                                    <span className="lever"></span>
-                                    On
-                                </label>
-                            </div>
-                            <div className="switch">
-                                <label>
-                                    Off
-                                <input disabled={true} type="checkbox" />
-                                    <span className="lever"></span>
-                                    On
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <BasicSection
                 theme="white" large={true}
-                wrappedSection=""
+                wrappedSection={
+                    <>
+                        <FormCard header="Sign up" theme="light" themeColor="blue" onSubmit={handleFormSubmit}
+                            content={
+                                <StepperLinear steps={[
+                                    <Step id="step_1" active={true} header="Basic data" headerWaves={true}
+                                        content={
+                                            <>
+                                                <InputText
+                                                    id="login_first_name" label="Your login"
+                                                    icon="message" iconColor="blue-text"
+                                                    validate={{ minLength: 2, maxLength: 10, dataLength: 10 }}
+                                                    required={true}
+                                                    autocomplete={false}
+                                                />
+                                                <InputText
+                                                    id="login_email" type="email" label="Your e-mail"
+                                                    validate={{ successMessage: "Right email", errorMessage: "Wrong email" }}
+                                                    required={true}
+                                                    autocomplete={false}
+                                                />
+                                            </>
+                                        }
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id={"continue_step_1"} label="Continue"
+                                                    classes="next-step"
+                                                    color="blue" hasWaves={true}
+                                                    actions={{ onClick: () => "" }} />
+                                            ]
+                                        } />,
+                                    <Step id="step_2" header="Password" headerWaves={true}
+                                        content={
+                                            <>
+                                                <InputText
+                                                    id="login_password" label="Your password" type="password"
+                                                    validate={{}}
+                                                    required={true}
+                                                    autocomplete={false}
+                                                />
+                                                <InputText
+                                                    id="login_password_repeat" label="Repeat password" type="password"
+                                                    validate={{}}
+                                                    required={true}
+                                                    autocomplete={false}
+                                                />
+                                            </>
+                                        }
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id="continue_step_2" label="Continue"
+                                                    classes="next-step"
+                                                    color="blue" hasWaves={true}
+                                                    actions={{ onClick: () => "" }} />,
+                                                <ActionButton
+                                                    id="continue_step_2" label="Back"
+                                                    classes="previous-step" buttonFlat={true}
+                                                    hasWaves={true}
+                                                    actions={{ onClick: () => "" }} />
+                                            ]
+                                        } />,
+                                    <Step id="step_3" header="Summary" headerWaves={true}
+                                        content="We've just sent you an activation email"
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id="login_step_3" type="submit" label="Log in"
+                                                    color="blue" hasWaves={true}
+                                                    /* data-feedback="someFunction">Log in</button> */
+                                                    actions={{ onClick: () => "" }} />
+                                            ]
+                                        } />
+                                ]} />
+                            }
+                            footerActions={[
+                                <ActionButton
+                                    id="controlled_reset" label="Clear form data"
+                                    color="grey" hasWaves={true}
+                                    actions={{}} />
+                            ]} />
+                    </>
+                }
             />
-            <div className="section section-large-size white valign-wrapper">
-                <div className="container">
-
-                    <div className="row">
-                        <div className="col l6 m10 s12  offset-l3 offset-m1">
-                            {/* <div className="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1"> */}
-                            <h3 className="light center-align blue-text">Sign up form</h3>
-                            <div className="card">
-                                <div className="card-content">
-                                    <form onSubmit={handleFormSubmit}>
-                                        <ul className="stepper linear" ref={stepperRef}>
-                                            {/* <ul data-method="GET" className="stepper linear" ref={stepperRef}> */}
-                                            <li className="step active">
-                                                <div className="step-title waves-effect waves-dark">Basic data</div>
-                                                <div className="step-content">
-                                                    <div className="row">
-
-                                                        <div className="input-field col s12">
-                                                            <i className="material-icons prefix  blue-text">message</i>
-                                                            <input id="first_name" type="text" minLength="2" maxLength="10" data-length="10"
-                                                                className="validate" required={true} autoComplete="off" />
-                                                            <label htmlFor="first_name">Your login</label>
-                                                        </div>
-
-                                                        <div className="input-field col s12">
-                                                            <input id="email" name="email" type="email" className="validate" required={true} autoComplete="off" />
-                                                            <label htmlFor="email">Your e-mail</label>
-                                                            <p className="helper-text" data-error="wrong" data-success="right"></p>
-                                                        </div>
-
-                                                    </div>
-                                                    <div className="step-actions">
-                                                        <button className="waves-effect waves-dark btn blue next-step" onClick={() => ""}>Continue</button>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li className="step">
-                                                <div className="step-title waves-effect waves-dark">Password</div>
-                                                <div className="step-content">
-                                                    <div className="row">
-                                                        <div className="input-field col s12">
-                                                            <input id="password" name="password" type="password" className="validate" required={true} autoComplete="off" />
-                                                            <label htmlFor="password">Your password</label>
-                                                        </div>
-                                                        <div className="input-field col s12">
-                                                            <input id="password" name="password" type="password" className="validate" required={true} autoComplete="off" />
-                                                            <label htmlFor="password">Repeat password</label>
-                                                        </div>
-                                                    </div>
-                                                    <div className="step-actions">
-                                                        <button className="waves-effect waves-dark btn blue next-step">Continue</button>
-                                                        <button className="waves-effect waves-dark btn-flat previous-step">Back</button>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li className="step">
-                                                <div className="step-title waves-effect waves-dark">Summary</div>
-                                                <div className="step-content">
-                                                    We've just sent you an activation email
-                                        <div className="step-actions">
-                                                        <button className="waves-effect waves-dark btn blue"
-                                                            type="submit">Log in</button>
-                                                        {/* <button className="waves-effect waves-dark btn blue" data-feedback="someFunction">Log in</button> */}
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </form>
-                                </div>
-                            </div>
-                            <button className="btn waves-effect waves-light grey" id="controlled_reset">Clear form data</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </>
     );
 }

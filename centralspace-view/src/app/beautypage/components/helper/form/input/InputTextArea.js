@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from '../../Icon';
 import ValidateMessage from '../validation/ValidateMessage';
 
 function InputTextArea(props) {
@@ -9,11 +10,14 @@ function InputTextArea(props) {
     const validateLengthAttribute = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
+            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor} />}
             <textarea
                 id={props.id}
                 {...defaultValueAttr}
                 className={`materialize-textarea ${validate ? "validate" : ""}`}
+                required={props.required}
+                disabled={props.disabled}
+                autoComplete={props.autoComplete && props.autoComplete === false ? false : true}
                 {...validateLengthAttribute}
             />
             <label htmlFor={props.id}>{props.label}</label>

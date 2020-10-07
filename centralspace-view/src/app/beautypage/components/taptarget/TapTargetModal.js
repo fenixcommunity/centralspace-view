@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../resources/beautypage/css/tap-target.css';
 
 function TapTargetModal(props) {
     return (

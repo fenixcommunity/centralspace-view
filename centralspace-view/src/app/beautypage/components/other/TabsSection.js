@@ -1,6 +1,6 @@
 import React from "react";
 import DividedSection from "../helper/section/DividedSection";
-import Tabs from "../helper/form/tab/Tabs";
+import Tabs from "../tab/Tabs";
 
 function TabsSection() {
 

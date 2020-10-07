@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../../resources/beautypage/css/datatimepicker.css';
+import Icon from "../../Icon";
 
 function InputDatepicker(props) {
     const datepickerRef = useRef(null);
@@ -30,7 +31,7 @@ function InputDatepicker(props) {
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && (<i className="material-icons prefix">{props.icon}</i>)}
+            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
             <input
                 id={props.id}
                 type="text"

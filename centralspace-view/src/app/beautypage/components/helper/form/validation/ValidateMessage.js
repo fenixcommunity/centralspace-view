@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../../../../../resources/beautypage/css/helper-text-validator.css';
 
 function ValidateMessage(props) {
     //set validate as required
