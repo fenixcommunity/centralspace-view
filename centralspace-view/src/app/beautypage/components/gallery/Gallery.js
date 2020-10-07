@@ -1,16 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import '../../../../resources/gallery/css/gallery.css';
-import M from 'materialize-css/dist/js/materialize.js';
 import GalleryItems from "./GalleryItems.js"
 
 function Gallery() {
-  const optionSelectRef1 = useRef(null);
-  const optionSelectRef2 = useRef(null);
-  
-  useEffect(() => {
-    M.FormSelect.init(optionSelectRef1.current, {});
-    M.FormSelect.init(optionSelectRef2.current, {});
-  }, []);
 
   return (
     <>
