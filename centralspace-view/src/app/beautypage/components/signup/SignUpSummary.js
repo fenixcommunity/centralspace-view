@@ -1,10 +1,8 @@
 
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
-import '../../../../resources/beautypage/css/nouislider.css';
 //todo css where?
-import '../../../../resources/beautypage/css/range.css';
-import '../../../../resources/beautypage/css/stepper/mstepper.css';
+import '../../../../resources/beautypage/css/nouislider.css';
 import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg';
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
 import avatar4 from '../../../../resources/beautypage/images/people/avatar4.jpg';

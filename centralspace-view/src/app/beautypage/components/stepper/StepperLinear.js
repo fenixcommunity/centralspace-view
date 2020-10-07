@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../resources/beautypage/css/stepper/mstepper.css';
 
 function StepperLinear(props) {
     return (

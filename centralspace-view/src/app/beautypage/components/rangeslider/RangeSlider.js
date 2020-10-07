@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../resources/beautypage/css/range.css';
 
 function RangeSlider() {
     {/* initialized in init.js */ }
