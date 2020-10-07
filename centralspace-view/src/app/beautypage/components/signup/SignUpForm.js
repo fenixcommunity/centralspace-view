@@ -1,11 +1,11 @@
 import React from "react";
-import InputText from "../form/input/InputText";
-import InputTextArea from "../form/input/InputTextArea";
-import Inputdatepicker from "../form/input/InputDatepicker";
-import InputSelect from "../form/input/InputSelect";
-import ActionButton from "../form/button/ActionButton";
-import FormTemplate from "../form/FormTemplate";
-import BasicSection from "../helper/BasicSection";
+import InputText from "../helper/form/input/InputText";
+import InputTextArea from "../helper/form/input/InputTextArea";
+import Inputdatepicker from "../helper/form/input/InputDatepicker";
+import InputSelect from "../helper/form/input/InputSelect";
+import ActionButton from "../helper/form/button/ActionButton";
+import FormTemplate from "../helper/form/FormTemplate";
+import BasicSection from "../helper/section/BasicSection";
 
 function SignUpForm() {
 

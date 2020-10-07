@@ -1,11 +1,11 @@
 import React from "react";
-import SectionDivided from "../helper/SectionDivided";
-import Tabs from "../form/tab/Tabs";
+import DividedSection from "../helper/section/DividedSection";
+import Tabs from "../helper/form/tab/Tabs";
 
 function TabsSection() {
 
   return (
-    <SectionDivided
+    <DividedSection
       contentLeft={{
         division: "l4",
         content: (

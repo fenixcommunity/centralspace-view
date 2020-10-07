@@ -1,5 +1,5 @@
 import React from "react";
-import VideoYoutube from "../helper/VideoYoutube";
+import VideoYoutube from "../other/VideoYoutube";
 import TeamSection from "./TeamSection";
 
 function Team() {

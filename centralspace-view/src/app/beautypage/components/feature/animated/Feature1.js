@@ -1,6 +1,6 @@
 import React from "react";
 import poly1 from '../../../../../resources/beautypage/images/blog/poly1.jpg';
-import FullHeightSection from "../../helper/slider/FullHeightSection";
+import FullHeightSection from "../../helper/section/FullHeightSection";
 import PerspectiveWrapper from "./PerspectiveWrapper";
 import PhonePreview from "./PhonePreview";
 

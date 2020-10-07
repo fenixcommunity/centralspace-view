@@ -11,22 +11,22 @@ import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg'
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
 import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 import avatar4 from '../../../../resources/beautypage/images/people/avatar4.jpg';
-import BasicSection from "../helper/BasicSection";
-import FormTemplate from "../form/FormTemplate";
-import Table from "../form/table/Table";
-import Pagination from "../form/table/Pagination";
-import InputTextArea from "../form/input/InputTextArea";
-import InputText from "../form/input/InputText";
-import InputTimepicker from "../form/input/InputTimepicker";
-import InputTags from "../form/tag/InputTags";
-import Tags from "../form/tag/Tags";
-import InputSelect from "../form/input/InputSelect";
-import ActionButton from "../form/button/ActionButton";
-import FileInput from "../form/input/FileInput";
-import TapTargetButton from "../other/taptarget/TapTargetButton";
-import TapTargetModal from "../other/taptarget/TapTargetModal";
+import BasicSection from "../helper/section/BasicSection";
+import FormTemplate from "../helper/form/FormTemplate";
+import Table from "../helper/form/table/Table";
+import Pagination from "../helper/form/table/Pagination";
+import InputTextArea from "../helper/form/input/InputTextArea";
+import InputText from "../helper/form/input/InputText";
+import InputTimepicker from "../helper/form/input/InputTimepicker";
+import InputTags from "../helper/form/tag/InputTags";
+import Tags from "../helper/form/tag/Tags";
+import InputSelect from "../helper/form/input/InputSelect";
+import ActionButton from "../helper/form/button/ActionButton";
+import FileInput from "../helper/form/input/FileInput";
+import TapTargetButton from "../taptarget/TapTargetButton";
+import TapTargetModal from "../taptarget/TapTargetModal";
 import Comment from "../blog/Comment";
-import Modal from "../helper/modal/Modal";
+import Modal from "../modal/Modal";
 
 function SignUpSummary() {
     const collapsibleRef = useRef(null);
@@ -280,7 +280,7 @@ function SignUpSummary() {
 
                                 <div className="basic-top-break ">
                                     <ActionButton
-                                        id="modal_trigger" label="Terms & Conditions"
+                                        id="modal_trigger" label="Bottom Modal"
                                         reference="#modal"
                                         classes="modal-trigger"
                                         color="grey" hasWaves={true}
@@ -289,32 +289,26 @@ function SignUpSummary() {
                                         modalBottom={true}
                                         title="Modal Header"
                                         content={
-                                            <>
                                                 <ul className="collection">
                                                     <Comment
                                                         authorAvatar={avatar1}
                                                         title="Title"
                                                         content={
-                                                            <>
-                                                                <p>First Line<br />
-                                                  Second Line
-                                                </p>
-                                                            </>
+                                                                <p>
+                                                                First Line <br /> Second Line
+                                                                </p>
                                                         }
                                                         rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                                     <Comment
                                                         authorAvatar={avatar3}
                                                         title="Title"
                                                         content={
-                                                            <>
-                                                                <p>First Line<br />
-                                                      Second Line
-                                                    </p>
-                                                            </>
+                                                                <p>
+                                                                First Line <br /> Second Line
+                                                                </p>
                                                         }
                                                         rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                                 </ul>
-                                            </>
                                         }
                                         modalActions={
                                             [<ActionButton
@@ -329,7 +323,6 @@ function SignUpSummary() {
 
                             </>
                         } />
-
                 )}
             />
 
@@ -337,11 +330,6 @@ function SignUpSummary() {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col s12 basic-top-break ">
-
-
-
-                        </div>
 
                         <div className="col s12">
                             <ul className="collapsible" ref={collapsibleRef}>

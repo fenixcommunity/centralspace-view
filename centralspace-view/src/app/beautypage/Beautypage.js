@@ -5,7 +5,7 @@ import './BeautypageStyleModification.css';
 import treeFogg from '../../resources/beautypage/images/background.jpg';
 import BeautypageScriptsLoader from './BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
-import Header from './components/helper/header/Header';
+import Header from './components/header/Header';
 import Features from './components/feature/Features';
 import Clients from './components/client/Clients';
 import PricingTables from './components/pricing/PricingTables';

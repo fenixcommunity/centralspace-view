@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundStars from '../../../../../resources/beautypage/images/backgroundStars.jpg';
+import backgroundStars from '../../../../resources/beautypage/images/backgroundStars.jpg';
 import Slider from './Slider';
 
 function SliderSection() {

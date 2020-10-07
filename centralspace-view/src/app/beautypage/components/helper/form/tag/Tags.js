@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../../resources/beautypage/css/chips.css';
+import '../../../../../../resources/beautypage/css/chips.css';
 
 function Tags(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"

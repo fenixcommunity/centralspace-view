@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import '../../../../../resources/beautypage/css/chips.css';
+import '../../../../../../resources/beautypage/css/chips.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 function InputTags(props) {

@@ -1,9 +1,9 @@
 import React from "react";
-import ActionButton from "../form/button/ActionButton";
-import InputCheckbox from "../form/input/InputCheckbox";
-import InputRadioButtons from "../form/input/InputRadioButtons";
-import FormTemplate from "../form/FormTemplate";
-import BasicSection from "../helper/BasicSection";
+import ActionButton from "../helper/form/button/ActionButton";
+import InputCheckbox from "../helper/form/input/InputCheckbox";
+import InputRadioButtons from "../helper/form/input/InputRadioButtons";
+import FormTemplate from "../helper/form/FormTemplate";
+import BasicSection from "../helper/section/BasicSection";
 
 function ContactUs() {
   const handleInputRadioChange = () => {

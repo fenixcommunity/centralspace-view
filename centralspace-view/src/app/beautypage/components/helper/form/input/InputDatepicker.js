@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
-import '../../../../../resources/beautypage/css/datatimepicker.css';
+import '../../../../../../resources/beautypage/css/datatimepicker.css';
 
 function InputDatepicker(props) {
     const datepickerRef = useRef(null);

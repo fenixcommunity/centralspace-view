@@ -10,10 +10,10 @@ import BlogSectionItem from "./BlogSectionItem";
 import Divider from "../helper/Divider";
 import BlogSectionFooter from "./BlogSectionFooter";
 import ProposedArticle from "./ProposedArticle";
-import Modal from "../helper/modal/Modal";
+import Modal from "../modal/Modal";
 import CommentsSection from "./CommentsSection";
 import ActiclesSection from "./ArticlesSection";
-import ActionButton from "../form/button/ActionButton";
+import ActionButton from "../helper/form/button/ActionButton";
 
 function Blog() {
   const [articles, setArticles] = useState([]);

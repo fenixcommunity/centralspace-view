@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateKey } from '../../../utils/keyGenerator';
+import { generateKey } from '../../../../utils/keyGenerator';
 
 function TableColumn(props) {
     const rows = props.rows;

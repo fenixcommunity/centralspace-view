@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SectionDivided(props) {
+function DividedSection(props) {
     const contentLeft = props.contentLeft;
     const contentRight = props.contentRight;
     return (
@@ -17,4 +17,4 @@ function SectionDivided(props) {
     )
 }
 
-export default SectionDivided;
+export default DividedSection;
