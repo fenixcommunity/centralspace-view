@@ -1,22 +1,13 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import PaginationArrow from './PaginationArrow'
 import PaginationItem from './PaginationItem'
-
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    pages: PropTypes.array.isRequired,
+    arrows: PropTypes.array.isRequired
 }
 
-const Pagination = ({ }) => {
-    const arrows = props.arrows
-    const pages = props.pages
+const Pagination = ({ pages, arrows }) => {
     return (
         <ul className="pagination">
             <PaginationArrow arrow={arrows.left} />

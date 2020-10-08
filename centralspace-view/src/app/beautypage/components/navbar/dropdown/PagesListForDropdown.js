@@ -1,19 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    waves: PropTypes.bool
 }
 
-const PagesListForDropdown = ({ }) => {
-    const wavesEffect = props.waves ? "waves-effect waves-teal" : ""
+const PagesListForDropdown = ({ waves }) => {
+    const wavesEffect = waves ? "waves-effect waves-teal" : ""
     return (
         <>
             <li>

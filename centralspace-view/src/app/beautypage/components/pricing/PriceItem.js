@@ -1,26 +1,23 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    headerIcon: PropTypes.string.isRequired,
+    priceTypeName: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    dollars: PropTypes.string.isRequired,
+    cents: PropTypes.string.isRequired
 }
 
-const PriceItem = ({ }) => {
+const PriceItem = ({ headerIcon, priceTypeName, currency, dollars, cents }) => {
     return (
         <div className="pricing-header">
-            <i className={props.headerIcon} />
-            <h4>{props.priceTypeName}</h4>
+            <i className={headerIcon} />
+            <h4>{priceTypeName}</h4>
             <div className="price">
-    <span className="currency">{props.currency}</span>
-                <span className="dollars">{props.dollars}</span>
-                <span className="cents">{props.cents}</span>
+                <span className="currency">{currency}</span>
+                <span className="dollars">{dollars}</span>
+                <span className="cents">{cents}</span>
             </div>
         </div>
     )

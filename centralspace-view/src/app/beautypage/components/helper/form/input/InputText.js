@@ -23,7 +23,6 @@ const InputText = ({ id, label, type, defaultValue, icon, iconColor, isDuplicate
     const defaultValueAttr = defaultValue ? { "defaultValue": defaultValue } : {}
     const autoCompleteAttr = autocomplete === false ? { "autoComplete": "off" } : {}
 
-    const validate = validate;
     const validateLengthAttr = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
     const validateMinLengthAttr = validate && validate.minLength ? { "minLength": validate.minLength } : {}
     const validateMaxLengthAttr = validate && validate.maxLength ? { "maxLength": validate.maxLength } : {}

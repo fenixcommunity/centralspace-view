@@ -1,18 +1,8 @@
-import React from 'react'
+import React from 'react';
 import backgroundPlanet2 from '../../../../../resources/beautypage/images/backgroundPlanet2.jpg';
 import avatar from '../../../../../resources/beautypage/images/people/avatar4.jpg';
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const NavbarSlideOutHeader = ({ }) => {
     return (

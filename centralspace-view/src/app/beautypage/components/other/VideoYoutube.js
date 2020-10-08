@@ -1,21 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired
 }
 
-const VideoYoutube = ({ }) => {
+const VideoYoutube = ({ width, height, src }) => {
     return (
         <div className="video-container">
-            <iframe title="video_youtube" width={props.width} height={props.height} src={props.src} frameBorder="0" allowFullScreen></iframe>
+            <iframe title="video_youtube" width={width} height={height} src={src} frameBorder="0" allowFullScreen></iframe>
         </div>
     )
 }

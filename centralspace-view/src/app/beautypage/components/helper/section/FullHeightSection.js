@@ -1,22 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    theme: PropTypes.string,
+    wrappedSection: PropTypes.node.isRequired
 }
 
-const FullHeightSection = ({ }) => {
+const FullHeightSection = ({ theme, wrappedSection }) => {
     return (
-        <div className={`section full-height ${props.theme}`}>
+        <div className={`section full-height ${theme}`}>
             <div className="container">
-                {props.wrappedSection}
+                {wrappedSection}
             </div>
         </div>
     )

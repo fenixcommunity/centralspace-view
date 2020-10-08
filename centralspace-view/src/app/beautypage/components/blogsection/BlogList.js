@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import poly1 from '../../../../resources/beautypage/images/blog/poly1.jpg';
 import poly2 from '../../../../resources/beautypage/images/blog/poly2.jpg';
 import poly3 from '../../../../resources/beautypage/images/blog/poly3.jpg';

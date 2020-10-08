@@ -1,21 +1,14 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import PriceInfoRecord from "./PriceInfoRecord";
 import PriceItem from "./PriceItem";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    hasAnimation: PropTypes.bool
 }
 
-const LowPricingTable = ({ }) => {
-    const animationClass = props.hasAnimation ? 'scale-in-out fade-in-out left-transform-origin' : '';
+const LowPricingTable = ({ hasAnimation }) => {
+    const animationClass = hasAnimation ? 'scale-in-out fade-in-out left-transform-origin' : '';
 
     const pricingTableContent = (
         <div className={`pricing-table ${animationClass}`}>
@@ -33,7 +26,7 @@ const LowPricingTable = ({ }) => {
     )
 
     return (
-        props.hasAnimation ? (
+        hasAnimation ? (
             <div className="transform-wrapper">
                 {pricingTableContent}
             </div>

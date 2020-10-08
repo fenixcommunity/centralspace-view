@@ -3,18 +3,10 @@ import PropTypes from 'prop-types';
 import loadjs from 'loadjs';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    contextOfScripts: PropTypes.string
 }
 
-const BeautypageScriptsLoader = ({ }) => {
+const BeautypageScriptsLoader = ({ contextOfScripts }) => {
     //  TODO - if only beautypage (without materializecss) than set all scripts as global(index.html)
     const basicScripts = [
         '/beautypage/js/main/materialize_v2.min.js',
@@ -23,7 +15,6 @@ const BeautypageScriptsLoader = ({ }) => {
         '/beautypage/js/stepper/mstepper.js'
     ]
     let contextPageScripts = [];
-    const contextOfScripts = props.contextOfScripts;
     if (contextOfScripts && contextOfScripts === "galleryTheme") {
         contextPageScripts = contextPageScripts.concat([
             '/beautypage/js/gallery/init.js',

@@ -1,25 +1,20 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    theme: PropTypes.string,
+    large: PropTypes.bool,
+    wrappedSection: PropTypes.node.isRequired
 }
 
-const BasicSection = ({ }) => {
+const BasicSection = ({ theme, large, wrappedSection }) => {
     //todo create wrapper component
-    const largeSection = props.large ? "section-large-size" : "";
+    const largeSection = large ? "section-large-size" : "";
 
     return (
-        <div className={`section valign-wrapper ${props.theme} ${largeSection}`}>
+        <div className={`section valign-wrapper ${theme} ${largeSection}`}>
             <div className="container">
-                {props.wrappedSection}
+                {wrappedSection}
             </div>
         </div >
     )

@@ -1,28 +1,25 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    header: PropTypes.string,
+    headerWaves: PropTypes.bool,
+    active: PropTypes.bool,
+    content: PropTypes.node.isRequired,
+    stepActions: PropTypes.array
 }
 
-const Step = ({ }) => {
-    const headerWaves = props.headerWaves ? "waves-effect waves-dark" : "";
+const Step = ({ header, headerWaves, active, content, stepActions }) => {
+    const headerWaves = headerWaves ? "waves-effect waves-dark" : "";
     return (
-        <li className={`step ${props.active ? "active" : ""}`}>
-            <div className={`step-title ${headerWaves}`}>{props.header}</div>
+        <li className={`step ${active ? "active" : ""}`}>
+            <div className={`step-title ${headerWaves}`}>{header}</div>
             <div className="step-content">
                 <div className="row">
-                    {props.content}
+                    {content}
                 </div>
                 <div className="step-actions">
-                    {props.stepActions && props.stepActions.map(action => (
+                    {stepActions && stepActions.map(action => (
                         action
                     ))}
                 </div>

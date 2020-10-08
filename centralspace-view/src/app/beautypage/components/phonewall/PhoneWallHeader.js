@@ -1,24 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    title: PropTypes.string.isRequired,
+    sentence: PropTypes.string.isRequired
 }
 
-const PhoneWallHeader = ({ }) => {
+const PhoneWallHeader = ({ title, sentence }) => {
     return (
         <div className="col s12 m10 offset-m1 valign-wrapper">
             <div className="valign">
-                <h1>{props.title}</h1>
+                <h1>{title}</h1>
                 <span className="tagline">
-                    {props.sentence}
+                    {sentence}
                 </span>
                 <button className="read-more">
                     <i className="icon-caret-down" />

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 //todo as global css?
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import { generateKey } from '../../../../utils/keyGenerator';

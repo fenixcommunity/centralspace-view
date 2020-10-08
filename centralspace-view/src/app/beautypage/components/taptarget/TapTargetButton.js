@@ -3,22 +3,15 @@ import PropTypes from 'prop-types';
 import '../../../../resources/beautypage/css/tap-target.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    isActive: PropTypes.bool,
+    actionButton: PropTypes.node.isRequired
 }
 
-const TapTargetFloatingButton = ({ }) => {
-    const activeClass = props.isActive ? "active" : ""
+const TapTargetFloatingButton = ({ isActive, actionButton }) => {
+    const activeClass = isActive ? "active" : ""
     return (
         <div className={`fixed-action-btn direction-top ${activeClass}`} >
-            {props.actionButton}
+            {actionButton}
         </div>
     )
 }

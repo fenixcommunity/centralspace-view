@@ -1,24 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    recordMessage: PropTypes.string.isRequired,
+    disabled: PropTypes.bool
 }
 
-const PriceInfoRecord = ({ }) => {
-    const recordClass = props.disabled ? "disabled" : ""
-    const recordIcon = props.disabled ? "icon-close" : "icon-accept"
+const PriceInfoRecord = ({ recordMessage, disabled }) => {
+    const recordClass = disabled ? "disabled" : ""
+    const recordIcon = disabled ? "icon-close" : "icon-accept"
     return (
         <li className={`pricing-feature ${recordClass}`}>
             <i className={recordIcon} />
-            {props.recordMessage}
+            {recordMessage}
         </li>
     )
 }

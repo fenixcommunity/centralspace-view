@@ -1,38 +1,32 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import LowPricingTable from "./LowPricingTable";
 import MediumPricingTable from "./MediumPricingTable";
 import HighPricingTable from "./HighPricingTable";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+  hasAnimation: PropTypes.bool,
+  isExtended: PropTypes.bool,
 }
 
-const PricingTables = ({ }) => {
+const PricingTables = ({ hasAnimation, isExtended }) => {
 
   const pricingTablesBody = (
     <div className="row">
       <h1 className="center">Pricing</h1>
       <div className="col s12 m4">
-        <LowPricingTable hasAnimation={props.hasAnimation} />
+        <LowPricingTable hasAnimation={hasAnimation} />
       </div>
       <div className="col s12 m4">
-        <MediumPricingTable hasAnimation={props.hasAnimation} />
+        <MediumPricingTable hasAnimation={hasAnimation} />
       </div>
       <div className="col s12 m4">
-        <HighPricingTable hasAnimation={props.hasAnimation} />
+        <HighPricingTable hasAnimation={hasAnimation} />
       </div>
     </div>
   )
 
-  const pricingTablesWrapper = props.isExtended ? (
+  const pricingTablesWrapper = isExtended ? (
     <div className="row valign">
       <div className="col s12 m10 offset-m1">
         {pricingTablesBody}

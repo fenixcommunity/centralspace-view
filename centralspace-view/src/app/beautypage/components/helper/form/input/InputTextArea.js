@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../../Icon';
 import ValidateMessage from '../validation/ValidateMessage';
 
@@ -21,7 +22,6 @@ const InputTextArea = ({ id, label, type, defaultValue, icon, iconColor, isDupli
     const defaultValueAttr = defaultValue ? { "defaultValue": defaultValue } : {}
     const autoCompleteAttr = autocomplete === false ? { "autoComplete": "off" } : {}
 
-    const validate = validate;
     const validateLengthAttribute = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
     return (
         <div className={`input-field col ${duplicatedClass}`}>

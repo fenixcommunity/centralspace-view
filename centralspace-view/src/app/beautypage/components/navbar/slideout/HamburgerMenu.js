@@ -2,18 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    textStyle: PropTypes.string
 }
 
-const HamburgerMenu = ({ }) => {
+const HamburgerMenu = ({ textStyle }) => {
     return (
         <a
             href="#!"
@@ -21,7 +13,7 @@ const HamburgerMenu = ({ }) => {
             data-target="slide-out"
             className="button-collapse right"
         >
-            <i className={`material-icons ${props.textStyle}`}>menu</i>
+            <i className={`material-icons ${textStyle}`}>menu</i>
         </a>
     )
 }

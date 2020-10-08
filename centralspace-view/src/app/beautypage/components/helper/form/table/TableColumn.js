@@ -3,19 +3,10 @@ import PropTypes from 'prop-types';
 import { generateKey } from '../../../../utils/keyGenerator';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    rows: PropTypes.array.isRequired
 }
 
-const TableColumn = ({ }) => {
-    const rows = props.rows;
+const TableColumn = ({ rows }) => {
     return (
         <tr>
             {rows && rows.map(row =>

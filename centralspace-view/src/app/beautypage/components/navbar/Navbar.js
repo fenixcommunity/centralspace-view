@@ -10,42 +10,37 @@ import HamburgerMenu from "./slideout/HamburgerMenu";
 import NavbarSlideOut from "./slideout/NavbarSlideOut";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+  isDarkMode: PropTypes.bool,
+  isPrimaryColor: PropTypes.bool,
+  basicSearchIsActive: PropTypes.bool,
+  fullScreenSearchIsActive: PropTypes.bool
 }
 
-const Navbar = ({ }) => {
-  const darkMode = props.isDarkMode;
+const Navbar = ({ isDarkMode, isPrimaryColor, basicSearchIsActive, fullScreenSearchIsActive }) => {
+  const darkMode = isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
-  const textStyle = props.isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')
-  const navbarSolidTransitionStyle = props.isNavbarSolidTransition ? 'navbar-solid-transition' : '';
+  const textStyle = isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')
+  const navbarSolidTransitionStyle = isNavbarSolidTransition ? 'navbar-solid-transition' : '';
 
   return (
     <>
-    <nav className={`navbar ${navbarStyle} ${navbarSolidTransitionStyle}`}>
-      <div className="nav-wrapper">
-        <Logo textStyle={textStyle} />
-        <ul id="mobile-menu" className="right hide-on-med-and-down">
-          <Searcher basicSearchIsActive={props.basicSearchIsActive} fullScreenSearchIsActive={props.fullScreenSearchIsActive} />
-          <PagesDropdown />
-          <NavbarPagesList />
-          <NavbarTooltip tooltipText="Instagram" tooltipIconName="fab fa-instagram" />
-          <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
-          <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
-          <NotificationIcon notificationIconName="notifications" notificationCount={5} />
-        </ul>
-        {/* HamburgerMenu refers to NavbarSlideOut */}
-        <HamburgerMenu textStyle={textStyle} />
-      </div>
-    </nav>
-    <NavbarSlideOut />
+      <nav className={`navbar ${navbarStyle} ${navbarSolidTransitionStyle}`}>
+        <div className="nav-wrapper">
+          <Logo textStyle={textStyle} />
+          <ul id="mobile-menu" className="right hide-on-med-and-down">
+            <Searcher basicSearchIsActive={basicSearchIsActive} fullScreenSearchIsActive={fullScreenSearchIsActive} />
+            <PagesDropdown />
+            <NavbarPagesList />
+            <NavbarTooltip tooltipText="Instagram" tooltipIconName="fab fa-instagram" />
+            <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
+            <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
+            <NotificationIcon notificationIconName="notifications" notificationCount={5} />
+          </ul>
+          {/* HamburgerMenu refers to NavbarSlideOut */}
+          <HamburgerMenu textStyle={textStyle} />
+        </div>
+      </nav>
+      <NavbarSlideOut />
     </>
   );
 }

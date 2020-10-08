@@ -1,19 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    page: PropTypes.objectOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            ref: PropTypes.string.isRequired,
+            number: PropTypes.number.isRequired,
+            active: PropTypes.bool,
+            waves: PropTypes.bool
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const PaginationItem = ({ }) => {
-    const page = props.page;
+const PaginationItem = ({ page }) => {
     const activeClass = page.active ? "active" : "";
     const wavesClass = page.waves ? "waves-effect" : "";
     return (

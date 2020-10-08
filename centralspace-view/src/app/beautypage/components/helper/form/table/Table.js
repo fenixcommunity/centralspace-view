@@ -1,24 +1,17 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/table.css';
 import TableColumn from './TableColumn';
 import TableHeader from './TableHeader';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    striped: PropTypes.bool,
+    headers: PropTypes.array.isRequired,
+    columns: PropTypes.array.isRequired
 }
 
-const Table = ({ }) => {
-    const headers = props.headers;
-    const columns = props.columns;
-    const stripedClass = props.striped ? "striped" : "";
+const Table = ({ headers, columns, striped }) => {
+    const stripedClass = striped ? "striped" : "";
     return (
         <table className={`highlight centered responsive-table ${stripedClass}`}>
             <thead>

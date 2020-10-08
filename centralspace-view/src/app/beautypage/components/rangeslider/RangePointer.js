@@ -3,21 +3,15 @@ import PropTypes from 'prop-types';
 import '../../../../resources/beautypage/css/range.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    id: PropTypes.string.isRequired,
+    min: PropTypes.string.isRequired,
+    max: PropTypes.string.isRequired
 }
 
-const RangePointer = ({ }) => {
+const RangePointer = ({ id, min, max }) => {
     return (
         <p className="range-field">
-            <input type="range" id={props.id} min={props.min} max={props.max} />
+            <input type="range" id={id} min={min} max={max} />
         </p>
     )
 }

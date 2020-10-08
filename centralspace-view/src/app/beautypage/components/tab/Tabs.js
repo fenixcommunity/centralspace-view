@@ -1,19 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    tabs: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            content: PropTypes.string.isRequired,
+            active: PropTypes.bool,
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const Tabs = ({ }) => {
-    const tabs = props.tabs;
+const Tabs = ({ tabs }) => {
     const tabsDivision = (12 / tabs.length);
     return (
         <>

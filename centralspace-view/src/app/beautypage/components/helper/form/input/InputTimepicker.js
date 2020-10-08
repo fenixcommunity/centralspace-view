@@ -20,7 +20,6 @@ const propTypes = {
 
 const InputTimepicker = ({ id, label, icon, iconColor, isDuplicated, validate, properties }) => {
     const duplicatedClass = isDuplicated ? "s6" : "s12"
-    const validate = validate;
 
     const timepickerRef = useRef(null);
 

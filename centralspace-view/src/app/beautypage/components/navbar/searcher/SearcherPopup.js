@@ -1,19 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import ActionButton from '../../helper/form/button/ActionButton';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    popupSearcherText: PropTypes.string.isRequired
 }
 
-const SearcherPopup = ({ }) => {
+const SearcherPopup = ({ popupSearcherText }) => {
     return (
         <div className="popup-search-wrapper">
             <form action="/beautypage/search" method="get" role="search">
@@ -24,7 +17,7 @@ const SearcherPopup = ({ }) => {
                     type="search"
                     name="q"
                     id="search"
-                    placeholder={props.popupSearcherText}
+                    placeholder={popupSearcherText}
                 />
 
                 <ActionButton

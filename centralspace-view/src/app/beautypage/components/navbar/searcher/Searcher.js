@@ -1,23 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import SearcherPopup from './SearcherPopup'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    basicSearchIsActive: PropTypes.bool,
+    fullScreenSearchIsActive: PropTypes.bool
 }
 
-const Searcher = ({ }) => {
-
+const Searcher = ({ basicSearchIsActive, fullScreenSearchIsActive }) => {
     return (
         <>
-            {props.basicSearchIsActive && (
+            {basicSearchIsActive && (
                 <li>
                     <form>
                         <div className="input-field">
@@ -30,7 +23,7 @@ const Searcher = ({ }) => {
                     </form>
                 </li>
             )}
-            {props.fullScreenSearchIsActive && (
+            {fullScreenSearchIsActive && (
                 <li>
                     <a className="fullscreen-search" href="#!">
                         <i className="material-icons">search</i>

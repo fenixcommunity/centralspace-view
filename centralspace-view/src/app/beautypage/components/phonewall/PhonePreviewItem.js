@@ -1,25 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    backgroundImageUrl: PropTypes.string.isRequired
 }
 
-const PhonePreviewItem = ({ }) => {
+const PhonePreviewItem = ({ backgroundImageUrl }) => {
     return (
         <div className="phone-preview-sizer">
             <div className="phone-preview" />
             <div
                 className="image-container default"
                 style={{
-                    backgroundImage: `url(${props.backgroundImageUrl})`
+                    backgroundImage: `url(${backgroundImageUrl})`
                 }}
             />
         </div>

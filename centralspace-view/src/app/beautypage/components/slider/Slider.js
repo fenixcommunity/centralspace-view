@@ -1,25 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    align: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    sentence: PropTypes.string,
+    hasIconArrowDown: PropTypes.bool,
+    background: PropTypes.node.isRequired
 }
 
-const Slider = ({ }) => {
+const Slider = ({ align, title, sentence, hasIconArrowDown, background }) => {
     return (
         <li>
-            <img src={props.background}  alt="description"/>
-            <div className={`caption ${props.align}-align`}>
-                <h3>{props.title}</h3>
-                <h5 className="light grey-text text-lighten-3">{props.sentence}</h5>
-                {props.hasIconArrowDown && (
+            <img src={background} alt="description" />
+            <div className={`caption ${align}-align`}>
+                <h3>{title}</h3>
+                <h5 className="light grey-text text-lighten-3">{sentence}</h5>
+                {hasIconArrowDown && (
                     <button className="read-more">
                         <i className="icon-caret-down" />
                     </button>

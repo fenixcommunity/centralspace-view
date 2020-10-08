@@ -3,20 +3,10 @@ import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/helper-text-validator.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    validate: PropTypes.object.isRequired
 }
 
-const ValidateMessage = ({ }) => {
-    //set validate as required
-    const validate = props.validate;
+const ValidateMessage = ({ validate }) => {
     return (
         <>
             {validate.successMessage && (

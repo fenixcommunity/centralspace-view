@@ -1,23 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    textStyle: PropTypes.string
 }
 
-const Logo = ({ }) => {
+const Logo = ({ textStyle }) => {
     return (
         <>
-            {props.textStyle && (
+            {textStyle && (
                 <a href="/beautypage" className="brand-logo">
-                    <i className={`icon-diamond ${props.textStyle}`} />
+                    <i className={`icon-diamond ${textStyle}`} />
                 </a>
             )}
         </>

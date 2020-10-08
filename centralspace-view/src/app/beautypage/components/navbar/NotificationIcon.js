@@ -1,27 +1,21 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    notificationIconName: PropTypes.string.isRequired,
+    notificationCount: PropTypes.number.isRequired
 }
 
-const NotificationIcon = ({ }) => {
+const NotificationIcon = ({ notificationIconName, notificationCount }) => {
     return (
         <>
             <li className="notification-icon">
                 <button href="" className="btn-floating z-depth-0">
-                    <i className="material-icons">{props.notificationIconName}</i>
+                    <i className="material-icons">{notificationIconName}</i>
                 </button>
             </li>
-            {props.notificationCount &&
-                (<li><span className="badge white-text new">{props.notificationCount}</span></li>)
+            {notificationCount &&
+                (<li><span className="badge white-text new">{notificationCount}</span></li>)
             }
         </>
     )

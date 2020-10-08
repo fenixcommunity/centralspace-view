@@ -1,30 +1,25 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    formId: PropTypes.string.isRequired,
+    headerText: PropTypes.string,
+    formContent: PropTypes.node.isRequired
 }
 
-const FormTemplate = ({ }) => {
+const FormTemplate = ({ formId, headerText, formContent }) => {
     return (
-        <form id={props.formId}>
+        <form id={formId}>
             <div className="row">
-                {props.headerText &&
+                {headerText &&
                     (
                         <div className="col s12">
-                            <h2 className="section-title">{props.headerText}</h2>
+                            <h2 className="section-title">{headerText}</h2>
                         </div>
                     )
                 }
                 <div className="col s12">
-                    {props.formContent}
+                    {formContent}
                 </div>
             </div>
         </form>

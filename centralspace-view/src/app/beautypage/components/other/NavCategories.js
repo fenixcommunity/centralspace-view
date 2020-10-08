@@ -1,23 +1,21 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    categories: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            items: PropTypes.object.isRequired,
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const NavCategories = ({ }) => {
+const NavCategories = ({ categories }) => {
     return (
         <nav className="nav-extended">
             <div className="categories-wrapper">
                 <div className="categories-container pin-top">
-                    {props.categories && props.categories.map(category => (
+                    {categories && categories.map(category => (
                         <ul key={category.name} className="categories container" data-filter={category.name}>
                             {category.items && category.items.map(item => (
                                 <li key={item.reference} className={`${item.active ? "active" : ""}`}>

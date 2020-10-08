@@ -1,19 +1,16 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    arrow: PropTypes.objectOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            ref: PropTypes.string.isRequired,
+            icon: PropTypes.string.isRequired,
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const PaginationArrow = ({ }) => {
-    const arrow = props.arrow;
+const PaginationArrow = ({ arrow }) => {
     return (
         <li className={`${arrow.disabled ? "disabled" : ""}`}>
             <a href={arrow.ref}><i className="material-icons">{arrow.icon}</i></a>

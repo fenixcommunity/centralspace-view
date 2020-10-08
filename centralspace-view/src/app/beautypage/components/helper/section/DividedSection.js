@@ -1,20 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    contentLeft: PropTypes.objectOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            division: PropTypes.string,
+            offset: PropTypes.string
         })
     ).isRequired,
+    contentRight: PropTypes.objectOf(
+        PropTypes.shape({
+            division: PropTypes.string,
+            offset: PropTypes.string
+        })
+    ).isRequired
 }
 
-const DividedSection = ({ }) => {
-    const contentLeft = props.contentLeft;
-    const contentRight = props.contentRight;
+const DividedSection = ({ contentLeft, contentRight }) => {
     return (
         <section className="container scrollspy" id="services">
             <div className="row">

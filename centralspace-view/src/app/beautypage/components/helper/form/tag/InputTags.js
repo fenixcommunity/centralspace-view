@@ -4,33 +4,29 @@ import '../../../../../../resources/beautypage/css/chips.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    id: PropTypes.string.isRequired,
+    isDuplicated: PropTypes.bool,
+    initial: PropTypes.bool,
+    autocomplete: PropTypes.bool,
+    properties: PropTypes.object
 }
 
-const InputTags = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const initialTagsClass = props.initial ? "chips-initial" : "";
-    const autocompleteTagsClass = props.autocomplete ? "chips-autocomplete" : "";
+const InputTags = ({ id, isDuplicated, initial, autocomplete, properties }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const initialTagsClass = initial ? "chips-initial" : "";
+    const autocompleteTagsClass = autocomplete ? "chips-autocomplete" : "";
 
     const chipsRef = useRef(null);
 
     useEffect(() => {
-        if (props.properties) {
-            M.Chips.init(chipsRef.current, props.properties);
+        if (properties) {
+            M.Chips.init(chipsRef.current, properties);
         }
-    }, [props.properties]);
+    }, [properties]);
 
     return (
         <div className={`basic-top-break col ${duplicatedClass}`}>
-            <div id={props.id}
+            <div id={id}
                 className={`chips ${initialTagsClass} ${autocompleteTagsClass}`}
                 ref={chipsRef}></div>
         </div>

@@ -3,26 +3,20 @@ import PropTypes from 'prop-types';
 import '../../../../resources/beautypage/css/tap-target.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    modalTheme: PropTypes.string,
+    tapTargetRef: PropTypes.object.isRequired,
+    content: PropTypes.node.isRequired
 }
 
-const TapTargetModal = ({ }) => {
+const TapTargetModal = ({ modalTheme, tapTargetRef, content }) => {
     return (
         <div className="tap-target-wrapper">
-        <div className={`tap-target ${props.modalTheme}`} data-target="menu" ref={props.tapTargetRef}>
-            <div className="tap-target-content white-text" >
-                {props.content}
+            <div className={`tap-target ${modalTheme}`} data-target="menu" ref={tapTargetRef}>
+                <div className="tap-target-content white-text" >
+                    {content}
+                </div>
             </div>
         </div>
-    </div>
     )
 }
 

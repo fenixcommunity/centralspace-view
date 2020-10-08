@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/chips.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    isDuplicated: PropTypes.bool,
+    tags: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            image: PropTypes.node.isRequired,
+            close: PropTypes.bool
         })
     ).isRequired,
 }
 
-const DisplayTags = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const tags = props.tags;
+const DisplayTags = ({ tags, isDuplicated }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
 
     return (
         <div className={`basic-top-break col ${duplicatedClass}`}>

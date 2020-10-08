@@ -1,25 +1,24 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import TeamPerson from './TeamPerson';
 import { generateKey } from '../../utils/keyGenerator';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    groupName: PropTypes.string.isRequired,
+    peoples: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            teamTitle: PropTypes.string.isRequired,
+            avatar: PropTypes.object.isRequired,
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const TeamGroup = ({ }) => {
-    const peoples = props.peoples;
+const TeamGroup = ({ groupName, peoples }) => {
     return (
         <div className="row">
             <div className="col s12 l3 center-on-small-only">
-                <h3 className="section-title">{props.groupName}</h3>
+                <h3 className="section-title">{groupName}</h3>
             </div>
             <div className="col s12 l9">
                 <div className="row">

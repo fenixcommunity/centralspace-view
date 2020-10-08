@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef } from "react";
-import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 //todo css where?
 import '../../../../resources/beautypage/css/nouislider.css';
@@ -31,17 +30,7 @@ import InputSwitch from "../helper/form/input/InputSwitch";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const SignUpSummary = ({ }) => {
     const tapTargetRef = useRef(null);
