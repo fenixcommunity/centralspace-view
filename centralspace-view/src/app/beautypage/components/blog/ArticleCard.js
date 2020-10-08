@@ -1,17 +1,21 @@
 import React from 'react';
 import { generateKey } from '../../utils/keyGenerator';
+import ActionButton from '../helper/form/button/ActionButton';
 
 function ArticleCard(props) {
     const hoverableClass = props.isHoverable ? 'hoverable' : "";
+    const onClickAction = props.handleToastOnClick
     return (
         <div className={`col s12 l6 ${hoverableClass}`}>
             <div className="card">
                 <div className="card-image">
                     <img src={props.articleImg} alt="" />
                     {props.handleToastOnClick && (
-                        <a onClick={props.handleToastOnClick} className="halfway-fab btn-floating pink pulse">
-                            <i className="material-icons">favorite</i>
-                        </a>
+                        <ActionButton
+                            id="save" icon="favorite"
+                            classes="halfway-fab" color="pink"
+                            buttonFloating={true} pulseEffect={true}
+                            actions={{ onClick: onClickAction }} />
                     )}
                 </div>
                 <div className="card-content">
@@ -20,11 +24,12 @@ function ArticleCard(props) {
                     {props.finalQuote}
                 </div>
                 <div className="card-action">
-                   {props.cardAction && props.cardAction.map(action => {
-                       return (
-                       <a key={generateKey(action.title)} className="teal-text text-lighten-2" href={action.ref}>{action.title}</a>
-                       )
-                   })}
+                    {props.cardAction && props.cardAction.map(action => {
+                        const title = action.title;
+                        return (
+                            <a href="#!" key={generateKey(title)} className="teal-text text-lighten-2" href={action.ref}>{title}</a>
+                        )
+                    })}
                 </div>
             </div>
         </div>

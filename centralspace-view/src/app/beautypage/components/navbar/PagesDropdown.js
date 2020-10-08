@@ -5,7 +5,7 @@ import PagesListForDropdown from "./dropdown/PagesListForDropdown";
 function PagesDropdown() {
     const dropdownRef = useRef(null);
     useEffect(() => {
-        const dropdown = M.Dropdown.init(dropdownRef.current, {});
+        M.Dropdown.init(dropdownRef.current, {});
     }, []);
 
     return (
@@ -13,7 +13,7 @@ function PagesDropdown() {
             <li className="active">
                 <a
                     className="dropdown-trigger"
-                    href='#'
+                    href='#!'
                     data-activates="pages"
                     data-target="pages"
                     data-constrainwidth="false"

@@ -7,8 +7,9 @@ import M from 'materialize-css/dist/js/materialize.js';
 // props in functional, in component we add this.props
 function SignedInLinks(props) {
     const dropdownRef = useRef(null);
+
     useEffect(() => {
-        const dropdown = M.Dropdown.init(dropdownRef.current, {});
+        M.Dropdown.init(dropdownRef.current, {}); // eslint-disable-line
         // const openDropdown = (e) => {
         //     // dropdown.open();
         // };
@@ -39,12 +40,12 @@ function SignedInLinks(props) {
                 <li><NavLink to="/account-list">Accounts Rest</NavLink></li>
                 <li><NavLink to="/address-list">Address Rest</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>
-                <li><a onClick={handleSignOutAction}>Log out</a></li>
+                <li><a onClick={handleSignOutAction} href="#!">Log out</a></li>
                 <li><NavLink to="/" className='btn btn-floating pink lighten-1'>
                     {props.profile.initials}
                 </NavLink>
                 </li>
-                <li><a className="dropdown-trigger" ref={dropdownRef} data-target="dropdown"><i className="material-icons">more_vert</i></a></li>
+                <li><a className="dropdown-trigger" ref={dropdownRef} data-target="dropdown" href="#!"><i className="material-icons">more_vert</i></a></li>
             </ul>
         </div>
     )

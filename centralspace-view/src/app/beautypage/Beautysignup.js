@@ -11,7 +11,7 @@ import TabsSection from './components/other/TabsSection';
 import Header from "./components/header/Header";
 import SignUpForm from './components/signup/SignUpForm';
 import SignUpSummary from './components/signup/SignUpSummary';
-import MaterialUiStepper from './components/other/MaterialUiStepper';
+// import MaterialUiStepper from './components/other/MaterialUiStepper';
 import Gallery from './components/gallery/Gallery';
 
 class Beautysignup extends React.Component {

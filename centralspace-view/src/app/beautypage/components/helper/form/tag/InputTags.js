@@ -4,7 +4,6 @@ import M from 'materialize-css/dist/js/materialize.js';
 
 function InputTags(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const validate = props.validate;
     const initialTagsClass = props.initial ? "chips-initial" : "";
     const autocompleteTagsClass = props.autocomplete ? "chips-autocomplete" : "";
 
@@ -14,7 +13,7 @@ function InputTags(props) {
         if (props.properties) {
             M.Chips.init(chipsRef.current, props.properties);
         }
-    }, []);
+    }, [props.properties]);
 
     return (
         <div className={`basic-top-break col ${duplicatedClass}`}>

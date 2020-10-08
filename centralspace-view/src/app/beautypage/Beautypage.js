@@ -10,7 +10,7 @@ import Features from './components/feature/Features';
 import Clients from './components/client/Clients';
 import PricingTables from './components/pricing/PricingTables';
 import Blog from './components/blogsection/BlogSection';
-import GoogleMaps from './components/map/GoogleMaps';
+// import GoogleMaps from './components/map/GoogleMaps';
 import LeafletMapEmbedded from './components/map/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/footer/Footer';
@@ -18,7 +18,6 @@ import Footer from './components/footer/Footer';
 function Beautypage() {
 
 // pisz tak jak w revamipie?
-// wywal errory i warning
 // dodaj required props https://stackoverflow.com/questions/45288511/set-required-props-on-component
 
     return (

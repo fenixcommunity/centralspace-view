@@ -6,7 +6,7 @@ function FooterLogo(props) {
         <img
           className="materialize-logo"
           src={props.logoImg}
-          alt="img"
+          alt="description"
         />
         <p>{props.logoDescription}</p>
       </div>

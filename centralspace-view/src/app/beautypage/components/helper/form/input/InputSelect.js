@@ -7,19 +7,19 @@ import Icon from "../../Icon";
 function InputSelect(props) {
     const defaultValue = props.defaultValue ? props.defaultValue : 0;
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const validate = props.validate;
     const multipleAttr = props.multiple ? { "multiple": true } : {}
 
     const optionSelectRef = useRef(null);
     useEffect(() => {
         M.FormSelect.init(optionSelectRef.current, props.properties);
-    }, []);
+    }, [props.properties]);
+    
     return (
         <div className={`input-field col ${duplicatedClass}`}>
             {props.headerText && (<p>{props.headerText}</p>)} {/* or <label>Options Select</label> */}
             {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
             <select id={props.id} name="optionselect" disabled={props.disabled}
-                ref={optionSelectRef} defaultValue={props.defaultValue} {...multipleAttr}>
+                ref={optionSelectRef} defaultValue={defaultValue} {...multipleAttr}>
                 {!props.optionGroups ?
                     (
                         <>

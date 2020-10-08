@@ -12,7 +12,7 @@ function InputTimepicker(props) {
         if (props.properties) {
             M.Timepicker.init(timepickerRef.current, props.properties);
         }
-    }, []);
+    }, [props.properties]);
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>

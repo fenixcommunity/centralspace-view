@@ -28,7 +28,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -49,7 +49,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -74,7 +74,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -95,7 +95,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -119,7 +119,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -140,7 +140,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -164,7 +164,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]
@@ -185,7 +185,7 @@ function GalleryItems() {
                 }
                 actions={
                     [
-                        <ActionButton id="favorite" icon="favorite"
+                        <ActionButton id="favorite" key="favorite" icon="favorite"
                             buttonFloating={true} buttonLarge={true}
                             color="pink" hasWaves={true} />
                     ]

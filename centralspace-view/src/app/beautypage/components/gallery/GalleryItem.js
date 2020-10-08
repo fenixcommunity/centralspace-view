@@ -6,11 +6,11 @@ function GalleryItem(props) {
     return (
         <div className={`col l4 m6 s12 gallery-item gallery-expand gallery-filter ${props.filterName}`}>
             <div className="gallery-curve-wrapper">
-                <a
-                    className="gallery-cover"
+                <a className="gallery-cover"
                     style={{
                         height: image.height
                     }}
+                    href="#!"
                 >
                     <img src={image.img} alt={image.name} />
                 </a>
@@ -21,9 +21,7 @@ function GalleryItem(props) {
                     <div className="title-wrapper">
                         <h3>{props.contentTitle}</h3>
                     </div>
-                    <p className="description">
                         {props.content}
-                    </p>
                 </div>
                 <div className="gallery-action">
                     {props.actions && props.actions.map(action => (

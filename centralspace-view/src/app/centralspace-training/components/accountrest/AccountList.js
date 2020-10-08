@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux' // to bring higher order component
-import axios from 'axios'
-import { authApi } from '../utils/CentralspaceApi'
+// import axios from 'axios'
+// import { authApi } from '../utils/CentralspaceApi'
 import { Link } from 'react-router-dom'
 import daVinciImg from '../../../../resources/da_vinci.jpg'
 

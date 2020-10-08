@@ -6,7 +6,7 @@ function BlogItem(props) {
             <div className={`card ${props.hasAnimationClass}`} data-duration={props.animationDataDuration}>
                 <div className="card-image">
                     <a href={props.blogRef}>
-                        <img src={props.blogImg} alt="img" />
+                        <img src={props.blogImg} alt="description" />
                     </a>
                     <span className="card-title">{props.blogTitle}</span>
                 </div>

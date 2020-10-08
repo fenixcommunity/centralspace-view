@@ -5,6 +5,7 @@ import ValidateMessage from '../validation/ValidateMessage';
 function InputTextArea(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
+    const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}
 
     const validate = props.validate;
     const validateLengthAttribute = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
@@ -17,8 +18,8 @@ function InputTextArea(props) {
                 className={`materialize-textarea ${validate ? "validate" : ""}`}
                 required={props.required}
                 disabled={props.disabled}
-                autoComplete={props.autoComplete && props.autoComplete === false ? false : true}
                 {...validateLengthAttribute}
+                {...autoCompleteAttr}
             />
             <label htmlFor={props.id}>{props.label}</label>
             <ValidateMessage validate={validate} />

@@ -213,11 +213,11 @@ function SignUpSummary() {
 
                                 <div className="input-field col s12">
                                     <ActionButton
-                                        id="reset" label="Reset"
+                                        id="reset_summary" label="Reset"
                                         icon="clear_all" color="grey" hasWaves={true}
                                         disabled={false} />
                                     <ActionButton
-                                        id="save" label="Save"
+                                        id="save_summary" label="Save"
                                         icon="send" hasWaves={true}
                                         disabled={false} type="submit" />
                                 </div>
@@ -289,25 +289,29 @@ function SignUpSummary() {
                                                     authorAvatar={avatar1}
                                                     title="Title"
                                                     content={
-                                                        <p>
+                                                        <>
+                                                        <p className="grey-text">
                                                             First Line <br /> Second Line
-                                                                </p>
+                                                        </p>
+                                                                </>
                                                     }
                                                     rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                                 <Comment
                                                     authorAvatar={avatar2}
                                                     title="Title"
                                                     content={
-                                                        <p>
+                                                        <>
+                                                        <p className="grey-text">
                                                             First Line <br /> Second Line
-                                                                </p>
+                                                        </p>
+                                                                </>
                                                     }
                                                     rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                             </ul>
                                         }
                                         modalActions={
                                             [<ActionButton
-                                                id="modal_close" label="Agree"
+                                                id="modal_close" key="modal_close" label="Agree"
                                                 //todo classes -> use another way
                                                 classes="modal-close"
                                                 color="teal lighten-2" hasWaves={true}
@@ -319,29 +323,29 @@ function SignUpSummary() {
                                 <div className="col s12 basic-top-break">
                                     <Collapsible items={[
                                         {
-                                            headerIcon: "filter_drama", headerMessage: "First",
+                                            id: 1, headerIcon: "filter_drama", headerMessage: "First",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         },
                                         {
-                                            headerIcon: "place", headerMessage: "Second",
+                                            id: 2, headerIcon: "place", headerMessage: "Second",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         },
                                         {
-                                            headerIcon: "whatshot", headerMessage: "Third",
+                                            id: 3, headerIcon: "whatshot", headerMessage: "Third",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         }
                                     ]} />
                                     <Collapsible pulledOut={true} items={[
                                         {
-                                            headerIcon: "filter_drama", headerMessage: "First",
+                                            id: 1, headerIcon: "filter_drama", headerMessage: "First",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         },
                                         {
-                                            headerIcon: "place", headerMessage: "Second",
+                                            id: 2, headerIcon: "place", headerMessage: "Second",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         },
                                         {
-                                            headerIcon: "whatshot", headerMessage: "Third",
+                                            id: 3, headerIcon: "whatshot", headerMessage: "Third",
                                             content: (<span>Lorem ipsum dolor sit amet.</span>)
                                         }
                                     ]} />
@@ -370,7 +374,7 @@ function SignUpSummary() {
                         <FormCard header="Sign up" theme="light" themeColor="blue" onSubmit={handleFormSubmit}
                             content={
                                 <StepperLinear steps={[
-                                    <Step id="step_1" active={true} header="Basic data" headerWaves={true}
+                                    <Step id="step_1" key="step_1" active={true} header="Basic data" headerWaves={true}
                                         content={
                                             <>
                                                 <InputText
@@ -391,13 +395,13 @@ function SignUpSummary() {
                                         stepActions={
                                             [
                                                 <ActionButton
-                                                    id={"continue_step_1"} label="Continue"
+                                                    id="continue_step_1" key="continue_step_1" label="Continue"
                                                     classes="next-step"
                                                     color="blue" hasWaves={true}
                                                     actions={{ onClick: () => "" }} />
                                             ]
                                         } />,
-                                    <Step id="step_2" header="Password" headerWaves={true}
+                                    <Step id="step_2" key="step_2" header="Password" headerWaves={true}
                                         content={
                                             <>
                                                 <InputText
@@ -417,23 +421,23 @@ function SignUpSummary() {
                                         stepActions={
                                             [
                                                 <ActionButton
-                                                    id="continue_step_2" label="Continue"
+                                                    id="continue_step_2" key="continue_step_2" label="Continue"
                                                     classes="next-step"
                                                     color="blue" hasWaves={true}
                                                     actions={{ onClick: () => "" }} />,
                                                 <ActionButton
-                                                    id="continue_step_2" label="Back"
+                                                    id="back_step_2" key="back_step_2" label="Back"
                                                     classes="previous-step" buttonFlat={true}
                                                     hasWaves={true}
                                                     actions={{ onClick: () => "" }} />
                                             ]
                                         } />,
-                                    <Step id="step_3" header="Summary" headerWaves={true}
+                                    <Step id="step_3" key="step_3" header="Summary" headerWaves={true}
                                         content="We've just sent you an activation email"
                                         stepActions={
                                             [
                                                 <ActionButton
-                                                    id="login_step_3" type="submit" label="Log in"
+                                                    id="login_step_3" key="login_step_3" type="submit" label="Log in"
                                                     color="blue" hasWaves={true}
                                                     /* data-feedback="someFunction">Log in</button> */
                                                     actions={{ onClick: () => "" }} />
@@ -443,7 +447,7 @@ function SignUpSummary() {
                             }
                             footerActions={[
                                 <ActionButton
-                                    id="controlled_reset" label="Clear form data"
+                                    id="controlled_reset" key="controlled_reset" label="Clear form data"
                                     color="grey" hasWaves={true}
                                     actions={{}} />
                             ]} />

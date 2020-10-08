@@ -3,7 +3,6 @@ import '../../../../../../resources/beautypage/css/chips.css';
 
 function DisplayTags(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const validate = props.validate;
     const tags = props.tags;
 
     return (

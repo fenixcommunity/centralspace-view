@@ -20,7 +20,7 @@ function Searcher(props) {
             )}
             {props.fullScreenSearchIsActive && (
                 <li>
-                    <a className="fullscreen-search" href="#">
+                    <a className="fullscreen-search" href="#!">
                         <i className="material-icons">search</i>
                     </a>
                 </li>

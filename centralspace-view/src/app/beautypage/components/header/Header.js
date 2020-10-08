@@ -6,7 +6,7 @@ function Header(props) {
 
     return (
         <div className={`section header ${blackTheme ? "white" : ""}`}>
-            <img className="background" src={props.headerImg} />
+            <img className="background" src={props.headerImg} alt="description"/>
             <div className="header-wrapper row valign-wrapper">
                 <div className={headerWithOffset}>
                     <h1>{props.headerMessage}</h1>
@@ -14,7 +14,7 @@ function Header(props) {
                         {props.headerSentence}
                     </span>
                     <button className="read-more">
-                        <i className={`${blackTheme ? "black-text" : ""} icon-caret-down`} />
+                        <i className={`${blackTheme ? "black-text" : ""} icon-caret-down`}/>
                     </button>
                 </div>
             </div>

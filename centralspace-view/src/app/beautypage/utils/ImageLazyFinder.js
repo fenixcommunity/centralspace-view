@@ -8,11 +8,15 @@ export const getImageFromResources = (category, imageName) => {
                 return Images.blog.poly1;
             case 'poly2':
                 return Images.blog.poly2;
+            default:
+                return null;
         }
     } else if (category === 'people') {
         switch (imageName) {
             case 'avatar1':
                 return Images.people.avatar1;
+            default:
+                return null;
         }
     }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../../resources/beautypage/css/datatimepicker.css';
 import Icon from "../../Icon";
@@ -8,13 +8,9 @@ function InputDatepicker(props) {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
 
-    useEffect(() => {
-        initCalendarDefault(props.settings);
-    }, []);
-
-    const initCalendarDefault = (settings) => {
+    const initCalendarDefault = useCallback(() => {
         return M.Datepicker.init(datepickerRef.current,
-            settings ? settings :
+            props.settings ? props.settings :
                 {
                     autoClose: false,
                     format: "dd/mm/yyyy",
@@ -27,7 +23,11 @@ function InputDatepicker(props) {
                     }
                 }
         );
-    }
+    }, [props.settings]);
+
+    useEffect(() => {
+        initCalendarDefault();
+    }, [initCalendarDefault]);
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>

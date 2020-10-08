@@ -8,9 +8,9 @@ function NavbarSlideOutHeader() {
             <li className="no-padding">
                 <div className="user-view">
                     <div className="background">
-                        <img src={backgroundPlanet2} />
+                        <img src={backgroundPlanet2} alt="description" />
                     </div>
-                    <a href="#user"><img className="circle" src={avatar} /></a>
+                    <a href="#user"><img className="circle" src={avatar}  alt="description"/></a>
                     <a href="#name"><span className="white-text name">John Doe</span></a>
                     <a href="#email"><span className="white-text email">jdandturk@gmail.com</span></a>
                 </div>

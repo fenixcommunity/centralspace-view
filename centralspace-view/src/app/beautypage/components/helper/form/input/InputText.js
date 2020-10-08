@@ -18,10 +18,10 @@ function InputText(props) {
     useEffect(() => {
         if (props.autocomplete) {
             const dataToAutocomplete = props.autocomplete.dataToAutocomplete;
-            const instance = initAutocomplete(dataToAutocomplete ? dataToAutocomplete : {});
+            initAutocomplete(dataToAutocomplete ? dataToAutocomplete : {});
             // instance.updateData({...});
         }
-    }, []);
+    }, [props.autocomplete]);
 
     const initAutocomplete = (dataToAutocomplete) => {
         return M.Autocomplete.init(

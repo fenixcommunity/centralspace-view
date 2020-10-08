@@ -4,7 +4,7 @@ function NavbarTooltip(props) {
     return (
         <li>
         <a
-          href="#"
+          href="#!"
           className="tooltipped"
           data-position="bottom"
           data-tooltip={props.tooltipText}

@@ -81,7 +81,7 @@ function Blog() {
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae finibus mi, egestas dignissim metus. Fusce tempus elementum metus. Donec eu nibh fringilla, dignissim arcu eu, ultrices ante. Cras consectetur risus id mi condimentum aliquam."
         modalActions={
           [<ActionButton
-            id="modal_close" label="Agree"
+            id="modal_close" key="modal_close" label="Agree"
             //todo classes -> use another way
             classes="modal-close"
             color="teal lighten-2" hasWaves={true}

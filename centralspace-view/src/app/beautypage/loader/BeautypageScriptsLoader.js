@@ -28,7 +28,7 @@ function BeautypageScriptsLoader(props) {
             },
             error: function () { console.error("scripts loading failed") },
         });
-    }, []);
+    }, [basicScripts, contextPageScripts]);
 
     return (
         <>

@@ -6,7 +6,7 @@ function Modal(props) {
     const modalBottom = props.modalBottom;
 
     useEffect(() => {
-        const modal = M.Modal.init(modalRef.current, {});
+        M.Modal.init(modalRef.current, {});
     }, []);
 
     return (

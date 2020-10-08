@@ -10,7 +10,7 @@ function Comment(props) {
                 </div>
             </div>
             <span className="title">{props.title}</span>
-            <p className="grey-text">{props.content}</p>
+            {props.content}
             {rightIcon &&
                 (
                     <button href={rightIcon.ref} className="secondary-content">

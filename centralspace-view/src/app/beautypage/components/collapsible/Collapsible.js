@@ -16,7 +16,7 @@ function Collapsible(props) {
             M.Collapsible.init(collapsibleRef.current, {});
         }
 
-    }, []);
+    }, [pulledOut]);
     return (
         <ul className={`collapsible ${pulledOut ? "popout" : ""}`} ref={collapsibleRef}>
             {props.items && props.items.map(item => (
