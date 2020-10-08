@@ -2,23 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    items: PropTypes.node.isRequired
 }
 
-const GalleryContainer = ({ }) => {
+const GalleryContainer = ({ items }) => {
     return (
         <div id="portfolio">
             <div className="container">
                 <div className="gallery row">
-                    {props.items}
+                    {items}
                 </div>
             </div>
         </div>

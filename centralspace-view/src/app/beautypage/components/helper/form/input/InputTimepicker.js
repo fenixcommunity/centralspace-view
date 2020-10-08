@@ -4,41 +4,44 @@ import M from 'materialize-css/dist/js/materialize.js';
 import Icon from "../../Icon";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    type: PropTypes.string,
+    defaultValue: PropTypes.string,
+    icon: PropTypes.string,
+    iconColor: PropTypes.string,
+    isDuplicated: PropTypes.bool,
+    autocomplete: PropTypes.bool,
+    required: PropTypes.bool,
+    disabled: PropTypes.bool,
+    validate: PropTypes.object,
+    properties: PropTypes.object
 }
 
-const InputTimepicker = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const validate = props.validate;
+const InputTimepicker = ({ id, label, icon, iconColor, isDuplicated, validate, properties }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const validate = validate;
 
     const timepickerRef = useRef(null);
 
     useEffect(() => {
-        if (props.properties) {
-            M.Timepicker.init(timepickerRef.current, props.properties);
+        if (properties) {
+            M.Timepicker.init(timepickerRef.current, properties);
         }
-    }, [props.properties]);
+    }, [properties]);
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
+            {icon && <Icon icon={icon} iconColor={iconColor} />}
             <input
-                id={props.id}
+                id={id}
                 type="text"
                 className={`timepicker 
                 ${validate ? "validate" : ""} 
                 `}
                 ref={timepickerRef}
             />
-            <label htmlFor={props.id}>{props.label}</label>
+            <label htmlFor={id}>{label}</label>
         </div>
     )
 }

@@ -4,19 +4,11 @@ import Divider from '../helper/Divider';
 import { getImageFromResources } from '../../utils/imageLazyFinder';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    authorOfArticles: PropTypes.string.isRequired
 }
 
-const BlogSectionFooter = ({ }) => {
-    const author = props.authorOfArticles
+const BlogSectionFooter = ({ authorOfArticles }) => {
+    const author = authorOfArticles
     const avatar = getImageFromResources('people', author.avatar);
     return (
         <div className="col s8 offset-s2 m6 offset-m3 blog-author">

@@ -1,18 +1,11 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    backgroundImageUrlFirst: PropTypes.node.isRequired,
+    backgroundImageUrlSecond: PropTypes.node.isRequired
 }
 
-const ImagePair = ({ }) => {
+const ImagePair = ({ backgroundImageUrlFirst, backgroundImageUrlSecond }) => {
     return (
         <div className="device-pair">
             <div className="tablet-preview-sizer">
@@ -20,7 +13,7 @@ const ImagePair = ({ }) => {
                 <div
                     className="image-container default"
                     style={{
-                        backgroundImage: `url(${props.backgroundImageUrlFirst})`
+                        backgroundImage: `url(${backgroundImageUrlFirst})`
                     }}
                 />
             </div>
@@ -29,7 +22,7 @@ const ImagePair = ({ }) => {
                 <div
                     className="image-container default"
                     style={{
-                        backgroundImage: `url(${props.backgroundImageUrlSecond})`
+                        backgroundImage: `url(${backgroundImageUrlSecond})`
                     }}
                 />
             </div>

@@ -5,17 +5,7 @@ import FullHeightSection from "../../helper/section/FullHeightSection";
 import FeatureFadeRightInOut from "./FeatureFadeRightInOut";
 import ImagePair from "./ImagePair";
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const Feature3 = ({ }) => {
   const content = (

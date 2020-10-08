@@ -2,22 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    filterName: PropTypes.string.isRequired,
+    contentTitle: PropTypes.string.isRequired,
+    headerContent: PropTypes.node.isRequired,
+    content: PropTypes.node.isRequired,
+    image: PropTypes.objectOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            height: PropTypes.string.isRequired,
+            img: PropTypes.node.isRequired,
+            name: PropTypes.string.isRequired,
         })
     ).isRequired,
+    actions: PropTypes.object
 }
 
-const GalleryItem = ({ }) => {
-    //todo required
-    const image = props.image;
+const GalleryItem = ({ filterName, contentTitle, headerContent, content, actions, image }) => {
     return (
-        <div className={`col l4 m6 s12 gallery-item gallery-expand gallery-filter ${props.filterName}`}>
+        <div className={`col l4 m6 s12 gallery-item gallery-expand gallery-filter ${filterName}`}>
             <div className="gallery-curve-wrapper">
                 <a className="gallery-cover"
                     style={{
@@ -28,16 +29,16 @@ const GalleryItem = ({ }) => {
                     <img src={image.img} alt={image.name} />
                 </a>
                 <div className="gallery-header">
-                    {props.headerContent}
+                    {headerContent}
                 </div>
                 <div className="gallery-body">
                     <div className="title-wrapper">
-                        <h3>{props.contentTitle}</h3>
+                        <h3>{contentTitle}</h3>
                     </div>
-                        {props.content}
+                    {content}
                 </div>
                 <div className="gallery-action">
-                    {props.actions && props.actions.map(action => (
+                    {actions && actions.map(action => (
                         action
                     ))}
                 </div>

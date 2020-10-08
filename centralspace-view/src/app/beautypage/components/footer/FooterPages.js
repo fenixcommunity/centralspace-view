@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    sectionName: PropTypes.string.isRequired,
+    pages: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            ref: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const FooterPages = ({ }) => {
-    const pages = props.pages ? (
-        props.pages.map(page => {
+const FooterPages = ({ pages, sectionName }) => {
+    const pages = pages ? (
+        pages.map(page => {
             return (
                 <li key={page.name}>
                     <a href={page.ref}>{page.name}</a>
@@ -25,11 +23,11 @@ const FooterPages = ({ }) => {
 
     return (
         <div className="col s6 m3">
-            <h5>{props.sectionName}</h5>
+            <h5>{sectionName}</h5>
             {pages && (
-            <ul>
-                {pages}
-            </ul>
+                <ul>
+                    {pages}
+                </ul>
             )}
 
         </div>

@@ -4,18 +4,10 @@ import poly2 from '../../../../resources/beautypage/images/blog/poly2.jpg';
 import ArticleCard from './ArticleCard';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    handleToastOnClick: PropTypes.func
 }
 
-const ArticlesSection = ({ }) => {
+const ArticlesSection = ({ handleToastOnClick }) => {
     return (
         <div className="container">
             <h4>Articles</h4>
@@ -23,7 +15,7 @@ const ArticlesSection = ({ }) => {
                 <ArticleCard
                     id={1}
                     isHoverable={true}
-                    handleToastOnClick={props.handleToastOnClick}
+                    handleToastOnClick={handleToastOnClick}
                     articleImg={poly1}
                     articleTitle="Mango & Chickpea Curry"
                     articleContent={
@@ -37,7 +29,7 @@ const ArticlesSection = ({ }) => {
                 <ArticleCard
                     id={2}
                     isHoverable={false}
-                    handleToastOnClick={props.handleToastOnClick}
+                    handleToastOnClick={handleToastOnClick}
                     articleImg={poly2}
                     articleTitle="Rainbow Pasta Salad"
                     articleContent={

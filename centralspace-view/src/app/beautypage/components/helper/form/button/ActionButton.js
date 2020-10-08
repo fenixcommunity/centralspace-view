@@ -2,44 +2,54 @@ import React from 'react'
 import Icon from '../../Icon';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+  id: PropTypes.number.isRequired,
+  label: PropTypes.string,
+  classes: PropTypes.string,
+  icon: PropTypes.string,
+  iconColor: PropTypes.string,
+  iconPossition: PropTypes.string,
+  color: PropTypes.string,
+  reference: PropTypes.string,
+  type: PropTypes.string,
+  classes: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  buttonLarge: PropTypes.bool,
+  buttonFloating: PropTypes.bool,
+  buttonFlat: PropTypes.bool,
+  hasWaves: PropTypes.bool,
+  pulseEffect: PropTypes.bool,
+  actions: PropTypes.object.isRequired
 }
 
-const ActionButton = ({ }) => {
+const ActionButton = ({
+  id, label, classes, icon, iconColor, iconPossition, color, reference, type, classes, disabled, buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
+}) => {
   //todo classes -> use another way
-  const classes = props.classes ? props.classes : "";
-  const buttonColor = props.color ? props.color : "";
-  const reference = props.reference ? props.reference : "#";
-  const buttonType = props.type ? props.type : "button";
-  const buttonLarge = props.buttonLarge ? "btn-large" : "";
-  const buttonFloating = props.buttonFloating ? "btn-floating" : "";
-  const buttonFlat = props.buttonFlat ? "-flat" : "";
-  const wavesEffect = props.hasWaves ? "waves-effect waves-light" : "";
-  const pulseEffect = props.pulseEffect ? "pulse" : "";
+  const classes = classes ? classes : "";
+  const buttonColor = color ? color : "";
+  const reference = reference ? reference : "#";
+  const buttonType = type ? type : "button";
+  const buttonLarge = buttonLarge ? "btn-large" : "";
+  const buttonFloating = buttonFloating ? "btn-floating" : "";
+  const buttonFlat = buttonFlat ? "-flat" : "";
+  const wavesEffect = hasWaves ? "waves-effect waves-light" : "";
+  const pulseEffect = pulseEffect ? "pulse" : "";
 
-  const actions = props.actions;
+  const actions = actions;
   const onClickActionAttr = actions && actions.onClick ? { "onClick": actions.onClick } : {}
 
   return (
     <button
-      id={props.id}
+      id={id}
       href={reference}
       className={`btn${buttonFlat} ${wavesEffect} ${pulseEffect} ${buttonColor} ${buttonLarge} ${buttonFloating} ${classes}`}
       type={buttonType}
-      name={props.label}
-      disabled={props.disabled}
+      name={label}
+      disabled={disabled}
       {...onClickActionAttr}
     >
-      {props.label}
-      {props.icon && <Icon icon={props.icon} iconColor={props.iconColor} possition={props.iconPossition}/>}
+      {label}
+      {icon && <Icon icon={icon} iconColor={iconColor} possition={iconPossition} />}
     </button>
   )
 }

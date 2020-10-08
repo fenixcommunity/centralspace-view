@@ -4,17 +4,7 @@ import FullHeightSection from "../../helper/section/FullHeightSection";
 import PerspectiveWrapper from "./PerspectiveWrapper";
 import PhonePreview from "./PhonePreview";
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const Feature1 = ({ }) => {
   const basicMessage = (

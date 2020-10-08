@@ -5,17 +5,7 @@ import FullHeightSection from "../../helper/section/FullHeightSection";
 import FeatureHeader from "./FeatureHeader";
 import PhonePreviewSize from "./PhonePreviewSize";
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const Feature2 = ({ }) => {
   const content = (

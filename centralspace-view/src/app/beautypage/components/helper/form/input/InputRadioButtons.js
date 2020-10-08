@@ -4,33 +4,35 @@ import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import { generateKey } from '../../../../utils/keyGenerator';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    groupName: PropTypes.string.isRequired,
+    headerText: PropTypes.string,
+    isDuplicated: PropTypes.bool,
+    withGapStyle: PropTypes.bool,
+    onChange: PropTypes.func,
+    options: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            disabled: PropTypes.bool,
+            checked: PropTypes.bool,
         })
-    ).isRequired,
+    ).isRequired
 }
 
-const InputRadioButtons = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const withGapStyle = props.withGapStyle ? "with-gap" : "";
-    const options = props.options;
+const InputRadioButtons = ({ groupName, headerText, isDuplicated, withGapStyle, onChange, options }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const withGapStyle = withGapStyle ? "with-gap" : "";
 
     return (
         <div className={`${duplicatedClass}`}>
-            {props.headerText && (<p>{props.headerText}</p>)}
-            {props.groupName && options && options.map(option => {
+            {headerText && (<p>{headerText}</p>)}
+            {groupName && options && options.map(option => {
                 return (
                     <p key={generateKey(option.label)}>
                         <label className="radio-label">
-                            <input name={props.groupName} type="radio"
+                            <input name={groupName} type="radio"
                                 className={`${withGapStyle}`}
                                 disabled={option.disabled} defaultChecked={option.checked}
-                                onChange={props.onChange} />
+                                onChange={onChange} />
                             <span>{option.label}</span>
                         </label>
                     </p>

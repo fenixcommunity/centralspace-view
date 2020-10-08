@@ -1,27 +1,20 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    logoDescription: PropTypes.string.isRequired,
+    logoImg: PropTypes.node.isRequired
 }
 
-const FooterLogo = ({ }) => {
+const FooterLogo = ({ logoDescription, logoImg }) => {
     return (
         <div className="col s6 m3">
-        <img
-          className="materialize-logo"
-          src={props.logoImg}
-          alt="description"
-        />
-        <p>{props.logoDescription}</p>
-      </div>
+            <img
+                className="materialize-logo"
+                src={logoImg}
+                alt="description"
+            />
+            <p>{logoDescription}</p>
+        </div>
     )
 }
 

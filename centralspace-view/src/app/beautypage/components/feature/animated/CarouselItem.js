@@ -1,20 +1,13 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    reference: PropTypes.string.isRequired,
+    img: PropTypes.node.isRequired
 }
 
-const CarouselItem = ({ }) => {
+const CarouselItem = ({reference, img }) => {
     return (
-        <a className="carousel-item" href={props.reference}><img src={props.img} alt="description"/></a>
+        <a className="carousel-item" href={reference}><img src={img} alt="description"/></a>
     )
 }
 

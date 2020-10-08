@@ -4,17 +4,7 @@ import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg'
 import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 import Comment from './Comment';
 
-const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-}
+const propTypes = {}
 
 const CommentsSection = ({ }) => {
     return (

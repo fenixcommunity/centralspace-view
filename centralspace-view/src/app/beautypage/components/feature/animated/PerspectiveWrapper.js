@@ -1,18 +1,12 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.node.isRequired
+    leftOrientation: PropTypes.bool
 }
 
-const PerspectiveWrapper = ({ }) => {
+const PerspectiveWrapper = ({ title, content, leftOrientation }) => {
     const orientationClass = props.leftOrientation ? "left-transform-origin right-align" : "right-transform-origin";
     return (
         <div className="perspective-wrapper">

@@ -6,42 +6,56 @@ import { generateKey } from '../../../../utils/keyGenerator';
 import Icon from "../../Icon";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    headerText: PropTypes.string,
+    icon: PropTypes.string,
+    iconColor: PropTypes.string,
+    id: PropTypes.number,
+    defaultValue: PropTypes.number,
+    isDuplicated: PropTypes.bool,
+    multiple: PropTypes.bool,
+    disabled: PropTypes.bool,
+    properties: PropTypes.object.isRequired,
+    options: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            icon: PropTypes.string.isRequired,
+            value: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
         })
-    ).isRequired,
+    ),
+    optionGroups: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            value: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+        })
+    )
 }
 
-const InputSelect = ({ }) => {
-    const defaultValue = props.defaultValue ? props.defaultValue : 0;
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const multipleAttr = props.multiple ? { "multiple": true } : {}
+const InputSelect = ({ headerText, icon, iconColor, id, defaultValue, isDuplicated, multiple, disabled, properties, options, optionGroups }) => {
+    const defaultValue = defaultValue ? defaultValue : 0;
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const multipleAttr = multiple ? { "multiple": true } : {}
 
     const optionSelectRef = useRef(null);
     useEffect(() => {
-        M.FormSelect.init(optionSelectRef.current, props.properties);
-    }, [props.properties]);
-    
+        M.FormSelect.init(optionSelectRef.current, properties);
+    }, [properties]);
+
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.headerText && (<p>{props.headerText}</p>)} {/* or <label>Options Select</label> */}
-            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
-            <select id={props.id} name="optionselect" disabled={props.disabled}
+            {headerText && (<p>{headerText}</p>)} {/* or <label>Options Select</label> */}
+            {icon && <Icon icon={icon} iconColor={iconColor} />}
+            <select id={id} name="optionselect" disabled={disabled}
                 ref={optionSelectRef} defaultValue={defaultValue} {...multipleAttr}>
-                {!props.optionGroups ?
+                {!optionGroups ?
                     (
                         <>
-                            {props.label && (
+                            {label && (
                                 <option value={0} disabled={true}>
-                                    {props.label}
+                                    {label}
                                 </option>
                             )}
-                            {props.options.map(option => {
+                            {options.map(option => {
                                 const iconAttr = option.icon ? { "data-icon": option.icon } : {};
                                 return (
                                     <option key={generateKey(option.value)} value={option.value} {...iconAttr}>
@@ -53,7 +67,7 @@ const InputSelect = ({ }) => {
                         </>
                     ) : (
                         <>
-                            {props.optionGroups && props.optionGroups.map(group => (
+                            {optionGroups && optionGroups.map(group => (
                                 <optgroup key={group.id} id={group.id} label={group.label}>
                                     {group.options && group.options.map(option => (
                                         <option key={generateKey(option.value)} value={option.value}>

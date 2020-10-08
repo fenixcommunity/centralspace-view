@@ -1,24 +1,17 @@
 import React from "react";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+  headerMessage: PropTypes.string.isRequired,
+  sentenceMessage: PropTypes.string.isRequired
 }
 
-const IntroductionAnimation = ({ }) => {
+const IntroductionAnimation = ({ headerMessage, sentenceMessage }) => {
   return (
     <div className="title-transition section white valign-wrapper">
       <div className="row valign">
         <div className="col s8 offset-s2 m6 offset-m3 blog-title fade-transition">
-          <h1>{props.headerMessage}</h1>
-          <span className="date">{props.sentenceMessage}</span>
+          <h1>{headerMessage}</h1>
+          <span className="date">{sentenceMessage}</span>
         </div>
       </div>
     </div>

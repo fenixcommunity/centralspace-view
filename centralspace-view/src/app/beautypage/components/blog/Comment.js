@@ -1,28 +1,28 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    authorAvatar: PropTypes.node.isRequired,
+    rightIcon: PropTypes.objectOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            ref: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired,
+            icon: PropTypes.string.isRequired,
         })
-    ).isRequired,
+    )
 }
 
-const Comment = ({ }) => {
-    const rightIcon = props.rightIcon;
+const Comment = ({ title, content, authorAvatar, rightIcon }) => {
     return (
         <li className="collection-item avatar">
             <div className="avatar-wrapper circle">
                 <div className="avatar">
-                    <img src={props.authorAvatar} alt="" />
+                    <img src={authorAvatar} alt="" />
                 </div>
             </div>
-            <span className="title">{props.title}</span>
-            {props.content}
+            <span className="title">{title}</span>
+            {content}
             {rightIcon &&
                 (
                     <button href={rightIcon.ref} className="secondary-content">

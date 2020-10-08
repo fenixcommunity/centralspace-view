@@ -3,36 +3,36 @@ import React from 'react'
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    name: PropTypes.string.required,
+    label: PropTypes.string.required,
+    headerText: PropTypes.string,
+    value: PropTypes.object,
+    isDuplicated: PropTypes.bool,
+    withFilledInStyle: PropTypes.bool,
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func.isRequired,
 }
 
-const InputCheckbox = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const withFilledInStyle = props.withFilledInStyle ? "filled-in" : "";
+const InputCheckbox = ({ name, label, headerText, value, isDuplicated, withFilledInStyle, checked, disabled, onChange }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const withFilledInStyle = withFilledInStyle ? "filled-in" : "";
 
     return (
         <div className={`${duplicatedClass}`}>
-            {props.headerText && (<p>{props.headerText}</p>)}
+            {headerText && (<p>{headerText}</p>)}
             <p>
                 <label>
                     <input
                         type="checkbox"
-                        name={props.name}
-                        defaultValue={props.value}
+                        name={name}
+                        defaultValue={value}
                         className={`${withFilledInStyle}`}
-                        defaultChecked={props.checked}
-                        disabled={props.disabled}
-                        onChange={props.onChange}
+                        defaultChecked={checked}
+                        disabled={disabled}
+                        onChange={onChange}
                     />
-                    <span>{props.label}</span>
+                    <span>{label}</span>
                 </label>
             </p>
         </div>

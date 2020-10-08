@@ -1,26 +1,20 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    featureIcon: PropTypes.string.isRequired,
+    featureMessage: PropTypes.string.isRequired,
+    animationClass: PropTypes.bool
 }
 
-const Feature = ({ }) => {
+const Feature = ({ featureIcon, featureMessage, animationClass }) => {
     return (
         <>
-            <div className={`col s12 m6 l4 ${props.animationClass}`}>
+            <div className={`col s12 m6 l4 ${animationClass}`}>
                 <h4>
-                    <i className={props.featureIcon} />
+                    <i className={featureIcon} />
                 </h4>
                 <p className="caption">
-                    {props.featureMessage}
+                    {featureMessage}
                 </p>
             </div>
         </>

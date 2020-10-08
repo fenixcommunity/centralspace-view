@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    pulledOut: PropTypes.bool,
+    items: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            id: PropTypes.number.isRequired,
+            headerIcon: PropTypes.string.isRequired,
+            headerMessage: PropTypes.string.isRequired,
+            content: PropTypes.node.isRequired
         })
     ).isRequired,
 }
 
-const Collapsible = ({ }) => {
-    const pulledOut = props.pulledOut;
+const Collapsible = ({ items, pulledOut }) => {
+    const pulledOut = pulledOut;
 
     const collapsibleRef = useRef(null);
     const collapsiblePopupRef = useRef(null);
@@ -30,9 +30,10 @@ const Collapsible = ({ }) => {
         }
 
     }, [pulledOut]);
+    
     return (
         <ul className={`collapsible ${pulledOut ? "popout" : ""}`} ref={collapsibleRef}>
-            {props.items && props.items.map(item => (
+            {items && items.map(item => (
                 <li key={item.id}>
                     <div className="collapsible-header"><i className="material-icons">{item.headerIcon}</i>{item.headerMessage}</div>
                     <div className="collapsible-body">{item.content}</div>

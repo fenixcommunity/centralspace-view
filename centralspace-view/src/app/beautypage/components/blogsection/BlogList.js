@@ -8,19 +8,10 @@ import poly6 from '../../../../resources/beautypage/images/blog/poly6.jpg';
 import BlogItem from "./BlogItem";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    hasAnimation: PropTypes.bool
 }
 
-const BlogList = ({ }) => {
-    const hasAnimation = props.hasAnimation;
+const BlogList = ({ hasAnimation }) => {
     const hasAnimationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
     const animationDataDuration = hasAnimation ? 0 : 'none';
     // we can also add custom attribute to html node custom-data=xxx

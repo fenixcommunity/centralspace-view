@@ -2,19 +2,11 @@ import React from "react";
 import FeaturesBody from "./FeaturesBody";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+  isExtended: PropTypes.bool,
+  hasAnimation: PropTypes.bool
 }
 
-const Features = ({ }) => {
-  const isExtended = props.isExtended;
+const Features = ({ isExtended, hasAnimation }) => {
 
   const featuresTitle = (
     <div className="col s12">
@@ -28,15 +20,15 @@ const Features = ({ }) => {
         <div className="row">
           {featuresTitle}
         </div>
-        <FeaturesBody hasAnimation={props.hasAnimation} />
+        <FeaturesBody hasAnimation={hasAnimation} />
       </div>
     </div>
   ) :
-   (
+    (
       <div className="container">
         <div className="row">
           {featuresTitle}
-          <FeaturesBody hasAnimation={props.hasAnimation} />
+          <FeaturesBody hasAnimation={hasAnimation} />
         </div>
       </div>
     );

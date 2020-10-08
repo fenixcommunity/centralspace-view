@@ -1,32 +1,28 @@
 import React from "react";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    headerMessage: PropTypes.string.isRequired,
+    headerSentence: PropTypes.string.isRequired,
+    hasBlackTheme: PropTypes.bool,
+    headerWithOffset: PropTypes.bool,
+    headerImg: PropTypes.node.isRequired
 }
 
-const Header = ({ }) => {
-    const blackTheme = props.hasBlackTheme;
-    const headerWithOffset = props.headerWithOffset ? "col s12 m6 offset-m3 valign" : "col s12"
+const Header = ({ headerMessage, headerSentence, hasBlackTheme, headerImg }) => {
+    const blackTheme = hasBlackTheme;
+    const headerWithOffsetClass = headerWithOffset ? "col s12 m6 offset-m3 valign" : "col s12"
 
     return (
         <div className={`section header ${blackTheme ? "white" : ""}`}>
-            <img className="background" src={props.headerImg} alt="description"/>
+            <img className="background" src={headerImg} alt="description" />
             <div className="header-wrapper row valign-wrapper">
-                <div className={headerWithOffset}>
-                    <h1>{props.headerMessage}</h1>
+                <div className={headerWithOffsetClass}>
+                    <h1>{headerMessage}</h1>
                     <span className="tagline">
-                        {props.headerSentence}
+                        {headerSentence}
                     </span>
                     <button className="read-more">
-                        <i className={`${blackTheme ? "black-text" : ""} icon-caret-down`}/>
+                        <i className={`${blackTheme ? "black-text" : ""} icon-caret-down`} />
                     </button>
                 </div>
             </div>

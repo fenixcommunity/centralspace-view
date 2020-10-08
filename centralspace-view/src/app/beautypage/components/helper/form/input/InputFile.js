@@ -1,26 +1,21 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    label: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    isDuplicated: PropTypes.bool,
+    multiple: PropTypes.bool
 }
 
-const FileInput = ({ }) => {
-    const multipleAttr = props.multiple ? { "multiple": true } : {}
-    const placeholderAttr = props.placeholder ? { "placeholder": props.placeholder } : {}
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
+const FileInput = ({ label, placeholder, isDuplicated, multiple }) => {
+    const multipleAttr = multiple ? { "multiple": true } : {}
+    const placeholderAttr = placeholder ? { "placeholder": placeholder } : {}
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
 
     return (
         <div className={`input-field file-field col ${duplicatedClass}`}>
             <div className="btn">
-                <span>{props.label}</span>
+                <span>{label}</span>
                 <input type="file" {...multipleAttr} />
             </div>
             <div className="file-path-wrapper">

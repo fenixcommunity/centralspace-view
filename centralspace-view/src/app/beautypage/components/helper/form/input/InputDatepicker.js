@@ -5,25 +5,23 @@ import '../../../../../../resources/beautypage/css/datatimepicker.css';
 import Icon from "../../Icon";
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    id: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    icon: PropTypes.string,
+    iconColor: PropTypes.string,
+    settings: PropTypes.object,
+    validate: PropTypes.object,
+    isDuplicated: PropTypes.bool
 }
 
-const InputDatepicker = ({ }) => {
+const InputDatepicker = ({ id, label, icon, iconColor, settings, validate, isDuplicated }) => {
     const datepickerRef = useRef(null);
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const validate = props.validate;
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const validate = validate;
 
     const initCalendarDefault = useCallback(() => {
         return M.Datepicker.init(datepickerRef.current,
-            props.settings ? props.settings :
+            settings ? settings :
                 {
                     autoClose: false,
                     format: "dd/mm/yyyy",
@@ -36,7 +34,7 @@ const InputDatepicker = ({ }) => {
                     }
                 }
         );
-    }, [props.settings]);
+    }, [settings]);
 
     useEffect(() => {
         initCalendarDefault();
@@ -44,14 +42,14 @@ const InputDatepicker = ({ }) => {
 
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor}/>}
+            {icon && <Icon icon={icon} iconColor={iconColor} />}
             <input
-                id={props.id}
+                id={id}
                 type="text"
                 ref={datepickerRef}
                 className={`datepicker ${validate ? "validate" : ""}`}
             />
-            <label htmlFor={props.id}>{props.label}</label>
+            <label htmlFor={id}>{label}</label>
         </div>
     )
 }

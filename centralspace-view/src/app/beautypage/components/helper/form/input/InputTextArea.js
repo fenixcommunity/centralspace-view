@@ -3,37 +3,39 @@ import Icon from '../../Icon';
 import ValidateMessage from '../validation/ValidateMessage';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    type: PropTypes.string,
+    defaultValue: PropTypes.string,
+    icon: PropTypes.string,
+    iconColor: PropTypes.string,
+    isDuplicated: PropTypes.bool,
+    autocomplete: PropTypes.bool,
+    required: PropTypes.bool,
+    disabled: PropTypes.bool,
+    validate: PropTypes.object
 }
 
-const InputTextArea = ({ }) => {
-    const duplicatedClass = props.isDuplicated ? "s6" : "s12"
-    const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
-    const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}
+const InputTextArea = ({ id, label, type, defaultValue, icon, iconColor, isDuplicated, autocomplete, required, disabled, validate }) => {
+    const duplicatedClass = isDuplicated ? "s6" : "s12"
+    const defaultValueAttr = defaultValue ? { "defaultValue": defaultValue } : {}
+    const autoCompleteAttr = autocomplete === false ? { "autoComplete": "off" } : {}
 
-    const validate = props.validate;
+    const validate = validate;
     const validateLengthAttribute = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
     return (
         <div className={`input-field col ${duplicatedClass}`}>
-            {props.icon && <Icon icon={props.icon} iconColor={props.iconColor} />}
+            {icon && <Icon icon={icon} iconColor={iconColor} />}
             <textarea
-                id={props.id}
+                id={id}
                 {...defaultValueAttr}
                 className={`materialize-textarea ${validate ? "validate" : ""}`}
-                required={props.required}
-                disabled={props.disabled}
+                required={required}
+                disabled={disabled}
                 {...validateLengthAttribute}
                 {...autoCompleteAttr}
             />
-            <label htmlFor={props.id}>{props.label}</label>
+            <label htmlFor={id}>{label}</label>
             <ValidateMessage validate={validate} />
         </div>
     )

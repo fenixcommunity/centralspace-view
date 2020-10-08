@@ -3,19 +3,18 @@ import PropTypes from 'prop-types';
 import { getImageFromResources } from '../../utils/imageLazyFinder';
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
+    paragraphs: PropTypes.arrayOf(
         PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
+            id: PropTypes.number.isRequired,
+            content: PropTypes.string.isRequired,
         })
     ).isRequired,
+    hasZoom: PropTypes.bool.isRequired,
+    sectionHeader: PropTypes.string.isRequired
 }
 
-const BlogSectionItem = ({ }) => {
-    const paragraphs = props.paragraphs ? props.paragraphs.map(paragraph => {
+const BlogSectionItem = ({ paragraphs, hasZoom, sectionHeader }) => {
+    const paragraphs = paragraphs ? paragraphs.map(paragraph => {
         if (typeof (paragraph.content) === 'string') {
             return (
                 <p key={paragraph.id}>{paragraph.content}</p>
@@ -38,11 +37,11 @@ const BlogSectionItem = ({ }) => {
 
     return (
         <>
-            {props.hasZoom && (
+            {hasZoom && (
                 <a id="flow-toggle" className="teal-text text-lighten-2" href="#!"><i className="material-icons medium right">zoom_in</i></a>
             )}
             <h4>
-                {props.sectionHeader}
+                {sectionHeader}
             </h4>
             {paragraphs}
         </>

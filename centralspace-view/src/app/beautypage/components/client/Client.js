@@ -1,27 +1,21 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    color: PropTypes.string.isRequired,
+    clientName: PropTypes.string.isRequired,
+    clientLogo: PropTypes.node.isRequired
 }
 
-const Client = ({ }) => {
+const Client = ({ color, clientName, clientLogo }) => {
     return (
         <>
-            <a href="#!" className={`col s12 m6 l4 client ${props.color} `}>
+            <a href="#!" className={`col s12 m6 l4 client ${color} `}>
                 <img
                     className="logo"
-                    src={props.clientLogo}
-                    alt={props.clientName}
+                    src={clientLogo}
+                    alt={clientName}
                 />
-                <span className="title">{props.clientName}</span>
+                <span className="title">{clientName}</span>
             </a>
         </>
     )

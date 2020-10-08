@@ -1,25 +1,20 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    labelUnchecked: PropTypes.string.isRequired,
+    labelChecked: PropTypes.string.isRequired,
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool
 }
 
-const InputSwitch = ({ }) => {
+const InputSwitch = ({ labelUnchecked, labelChecked, checked, disabled }) => {
     return (
         <div className="switch">
             <label>
-                {props.labelUnchecked}
-                <input type="checkbox" defaultChecked={props.checked} disabled={props.disabled} />
+                {labelUnchecked}
+                <input type="checkbox" defaultChecked={checked} disabled={disabled} />
                 <span className="lever"></span>
-                {props.labelChecked}
+                {labelChecked}
             </label>
         </div>
     )

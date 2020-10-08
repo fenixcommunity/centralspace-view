@@ -1,26 +1,19 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    orientation: PropTypes.string.isRequired,
+    backgroundImageUrl: PropTypes.node.isRequired
 }
 
-const PhonePreviewSize = ({ }) => {
-    const orientation =  props.orientation ? props.orientation + "-in-out" : "";
+const PhonePreviewSize = ({ backgroundImageUrl, orientation }) => {
+    const orientation = orientation ? orientation + "-in-out" : "";
     return (
         <div className={`phone-preview-sizer iphone ${orientation}`}>
             <div className="phone-preview" />
             <div
                 className="image-container default"
                 style={{
-                    backgroundImage: `url(${props.backgroundImageUrl})`
+                    backgroundImage: `url(${backgroundImageUrl})`
                 }}
             />
         </div>

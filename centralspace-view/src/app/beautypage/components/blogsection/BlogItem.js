@@ -1,26 +1,22 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    blogRef: PropTypes.string.isRequired,
+    blogTitle: PropTypes.string.isRequired,
+    hasAnimationClass: PropTypes.bool,
+    animationDataDuration: PropTypes.bool,
+    blogImg: PropTypes.node.isRequired,
 }
 
-const BlogItem = ({ }) => {
+const BlogItem = ({ blogRef, blogTitle, hasAnimationClass, animationDataDuration, blogImg }) => {
     return (
         <div className="col s12 m6 l4">
-            <div className={`card ${props.hasAnimationClass}`} data-duration={props.animationDataDuration}>
+            <div className={`card ${hasAnimationClass}`} data-duration={animationDataDuration}>
                 <div className="card-image">
-                    <a href={props.blogRef}>
-                        <img src={props.blogImg} alt="description" />
+                    <a href={blogRef}>
+                        <img src={blogImg} alt="description" />
                     </a>
-                    <span className="card-title">{props.blogTitle}</span>
+                    <span className="card-title">{blogTitle}</span>
                 </div>
             </div>
         </div>

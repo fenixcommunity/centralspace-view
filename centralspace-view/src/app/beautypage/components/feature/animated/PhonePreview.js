@@ -1,18 +1,10 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    backgroundImageUrl: PropTypes.node.isRequired
 }
 
-const PhonePreview = ({ }) => {
+const PhonePreview = ({ backgroundImageUrl }) => {
     return (
         <div className="phone-preview-halfway">
             <div className="phone-preview-sizer">
@@ -20,7 +12,7 @@ const PhonePreview = ({ }) => {
                 <div
                     className="image-container default"
                     style={{
-                        backgroundImage: `url(${props.backgroundImageUrl})`
+                        backgroundImage: `url(${backgroundImageUrl})`
                     }}
                 />
             </div>

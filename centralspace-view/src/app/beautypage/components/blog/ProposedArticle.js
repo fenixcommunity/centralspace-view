@@ -1,28 +1,22 @@
 import React from 'react'
 
 const propTypes = {
-    XXX: PropTypes.string.isRequired,
-    XXX: PropTypes.bool.isRequired,
-    XXX: PropTypes.node.isRequired,
-    XXX: PropTypes.func.isRequired,
-    cardAction: PropTypes.arrayOf(
-        PropTypes.shape({
-            XXX: PropTypes.string.isRequired,
-        })
-    ).isRequired,
+    authorAvatar: PropTypes.node.isRequired,
+    articleTitle: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired
 }
 
-const ProposedArticle = ({ }) => {
+const ProposedArticle = ({ authorAvatar, articleTitle, date }) => {
     return (
         <li>
             <a href="#!">
                 <span className="avatar-wrapper">
                     <span className="avatar">
-                        <img src={props.authorAvatar} alt="" />
+                        <img src={authorAvatar} alt="" />
                     </span>
                 </span>
-                <span className="title">{props.articleTitle}</span>
-                <span className="date">{props.date}</span>
+                <span className="title">{articleTitle}</span>
+                <span className="date">{date}</span>
             </a>
         </li>
     )
