@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function GalleryItem(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const GalleryItem = ({}) => {
     //todo required
     const image = props.image;
     return (
@@ -32,5 +45,7 @@ function GalleryItem(props) {
         </div>
     )
 }
+
+GalleryItem.propTypes = propTypes;
 
 export default GalleryItem;

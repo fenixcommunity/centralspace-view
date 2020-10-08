@@ -1,8 +1,21 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 import Icon from "../../Icon";
 
-function InputTimepicker(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputTimepicker = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
 
@@ -29,5 +42,7 @@ function InputTimepicker(props) {
         </div>
     )
 }
+
+InputTimepicker.propTypes = propTypes;
 
 export default InputTimepicker

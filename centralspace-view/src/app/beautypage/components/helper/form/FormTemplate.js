@@ -1,6 +1,18 @@
 import React from 'react'
 
-function FormTemplate(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FormTemplate = ({}) => {
     return (
         <form id={props.formId}>
             <div className="row">
@@ -18,5 +30,7 @@ function FormTemplate(props) {
         </form>
     )
 }
+
+FormTemplate.propTypes = propTypes;
 
 export default FormTemplate;

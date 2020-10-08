@@ -1,7 +1,20 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
 import loadjs from 'loadjs';
 
-function BeautypageScriptsLoader(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const BeautypageScriptsLoader = ({}) => {
     //  TODO - if only beautypage (without materializecss) than set all scripts as global(index.html)
     const basicScripts = [
         '/beautypage/js/main/materialize_v2.min.js',
@@ -36,5 +49,7 @@ function BeautypageScriptsLoader(props) {
         </>
     )
 }
+
+BeautypageScriptsLoader.propTypes = propTypes;
 
 export default BeautypageScriptsLoader;

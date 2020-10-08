@@ -2,7 +2,19 @@ import React from "react";
 import PriceInfoRecord from "./PriceInfoRecord";
 import PriceItem from "./PriceItem";
 
-function HighPricingTable(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const HighPricingTable = ({}) => {
     const animationClass = props.hasAnimation ? 'scale-in-out fade-in-out right-transform-origin' : '';
 
     const pricingTableContent = (
@@ -32,5 +44,7 @@ function HighPricingTable(props) {
             )
     );
 }
+
+HighPricingTable.propTypes = propTypes;
 
 export default HighPricingTable;

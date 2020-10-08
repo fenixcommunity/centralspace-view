@@ -4,7 +4,19 @@ import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg'
 import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 import Comment from './Comment';
 
-function CommentsSection() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const CommentsSection = ({}) => {
     return (
         <div className="container">
             <ul className="collection with-header">
@@ -31,5 +43,7 @@ function CommentsSection() {
         </div>
     )
 }
+
+CommentsSection.propTypes = propTypes;
 
 export default CommentsSection;

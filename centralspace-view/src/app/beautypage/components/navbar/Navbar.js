@@ -9,7 +9,19 @@ import NavbarPagesList from "./NavbarPagesList";
 import HamburgerMenu from "./slideout/HamburgerMenu";
 import NavbarSlideOut from "./slideout/NavbarSlideOut";
 
-function Navbar(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Navbar = ({}) => {
   const darkMode = props.isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
   const textStyle = props.isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')
@@ -37,5 +49,7 @@ function Navbar(props) {
     </>
   );
 }
+
+Navbar.propTypes = propTypes;
 
 export default Navbar;

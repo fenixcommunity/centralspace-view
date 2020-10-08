@@ -1,9 +1,22 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 import ValidateMessage from "../validation/ValidateMessage";
 import Icon from "../../Icon";
 
-function InputText(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputText = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
     const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}
@@ -62,5 +75,7 @@ function InputText(props) {
         </div>
     )
 }
+
+InputText.propTypes = propTypes;
 
 export default InputText;

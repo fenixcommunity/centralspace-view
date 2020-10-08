@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Step(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Step = ({}) => {
     const headerWaves = props.headerWaves ? "waves-effect waves-dark" : "";
     return (
         <li className={`step ${props.active ? "active" : ""}`}>
@@ -18,5 +30,7 @@ function Step(props) {
         </li>
     )
 }
+
+Step.propTypes = propTypes;
 
 export default Step;

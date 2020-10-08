@@ -1,9 +1,23 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import L from 'leaflet';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-function LeafletMap(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const LeafletMap = ({}) => {
     useEffect(() => {
         initIcons();
     }, []);
@@ -34,5 +48,7 @@ function LeafletMap(props) {
         </Map>
     );
 }
+
+LeafletMap.propTypes = propTypes;
 
 export default LeafletMap;

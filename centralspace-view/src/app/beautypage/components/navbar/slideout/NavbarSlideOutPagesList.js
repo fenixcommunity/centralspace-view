@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PagesListForDropdown from "../dropdown/PagesListForDropdown";
 
-function NavbarSlideOutPagesList() {    
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const NavbarSlideOutPagesList = ({}) => {    
     return (
         <li className="bold">
             <a className="collapsible-header waves-effect waves-teal active" href="#!">
@@ -15,5 +28,7 @@ function NavbarSlideOutPagesList() {
         </li>
     )
 }
+
+NavbarSlideOutPagesList.propTypes = propTypes;
 
 export default NavbarSlideOutPagesList;

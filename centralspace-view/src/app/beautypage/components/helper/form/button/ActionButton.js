@@ -1,7 +1,19 @@
 import React from 'react'
 import Icon from '../../Icon';
 
-function ActionButton(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const ActionButton = ({}) => {
   //todo classes -> use another way
   const classes = props.classes ? props.classes : "";
   const buttonColor = props.color ? props.color : "";
@@ -31,5 +43,7 @@ function ActionButton(props) {
     </button>
   )
 }
+
+ActionButton.propTypes = propTypes;
 
 export default ActionButton;

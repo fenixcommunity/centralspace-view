@@ -1,7 +1,19 @@
 import React from 'react'
 import ActionButton from '../../helper/form/button/ActionButton';
 
-function SearcherPopup(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const SearcherPopup = ({}) => {
     return (
         <div className="popup-search-wrapper">
             <form action="/beautypage/search" method="get" role="search">
@@ -25,5 +37,7 @@ function SearcherPopup(props) {
         </div>
     )
 }
+
+SearcherPopup.propTypes = propTypes;
 
 export default SearcherPopup;

@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Feature(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Feature = ({}) => {
     return (
         <>
             <div className={`col s12 m6 l4 ${props.animationClass}`}>
@@ -14,5 +26,7 @@ function Feature(props) {
         </>
     )
 }
+
+Feature.propTypes = propTypes;
 
 export default Feature;

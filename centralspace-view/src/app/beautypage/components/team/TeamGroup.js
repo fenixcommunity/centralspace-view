@@ -2,7 +2,19 @@ import React from 'react'
 import TeamPerson from './TeamPerson';
 import { generateKey } from '../../utils/keyGenerator';
 
-function TeamGroup(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TeamGroup = ({}) => {
     const peoples = props.peoples;
     return (
         <div className="row">
@@ -20,5 +32,7 @@ function TeamGroup(props) {
         </div>
     )
 }
+
+TeamGroup.propTypes = propTypes;
 
 export default TeamGroup;

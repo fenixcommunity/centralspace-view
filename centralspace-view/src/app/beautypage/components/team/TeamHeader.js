@@ -1,7 +1,19 @@
 import React from "react";
 import img from '../../../../resources/beautypage/images/team/office.jpg';
 
-function TeamHeader() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TeamHeader = ({}) => {
   return (
     <div className="section header white">
       <img className="background" src={img} />
@@ -20,5 +32,7 @@ function TeamHeader() {
     </div>
   );
 }
+
+TeamHeader.propTypes = propTypes;
 
 export default TeamHeader;

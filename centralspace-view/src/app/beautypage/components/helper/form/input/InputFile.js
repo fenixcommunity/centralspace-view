@@ -1,6 +1,18 @@
 import React from 'react'
 
-function FileInput(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FileInput = ({}) => {
     const multipleAttr = props.multiple ? { "multiple": true } : {}
     const placeholderAttr = props.placeholder ? { "placeholder": props.placeholder } : {}
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
@@ -17,5 +29,7 @@ function FileInput(props) {
         </div>
     )
 }
+
+FileInput.propTypes = propTypes;
 
 export default FileInput

@@ -2,7 +2,19 @@ import React from 'react'
 //todo as global css?
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
-function InputCheckbox(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputCheckbox = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const withFilledInStyle = props.withFilledInStyle ? "filled-in" : "";
 
@@ -26,5 +38,7 @@ function InputCheckbox(props) {
         </div>
     )
 }
+
+InputCheckbox.propTypes = propTypes;
 
 export default InputCheckbox

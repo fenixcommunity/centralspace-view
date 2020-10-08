@@ -1,6 +1,18 @@
 import React from 'react'
 
-function NavCategories(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const NavCategories = ({}) => {
     return (
         <nav className="nav-extended">
             <div className="categories-wrapper">
@@ -21,5 +33,7 @@ function NavCategories(props) {
         </nav>
     )
 }
+
+NavCategories.propTypes = propTypes;
 
 export default NavCategories

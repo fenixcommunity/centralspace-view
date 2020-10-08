@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function TeamPerson(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TeamPerson = ({}) => {
     return (
         <div className="col s12 m4">
         <div className="avatar-wrapper">
@@ -15,5 +28,7 @@ function TeamPerson(props) {
       </div>
     )
 }
+
+TeamPerson.propTypes = propTypes;
 
 export default TeamPerson;

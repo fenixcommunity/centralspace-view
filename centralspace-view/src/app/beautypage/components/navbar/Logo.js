@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Logo(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Logo = ({}) => {
     return (
         <>
             {props.textStyle && (
@@ -11,5 +23,7 @@ function Logo(props) {
         </>
     )
 }
+
+Logo.propTypes = propTypes;
 
 export default Logo;

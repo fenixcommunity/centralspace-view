@@ -1,7 +1,20 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 
-function Parallax(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Parallax = ({}) => {
     const parallaxRef = useRef(null);
 
     useEffect(() => {
@@ -16,5 +29,7 @@ function Parallax(props) {
       </div>
     );
 }
+
+Parallax.propTypes = propTypes;
 
 export default Parallax;

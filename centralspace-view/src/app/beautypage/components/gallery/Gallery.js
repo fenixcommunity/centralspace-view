@@ -4,7 +4,19 @@ import NavCategories from "../other/NavCategories";
 import GalleryContainer from "./GalleryContainer";
 import GalleryItems from "./GalleryItems.js"
 
-function Gallery() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Gallery = ({}) => {
 
   return (
     <>
@@ -35,5 +47,7 @@ function Gallery() {
 
   );
 }
+
+Gallery.propTypes = propTypes;
 
 export default Gallery;

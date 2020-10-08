@@ -1,8 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Divider from '../helper/Divider';
 import { getImageFromResources } from '../../utils/imageLazyFinder';
 
-function BlogSectionFooter(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const BlogSectionFooter = ({}) => {
     const author = props.authorOfArticles
     const avatar = getImageFromResources('people', author.avatar);
     return (
@@ -25,5 +38,7 @@ function BlogSectionFooter(props) {
         </div>
     )
 }
+
+BlogSectionFooter.propTypes = propTypes;
 
 export default BlogSectionFooter;

@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function FooterPages(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FooterPages = ({}) => {
     const pages = props.pages ? (
         props.pages.map(page => {
             return (
@@ -22,5 +35,7 @@ function FooterPages(props) {
         </div>
     )
 }
+
+FooterPages.propTypes = propTypes;
 
 export default FooterPages;

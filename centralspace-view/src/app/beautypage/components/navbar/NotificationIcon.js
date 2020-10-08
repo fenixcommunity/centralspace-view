@@ -1,6 +1,18 @@
 import React from 'react'
 
-function NotificationIcon(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const NotificationIcon = ({}) => {
     return (
         <>
             <li className="notification-icon">
@@ -14,5 +26,7 @@ function NotificationIcon(props) {
         </>
     )
 }
+
+NotificationIcon.propTypes = propTypes;
 
 export default NotificationIcon;

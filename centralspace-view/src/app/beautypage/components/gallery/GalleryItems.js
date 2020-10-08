@@ -8,7 +8,19 @@ import poly6 from '../../../../resources/beautypage/images/blog/poly6-560x400.jp
 import ActionButton from "../helper/form/button/ActionButton";
 import GalleryItem from "./GalleryItem";
 
-function GalleryItems() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const GalleryItems = ({}) => {
     return (
         <>
             <GalleryItem
@@ -194,5 +206,7 @@ function GalleryItems() {
         </>
     )
 }
+
+GalleryItems.propTypes = propTypes;
 
 export default GalleryItems;

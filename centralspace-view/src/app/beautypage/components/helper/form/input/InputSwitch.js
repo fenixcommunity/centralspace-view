@@ -1,6 +1,18 @@
 import React from 'react'
 
-function InputSwitch(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputSwitch = ({}) => {
     return (
         <div className="switch">
             <label>
@@ -12,5 +24,7 @@ function InputSwitch(props) {
         </div>
     )
 }
+
+InputSwitch.propTypes = propTypes;
 
 export default InputSwitch

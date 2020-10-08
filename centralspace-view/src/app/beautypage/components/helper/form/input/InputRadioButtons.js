@@ -3,7 +3,19 @@ import React from 'react'
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import { generateKey } from '../../../../utils/keyGenerator';
 
-function InputRadioButtons(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputRadioButtons = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const withGapStyle = props.withGapStyle ? "with-gap" : "";
     const options = props.options;
@@ -27,5 +39,7 @@ function InputRadioButtons(props) {
         </div>
     )
 }
+
+InputRadioButtons.propTypes = propTypes;
 
 export default InputRadioButtons

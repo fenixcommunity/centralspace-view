@@ -1,7 +1,20 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 
-function Collapsible(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Collapsible = ({}) => {
     const pulledOut = props.pulledOut;
 
     const collapsibleRef = useRef(null);
@@ -29,5 +42,7 @@ function Collapsible(props) {
 
     )
 }
+
+Collapsible.propTypes = propTypes;
 
 export default Collapsible;

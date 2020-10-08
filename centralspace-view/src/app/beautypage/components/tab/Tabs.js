@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Tabs(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Tabs = ({}) => {
     const tabs = props.tabs;
     const tabsDivision = (12 / tabs.length);
     return (
@@ -29,5 +41,7 @@ function Tabs(props) {
         </>
     )
 }
+
+Tabs.propTypes = propTypes;
 
 export default Tabs;

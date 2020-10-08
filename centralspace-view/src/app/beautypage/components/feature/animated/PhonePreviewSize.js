@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PhonePreviewSize(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PhonePreviewSize = ({}) => {
     const orientation =  props.orientation ? props.orientation + "-in-out" : "";
     return (
         <div className={`phone-preview-sizer iphone ${orientation}`}>
@@ -14,5 +26,7 @@ function PhonePreviewSize(props) {
         </div>
     )
 }
+
+PhonePreviewSize.propTypes = propTypes;
 
 export default PhonePreviewSize;

@@ -2,7 +2,19 @@ import React from "react";
 import VideoYoutube from "../other/VideoYoutube";
 import TeamSection from "./TeamSection";
 
-function Team() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Team = ({}) => {
   return (
     <>
       <VideoYoutube src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
@@ -15,5 +27,7 @@ function Team() {
     </>
   );
 }
+
+Team.propTypes = propTypes;
 
 export default Team;

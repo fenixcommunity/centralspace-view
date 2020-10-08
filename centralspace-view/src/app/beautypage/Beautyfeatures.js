@@ -1,4 +1,7 @@
 import React from "react";
+import { compose } from "recompose";
+import { connect as connectRedux } from "react-redux";
+import { withStyles } from "@material-ui/core/styles";
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import BeautypageScriptsLoader from './loader/BeautypageScriptsLoader';
@@ -13,7 +16,19 @@ import Feature3 from './components/feature/animated/Feature3';
 import Feature4 from './components/feature/animated/Feature4';
 import SliderHeader from './components/header/SliderHeader';
 
-function Beautyfeatures() {
+const propTypes = {
+
+}
+const styles = theme => ({});
+const mapStateToProps = state => ({}); // state from reducers
+const mapDispatchToProps = {}; //imported dispatchers
+const enhance = compose(
+    // withReducer({}), //actual reducer
+    connectRedux(mapStateToProps, mapDispatchToProps),
+    withStyles(styles)
+);
+
+const Beautyfeatures = ({}) => {
 
     return (
         <div>
@@ -39,4 +54,6 @@ function Beautyfeatures() {
     )
 }
 
-export default Beautyfeatures;
+Beautyfeatures.propTypes = propTypes;
+
+export default enhance(Beautyfeatures);

@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { generateKey } from '../../../../utils/keyGenerator';
 
-function TableColumn(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TableColumn = ({}) => {
     const rows = props.rows;
     return (
         <tr>
@@ -11,5 +24,7 @@ function TableColumn(props) {
         </tr>
     )
 }
+
+TableColumn.propTypes = propTypes;
 
 export default TableColumn;

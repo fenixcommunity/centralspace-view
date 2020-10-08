@@ -1,7 +1,19 @@
 import React from 'react'
 import SearcherPopup from './SearcherPopup'
 
-function Searcher(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Searcher = ({}) => {
 
     return (
         <>
@@ -30,5 +42,7 @@ function Searcher(props) {
         </>
     )
 }
+
+Searcher.propTypes = propTypes;
 
 export default Searcher;

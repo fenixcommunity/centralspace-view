@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/chips.css';
 
-function DisplayTags(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const DisplayTags = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const tags = props.tags;
 
@@ -18,5 +31,7 @@ function DisplayTags(props) {
         </div>
     )
 }
+
+DisplayTags.propTypes = propTypes;
 
 export default DisplayTags;

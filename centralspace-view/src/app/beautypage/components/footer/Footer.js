@@ -3,7 +3,19 @@ import logo from '../../../../resources/beautypage/images/materialize-teal.png';
 import FooterLogo from "./FooterLogo";
 import FooterPages from "./FooterPages";
 
-function Footer() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Footer = ({}) => {
   return (
     <footer className="page-footer">
       <div className="container">
@@ -26,5 +38,7 @@ function Footer() {
     </footer>
   );
 }
+
+Footer.propTypes = propTypes;
 
 export default Footer;

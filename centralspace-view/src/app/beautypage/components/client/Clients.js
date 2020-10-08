@@ -7,7 +7,19 @@ import pinterest from '../../../../resources/beautypage/images/clients/pinterest
 import snapchat from '../../../../resources/beautypage/images/clients/snapchat.png';
 import Client from "./Client";
 
-function Clients() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Clients = ({}) => {
   return (
     <div className="section black clients">
       <div className="container">
@@ -24,5 +36,7 @@ function Clients() {
     </div>
   );
 }
+
+Clients.propTypes = propTypes;
 
 export default Clients;

@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getImageFromResources } from '../../utils/imageLazyFinder';
 
-function BlogSectionItem(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const BlogSectionItem = ({}) => {
     const paragraphs = props.paragraphs ? props.paragraphs.map(paragraph => {
         if (typeof (paragraph.content) === 'string') {
             return (
@@ -35,5 +48,7 @@ function BlogSectionItem(props) {
         </>
     )
 }
+
+BlogSectionItem.propTypes = propTypes;
 
 export default BlogSectionItem

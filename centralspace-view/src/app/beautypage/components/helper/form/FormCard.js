@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function FormCard(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FormCard = ({}) => {
     const theme = props.theme ? props.theme : "white"
     const themeColor = props.themeColor ? props.themeColor : "blue"
 
@@ -22,5 +35,7 @@ function FormCard(props) {
         </div>
     )
 }
+
+FormCard.propTypes = propTypes;
 
 export default FormCard;

@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NavbarTooltip(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const NavbarTooltip = ({}) => {
     return (
         <li>
         <a
@@ -14,5 +27,7 @@ function NavbarTooltip(props) {
       </li>
     )
 }
+
+NavbarTooltip.propTypes = propTypes;
 
 export default NavbarTooltip;

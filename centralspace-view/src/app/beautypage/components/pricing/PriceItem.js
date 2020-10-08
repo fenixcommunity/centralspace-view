@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PriceItem(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PriceItem = ({}) => {
     return (
         <div className="pricing-header">
             <i className={props.headerIcon} />
@@ -13,5 +25,7 @@ function PriceItem(props) {
         </div>
     )
 }
+
+PriceItem.propTypes = propTypes;
 
 export default PriceItem;

@@ -1,6 +1,18 @@
 import React from 'react'
 
-function BasicSection(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const BasicSection = ({}) => {
     //todo create wrapper component
     const largeSection = props.large ? "section-large-size" : "";
 
@@ -12,5 +24,7 @@ function BasicSection(props) {
         </div >
     )
 }
+
+BasicSection.propTypes = propTypes;
 
 export default BasicSection

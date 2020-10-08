@@ -1,9 +1,22 @@
 import React, { useEffect, useRef, useCallback } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../../resources/beautypage/css/datatimepicker.css';
 import Icon from "../../Icon";
 
-function InputDatepicker(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputDatepicker = ({}) => {
     const datepickerRef = useRef(null);
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
@@ -42,5 +55,7 @@ function InputDatepicker(props) {
         </div>
     )
 }
+
+InputDatepicker.propTypes = propTypes;
 
 export default InputDatepicker

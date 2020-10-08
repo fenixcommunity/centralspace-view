@@ -1,7 +1,20 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 
-function Modal(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Modal = ({}) => {
     const modalRef = useRef(null);
     const modalBottom = props.modalBottom;
 
@@ -27,5 +40,7 @@ function Modal(props) {
 </div>
     )
 }
+
+Modal.propTypes = propTypes;
 
 export default Modal;

@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PagesListForDropdown(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PagesListForDropdown = ({}) => {
     const wavesEffect = props.waves ? "waves-effect waves-teal" : ""
     return (
         <>
@@ -16,5 +28,7 @@ function PagesListForDropdown(props) {
         </>
     )
 }
+
+PagesListForDropdown.propTypes = propTypes;
 
 export default PagesListForDropdown;

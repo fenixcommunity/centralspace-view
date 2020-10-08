@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function HamburgerMenu(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const HamburgerMenu = ({}) => {
     return (
         <a
             href="#!"
@@ -12,5 +25,7 @@ function HamburgerMenu(props) {
         </a>
     )
 }
+
+HamburgerMenu.propTypes = propTypes;
 
 export default HamburgerMenu;

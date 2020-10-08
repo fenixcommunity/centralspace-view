@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PriceInfoRecord(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PriceInfoRecord = ({}) => {
     const recordClass = props.disabled ? "disabled" : ""
     const recordIcon = props.disabled ? "icon-close" : "icon-accept"
     return (
@@ -10,5 +22,7 @@ function PriceInfoRecord(props) {
         </li>
     )
 }
+
+PriceInfoRecord.propTypes = propTypes;
 
 export default PriceInfoRecord

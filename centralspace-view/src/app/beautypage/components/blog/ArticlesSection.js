@@ -3,7 +3,19 @@ import poly1 from '../../../../resources/beautypage/images/blog/poly1.jpg';
 import poly2 from '../../../../resources/beautypage/images/blog/poly2.jpg';
 import ArticleCard from './ArticleCard';
 
-function ArticlesSection(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const ArticlesSection = ({}) => {
     return (
         <div className="container">
             <h4>Articles</h4>
@@ -40,5 +52,7 @@ function ArticlesSection(props) {
         </div>
     )
 }
+
+ArticlesSection.propTypes = propTypes;
 
 export default ArticlesSection;

@@ -1,10 +1,23 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 import { generateKey } from '../../../../utils/keyGenerator';
 import Icon from "../../Icon";
 
-function InputSelect(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputSelect = ({}) => {
     const defaultValue = props.defaultValue ? props.defaultValue : 0;
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const multipleAttr = props.multiple ? { "multiple": true } : {}
@@ -55,5 +68,7 @@ function InputSelect(props) {
         </div>
     )
 }
+
+InputSelect.propTypes = propTypes;
 
 export default InputSelect;

@@ -1,8 +1,21 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.js';
 import PagesListForDropdown from "./dropdown/PagesListForDropdown";
 
-function PagesDropdown() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PagesDropdown = ({}) => {
     const dropdownRef = useRef(null);
     useEffect(() => {
         M.Dropdown.init(dropdownRef.current, {});
@@ -30,5 +43,7 @@ function PagesDropdown() {
         </>
     )
 }
+
+PagesDropdown.propTypes = propTypes;
 
 export default PagesDropdown;

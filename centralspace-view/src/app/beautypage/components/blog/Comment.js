@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Comment(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Comment = ({}) => {
     const rightIcon = props.rightIcon;
     return (
         <li className="collection-item avatar">
@@ -21,5 +33,7 @@ function Comment(props) {
         </li>
     )
 }
+
+Comment.propTypes = propTypes;
 
 export default Comment;

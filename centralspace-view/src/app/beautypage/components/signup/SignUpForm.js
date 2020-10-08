@@ -7,7 +7,19 @@ import ActionButton from "../helper/form/button/ActionButton";
 import FormTemplate from "../helper/form/FormTemplate";
 import BasicSection from "../helper/section/BasicSection";
 
-function SignUpForm() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const SignUpForm = ({}) => {
 
   const formContent = (
     <>
@@ -57,5 +69,7 @@ function SignUpForm() {
     />
   )
 }
+
+SignUpForm.propTypes = propTypes;
 
 export default SignUpForm;

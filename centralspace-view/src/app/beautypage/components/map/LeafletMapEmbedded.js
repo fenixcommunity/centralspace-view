@@ -25,4 +25,6 @@ class LeafletMapEmbedded extends React.Component {
   }
 }
 
+LeafletMapEmbedded.propTypes = propTypes;
+
 export default LeafletMapEmbedded;

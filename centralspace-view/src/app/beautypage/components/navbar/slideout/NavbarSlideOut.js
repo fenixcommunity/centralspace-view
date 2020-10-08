@@ -5,7 +5,19 @@ import NavbarSlideOutHeader from "./NavbarSlideOutHeader";
 import NavbarSlideOutPagesList from "./NavbarSlideOutPagesList";
 import NavbarSlideOutFooter from "./NavbarSlideOutFooter";
 
-function NavbarSlideOut() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const NavbarSlideOut = ({}) => {
   return (
     <ul id="slide-out" className="side-nav sidenav-helper">
       <li className="no-padding">
@@ -21,5 +33,7 @@ function NavbarSlideOut() {
 
   );
 }
+
+NavbarSlideOut.propTypes = propTypes;
 
 export default NavbarSlideOut;

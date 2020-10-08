@@ -5,7 +5,19 @@ import FullHeightSection from "../../helper/section/FullHeightSection";
 import FeatureFadeRightInOut from "./FeatureFadeRightInOut";
 import ImagePair from "./ImagePair";
 
-function Feature3() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Feature3 = ({}) => {
   const content = (
     <div className="row valign-wrapper">
       <div className="col s12 m4">
@@ -37,5 +49,7 @@ function Feature3() {
     />
   );
 }
+
+Feature3.propTypes = propTypes;
 
 export default Feature3;

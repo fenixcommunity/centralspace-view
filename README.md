@@ -91,6 +91,8 @@ Env:
 - Cloud Firestore
 - Eslint formating
 - Express vs Axios
+- npm i recompose
+- npm i redux
 
 Shortcut:
 shift + alt + down arrow

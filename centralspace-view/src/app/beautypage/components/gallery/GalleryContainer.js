@@ -1,6 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function GalleryContainer(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const GalleryContainer = ({}) => {
     return (
         <div id="portfolio">
             <div className="container">
@@ -11,5 +24,7 @@ function GalleryContainer(props) {
         </div>
     )
 }
+
+GalleryContainer.propTypes = propTypes;
 
 export default GalleryContainer

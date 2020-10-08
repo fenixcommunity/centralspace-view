@@ -3,7 +3,19 @@ import LowPricingTable from "./LowPricingTable";
 import MediumPricingTable from "./MediumPricingTable";
 import HighPricingTable from "./HighPricingTable";
 
-function PricingTables(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PricingTables = ({}) => {
 
   const pricingTablesBody = (
     <div className="row">
@@ -39,5 +51,7 @@ function PricingTables(props) {
     </div>
   );
 }
+
+PricingTables.propTypes = propTypes;
 
 export default PricingTables;

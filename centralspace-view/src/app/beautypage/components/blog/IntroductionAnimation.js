@@ -1,6 +1,18 @@
 import React from "react";
 
-function IntroductionAnimation(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const IntroductionAnimation = ({}) => {
   return (
     <div className="title-transition section white valign-wrapper">
       <div className="row valign">
@@ -12,5 +24,7 @@ function IntroductionAnimation(props) {
     </div>
   );
 }
+
+IntroductionAnimation.propTypes = propTypes;
 
 export default IntroductionAnimation;

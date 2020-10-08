@@ -1,6 +1,18 @@
 import React from 'react'
 
-function ImagePair(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const ImagePair = ({}) => {
     return (
         <div className="device-pair">
             <div className="tablet-preview-sizer">
@@ -24,5 +36,7 @@ function ImagePair(props) {
         </div>
     )
 }
+
+ImagePair.propTypes = propTypes;
 
 export default ImagePair

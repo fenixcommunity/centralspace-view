@@ -5,7 +5,19 @@ import InputRadioButtons from "../helper/form/input/InputRadioButtons";
 import FormTemplate from "../helper/form/FormTemplate";
 import BasicSection from "../helper/section/BasicSection";
 
-function ContactUs() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const ContactUs = ({}) => {
   const handleInputRadioChange = () => {
     console.log("handleInputRadioChange");
   }
@@ -63,5 +75,7 @@ function ContactUs() {
     />
   )
 }
+
+ContactUs.propTypes = propTypes;
 
 export default ContactUs;

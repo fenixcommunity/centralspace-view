@@ -1,10 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TeamGroup from "./TeamGroup";
 import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg';
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
 import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg';
 
-function TeamSection() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TeamSection = ({}) => {
     return (
         <div className="section white full-height">
         <div className="row valign">
@@ -44,5 +57,7 @@ function TeamSection() {
       </div>
     )
 }
+
+TeamSection.propTypes = propTypes;
 
 export default TeamSection;

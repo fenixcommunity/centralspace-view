@@ -1,4 +1,7 @@
 import React from "react";
+import { compose } from "recompose";
+import { connect as connectRedux } from "react-redux";
+import { withStyles } from "@material-ui/core/styles";
 import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
@@ -15,7 +18,17 @@ import LeafletMapEmbedded from './components/map/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/footer/Footer';
 
-function Beautypage() {
+const propTypes = {}
+const styles = theme => ({});
+const mapStateToProps = state => ({}); // state from reducers
+const mapDispatchToProps = {}; //imported dispatchers
+const enhance = compose(
+    // withReducer({}), //actual reducer
+    connectRedux(mapStateToProps, mapDispatchToProps),
+    withStyles(styles)
+);
+
+const Beautypage = ({}) => {
 
 // pisz tak jak w revamipie?
 // dodaj required props https://stackoverflow.com/questions/45288511/set-required-props-on-component
@@ -45,4 +58,6 @@ function Beautypage() {
     )
 }
 
-export default Beautypage;
+Beautypage.propTypes = propTypes;
+
+export default enhance(Beautypage);

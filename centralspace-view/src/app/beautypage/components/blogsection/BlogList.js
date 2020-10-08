@@ -7,7 +7,19 @@ import poly5 from '../../../../resources/beautypage/images/blog/poly5.jpg';
 import poly6 from '../../../../resources/beautypage/images/blog/poly6.jpg';
 import BlogItem from "./BlogItem";
 
-function BlogList(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const BlogList = ({}) => {
     const hasAnimation = props.hasAnimation;
     const hasAnimationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
     const animationDataDuration = hasAnimation ? 0 : 'none';
@@ -53,5 +65,7 @@ function BlogList(props) {
         </>
     );
 }
+
+BlogList.propTypes = propTypes;
 
 export default BlogList;

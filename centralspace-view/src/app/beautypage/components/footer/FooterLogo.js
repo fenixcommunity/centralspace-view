@@ -1,6 +1,18 @@
 import React from 'react'
 
-function FooterLogo(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FooterLogo = ({}) => {
     return (
         <div className="col s6 m3">
         <img
@@ -12,5 +24,7 @@ function FooterLogo(props) {
       </div>
     )
 }
+
+FooterLogo.propTypes = propTypes;
 
 export default FooterLogo;

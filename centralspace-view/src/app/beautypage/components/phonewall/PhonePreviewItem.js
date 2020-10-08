@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PhonePreviewItem(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PhonePreviewItem = ({}) => {
     return (
         <div className="phone-preview-sizer">
             <div className="phone-preview" />
@@ -13,5 +25,7 @@ function PhonePreviewItem(props) {
         </div>
     )
 }
+
+PhonePreviewItem.propTypes = propTypes;
 
 export default PhonePreviewItem

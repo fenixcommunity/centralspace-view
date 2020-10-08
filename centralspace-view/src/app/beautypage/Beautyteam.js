@@ -1,4 +1,7 @@
 import React from "react";
+import { compose } from "recompose";
+import { connect as connectRedux } from "react-redux";
+import { withStyles } from "@material-ui/core/styles";
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import headerImg from '../../resources/beautypage/images/team/office.jpg';
@@ -8,7 +11,30 @@ import Footer from './components/footer/Footer';
 import Team from './components/team/Team';
 import Header from "./components/header/Header";
 
-function Beautyteam() {
+const propTypes = {}
+const styles = theme => ({});
+const mapStateToProps = state => ({}); // state from reducers
+const mapDispatchToProps = {}; //imported dispatchers
+const enhance = compose(
+    // withReducer({}), //actual reducer
+    connectRedux(mapStateToProps, mapDispatchToProps),
+    withStyles(styles)
+);
+
+
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Beautyteam = ({}) => {
 
     return (
         <div>
@@ -31,4 +57,6 @@ function Beautyteam() {
     )
 }
 
-export default Beautyteam;
+Beautyteam.propTypes = propTypes;
+
+export default enhance(Beautyteam);

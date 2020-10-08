@@ -4,7 +4,19 @@ import FullHeightSection from "../../helper/section/FullHeightSection";
 import PerspectiveWrapper from "./PerspectiveWrapper";
 import PhonePreview from "./PhonePreview";
 
-function Feature1() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Feature1 = ({}) => {
   const basicMessage = (
     <p>
       Locavore drinking vinegar quinoa seitan church-key, tilde
@@ -51,5 +63,7 @@ function Feature1() {
     />
   );
 }
+
+Feature1.propTypes = propTypes;
 
 export default Feature1;

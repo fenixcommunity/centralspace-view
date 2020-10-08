@@ -1,7 +1,19 @@
 import React from "react";
 import Feature from "./Feature";
 
-function FeaturesBody(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const FeaturesBody = ({}) => {
     const hasAnimation = props.hasAnimation;
     const animationClass = hasAnimation ? 'fade-in-out' : '';
 
@@ -53,5 +65,7 @@ function FeaturesBody(props) {
         </>
     );
 }
+
+FeaturesBody.propTypes = propTypes;
 
 export default FeaturesBody;

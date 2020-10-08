@@ -2,7 +2,19 @@ import React from 'react'
 import backgroundStars from '../../../../resources/beautypage/images/backgroundStars.jpg';
 import Slider from './Slider';
 
-function SliderSection() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const SliderSection = ({}) => {
     return (
         <div className="slider fullscreen">
             <ul className="slides">
@@ -28,5 +40,7 @@ function SliderSection() {
         </div>
     )
 }
+
+SliderSection.propTypes = propTypes;
 
 export default SliderSection;

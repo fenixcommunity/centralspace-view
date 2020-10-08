@@ -1,6 +1,18 @@
 import React from 'react'
 
-function ProposedArticle(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const ProposedArticle = ({}) => {
     return (
         <li>
             <a href="#!">
@@ -15,5 +27,7 @@ function ProposedArticle(props) {
         </li>
     )
 }
+
+ProposedArticle.propTypes = propTypes;
 
 export default ProposedArticle;

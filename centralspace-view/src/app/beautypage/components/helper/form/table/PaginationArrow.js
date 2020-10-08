@@ -1,6 +1,18 @@
 import React from 'react'
 
-function PaginationArrow(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PaginationArrow = ({}) => {
     const arrow = props.arrow;
     return (
         <li className={`${arrow.disabled ? "disabled" : ""}`}>
@@ -8,5 +20,7 @@ function PaginationArrow(props) {
         </li>
     )
 }
+
+PaginationArrow.propTypes = propTypes;
 
 export default PaginationArrow

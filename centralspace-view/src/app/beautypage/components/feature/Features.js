@@ -1,7 +1,19 @@
 import React from "react";
 import FeaturesBody from "./FeaturesBody";
 
-function Features(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Features = ({}) => {
   const isExtended = props.isExtended;
 
   const featuresTitle = (
@@ -35,5 +47,7 @@ function Features(props) {
     </div>
   );
 }
+
+Features.propTypes = propTypes;
 
 export default Features;

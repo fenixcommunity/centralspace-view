@@ -2,7 +2,19 @@ import React from "react";
 import DividedSection from "../helper/section/DividedSection";
 import Tabs from "../tab/Tabs";
 
-function TabsSection() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const TabsSection = ({}) => {
 
   return (
     <DividedSection
@@ -56,5 +68,7 @@ function TabsSection() {
     />
   );
 }
+
+TabsSection.propTypes = propTypes;
 
 export default TabsSection;

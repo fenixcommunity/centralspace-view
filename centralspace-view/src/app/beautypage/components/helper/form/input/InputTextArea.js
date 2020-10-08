@@ -2,7 +2,19 @@ import React from 'react'
 import Icon from '../../Icon';
 import ValidateMessage from '../validation/ValidateMessage';
 
-function InputTextArea(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputTextArea = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
     const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}
@@ -26,5 +38,7 @@ function InputTextArea(props) {
         </div>
     )
 }
+
+InputTextArea.propTypes = propTypes;
 
 export default InputTextArea;

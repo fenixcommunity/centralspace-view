@@ -1,8 +1,21 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/chips.css';
 import M from 'materialize-css/dist/js/materialize.js';
 
-function InputTags(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const InputTags = ({}) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const initialTagsClass = props.initial ? "chips-initial" : "";
     const autocompleteTagsClass = props.autocomplete ? "chips-autocomplete" : "";
@@ -23,5 +36,7 @@ function InputTags(props) {
         </div>
     )
 }
+
+InputTags.propTypes = propTypes;
 
 export default InputTags

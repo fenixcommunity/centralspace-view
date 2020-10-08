@@ -7,7 +7,19 @@ import poly5 from '../../../../resources/beautypage/images/blog/poly5.jpg';
 import poly6 from '../../../../resources/beautypage/images/blog/poly6.jpg';
 import PhonePreviewItem from './PhonePreviewItem';
 
-function PhoneWallImages() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const PhoneWallImages = ({}) => {
     //todo loop
     return (
         <div className="col s12 m10 offset-m1 column-wrapper">
@@ -49,5 +61,7 @@ function PhoneWallImages() {
       </div>
     )
 }
+
+PhoneWallImages.propTypes = propTypes;
 
 export default PhoneWallImages

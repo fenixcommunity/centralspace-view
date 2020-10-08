@@ -1,7 +1,19 @@
 import React from "react";
 import BlogList from './BlogList';
 
-function BlogSection(props) {
+const propTypes = {
+  XXX: PropTypes.string.isRequired,
+  XXX: PropTypes.bool.isRequired,
+  XXX: PropTypes.node.isRequired,
+  XXX: PropTypes.func.isRequired,
+  cardAction: PropTypes.arrayOf(
+      PropTypes.shape({
+          XXX: PropTypes.string.isRequired,
+      })
+  ).isRequired,
+}
+
+const BlogSection = ({}) => {
   const isExtended = props.isExtended;
 
   const blogContent = isExtended ? (
@@ -26,5 +38,7 @@ function BlogSection(props) {
     </div>
   );
 }
+
+BlogSection.propTypes = propTypes;
 
 export default BlogSection;

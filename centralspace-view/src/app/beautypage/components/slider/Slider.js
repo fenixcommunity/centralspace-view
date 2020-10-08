@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Slider(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Slider = ({}) => {
     return (
         <li>
             <img src={props.background}  alt="description"/>
@@ -16,5 +28,7 @@ function Slider(props) {
         </li>
     )
 }
+
+Slider.propTypes = propTypes;
 
 export default Slider;

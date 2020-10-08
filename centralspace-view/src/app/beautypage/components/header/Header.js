@@ -1,6 +1,18 @@
 import React from "react";
 
-function Header(props) {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Header = ({}) => {
     const blackTheme = props.hasBlackTheme;
     const headerWithOffset = props.headerWithOffset ? "col s12 m6 offset-m3 valign" : "col s12"
 
@@ -21,5 +33,7 @@ function Header(props) {
         </div>
     );
 }
+
+Header.propTypes = propTypes;
 
 export default Header;

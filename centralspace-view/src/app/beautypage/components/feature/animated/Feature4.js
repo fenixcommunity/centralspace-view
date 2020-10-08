@@ -8,7 +8,19 @@ import poly4 from '../../../../../resources/beautypage/images/blog/poly4.jpg';
 import poly5 from '../../../../../resources/beautypage/images/blog/poly5.jpg';
 import CarouselItem from "./CarouselItem";
 
-function Feature4() {
+const propTypes = {
+    XXX: PropTypes.string.isRequired,
+    XXX: PropTypes.bool.isRequired,
+    XXX: PropTypes.node.isRequired,
+    XXX: PropTypes.func.isRequired,
+    cardAction: PropTypes.arrayOf(
+        PropTypes.shape({
+            XXX: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
+
+const Feature4 = ({}) => {
     return (
         <div className="container">
             <div className="carousel">
@@ -21,5 +33,7 @@ function Feature4() {
         </div >
     );
 }
+
+Feature4.propTypes = propTypes;
 
 export default Feature4;
