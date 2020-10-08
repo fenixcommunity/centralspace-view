@@ -29,6 +29,9 @@ const enhance = compose(
 );
 
 const Beautypage = ({ }) => {
+
+    sprawdz required errory
+
     return (
         <div>
             <Navbar

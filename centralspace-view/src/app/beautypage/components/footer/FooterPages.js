@@ -12,7 +12,7 @@ const propTypes = {
 }
 
 const FooterPages = ({ pages, sectionName }) => {
-    const pages = pages ? (
+    const pagesToRender = pages ? (
         pages.map(page => {
             return (
                 <li key={page.name}>
@@ -24,9 +24,9 @@ const FooterPages = ({ pages, sectionName }) => {
     return (
         <div className="col s6 m3">
             <h5>{sectionName}</h5>
-            {pages && (
+            {pagesToRender && (
                 <ul>
-                    {pages}
+                    {pagesToRender}
                 </ul>
             )}
 

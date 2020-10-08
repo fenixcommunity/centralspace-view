@@ -21,7 +21,7 @@ const propTypes = {
 
 const InputRadioButtons = ({ groupName, headerText, isDuplicated, withGapStyle, onChange, options }) => {
     const duplicatedClass = isDuplicated ? "s6" : "s12"
-    const withGapStyle = withGapStyle ? "with-gap" : "";
+    const withGapStyleClass = withGapStyle ? "with-gap" : "";
 
     return (
         <div className={`${duplicatedClass}`}>
@@ -31,7 +31,7 @@ const InputRadioButtons = ({ groupName, headerText, isDuplicated, withGapStyle, 
                     <p key={generateKey(option.label)}>
                         <label className="radio-label">
                             <input name={groupName} type="radio"
-                                className={`${withGapStyle}`}
+                                className={`${withGapStyleClass}`}
                                 disabled={option.disabled} defaultChecked={option.checked}
                                 onChange={onChange} />
                             <span>{option.label}</span>

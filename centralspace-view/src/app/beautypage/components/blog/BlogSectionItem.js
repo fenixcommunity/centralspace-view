@@ -14,7 +14,7 @@ const propTypes = {
 }
 
 const BlogSectionItem = ({ paragraphs, hasZoom, sectionHeader }) => {
-    const paragraphs = paragraphs ? paragraphs.map(paragraph => {
+    const paragraphsToRender = paragraphs ? paragraphs.map(paragraph => {
         if (typeof (paragraph.content) === 'string') {
             return (
                 <p key={paragraph.id}>{paragraph.content}</p>
@@ -43,7 +43,7 @@ const BlogSectionItem = ({ paragraphs, hasZoom, sectionHeader }) => {
             <h4>
                 {sectionHeader}
             </h4>
-            {paragraphs}
+            {paragraphsToRender}
         </>
     )
 }

@@ -6,6 +6,7 @@ import { generateKey } from '../../../../utils/keyGenerator';
 import Icon from "../../Icon";
 
 const propTypes = {
+    label: PropTypes.string,
     headerText: PropTypes.string,
     icon: PropTypes.string,
     iconColor: PropTypes.string,
@@ -31,8 +32,8 @@ const propTypes = {
     )
 }
 
-const InputSelect = ({ headerText, icon, iconColor, id, defaultValue, isDuplicated, multiple, disabled, properties, options, optionGroups }) => {
-    const defaultValue = defaultValue ? defaultValue : 0;
+const InputSelect = ({ label, headerText, icon, iconColor, id, defaultValue, isDuplicated, multiple, disabled, properties, options, optionGroups }) => {
+    const defaultVal = defaultValue ? defaultValue : 0;
     const duplicatedClass = isDuplicated ? "s6" : "s12"
     const multipleAttr = multiple ? { "multiple": true } : {}
 
@@ -46,7 +47,7 @@ const InputSelect = ({ headerText, icon, iconColor, id, defaultValue, isDuplicat
             {headerText && (<p>{headerText}</p>)} {/* or <label>Options Select</label> */}
             {icon && <Icon icon={icon} iconColor={iconColor} />}
             <select id={id} name="optionselect" disabled={disabled}
-                ref={optionSelectRef} defaultValue={defaultValue} {...multipleAttr}>
+                ref={optionSelectRef} defaultValue={defaultVal} {...multipleAttr}>
                 {!optionGroups ?
                     (
                         <>

@@ -15,8 +15,6 @@ const propTypes = {
 }
 
 const Collapsible = ({ items, pulledOut }) => {
-    const pulledOut = pulledOut;
-
     const collapsibleRef = useRef(null);
     const collapsiblePopupRef = useRef(null);
 

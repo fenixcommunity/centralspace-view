@@ -7,9 +7,9 @@ const propTypes = {
 }
 
 const PhonePreviewSize = ({ backgroundImageUrl, orientation }) => {
-    const orientation = orientation ? orientation + "-in-out" : "";
+    const orientationClass = orientation ? orientation + "-in-out" : "";
     return (
-        <div className={`phone-preview-sizer iphone ${orientation}`}>
+        <div className={`phone-preview-sizer iphone ${orientationClass}`}>
             <div className="phone-preview" />
             <div
                 className="image-container default"

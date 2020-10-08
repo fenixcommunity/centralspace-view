@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
     title: PropTypes.string.isRequired,
-    content: PropTypes.node.isRequired
+    content: PropTypes.node.isRequired,
     leftOrientation: PropTypes.bool
 }
 

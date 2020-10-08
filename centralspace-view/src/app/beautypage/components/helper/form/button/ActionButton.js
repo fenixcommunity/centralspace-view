@@ -23,27 +23,26 @@ const propTypes = {
 }
 
 const ActionButton = ({
-  id, label, classes, icon, iconColor, iconPossition, color, reference, type, classes, disabled, buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
+  id, label, classes, icon, iconColor, iconPossition, color, reference, type, disabled, buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
 }) => {
   //todo classes -> use another way
-  const classes = classes ? classes : "";
+  const classesNames = classes ? classes : "";
   const buttonColor = color ? color : "";
-  const reference = reference ? reference : "#";
+  const hreference = reference ? reference : "#";
   const buttonType = type ? type : "button";
-  const buttonLarge = buttonLarge ? "btn-large" : "";
-  const buttonFloating = buttonFloating ? "btn-floating" : "";
-  const buttonFlat = buttonFlat ? "-flat" : "";
+  const buttonLargeClass = buttonLarge ? "btn-large" : "";
+  const buttonFloatingClass  = buttonFloating ? "btn-floating" : "";
+  const buttonFlatClass  = buttonFlat ? "-flat" : "";
   const wavesEffect = hasWaves ? "waves-effect waves-light" : "";
-  const pulseEffect = pulseEffect ? "pulse" : "";
+  const pulseEffectClass = pulseEffect ? "pulse" : "";
 
-  const actions = actions;
   const onClickActionAttr = actions && actions.onClick ? { "onClick": actions.onClick } : {}
 
   return (
     <button
       id={id}
-      href={reference}
-      className={`btn${buttonFlat} ${wavesEffect} ${pulseEffect} ${buttonColor} ${buttonLarge} ${buttonFloating} ${classes}`}
+      href={hreference}
+      className={`btn${buttonFlatClass} ${wavesEffect} ${pulseEffectClass} ${buttonColor} ${buttonLargeClass} ${buttonFloatingClass} ${classesNames}`}
       type={buttonType}
       name={label}
       disabled={disabled}

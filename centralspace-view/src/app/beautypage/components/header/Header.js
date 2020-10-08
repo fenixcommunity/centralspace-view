@@ -9,7 +9,7 @@ const propTypes = {
     headerImg: PropTypes.node.isRequired
 }
 
-const Header = ({ headerMessage, headerSentence, hasBlackTheme, headerImg }) => {
+const Header = ({ headerMessage, headerSentence, hasBlackTheme, headerWithOffset, headerImg }) => {
     const blackTheme = hasBlackTheme;
     const headerWithOffsetClass = headerWithOffset ? "col s12 m6 offset-m3 valign" : "col s12"
 

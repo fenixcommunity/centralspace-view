@@ -11,13 +11,13 @@ const propTypes = {
 }
 
 const FormCard = ({ theme, themeColor, header, content, onSubmit, footerActions }) => {
-    const theme = theme ? theme : "white"
-    const themeColor = themeColor ? themeColor : "blue"
+    const themeClass = theme ? theme : "white"
+    const themeColorClass = themeColor ? themeColor : "blue"
 
     return (
         <div className="row">
             <div className="col l6 m10 s12 offset-l3 offset-m1">
-                {header && (<h3 className={`center-align ${theme} ${themeColor}-text`}>{header}</h3>)}
+                {header && (<h3 className={`center-align ${themeClass} ${themeColorClass}-text`}>{header}</h3>)}
                 <div className="card">
                     <div className="card-content">
                         <form onSubmit={onSubmit}>

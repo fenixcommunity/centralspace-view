@@ -11,7 +11,6 @@ const propTypes = {
 
 const Modal = ({ title, modalBottom, content, modalActions }) => {
     const modalRef = useRef(null);
-    const modalBottom = modalBottom;
 
     useEffect(() => {
         M.Modal.init(modalRef.current, {});

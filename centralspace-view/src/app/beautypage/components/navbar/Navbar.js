@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import '../../../../resources/gallery/css/full-search.css';
 import Searcher from './searcher/Searcher';
 import Logo from "./Logo";
@@ -13,10 +14,11 @@ const propTypes = {
   isDarkMode: PropTypes.bool,
   isPrimaryColor: PropTypes.bool,
   basicSearchIsActive: PropTypes.bool,
-  fullScreenSearchIsActive: PropTypes.bool
+  fullScreenSearchIsActive: PropTypes.bool,
+  isNavbarSolidTransition: PropTypes.bool
 }
 
-const Navbar = ({ isDarkMode, isPrimaryColor, basicSearchIsActive, fullScreenSearchIsActive }) => {
+const Navbar = ({ isDarkMode, isPrimaryColor, basicSearchIsActive, fullScreenSearchIsActive, isNavbarSolidTransition }) => {
   const darkMode = isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
   const textStyle = isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')

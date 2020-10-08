@@ -17,7 +17,6 @@ const propTypes = {
 const InputDatepicker = ({ id, label, icon, iconColor, settings, validate, isDuplicated }) => {
     const datepickerRef = useRef(null);
     const duplicatedClass = isDuplicated ? "s6" : "s12"
-    const validate = validate;
 
     const initCalendarDefault = useCallback(() => {
         return M.Datepicker.init(datepickerRef.current,

@@ -6,7 +6,7 @@ const propTypes = {
     content: PropTypes.node.isRequired
 }
 
-const FeatureFadeRightInOut = ({ }) => {
+const FeatureFadeRightInOut = ({ title, content }) => {
     return (
         <div className="feature fade-right-in-out">
             <h3>{title}</h3>

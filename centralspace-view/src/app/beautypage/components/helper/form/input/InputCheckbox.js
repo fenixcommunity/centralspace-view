@@ -17,7 +17,7 @@ const propTypes = {
 
 const InputCheckbox = ({ name, label, headerText, value, isDuplicated, withFilledInStyle, checked, disabled, onChange }) => {
     const duplicatedClass = isDuplicated ? "s6" : "s12"
-    const withFilledInStyle = withFilledInStyle ? "filled-in" : "";
+    const withFilledInStyleClass = withFilledInStyle ? "filled-in" : "";
 
     return (
         <div className={`${duplicatedClass}`}>
@@ -28,7 +28,7 @@ const InputCheckbox = ({ name, label, headerText, value, isDuplicated, withFille
                         type="checkbox"
                         name={name}
                         defaultValue={value}
-                        className={`${withFilledInStyle}`}
+                        className={`${withFilledInStyleClass}`}
                         defaultChecked={checked}
                         disabled={disabled}
                         onChange={onChange}
