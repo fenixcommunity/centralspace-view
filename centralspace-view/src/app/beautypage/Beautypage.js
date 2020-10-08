@@ -28,11 +28,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautypage = ({}) => {
-
-// pisz tak jak w revamipie?
-// dodaj required props https://stackoverflow.com/questions/45288511/set-required-props-on-component
-
+const Beautypage = ({ }) => {
     return (
         <div>
             <Navbar

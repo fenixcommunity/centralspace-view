@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Footer = ({}) => {
+const Footer = ({ }) => {
   return (
     <footer className="page-footer">
       <div className="container">

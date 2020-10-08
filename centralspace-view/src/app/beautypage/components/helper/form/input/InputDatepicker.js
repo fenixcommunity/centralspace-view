@@ -16,7 +16,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputDatepicker = ({}) => {
+const InputDatepicker = ({ }) => {
     const datepickerRef = useRef(null);
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;

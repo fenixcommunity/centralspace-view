@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FooterPages = ({}) => {
+const FooterPages = ({ }) => {
     const pages = props.pages ? (
         props.pages.map(page => {
             return (

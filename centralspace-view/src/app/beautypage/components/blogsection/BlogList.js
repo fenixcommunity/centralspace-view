@@ -19,7 +19,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BlogList = ({}) => {
+const BlogList = ({ }) => {
     const hasAnimation = props.hasAnimation;
     const hasAnimationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
     const animationDataDuration = hasAnimation ? 0 : 'none';

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputTextArea = ({}) => {
+const InputTextArea = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const defaultValueAttr = props.defaultValue ? { "defaultValue": props.defaultValue } : {}
     const autoCompleteAttr = props.autocomplete === false ? { "autoComplete": "off" } : {}

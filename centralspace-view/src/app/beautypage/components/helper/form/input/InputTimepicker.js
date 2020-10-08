@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputTimepicker = ({}) => {
+const InputTimepicker = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const validate = props.validate;
 

@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PricingTables = ({}) => {
+const PricingTables = ({ }) => {
 
   const pricingTablesBody = (
     <div className="row">

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const HighPricingTable = ({}) => {
+const HighPricingTable = ({ }) => {
     const animationClass = props.hasAnimation ? 'scale-in-out fade-in-out right-transform-origin' : '';
 
     const pricingTableContent = (

@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TeamHeader = ({}) => {
+const TeamHeader = ({ }) => {
   return (
     <div className="section header white">
       <img className="background" src={img} />

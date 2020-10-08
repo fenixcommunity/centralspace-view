@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Features = ({}) => {
+const Features = ({ }) => {
   const isExtended = props.isExtended;
 
   const featuresTitle = (

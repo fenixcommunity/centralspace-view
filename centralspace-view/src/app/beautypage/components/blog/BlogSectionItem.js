@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BlogSectionItem = ({}) => {
+const BlogSectionItem = ({ }) => {
     const paragraphs = props.paragraphs ? props.paragraphs.map(paragraph => {
         if (typeof (paragraph.content) === 'string') {
             return (

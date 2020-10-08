@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BlogSectionFooter = ({}) => {
+const BlogSectionFooter = ({ }) => {
     const author = props.authorOfArticles
     const avatar = getImageFromResources('people', author.avatar);
     return (

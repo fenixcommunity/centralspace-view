@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Comment = ({}) => {
+const Comment = ({ }) => {
     const rightIcon = props.rightIcon;
     return (
         <li className="collection-item avatar">

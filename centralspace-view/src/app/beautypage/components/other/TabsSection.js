@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TabsSection = ({}) => {
+const TabsSection = ({ }) => {
 
   return (
     <DividedSection

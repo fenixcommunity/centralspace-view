@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BasicSection = ({}) => {
+const BasicSection = ({ }) => {
     //todo create wrapper component
     const largeSection = props.large ? "section-large-size" : "";
 

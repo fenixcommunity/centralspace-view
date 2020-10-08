@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputSwitch = ({}) => {
+const InputSwitch = ({ }) => {
     return (
         <div className="switch">
             <label>

@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Logo = ({}) => {
+const Logo = ({ }) => {
     return (
         <>
             {props.textStyle && (

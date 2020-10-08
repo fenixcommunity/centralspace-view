@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const RangeSlider = ({}) => {
+const RangeSlider = ({ }) => {
     /* initialized in init.js */ 
     return (
         <div id="range-slider"/>

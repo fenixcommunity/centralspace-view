@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Table = ({}) => {
+const Table = ({ }) => {
     const headers = props.headers;
     const columns = props.columns;
     const stripedClass = props.striped ? "striped" : "";

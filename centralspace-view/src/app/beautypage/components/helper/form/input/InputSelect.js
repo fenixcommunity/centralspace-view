@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputSelect = ({}) => {
+const InputSelect = ({ }) => {
     const defaultValue = props.defaultValue ? props.defaultValue : 0;
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const multipleAttr = props.multiple ? { "multiple": true } : {}

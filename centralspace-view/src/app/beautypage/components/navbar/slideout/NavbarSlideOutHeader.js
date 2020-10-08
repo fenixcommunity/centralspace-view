@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NavbarSlideOutHeader = ({}) => {
+const NavbarSlideOutHeader = ({ }) => {
     return (
         <>
             <li className="no-padding">

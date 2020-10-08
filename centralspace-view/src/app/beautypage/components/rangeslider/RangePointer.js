@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const RangePointer = ({}) => {
+const RangePointer = ({ }) => {
     return (
         <p className="range-field">
             <input type="range" id={props.id} min={props.min} max={props.max} />

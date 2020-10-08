@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputRadioButtons = ({}) => {
+const InputRadioButtons = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const withGapStyle = props.withGapStyle ? "with-gap" : "";
     const options = props.options;

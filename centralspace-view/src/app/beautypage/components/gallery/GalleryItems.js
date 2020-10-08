@@ -20,7 +20,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const GalleryItems = ({}) => {
+const GalleryItems = ({ }) => {
     return (
         <>
             <GalleryItem

@@ -16,7 +16,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const CommentsSection = ({}) => {
+const CommentsSection = ({ }) => {
     return (
         <div className="container">
             <ul className="collection with-header">

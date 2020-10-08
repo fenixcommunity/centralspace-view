@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputTags = ({}) => {
+const InputTags = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const initialTagsClass = props.initial ? "chips-initial" : "";
     const autocompleteTagsClass = props.autocomplete ? "chips-autocomplete" : "";

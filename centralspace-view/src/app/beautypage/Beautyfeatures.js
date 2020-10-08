@@ -16,9 +16,7 @@ import Feature3 from './components/feature/animated/Feature3';
 import Feature4 from './components/feature/animated/Feature4';
 import SliderHeader from './components/header/SliderHeader';
 
-const propTypes = {
-
-}
+const propTypes = {}
 const styles = theme => ({});
 const mapStateToProps = state => ({}); // state from reducers
 const mapDispatchToProps = {}; //imported dispatchers
@@ -28,7 +26,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautyfeatures = ({}) => {
+const Beautyfeatures = ({ }) => {
 
     return (
         <div>

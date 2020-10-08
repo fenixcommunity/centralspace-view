@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TapTargetFloatingButton = ({}) => {
+const TapTargetFloatingButton = ({ }) => {
     const activeClass = props.isActive ? "active" : ""
     return (
         <div className={`fixed-action-btn direction-top ${activeClass}`} >

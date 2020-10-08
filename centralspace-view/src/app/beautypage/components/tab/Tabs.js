@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Tabs = ({}) => {
+const Tabs = ({ }) => {
     const tabs = props.tabs;
     const tabsDivision = (12 / tabs.length);
     return (

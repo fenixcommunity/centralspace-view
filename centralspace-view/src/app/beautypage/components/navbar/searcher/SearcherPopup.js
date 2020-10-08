@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const SearcherPopup = ({}) => {
+const SearcherPopup = ({ }) => {
     return (
         <div className="popup-search-wrapper">
             <form action="/beautypage/search" method="get" role="search">

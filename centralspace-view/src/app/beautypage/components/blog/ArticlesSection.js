@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ArticlesSection = ({}) => {
+const ArticlesSection = ({ }) => {
     return (
         <div className="container">
             <h4>Articles</h4>

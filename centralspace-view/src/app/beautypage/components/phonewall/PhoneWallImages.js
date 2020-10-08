@@ -19,7 +19,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PhoneWallImages = ({}) => {
+const PhoneWallImages = ({ }) => {
     //todo loop
     return (
         <div className="col s12 m10 offset-m1 column-wrapper">

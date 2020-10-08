@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Pagination = ({}) => {
+const Pagination = ({ }) => {
     const arrows = props.arrows
     const pages = props.pages
     return (

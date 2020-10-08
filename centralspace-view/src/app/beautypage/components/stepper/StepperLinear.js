@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const StepperLinear = ({}) => {
+const StepperLinear = ({ }) => {
     return (
         <ul className="stepper linear">
             {props.steps && props.steps.map(step => (

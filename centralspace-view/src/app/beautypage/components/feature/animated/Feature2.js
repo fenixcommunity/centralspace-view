@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Feature2 = ({}) => {
+const Feature2 = ({ }) => {
   const content = (
     <div className="row">
       <div className="col s12 m8 offset-m2">

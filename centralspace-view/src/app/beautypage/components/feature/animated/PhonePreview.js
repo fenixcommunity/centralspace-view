@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PhonePreview = ({}) => {
+const PhonePreview = ({ }) => {
     return (
         <div className="phone-preview-halfway">
             <div className="phone-preview-sizer">

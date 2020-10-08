@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PhoneWallHeader = ({}) => {
+const PhoneWallHeader = ({ }) => {
     return (
         <div className="col s12 m10 offset-m1 valign-wrapper">
             <div className="valign">

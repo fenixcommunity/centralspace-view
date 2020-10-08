@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TeamGroup = ({}) => {
+const TeamGroup = ({ }) => {
     const peoples = props.peoples;
     return (
         <div className="row">

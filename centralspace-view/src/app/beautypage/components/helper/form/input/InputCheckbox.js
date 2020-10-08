@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const InputCheckbox = ({}) => {
+const InputCheckbox = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const withFilledInStyle = props.withFilledInStyle ? "filled-in" : "";
 

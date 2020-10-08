@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const IntroductionAnimation = ({}) => {
+const IntroductionAnimation = ({ }) => {
   return (
     <div className="title-transition section white valign-wrapper">
       <div className="row valign">

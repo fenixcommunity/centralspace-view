@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Slider = ({}) => {
+const Slider = ({ }) => {
     return (
         <li>
             <img src={props.background}  alt="description"/>

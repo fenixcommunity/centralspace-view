@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Divider = ({}) => {
+const Divider = ({ }) => {
     return (
         <div className="divider"></div>
     )

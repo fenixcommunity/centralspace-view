@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FeaturesBody = ({}) => {
+const FeaturesBody = ({ }) => {
     const hasAnimation = props.hasAnimation;
     const animationClass = hasAnimation ? 'fade-in-out' : '';
 

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const MediumPricingTable = ({}) => {
+const MediumPricingTable = ({ }) => {
     const animationClass = props.hasAnimation ? 'scale-in-out fade-in-out' : '';
 
     const pricingTableContent = (

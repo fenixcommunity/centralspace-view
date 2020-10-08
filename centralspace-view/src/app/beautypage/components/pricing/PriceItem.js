@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PriceItem = ({}) => {
+const PriceItem = ({ }) => {
     return (
         <div className="pricing-header">
             <i className={props.headerIcon} />

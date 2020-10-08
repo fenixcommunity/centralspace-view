@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TapTargetModal = ({}) => {
+const TapTargetModal = ({ }) => {
     return (
         <div className="tap-target-wrapper">
         <div className={`tap-target ${props.modalTheme}`} data-target="menu" ref={props.tapTargetRef}>

@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NavbarPagesList = ({}) => {
+const NavbarPagesList = ({ }) => {
     const wavesEffect = props.waves ? "waves-effect waves-teal" : ""
     return (
         <>

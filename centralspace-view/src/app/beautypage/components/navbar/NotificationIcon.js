@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NotificationIcon = ({}) => {
+const NotificationIcon = ({ }) => {
     return (
         <>
             <li className="notification-icon">

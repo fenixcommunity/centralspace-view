@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PagesListForDropdown = ({}) => {
+const PagesListForDropdown = ({ }) => {
     const wavesEffect = props.waves ? "waves-effect waves-teal" : ""
     return (
         <>

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const SliderSection = ({}) => {
+const SliderSection = ({ }) => {
     return (
         <div className="slider fullscreen">
             <ul className="slides">

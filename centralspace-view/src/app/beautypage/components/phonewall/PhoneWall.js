@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PhoneWall = ({}) => {
+const PhoneWall = ({ }) => {
   return (
     <div className="phone-wall-intro header white full-height">
       <div className="header-background" />

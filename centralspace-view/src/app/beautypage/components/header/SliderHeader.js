@@ -16,7 +16,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const SliderHeader = ({}) => {
+const SliderHeader = ({ }) => {
     return (
         <BasicSection
             wrappedSection={ <SliderSection /> }

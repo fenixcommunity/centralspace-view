@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PaginationItem = ({}) => {
+const PaginationItem = ({ }) => {
     const page = props.page;
     const activeClass = page.active ? "active" : "";
     const wavesClass = page.waves ? "waves-effect" : "";

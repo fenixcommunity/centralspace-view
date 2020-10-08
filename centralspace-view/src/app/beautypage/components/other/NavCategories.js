@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NavCategories = ({}) => {
+const NavCategories = ({ }) => {
     return (
         <nav className="nav-extended">
             <div className="categories-wrapper">

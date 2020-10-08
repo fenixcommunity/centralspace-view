@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ImagePair = ({}) => {
+const ImagePair = ({ }) => {
     return (
         <div className="device-pair">
             <div className="tablet-preview-sizer">

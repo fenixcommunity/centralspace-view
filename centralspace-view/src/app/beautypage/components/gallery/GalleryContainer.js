@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const GalleryContainer = ({}) => {
+const GalleryContainer = ({ }) => {
     return (
         <div id="portfolio">
             <div className="container">

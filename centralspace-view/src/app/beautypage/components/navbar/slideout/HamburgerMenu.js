@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const HamburgerMenu = ({}) => {
+const HamburgerMenu = ({ }) => {
     return (
         <a
             href="#!"

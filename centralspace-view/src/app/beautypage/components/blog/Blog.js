@@ -27,7 +27,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Blog = ({}) => {
+const Blog = ({ }) => {
   const [articles, setArticles] = useState([]);
   const [authorOfArticles, setAuthorOfArticles] = useState([]);
 

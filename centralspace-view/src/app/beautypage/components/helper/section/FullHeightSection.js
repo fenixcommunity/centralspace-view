@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FullHeightSection = ({}) => {
+const FullHeightSection = ({ }) => {
     return (
         <div className={`section full-height ${props.theme}`}>
             <div className="container">

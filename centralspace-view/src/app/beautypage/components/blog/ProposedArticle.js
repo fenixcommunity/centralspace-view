@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ProposedArticle = ({}) => {
+const ProposedArticle = ({ }) => {
     return (
         <li>
             <a href="#!">

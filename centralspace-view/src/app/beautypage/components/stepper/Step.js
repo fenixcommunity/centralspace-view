@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Step = ({}) => {
+const Step = ({ }) => {
     const headerWaves = props.headerWaves ? "waves-effect waves-dark" : "";
     return (
         <li className={`step ${props.active ? "active" : ""}`}>

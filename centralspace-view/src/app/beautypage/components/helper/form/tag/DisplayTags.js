@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const DisplayTags = ({}) => {
+const DisplayTags = ({ }) => {
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"
     const tags = props.tags;
 

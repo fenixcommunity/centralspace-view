@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const LeafletMap = ({}) => {
+const LeafletMap = ({ }) => {
     useEffect(() => {
         initIcons();
     }, []);

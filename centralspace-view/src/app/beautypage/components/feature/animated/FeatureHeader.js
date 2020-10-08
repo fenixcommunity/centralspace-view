@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FeatureHeader = ({}) => {
+const FeatureHeader = ({ }) => {
     return (
         <div className="feature">
             <h3>{props.title}</h3>

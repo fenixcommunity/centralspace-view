@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Modal = ({}) => {
+const Modal = ({ }) => {
     const modalRef = useRef(null);
     const modalBottom = props.modalBottom;
 

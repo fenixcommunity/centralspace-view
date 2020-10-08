@@ -19,7 +19,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Clients = ({}) => {
+const Clients = ({ }) => {
   return (
     <div className="section black clients">
       <div className="container">

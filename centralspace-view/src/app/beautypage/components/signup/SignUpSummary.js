@@ -43,7 +43,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const SignUpSummary = ({}) => {
+const SignUpSummary = ({ }) => {
     const tapTargetRef = useRef(null);
 
     useEffect(() => {

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ValidateMessage = ({}) => {
+const ValidateMessage = ({ }) => {
     //set validate as required
     const validate = props.validate;
     return (

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Team = ({}) => {
+const Team = ({ }) => {
   return (
     <>
       <VideoYoutube src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"

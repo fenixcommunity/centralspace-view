@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Feature3 = ({}) => {
+const Feature3 = ({ }) => {
   const content = (
     <div className="row valign-wrapper">
       <div className="col s12 m4">

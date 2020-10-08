@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FormCard = ({}) => {
+const FormCard = ({ }) => {
     const theme = props.theme ? props.theme : "white"
     const themeColor = props.themeColor ? props.themeColor : "blue"
 

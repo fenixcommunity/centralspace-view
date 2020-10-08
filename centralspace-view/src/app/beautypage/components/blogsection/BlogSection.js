@@ -13,7 +13,7 @@ const propTypes = {
   ).isRequired,
 }
 
-const BlogSection = ({}) => {
+const BlogSection = ({ }) => {
   const isExtended = props.isExtended;
 
   const blogContent = isExtended ? (

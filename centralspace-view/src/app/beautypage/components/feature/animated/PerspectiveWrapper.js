@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PerspectiveWrapper = ({}) => {
+const PerspectiveWrapper = ({ }) => {
     const orientationClass = props.leftOrientation ? "left-transform-origin right-align" : "right-transform-origin";
     return (
         <div className="perspective-wrapper">

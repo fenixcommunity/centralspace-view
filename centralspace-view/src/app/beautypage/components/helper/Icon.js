@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Icon = ({}) => {
+const Icon = ({ }) => {
     return (
         <i className={`material-icons ${props.iconColor ? props.iconColor : ""} ${props.possition ? props.possition : "right"}`}>
             {props.icon}

@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PagesDropdown = ({}) => {
+const PagesDropdown = ({ }) => {
     const dropdownRef = useRef(null);
     useEffect(() => {
         M.Dropdown.init(dropdownRef.current, {});

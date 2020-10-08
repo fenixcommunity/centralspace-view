@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TableHeader = ({}) => {
+const TableHeader = ({ }) => {
     const headers = props.headers;
     return (
         <tr>

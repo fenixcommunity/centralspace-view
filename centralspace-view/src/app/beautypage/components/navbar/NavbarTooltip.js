@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NavbarTooltip = ({}) => {
+const NavbarTooltip = ({ }) => {
     return (
         <li>
         <a

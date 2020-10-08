@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BlogItem = ({}) => {
+const BlogItem = ({ }) => {
     return (
         <div className="col s12 m6 l4">
             <div className={`card ${props.hasAnimationClass}`} data-duration={props.animationDataDuration}>

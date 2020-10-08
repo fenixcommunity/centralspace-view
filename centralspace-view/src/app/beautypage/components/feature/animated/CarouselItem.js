@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const CarouselItem = ({}) => {
+const CarouselItem = ({ }) => {
     return (
         <a className="carousel-item" href={props.reference}><img src={props.img} alt="description"/></a>
     )

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TableColumn = ({}) => {
+const TableColumn = ({ }) => {
     const rows = props.rows;
     return (
         <tr>

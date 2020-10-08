@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const GoogleMaps = ({}) => {
+const GoogleMaps = ({ }) => {
   return <div className="section google-map" />;
 }
 

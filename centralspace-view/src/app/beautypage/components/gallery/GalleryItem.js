@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const GalleryItem = ({}) => {
+const GalleryItem = ({ }) => {
     //todo required
     const image = props.image;
     return (

@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Searcher = ({}) => {
+const Searcher = ({ }) => {
 
     return (
         <>

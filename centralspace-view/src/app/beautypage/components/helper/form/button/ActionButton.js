@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ActionButton = ({}) => {
+const ActionButton = ({ }) => {
   //todo classes -> use another way
   const classes = props.classes ? props.classes : "";
   const buttonColor = props.color ? props.color : "";

@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const BeautypageScriptsLoader = ({}) => {
+const BeautypageScriptsLoader = ({ }) => {
     //  TODO - if only beautypage (without materializecss) than set all scripts as global(index.html)
     const basicScripts = [
         '/beautypage/js/main/materialize_v2.min.js',

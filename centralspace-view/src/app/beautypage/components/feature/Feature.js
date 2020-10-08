@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Feature = ({}) => {
+const Feature = ({ }) => {
     return (
         <>
             <div className={`col s12 m6 l4 ${props.animationClass}`}>

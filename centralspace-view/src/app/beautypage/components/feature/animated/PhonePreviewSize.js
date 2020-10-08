@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PhonePreviewSize = ({}) => {
+const PhonePreviewSize = ({ }) => {
     const orientation =  props.orientation ? props.orientation + "-in-out" : "";
     return (
         <div className={`phone-preview-sizer iphone ${orientation}`}>

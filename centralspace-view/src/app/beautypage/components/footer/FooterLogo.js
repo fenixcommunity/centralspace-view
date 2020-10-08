@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FooterLogo = ({}) => {
+const FooterLogo = ({ }) => {
     return (
         <div className="col s6 m3">
         <img

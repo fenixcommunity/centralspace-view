@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Parallax = ({}) => {
+const Parallax = ({ }) => {
     const parallaxRef = useRef(null);
 
     useEffect(() => {

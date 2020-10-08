@@ -20,7 +20,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Feature4 = ({}) => {
+const Feature4 = ({ }) => {
     return (
         <div className="container">
             <div className="carousel">

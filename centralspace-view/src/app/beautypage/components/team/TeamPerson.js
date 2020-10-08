@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TeamPerson = ({}) => {
+const TeamPerson = ({ }) => {
     return (
         <div className="col s12 m4">
         <div className="avatar-wrapper">

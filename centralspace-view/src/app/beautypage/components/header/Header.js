@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Header = ({}) => {
+const Header = ({ }) => {
     const blackTheme = props.hasBlackTheme;
     const headerWithOffset = props.headerWithOffset ? "col s12 m6 offset-m3 valign" : "col s12"
 

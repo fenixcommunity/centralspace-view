@@ -19,7 +19,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const SignUpForm = ({}) => {
+const SignUpForm = ({ }) => {
 
   const formContent = (
     <>

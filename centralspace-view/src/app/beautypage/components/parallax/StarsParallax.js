@@ -15,7 +15,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const StarsParallax = ({}) => {
+const StarsParallax = ({ }) => {
 
   return (
     <Parallax img={backgroundStars} />

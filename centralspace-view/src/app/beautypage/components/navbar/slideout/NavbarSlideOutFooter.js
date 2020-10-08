@@ -13,7 +13,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const NavbarSlideOutFooter = ({}) => {
+const NavbarSlideOutFooter = ({ }) => {
     return (
         <NavbarPagesList waves={true} />
     )

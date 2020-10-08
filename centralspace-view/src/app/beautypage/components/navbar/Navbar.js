@@ -21,7 +21,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Navbar = ({}) => {
+const Navbar = ({ }) => {
   const darkMode = props.isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
   const textStyle = props.isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')

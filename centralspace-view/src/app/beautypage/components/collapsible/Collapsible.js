@@ -14,7 +14,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Collapsible = ({}) => {
+const Collapsible = ({ }) => {
     const pulledOut = props.pulledOut;
 
     const collapsibleRef = useRef(null);

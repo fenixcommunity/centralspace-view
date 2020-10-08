@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FileInput = ({}) => {
+const FileInput = ({ }) => {
     const multipleAttr = props.multiple ? { "multiple": true } : {}
     const placeholderAttr = props.placeholder ? { "placeholder": props.placeholder } : {}
     const duplicatedClass = props.isDuplicated ? "s6" : "s12"

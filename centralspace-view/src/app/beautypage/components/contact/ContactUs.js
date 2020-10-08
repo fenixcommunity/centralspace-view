@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const ContactUs = ({}) => {
+const ContactUs = ({ }) => {
   const handleInputRadioChange = () => {
     console.log("handleInputRadioChange");
   }

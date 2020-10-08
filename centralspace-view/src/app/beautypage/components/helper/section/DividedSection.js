@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const DividedSection = ({}) => {
+const DividedSection = ({ }) => {
     const contentLeft = props.contentLeft;
     const contentRight = props.contentRight;
     return (

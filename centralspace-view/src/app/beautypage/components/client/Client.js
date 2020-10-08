@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const Client = ({}) => {
+const Client = ({ }) => {
     return (
         <>
             <a href="#!" className={`col s12 m6 l4 client ${props.color} `}>

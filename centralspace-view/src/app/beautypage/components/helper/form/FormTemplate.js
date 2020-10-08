@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const FormTemplate = ({}) => {
+const FormTemplate = ({ }) => {
     return (
         <form id={props.formId}>
             <div className="row">

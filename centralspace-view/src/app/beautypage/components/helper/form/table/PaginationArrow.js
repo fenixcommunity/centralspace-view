@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PaginationArrow = ({}) => {
+const PaginationArrow = ({ }) => {
     const arrow = props.arrow;
     return (
         <li className={`${arrow.disabled ? "disabled" : ""}`}>

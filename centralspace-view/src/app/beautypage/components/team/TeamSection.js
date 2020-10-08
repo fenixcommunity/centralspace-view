@@ -17,7 +17,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const TeamSection = ({}) => {
+const TeamSection = ({ }) => {
     return (
         <div className="section white full-height">
         <div className="row valign">

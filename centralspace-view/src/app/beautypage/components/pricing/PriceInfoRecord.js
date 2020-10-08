@@ -12,7 +12,7 @@ const propTypes = {
     ).isRequired,
 }
 
-const PriceInfoRecord = ({}) => {
+const PriceInfoRecord = ({ }) => {
     const recordClass = props.disabled ? "disabled" : ""
     const recordIcon = props.disabled ? "icon-close" : "icon-accept"
     return (
