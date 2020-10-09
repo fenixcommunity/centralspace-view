@@ -7,7 +7,7 @@ import BasicSection from "../helper/section/BasicSection";
 
 const propTypes = {}
 
-const ContactUs = ({ }) => {
+const ContactUs = () => {
   const handleInputRadioChange = () => {
     console.log("handleInputRadioChange");
   }

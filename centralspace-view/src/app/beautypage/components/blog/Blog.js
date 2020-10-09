@@ -17,7 +17,7 @@ import ActionButton from "../helper/form/button/ActionButton";
 
 const propTypes = {}
 
-const Blog = ({ }) => {
+const Blog = () => {
   const [articles, setArticles] = useState([]);
   const [authorOfArticles, setAuthorOfArticles] = useState(null);
 

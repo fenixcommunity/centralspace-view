@@ -20,7 +20,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautyblog = ({ }) => {
+const Beautyblog = () => {
 
     return (
         <div>

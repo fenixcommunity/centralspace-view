@@ -2,7 +2,7 @@ import React from "react";
 
 const propTypes = {}
 
-const GoogleMaps = ({ }) => {
+const GoogleMaps = () => {
   return <div className="section google-map" />;
 }
 

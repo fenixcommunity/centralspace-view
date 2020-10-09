@@ -21,7 +21,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautyteam = ({ }) => {
+const Beautyteam = () => {
     return (
         <div>
             <Navbar

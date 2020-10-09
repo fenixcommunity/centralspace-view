@@ -1,43 +1,67 @@
 import React from "react";
 import '../../../../resources/gallery/css/gallery.css';
-import NavCategories from "../other/NavCategories";
-import GalleryContainer from "./GalleryContainer";
 import GalleryItems from "./GalleryItems.js"
 
-const propTypes = {}
-
-const Gallery = ({ }) => {
+function Gallery() {
 
   return (
     <>
-      <NavCategories categories={[
-        {
-          name: "type",
-          items: [
-            { label: "All", reference: "#all" },
-            { label: "Big Bang", reference: "#overhead" },
-            { label: "Sacred Geometry", reference: "#sintel", active: true }
-          ]
-        },
-        {
-          name: "tag",
-          items: [
-            { label: "All", reference: "#all" },
-            { label: "circle", reference: "#sintel" },
-            { label: "Hexagon", reference: "#overhead" }
-          ]
-        }
-      ]} />
+      <nav className="nav-extended">
 
-      <GalleryContainer items={
-        <GalleryItems />
-      } />
+        <div className="categories-wrapper">
+          <div className="categories-container pin-top">
+            <ul className="categories container" data-filter="type">
+              <li>
+                <a href="#all">
+                  All
+              </a>
+              </li>
+              <li>
+                <a href="#overhead">
+                  Big Bang
+              </a>
+              </li>
+        
+              <li className="active">
+                <a href="#sintel">
+                  Sacred Geometry
+              </a>
+              </li>
+            </ul>
+            <ul className="categories container" data-filter="tag">
+              <li>
+                <a href="#all">
+                  All
+              </a>
+              </li>
+              <li className="active">
+                <a href="#sintel">
+                  circle
+              </a>
+              </li>
+              <li>
+                <a href="#overhead">
+                  Hexagon
+              </a>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+
+      </nav>
+
+      <div id="portfolio" className="gray">
+        <div className="container">
+          <div className="gallery row">
+            <GalleryItems />
+          </div>
+        </div>
+      </div>
 
     </>
 
   );
 }
-
-Gallery.propTypes = propTypes;
 
 export default Gallery;

@@ -10,7 +10,7 @@ import CarouselItem from "./CarouselItem";
 
 const propTypes = {}
 
-const Feature4 = ({ }) => {
+const Feature4 = () => {
     return (
         <div className="container">
             <div className="carousel">

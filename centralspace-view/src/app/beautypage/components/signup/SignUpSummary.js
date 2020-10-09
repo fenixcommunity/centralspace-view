@@ -32,7 +32,7 @@ import StepperLinear from "../stepper/StepperLinear";
 
 const propTypes = {}
 
-const SignUpSummary = ({ }) => {
+const SignUpSummary = () => {
     const tapTargetRef = useRef(null);
 
     useEffect(() => {

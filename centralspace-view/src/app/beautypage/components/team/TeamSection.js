@@ -6,7 +6,7 @@ import avatar3 from '../../../../resources/beautypage/images/people/avatar3.jpg'
 
 const propTypes = {}
 
-const TeamSection = ({ }) => {
+const TeamSection = () => {
     return (
         <div className="section white full-height">
         <div className="row valign">

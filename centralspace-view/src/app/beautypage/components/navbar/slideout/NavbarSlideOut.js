@@ -7,7 +7,7 @@ import NavbarSlideOutFooter from "./NavbarSlideOutFooter";
 
 const propTypes = {}
 
-const NavbarSlideOut = ({ }) => {
+const NavbarSlideOut = () => {
   return (
     <ul id="slide-out" className="side-nav sidenav-helper">
       <li className="no-padding">

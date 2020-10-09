@@ -9,7 +9,7 @@ import Client from "./Client";
 
 const propTypes = {}
 
-const Clients = ({ }) => {
+const Clients = () => {
   return (
     <div className="section black clients">
       <div className="container">

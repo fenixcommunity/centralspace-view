@@ -20,7 +20,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautywall = ({ }) => {
+const Beautywall = () => {
     return (
         <div>
             <Navbar

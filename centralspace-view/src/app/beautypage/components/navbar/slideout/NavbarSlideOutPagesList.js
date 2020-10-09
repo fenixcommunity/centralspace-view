@@ -3,7 +3,7 @@ import PagesListForDropdown from "../dropdown/PagesListForDropdown";
 
 const propTypes = {}
 
-const NavbarSlideOutPagesList = ({ }) => {    
+const NavbarSlideOutPagesList = () => {    
     return (
         <li className="bold">
             <a className="collapsible-header waves-effect waves-teal active" href="#!">

@@ -3,7 +3,7 @@ import img from '../../../../resources/beautypage/images/team/office.jpg';
 
 const propTypes = {}
 
-const TeamHeader = ({ }) => {
+const TeamHeader = () => {
   return (
     <div className="section header white">
       <img className="background" src={img} />

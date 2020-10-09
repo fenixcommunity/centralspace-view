@@ -4,7 +4,7 @@ import Tabs from "../tab/Tabs";
 
 const propTypes = {}
 
-const TabsSection = ({ }) => {
+const TabsSection = () => {
 
   return (
     <DividedSection

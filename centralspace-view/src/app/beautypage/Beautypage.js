@@ -28,12 +28,10 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautypage = ({ }) => {
+const Beautypage = () => {
 
-    ./src/app/beautypage/components/signup/SignUpSummary.js
-    Line 35:24:  Unexpected empty object pattern  no-empty-pattern
-
-    + galerry
+   
+    // + galerry
 
     return (
         <div>

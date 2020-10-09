@@ -3,7 +3,7 @@ import '../../../../resources/beautypage/css/range.css';
 
 const propTypes = {}
 
-const RangeSlider = ({ }) => {
+const RangeSlider = () => {
     /* initialized in init.js */ 
     return (
         <div id="range-slider"/>

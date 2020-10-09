@@ -10,7 +10,7 @@ import GalleryItem from "./GalleryItem";
 
 const propTypes = {}
 
-const GalleryItems = ({ }) => {
+const GalleryItems = () => {
     return (
         <>
             <GalleryItem

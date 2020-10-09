@@ -9,7 +9,7 @@ import BasicSection from "../helper/section/BasicSection";
 
 const propTypes = {}
 
-const SignUpForm = ({ }) => {
+const SignUpForm = () => {
 
   const formContent = (
     <>

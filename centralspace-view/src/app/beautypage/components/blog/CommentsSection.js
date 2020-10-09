@@ -6,7 +6,7 @@ import Comment from './Comment';
 
 const propTypes = {}
 
-const CommentsSection = ({ }) => {
+const CommentsSection = () => {
     return (
         <div className="container">
             <ul className="collection with-header">

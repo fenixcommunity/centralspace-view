@@ -5,7 +5,7 @@ import FooterPages from "./FooterPages";
 
 const propTypes = {}
 
-const Footer = ({ }) => {
+const Footer = () => {
   return (
     <footer className="page-footer">
       <div className="container">

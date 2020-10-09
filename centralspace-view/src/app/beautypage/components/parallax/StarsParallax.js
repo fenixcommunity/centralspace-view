@@ -5,7 +5,7 @@ import Parallax from "./Parallax";
 
 const propTypes = {}
 
-const StarsParallax = ({ }) => {
+const StarsParallax = () => {
 
   return (
     <Parallax img={backgroundStars} />

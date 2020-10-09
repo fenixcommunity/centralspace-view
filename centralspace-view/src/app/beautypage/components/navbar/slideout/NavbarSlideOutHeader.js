@@ -4,7 +4,7 @@ import avatar from '../../../../../resources/beautypage/images/people/avatar4.jp
 
 const propTypes = {}
 
-const NavbarSlideOutHeader = ({ }) => {
+const NavbarSlideOutHeader = () => {
     return (
         <>
             <li className="no-padding">

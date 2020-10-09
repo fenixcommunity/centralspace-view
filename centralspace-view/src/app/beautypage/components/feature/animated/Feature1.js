@@ -6,7 +6,7 @@ import PhonePreview from "./PhonePreview";
 
 const propTypes = {}
 
-const Feature1 = ({ }) => {
+const Feature1 = () => {
   const basicMessage = (
     <p>
       Locavore drinking vinegar quinoa seitan church-key, tilde

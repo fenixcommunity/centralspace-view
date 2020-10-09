@@ -22,7 +22,6 @@ const GalleryItem = ({ filterName, contentTitle, headerContent, content, actions
                     style={{
                         height: image.height
                     }}
-                    href="#!"
                 >
                     <img src={image.img} alt={image.name} />
                 </a>

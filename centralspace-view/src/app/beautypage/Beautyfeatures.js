@@ -26,7 +26,7 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const Beautyfeatures = ({ }) => {
+const Beautyfeatures = () => {
 
     return (
         <div>

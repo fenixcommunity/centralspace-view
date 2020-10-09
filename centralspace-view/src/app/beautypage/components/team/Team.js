@@ -4,7 +4,7 @@ import TeamSection from "./TeamSection";
 
 const propTypes = {}
 
-const Team = ({ }) => {
+const Team = () => {
   return (
     <>
       <VideoYoutube src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"

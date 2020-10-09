@@ -9,7 +9,7 @@ import PhonePreviewItem from './PhonePreviewItem';
 
 const propTypes = {}
 
-const PhoneWallImages = ({ }) => {
+const PhoneWallImages = () => {
   //todo loop
   return (
     <div className="col s12 m10 offset-m1 column-wrapper">

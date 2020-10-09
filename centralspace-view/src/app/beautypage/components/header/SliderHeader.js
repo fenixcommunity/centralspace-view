@@ -6,7 +6,7 @@ import SliderSection from "../slider/SliderSection";
 
 const propTypes = {}
 
-const SliderHeader = ({ }) => {
+const SliderHeader = () => {
     return (
         <BasicSection
             wrappedSection={ <SliderSection /> }

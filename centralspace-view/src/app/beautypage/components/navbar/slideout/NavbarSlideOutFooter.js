@@ -3,7 +3,7 @@ import NavbarPagesList from '../NavbarPagesList'
 
 const propTypes = {}
 
-const NavbarSlideOutFooter = ({ }) => {
+const NavbarSlideOutFooter = () => {
     return (
         <NavbarPagesList waves={true} />
     )
