@@ -29,6 +29,12 @@ const enhance = compose(
 );
 
 const Beautypage = () => {
+    //TODO
+    // 1.
+    // <Component>
+    //     <ChildComponent />
+    // </Component>
+    // 2. styles and classes pattern
     return (
         <div>
             <Navbar

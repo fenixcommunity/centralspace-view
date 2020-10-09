@@ -2,6 +2,7 @@ import React from "react";
 import '../../../../resources/gallery/css/gallery.css';
 import GalleryItems from "./GalleryItems.js";
 import NavCategories from "../other/NavCategories.js";
+import GalleryContainer from "./GalleryContainer";
 
 function Gallery() {
   return (
@@ -24,18 +25,9 @@ function Gallery() {
               { label: "Hexagon", reference: "#overhead", active: true },
             ]
           },
-
         ]}
       />
-
-      <div id="portfolio" className="gray">
-        <div className="container">
-          <div className="gallery row">
-            <GalleryItems />
-          </div>
-        </div>
-      </div>
-
+      <GalleryContainer items={<GalleryItems />} />
     </>
 
   );
