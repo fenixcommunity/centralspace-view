@@ -32,7 +32,7 @@ const BeautypageScriptsLoader = ({ contextOfScripts }) => {
             },
             error: function () { console.error("scripts loading failed") },
         });
-    }, [basicScripts, contextPageScripts]);
+    }, []);
 
     return (
         <>
