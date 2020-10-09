@@ -29,10 +29,6 @@ const enhance = compose(
 );
 
 const Beautypage = () => {
-
-   
-    // + galerry
-
     return (
         <div>
             <Navbar

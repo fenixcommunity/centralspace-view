@@ -18,6 +18,7 @@ const GalleryItem = ({ filterName, contentTitle, headerContent, content, actions
     return (
         <div className={`col l4 m6 s12 gallery-item gallery-expand gallery-filter ${filterName}`}>
             <div className="gallery-curve-wrapper">
+            {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a className="gallery-cover"
                     style={{
                         height: image.height

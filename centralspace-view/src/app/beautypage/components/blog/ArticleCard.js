@@ -42,7 +42,7 @@ const ArticleCard = ({ isHoverable, handleToastOnClick, cardAction, articleImg, 
                     {cardAction && cardAction.map(action => {
                         const title = action.title;
                         return (
-                            <a href="#!" key={generateKey(title)} className="teal-text text-lighten-2" href={action.ref}>{title}</a>
+                            <a key={generateKey(title)} className="teal-text text-lighten-2" href={action.ref}>{title}</a>
                         )
                     })}
                 </div>
