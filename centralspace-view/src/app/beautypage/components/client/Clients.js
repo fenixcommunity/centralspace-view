@@ -13,7 +13,7 @@ const Clients = ({ }) => {
   return (
     <div className="section black clients">
       <div className="container">
-        <h2 className="section-title">Clients</h2>
+        <h2 className="section-title center">Clients</h2>
       </div>
       <div className="row">
         <Client clientName="Google" clientLogo={google} color="white" />

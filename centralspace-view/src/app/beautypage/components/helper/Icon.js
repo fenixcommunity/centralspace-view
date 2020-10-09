@@ -9,7 +9,7 @@ const propTypes = {
 
 const Icon = ({ icon, iconColor, possition }) => {
     return (
-        <i className={`material-icons ${iconColor ? iconColor : ""} ${possition ? possition : "right"}`}>
+        <i className={`material-icons  ${iconColor ? iconColor : ""} ${possition ? possition : "prefix"}`}>
             {icon}
         </i>
     )

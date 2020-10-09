@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const propTypes = {
     featureIcon: PropTypes.string.isRequired,
     featureMessage: PropTypes.string.isRequired,
-    animationClass: PropTypes.bool
+    animationClass: PropTypes.string
 }
 
 const Feature = ({ featureIcon, featureMessage, animationClass }) => {

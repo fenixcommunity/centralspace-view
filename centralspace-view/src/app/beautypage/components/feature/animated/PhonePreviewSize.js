@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    orientation: PropTypes.string.isRequired,
+    orientation: PropTypes.string,
     backgroundImageUrl: PropTypes.node.isRequired
 }
 

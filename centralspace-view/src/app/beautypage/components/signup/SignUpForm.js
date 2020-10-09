@@ -37,12 +37,12 @@ const SignUpForm = ({ }) => {
       <div className="input-field col s12">
         <ActionButton
           id="reset" label="Reset"
-          icon="clear_all" color="grey" hasWaves={true}
-          disabled={false} />
+          icon="clear_all" iconPossition="right" color="grey"
+          hasWaves={true} disabled={false} />
         <ActionButton
-          id="save" label="Save"
-          icon="send" hasWaves={true}
-          disabled={false} type="submit" />
+          id="save" label="Save" type="submit"
+          icon="send" iconPossition="right"
+          hasWaves={true} disabled={false} />
       </div>
     </>
   )

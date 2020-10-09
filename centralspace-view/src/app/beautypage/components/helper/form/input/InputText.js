@@ -12,7 +12,10 @@ const propTypes = {
     icon: PropTypes.string,
     iconColor: PropTypes.string,
     isDuplicated: PropTypes.bool,
-    autocomplete: PropTypes.bool,
+    autocomplete: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.object
+    ]),
     required: PropTypes.bool,
     disabled: PropTypes.bool,
     validate: PropTypes.object

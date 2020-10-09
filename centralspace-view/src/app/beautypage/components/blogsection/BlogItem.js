@@ -4,15 +4,18 @@ import PropTypes from 'prop-types';
 const propTypes = {
     blogRef: PropTypes.string.isRequired,
     blogTitle: PropTypes.string.isRequired,
-    hasAnimationClass: PropTypes.bool,
-    animationDataDuration: PropTypes.bool,
+    animationClass: PropTypes.string,
+    animationDataDuration: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     blogImg: PropTypes.node.isRequired,
 }
 
-const BlogItem = ({ blogRef, blogTitle, hasAnimationClass, animationDataDuration, blogImg }) => {
+const BlogItem = ({ blogRef, blogTitle, animationClass, animationDataDuration, blogImg }) => {
     return (
         <div className="col s12 m6 l4">
-            <div className={`card ${hasAnimationClass}`} data-duration={animationDataDuration}>
+            <div className={`card ${animationClass}`} data-duration={animationDataDuration}>
                 <div className="card-image">
                     <a href={blogRef}>
                         <img src={blogImg} alt="description" />

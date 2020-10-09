@@ -6,28 +6,35 @@ import { generateKey } from '../../../../utils/keyGenerator';
 import Icon from "../../Icon";
 
 const propTypes = {
+    id: PropTypes.string,
     label: PropTypes.string,
     headerText: PropTypes.string,
     icon: PropTypes.string,
     iconColor: PropTypes.string,
-    id: PropTypes.number,
-    defaultValue: PropTypes.number,
+    defaultValue: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.array
+    ]),
     isDuplicated: PropTypes.bool,
     multiple: PropTypes.bool,
     disabled: PropTypes.bool,
-    properties: PropTypes.object.isRequired,
+    properties: PropTypes.object,
     options: PropTypes.arrayOf(
         PropTypes.shape({
-            icon: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired,
+            value: PropTypes.number.isRequired,
             label: PropTypes.string.isRequired,
         })
     ),
     optionGroups: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
+            options: PropTypes.arrayOf(
+                PropTypes.shape({
+                    value: PropTypes.number.isRequired,
+                    label: PropTypes.string.isRequired
+                })
+            )
         })
     )
 }

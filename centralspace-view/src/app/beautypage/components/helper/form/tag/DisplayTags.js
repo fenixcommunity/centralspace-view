@@ -8,7 +8,7 @@ const propTypes = {
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
-            image: PropTypes.node.isRequired,
+            image: PropTypes.node,
             close: PropTypes.bool
         })
     ).isRequired,

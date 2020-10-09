@@ -13,7 +13,7 @@ const propTypes = {
 }
 
 const BlogList = ({ hasAnimation }) => {
-    const hasAnimationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
+    const animationClass = hasAnimation ? 'fade-in-out up-in-out' : '';
     const animationDataDuration = hasAnimation ? 0 : 'none';
     // we can also add custom attribute to html node custom-data=xxx
     return (
@@ -26,32 +26,32 @@ const BlogList = ({ hasAnimation }) => {
                         blogRef="blog.html"
                         blogTitle="Something Interesting"
                         blogImg={poly1}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                     <BlogItem
                         blogRef="blog.html"
                         blogTitle="Another Blog Post"
                         blogImg={poly2}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                     <BlogItem
                         blogRef="blog.html"
                         blogTitle="Click Bait Article"
                         blogImg={poly3}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                     <BlogItem
                         blogRef="blog.html"
                         blogTitle="Don't Read This!"
                         blogImg={poly4}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                     <BlogItem
                         blogRef="blog.html"
                         blogTitle="Why Are You Still Reading?"
                         blogImg={poly5}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                     <BlogItem
                         blogRef="blog.html"
                         blogTitle="Good Bye"
                         blogImg={poly6}
-                        hasAnimationClass={hasAnimationClass} animationDataDuration={animationDataDuration} />
+                        animationClass={animationClass} animationDataDuration={animationDataDuration} />
                 </div>
             </div>
         </>

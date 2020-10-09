@@ -15,19 +15,31 @@ const CommentsSection = ({ }) => {
                 <Comment
                     authorAvatar={avatar1}
                     title="Ryu"
-                    content="black-belt"
+                    content={
+                        <p className="grey-text">
+                            black-belt
+                        </p>
+                    }
                     rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
                 <Comment
                     authorAvatar={avatar3}
                     title="Yoshi"
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
-                             varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
-                             varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    content={
+                        <p className="grey-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci
+                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
+                    }
                     rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
                 <Comment
                     authorAvatar={avatar2}
                     title="Max"
-                    content="green-belt"
+                    content={
+                        <p className="grey-text">
+                            green-belt
+                        </p>
+                    }
                     rightIcon={{ icon: "mail", ref: "/", color: "primary-color-text" }} />
             </ul>
         </div>

@@ -19,7 +19,7 @@ const propTypes = {}
 
 const Blog = ({ }) => {
   const [articles, setArticles] = useState([]);
-  const [authorOfArticles, setAuthorOfArticles] = useState([]);
+  const [authorOfArticles, setAuthorOfArticles] = useState(null);
 
   useEffect(() => {
     const blogArticlesRecordJson = require("../../../../resources/json/blog_articles.json");

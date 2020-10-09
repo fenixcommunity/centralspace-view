@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from '../../Icon';
 
 const propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string,
   classes: PropTypes.string,
   icon: PropTypes.string,
@@ -12,14 +12,13 @@ const propTypes = {
   color: PropTypes.string,
   reference: PropTypes.string,
   type: PropTypes.string,
-  classes: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   buttonLarge: PropTypes.bool,
   buttonFloating: PropTypes.bool,
   buttonFlat: PropTypes.bool,
   hasWaves: PropTypes.bool,
   pulseEffect: PropTypes.bool,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object
 }
 
 const ActionButton = ({

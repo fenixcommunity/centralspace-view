@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    arrow: PropTypes.objectOf(
-        PropTypes.shape({
-            ref: PropTypes.string.isRequired,
-            icon: PropTypes.string.isRequired,
-        })
-    ).isRequired
+    arrow: PropTypes.shape({
+        ref: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired,
+        disabled: PropTypes.bool
+    }).isRequired
 }
 
 const PaginationArrow = ({ arrow }) => {

@@ -4,7 +4,7 @@ import M from 'materialize-css/dist/js/materialize.js';
 
 const propTypes = {
     title: PropTypes.string.isRequired,
-    modalBottom: PropTypes.string.isRequired,
+    modalBottom: PropTypes.bool,
     content: PropTypes.node.isRequired,
     modalActions: PropTypes.array
 }

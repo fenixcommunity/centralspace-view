@@ -2,18 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    contentLeft: PropTypes.objectOf(
-        PropTypes.shape({
-            division: PropTypes.string,
-            offset: PropTypes.string
-        })
-    ).isRequired,
-    contentRight: PropTypes.objectOf(
-        PropTypes.shape({
-            division: PropTypes.string,
-            offset: PropTypes.string
-        })
-    ).isRequired
+    contentLeft: PropTypes.shape({
+        division: PropTypes.string,
+        offset: PropTypes.string
+    }).isRequired,
+    contentRight: PropTypes.shape({
+        division: PropTypes.string,
+        offset: PropTypes.string
+    }).isRequired
 }
 
 const DividedSection = ({ contentLeft, contentRight }) => {

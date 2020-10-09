@@ -5,7 +5,7 @@ const propTypes = {
     categories: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string.isRequired,
-            items: PropTypes.object.isRequired,
+            items: PropTypes.array.isRequired,
         })
     ).isRequired
 }

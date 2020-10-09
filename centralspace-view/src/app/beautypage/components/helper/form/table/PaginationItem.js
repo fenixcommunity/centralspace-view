@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-    page: PropTypes.objectOf(
-        PropTypes.shape({
-            ref: PropTypes.string.isRequired,
-            number: PropTypes.number.isRequired,
-            active: PropTypes.bool,
-            waves: PropTypes.bool
-        })
-    ).isRequired
+    page: PropTypes.shape({
+        ref: PropTypes.string.isRequired,
+        number: PropTypes.number.isRequired,
+        active: PropTypes.bool,
+        waves: PropTypes.bool
+    }).isRequired
 }
 
 const PaginationItem = ({ page }) => {

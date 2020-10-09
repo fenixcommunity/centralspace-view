@@ -6,14 +6,12 @@ const propTypes = {
     contentTitle: PropTypes.string.isRequired,
     headerContent: PropTypes.node.isRequired,
     content: PropTypes.node.isRequired,
-    image: PropTypes.objectOf(
-        PropTypes.shape({
-            height: PropTypes.string.isRequired,
-            img: PropTypes.node.isRequired,
-            name: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    actions: PropTypes.object
+    image: PropTypes.shape({
+        height: PropTypes.string.isRequired,
+        img: PropTypes.node.isRequired,
+        name: PropTypes.string.isRequired,
+    }).isRequired,
+    actions: PropTypes.array
 }
 
 const GalleryItem = ({ filterName, contentTitle, headerContent, content, actions, image }) => {

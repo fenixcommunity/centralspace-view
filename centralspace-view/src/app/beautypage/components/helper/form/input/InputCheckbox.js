@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/radiobutton-checkbox.css';
 
 const propTypes = {
-    name: PropTypes.string.required,
-    label: PropTypes.string.required,
+    name: PropTypes.string,
+    label: PropTypes.string,
     headerText: PropTypes.string,
-    value: PropTypes.object,
+    value: PropTypes.any,
     isDuplicated: PropTypes.bool,
     withFilledInStyle: PropTypes.bool,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
 }
 
 const InputCheckbox = ({ name, label, headerText, value, isDuplicated, withFilledInStyle, checked, disabled, onChange }) => {

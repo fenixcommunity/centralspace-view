@@ -5,7 +5,7 @@ import '../../../../../../resources/beautypage/css/datatimepicker.css';
 import Icon from "../../Icon";
 
 const propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     icon: PropTypes.string,
     iconColor: PropTypes.string,

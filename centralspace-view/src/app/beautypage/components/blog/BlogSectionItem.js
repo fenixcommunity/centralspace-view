@@ -6,7 +6,10 @@ const propTypes = {
     paragraphs: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
-            content: PropTypes.string.isRequired,
+            content: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.object
+            ]).isRequired
         })
     ).isRequired,
     hasZoom: PropTypes.bool.isRequired,
@@ -38,7 +41,7 @@ const BlogSectionItem = ({ paragraphs, hasZoom, sectionHeader }) => {
     return (
         <>
             {hasZoom && (
-                <a id="flow-toggle" className="teal-text text-lighten-2" href="#!"><i className="material-icons medium right">zoom_in</i></a>
+                <a id="flow-toggle" className="teal-text text-lighten-2"><i className="material-icons medium right">zoom_in</i></a>
             )}
             <h4>
                 {sectionHeader}

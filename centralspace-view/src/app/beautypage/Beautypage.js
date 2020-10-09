@@ -30,7 +30,10 @@ const enhance = compose(
 
 const Beautypage = ({ }) => {
 
-    sprawdz required errory
+    ./src/app/beautypage/components/signup/SignUpSummary.js
+    Line 35:24:  Unexpected empty object pattern  no-empty-pattern
+
+    + galerry
 
     return (
         <div>

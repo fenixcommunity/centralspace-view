@@ -6,7 +6,7 @@ const propTypes = {
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
-            content: PropTypes.string.isRequired,
+            content: PropTypes.object.isRequired,
             active: PropTypes.bool,
         })
     ).isRequired

@@ -4,7 +4,7 @@ import Divider from '../helper/Divider';
 import { getImageFromResources } from '../../utils/imageLazyFinder';
 
 const propTypes = {
-    authorOfArticles: PropTypes.string.isRequired
+    authorOfArticles: PropTypes.object.isRequired
 }
 
 const BlogSectionFooter = ({ authorOfArticles }) => {

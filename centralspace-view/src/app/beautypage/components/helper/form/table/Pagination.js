@@ -4,7 +4,7 @@ import PaginationArrow from './PaginationArrow'
 import PaginationItem from './PaginationItem'
 const propTypes = {
     pages: PropTypes.array.isRequired,
-    arrows: PropTypes.array.isRequired
+    arrows: PropTypes.object.isRequired
 }
 
 const Pagination = ({ pages, arrows }) => {

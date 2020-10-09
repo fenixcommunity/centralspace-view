@@ -216,12 +216,12 @@ const SignUpSummary = ({ }) => {
                                 <div className="input-field col s12">
                                     <ActionButton
                                         id="reset_summary" label="Reset"
-                                        icon="clear_all" color="grey" hasWaves={true}
-                                        disabled={false} />
+                                        icon="clear_all" iconPossition="right" color="grey"
+                                        hasWaves={true} disabled={false} />
                                     <ActionButton
-                                        id="save_summary" label="Save"
-                                        icon="send" hasWaves={true}
-                                        disabled={false} type="submit" />
+                                        id="save_summary" label="Save" type="submit"
+                                        icon="send" iconPossition="right"
+                                        hasWaves={true} />
                                 </div>
                             </>
                         } />
@@ -258,7 +258,7 @@ const SignUpSummary = ({ }) => {
                                 <TapTargetButton isActive={true} actionButton={
                                     <ActionButton
                                         id="menu" icon="menu"
-                                        color="cyan" buttonLarge="true" buttonFloating="true"
+                                        color="cyan" buttonLarge={true} buttonFloating={true}
                                         actions={{ onClick: handleOnClickTapTargetAction }} />
                                 } />
 
@@ -291,22 +291,18 @@ const SignUpSummary = ({ }) => {
                                                     authorAvatar={avatar1}
                                                     title="Title"
                                                     content={
-                                                        <>
                                                         <p className="grey-text">
                                                             First Line <br /> Second Line
                                                         </p>
-                                                                </>
                                                     }
                                                     rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                                 <Comment
                                                     authorAvatar={avatar2}
                                                     title="Title"
                                                     content={
-                                                        <>
                                                         <p className="grey-text">
                                                             First Line <br /> Second Line
                                                         </p>
-                                                                </>
                                                     }
                                                     rightIcon={{ icon: "grade", ref: "/", color: "primary-color-text" }} />
                                             </ul>
@@ -362,7 +358,7 @@ const SignUpSummary = ({ }) => {
 
                                 <div className="col s12 basic-top-break">
                                     <InputSwitch checked={true} labelUnchecked="Off" labelChecked="On" />
-                                    <InputSwitch labelNegative="Disabled" labelPositive="Enabled" disabled={true} />
+                                    <InputSwitch labelUnchecked="Disabled" labelChecked="Enabled" disabled={true} />
                                 </div>
                             </>
                         } />

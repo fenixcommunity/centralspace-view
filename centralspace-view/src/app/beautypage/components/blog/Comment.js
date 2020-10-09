@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]).isRequired,
     authorAvatar: PropTypes.node.isRequired,
-    rightIcon: PropTypes.objectOf(
-        PropTypes.shape({
-            ref: PropTypes.string.isRequired,
-            color: PropTypes.string.isRequired,
-            icon: PropTypes.string.isRequired,
-        })
-    )
+    rightIcon: PropTypes.objectOf(PropTypes.string).isRequired // objectOf when tha same types in object
 }
 
 const Comment = ({ title, content, authorAvatar, rightIcon }) => {
