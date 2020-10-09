@@ -35,18 +35,11 @@ const propTypes = {}
 const SignUpSummary = () => {
     const tapTargetRef = useRef(null);
 
-    useEffect(() => {
-
-    }, []);
-
     const selectImages = [
         { id: 1, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
         { id: 2, src: 'https://websetnet.net/wp-content/uploads/2018/09/unnamed-file-530.jpg', title: 'foo', description: 'bar' },
         { id: 3, src: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', title: 'foo', description: 'bar' },
     ];
-
-    // todo, add helper!
-    //   { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />)
 
     const getImg = (id) => {
         return selectImages.find(img => img.id === id);
