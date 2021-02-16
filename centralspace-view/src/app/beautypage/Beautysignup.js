@@ -1,11 +1,5 @@
 import React from "react";
-import { compose } from "recompose";
-import { connect as connectRedux } from "react-redux";
-import { withStyles } from "@material-ui/core/styles";
-import '../../resources/beautypage/css/startup-materialize.css';
-import './BeautypageStyleModification.css';
 import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
-import BeautypageScriptsLoader from './loader/BeautypageScriptsLoader';
 import Navbar from './components/navbar/Navbar';
 import ContactUs from './components/contact/ContactUs';
 import Footer from './components/footer/Footer';
@@ -18,14 +12,6 @@ import SignUpSummary from './components/signup/SignUpSummary';
 import Gallery from './components/gallery/Gallery';
 
 const propTypes = {}
-const styles = theme => ({});
-const mapStateToProps = state => ({}); // state from reducers
-const mapDispatchToProps = {}; //imported dispatchers
-const enhance = compose(
-    // withReducer({}), //actual reducer
-    connectRedux(mapStateToProps, mapDispatchToProps),
-    withStyles(styles)
-);
 class Beautysignup extends React.Component {
     constructor(props) {
         super(props)
@@ -57,8 +43,6 @@ class Beautysignup extends React.Component {
             TODO - create similar components
              <MaterialUiStepper /> 
              */}
-
-                <BeautypageScriptsLoader contextOfScripts="galleryTheme" />
                 <Footer />
             </div>
         )
@@ -67,4 +51,4 @@ class Beautysignup extends React.Component {
 
 Beautysignup.propTypes = propTypes;
 
-export default enhance(Beautysignup);
+export default Beautysignup;

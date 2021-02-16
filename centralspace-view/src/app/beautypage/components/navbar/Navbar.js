@@ -18,7 +18,13 @@ const propTypes = {
   isNavbarSolidTransition: PropTypes.bool
 }
 
-const Navbar = ({ isDarkMode, isPrimaryColor, basicSearchIsActive, fullScreenSearchIsActive, isNavbarSolidTransition }) => {
+const Navbar = ({
+  isDarkMode,
+  isPrimaryColor,
+  basicSearchIsActive,
+  fullScreenSearchIsActive,
+  isNavbarSolidTransition
+}) => {
   const darkMode = isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
   const textStyle = isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')

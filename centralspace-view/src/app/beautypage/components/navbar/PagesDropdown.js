@@ -1,18 +1,20 @@
 import React, { useEffect, useRef } from "react";
+import {  withRouter } from 'react-router-dom';
 import M from 'materialize-css/dist/js/materialize.js';
 import PagesListForDropdown from "./dropdown/PagesListForDropdown";
 
 const propTypes = {}
 
-const PagesDropdown = () => {
+const PagesDropdown = ({location}) => {
     const dropdownRef = useRef(null);
+    const isActive = location.pathname === "/beautypage";
     useEffect(() => {
         M.Dropdown.init(dropdownRef.current, {});
     }, []);
 
     return (
         <>
-            <li className="active">
+            <li className={`${isActive ? "active" : ""}`}>
                 <a
                     className="dropdown-trigger"
                     href='#!'
@@ -35,4 +37,4 @@ const PagesDropdown = () => {
 
 PagesDropdown.propTypes = propTypes;
 
-export default PagesDropdown;
+export default withRouter(PagesDropdown);

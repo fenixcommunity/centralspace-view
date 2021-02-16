@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
 //todo css where?
 import '../../../../resources/beautypage/css/nouislider.css';

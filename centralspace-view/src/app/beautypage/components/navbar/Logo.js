@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -9,9 +10,9 @@ const Logo = ({ textStyle }) => {
     return (
         <>
             {textStyle && (
-                <a href="/beautypage" className="brand-logo">
+                <NavLink className="brand-logo" to="/beautypage">
                     <i className={`icon-diamond ${textStyle}`} />
-                </a>
+                </NavLink>
             )}
         </>
     )
@@ -19,4 +20,4 @@ const Logo = ({ textStyle }) => {
 
 Logo.propTypes = propTypes;
 
-export default Logo;
+export default withRouter(Logo);

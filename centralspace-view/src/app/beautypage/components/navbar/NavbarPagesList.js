@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -10,19 +11,19 @@ const NavbarPagesList = ({ waves }) => {
     return (
         <>
             <li>
-                <a className={wavesEffect} href="/beautyblog">Blog</a>
+            <NavLink className={wavesEffect} to="/beautyblog">Blog</NavLink>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautyteam">Team</a>
+            <NavLink className={wavesEffect} to="/beautyteam">Team</NavLink>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautyfeatures">Features</a>
+            <NavLink className={wavesEffect} to="/beautyfeatures">Features</NavLink>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautywall">Phone Wall</a>
+            <NavLink className={wavesEffect} to="/beautywall">Phone Wall</NavLink>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautysignup">Sign Up</a>
+            <NavLink className={wavesEffect} to="/beautysignup">Sign Up</NavLink>
             </li>
         </>
     )
@@ -30,4 +31,4 @@ const NavbarPagesList = ({ waves }) => {
 
 NavbarPagesList.propTypes = propTypes;
 
-export default NavbarPagesList;
+export default withRouter(NavbarPagesList);

@@ -19,7 +19,7 @@ const NavCategories = ({ categories }) => {
                         <ul key={category.name} className="categories container" data-filter={category.name}>
                             {category.items && category.items.map(item => (
                                 <li key={item.reference} className={`${item.active ? "active" : ""}`}>
-                                    <a href={item.reference}>
+                                    <a href={item.reference} onClick={(event) => event.preventDefault()}>
                                         {item.label}
                                     </a>
                                 </li>

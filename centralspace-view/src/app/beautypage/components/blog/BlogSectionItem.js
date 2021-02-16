@@ -41,7 +41,8 @@ const BlogSectionItem = ({ paragraphs, hasZoom, sectionHeader }) => {
     return (
         <>
             {hasZoom && (
-                <a id="flow-toggle" className="teal-text text-lighten-2" href="#zoom"><i className="material-icons medium right">zoom_in</i></a>
+                // it doesn't works in some cases
+                <button id="flow-toggle" className="teal-text text-lighten-2 right" href="#zoom"><i className="material-icons medium right">zoom_in</i></button>
             )}
             <h4>
                 {sectionHeader}

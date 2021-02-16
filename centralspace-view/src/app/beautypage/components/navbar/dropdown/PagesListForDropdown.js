@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -10,13 +11,13 @@ const PagesListForDropdown = ({ waves }) => {
     return (
         <>
             <li>
-                <a className={wavesEffect} href="/"><i className="material-icons">home</i>Main App</a>
+                <NavLink className={wavesEffect} exact to="/"><i className="material-icons">home</i>Main App</NavLink>
             </li>
             <li>
-                <a className={`active ${wavesEffect}`} href="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</a>
+                <NavLink className={`${wavesEffect}`} exact to="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</NavLink>
             </li>
             <li>
-                <a className={wavesEffect} href="/beautypage"><i className="material-icons">grain</i>Materialize Css</a>
+                <NavLink className={wavesEffect} exact to="/"><i className="material-icons">grain</i>Materialize Css</NavLink>
             </li>
         </>
     )
@@ -24,4 +25,4 @@ const PagesListForDropdown = ({ waves }) => {
 
 PagesListForDropdown.propTypes = propTypes;
 
-export default PagesListForDropdown;
+export default withRouter(PagesListForDropdown);

@@ -54,7 +54,7 @@ for Visual Studio Code:
 - CSS Formatter
 
 Links:
-- http://localhost:7773/
+- http://localhost:7777/
 - https://reactjs.org/
 - https://babeljs.io/
 - https://pl.reactjs.org/docs/state-and-lifecycle.html
@@ -67,7 +67,7 @@ Links:
 
 
 Env:
-- port: 7773
+- port: 7777
 - npm install react-router-dom
 - npm install axios
 - npm install http-proxy-middleware --save
@@ -84,8 +84,8 @@ Env:
 - npm i react-leaflet
 - npm install --save materialize-stepper
 - npm install @material-ui/core
-- npm install -g firebase-tools / firebase login / firebase init / firebase deploy <all or function(firebase deploy --only functions)>
-/  npm run build  / firebase deploy / => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
+- npm install -g firebase-tools -> firebase login -> firebase init (hosting) / firebase deploy <all or function(firebase deploy --only functions)>
+->  npm run build  -> create dist folder and copy files from build -> firebase deploy  => https://console.firebase.google.com/project/centralspace-view/overview (https://centralspace-view.web.app/signin)
 - npm i -g html-to-react-components (html2react index.html)
 - npm install uuid
 - Cloud Firestore
