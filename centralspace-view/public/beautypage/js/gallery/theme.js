@@ -1571,8 +1571,8 @@ if (ColorThief.prototype.getColor = function (a, b) { var c = this.getPalette(a,
 
 
 const launchGalleryThemeScript = () => {
-  // Common a11y fixes
-  slate.a11y.pageLinkFocus($(window.location.hash));
+  // Common a11y fixes but error when we use HashRoute
+  // slate.a11y.pageLinkFocus($(window.location.hash));
 
   $('.in-page-link').on('click', function (evt) {
     slate.a11y.pageLinkFocus($(evt.currentTarget.hash));

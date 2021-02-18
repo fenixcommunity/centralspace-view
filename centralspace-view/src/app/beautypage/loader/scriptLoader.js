@@ -1,5 +1,6 @@
 import loadjs from 'loadjs';
 import { refreshLoadedScripts } from "./scriptRefresher"
+import { APP_BASIC_URL } from "../../../app/config/appConfig"
 
 export const loadExternalScripts = (
     contextOfScripts,
@@ -30,7 +31,10 @@ export const loadExternalScripts = (
 }
 
 const loadScripts = (scripts, setExternalScriptsLoaded) => {
-    loadjs(scripts,
+    const scriptsWithAppBasicPath = scripts.map((script => {
+        return `${APP_BASIC_URL}${script}`;
+    }))
+    loadjs(scriptsWithAppBasicPath,
         'foobar',
         { async: false, returnPromise: true });
 

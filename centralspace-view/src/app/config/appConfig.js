@@ -1,0 +1,1 @@
+export const APP_BASIC_URL = "/app";

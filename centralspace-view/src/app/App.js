@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
 import './centralspace-training/styles/resource.css';
 import Navbar from './centralspace-training/components/navigation/Navbar';
 import Dashboard from './centralspace-training/components/dashboard/Dashboard';
@@ -18,7 +18,8 @@ import ScrollToTop from './utils/ScrollToTop';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter basename="/app">
+      // or <BrowserRouter basename="/app"> /// HashRouter with path beacause -> "homepage": "http://localhost:8088/app/",
+      <HashRouter>
         <ScrollToTop>
           {/* <div className="centralspace-view-app container"> */}
           <div className="centralspace-view-app">
@@ -47,7 +48,7 @@ class App extends React.Component {
             <PrivateRoute path='/address-list' component={AddressList} />
           </ThemeContextProvider>
         </ScrollToTop>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
