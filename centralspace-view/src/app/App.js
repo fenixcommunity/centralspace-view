@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './centralspace-training/styles/resource.css';
 import Navbar from './centralspace-training/components/navigation/Navbar';
 import Dashboard from './centralspace-training/components/dashboard/Dashboard';
