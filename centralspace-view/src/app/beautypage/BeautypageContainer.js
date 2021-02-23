@@ -14,15 +14,18 @@ import Beautyblog from "./Beautyblog";
 import Beautyteam from "./Beautyteam";
 import Beautysignup from "./Beautysignup";
 import Beautyfeatures from "./Beautyfeatures";
+import ErrorPage from "./components/error/ErrorPage";
 
 const propTypes = {
     location: PropTypes.object.isRequired,
     externalScriptsLoaded: PropTypes.bool.isRequired,
-    setExternalScriptsLoaded: PropTypes.func.isRequired
+    setExternalScriptsLoaded: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-    externalScriptsLoaded: state.beautypage.externalScriptsLoaded
+    externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
+    auth: state.firebase.auth
 }); // state from reducers
 
 const mapDispatchToProps = {
@@ -36,12 +39,22 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautypageContainer = ({ location, externalScriptsLoaded, setExternalScriptsLoaded }) => {
-    const mainPage = <Beautypage />;
+const BeautypageContainer = ({ history, location, externalScriptsLoaded, setExternalScriptsLoaded, auth }) => {
+    useEffect(() => {
+        loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
+    }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    if (!auth.uid) {
+        return <ErrorPage headerText="Not Authorized"
+            message="You are not authorized to view the requested page. Go to our homepage. We apologize for the inconvenience"
+            goToFunc={() => history.push('/')} goToIconName="login"
+        />
+    }
+
     let beautypageContext;
     switch (location.pathname) {
         case "/beautypage":
-            beautypageContext = mainPage
+            beautypageContext = <Beautypage />
             break
         case "/beautyblog":
             beautypageContext = <Beautyblog />
@@ -59,12 +72,8 @@ const BeautypageContainer = ({ location, externalScriptsLoaded, setExternalScrip
             beautypageContext = <Beautysignup />
             break
         default:
-            beautypageContext = mainPage;
+            beautypageContext = <ErrorPage />;
     }
-
-    useEffect(() => {
-        loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
-    }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
