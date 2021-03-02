@@ -925,6 +925,8 @@ const launchBeautypageInitScript = () => {
     );
     var controlledReset = document.getElementById('controlled_reset');
     controlledReset.addEventListener('click', function () { stepper.resetStepper() })
+
+    document.mstepper = stepper;
   }
 }
 

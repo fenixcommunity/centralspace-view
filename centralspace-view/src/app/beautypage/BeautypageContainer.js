@@ -15,17 +15,18 @@ import Beautyteam from "./Beautyteam";
 import Beautysignup from "./Beautysignup";
 import Beautyfeatures from "./Beautyfeatures";
 import ErrorPage from "./components/error/ErrorPage";
+import BeautysigninContainer from "./BeautysigninContainer";
 
 const propTypes = {
+    history: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     externalScriptsLoaded: PropTypes.bool.isRequired,
-    setExternalScriptsLoaded: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
+    setExternalScriptsLoaded: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
-    externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
-    auth: state.firebase.auth
+    externalScriptsLoaded: state.beautypage.externalScriptsLoaded
+
 }); // state from reducers
 
 const mapDispatchToProps = {
@@ -39,17 +40,10 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautypageContainer = ({ history, location, externalScriptsLoaded, setExternalScriptsLoaded, auth }) => {
+const BeautypageContainer = ({ history, location, externalScriptsLoaded, setExternalScriptsLoaded }) => {
     useEffect(() => {
         loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
     }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
-
-    if (!auth.uid) {
-        return <ErrorPage headerText="Not Authorized"
-            message="You are not authorized to view the requested page. Go to our homepage. We apologize for the inconvenience"
-            goToFunc={() => history.push('/')} goToIconName="login"
-        />
-    }
 
     let beautypageContext;
     switch (location.pathname) {
@@ -71,8 +65,11 @@ const BeautypageContainer = ({ history, location, externalScriptsLoaded, setExte
         case "/beautysignup":
             beautypageContext = <Beautysignup />
             break
+        case "/beautysignin":
+            beautypageContext = <BeautysigninContainer history={history} />
+            break
         default:
-            beautypageContext = <ErrorPage />;
+            beautypageContext = <ErrorPage />
     }
 
     return (

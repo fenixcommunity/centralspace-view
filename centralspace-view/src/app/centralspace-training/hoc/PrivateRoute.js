@@ -1,22 +1,44 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { Route, withRouter } from "react-router-dom";
+import { compose } from "recompose";
+import { connect as connectRedux } from "react-redux";
+import ErrorPage from "../../beautypage/components/error/ErrorPage";
 
-import { connect } from "react-redux";
+const propTypes = {
+  history: PropTypes.object.isRequired,
+  authenticationInFirebase: PropTypes.object.isRequired,
+  authenticatedInCentralspace: PropTypes.bool
+}
 
-const PrivateRoute = ({ component: Component, auth, ...rest }) => {
+const mapStateToProps = state => ({
+  authenticationInFirebase: state.firebase.auth,
+  authenticatedInCentralspace: state.beautysignin.authenticatedInCentralspace
+});
 
+const mapDispatchToProps = {};
+
+const enhance = compose(
+  connectRedux(mapStateToProps, mapDispatchToProps)
+);
+
+const PrivateRoute = ({ history, component: Component, authenticationInFirebase, authenticatedInCentralspace, ...rest }) => {
   return (
     <Route
       {...rest}
       render={props =>
-        !!auth.uid ? <Component {...props} /> : <Redirect to="/signin" />
+        (!!authenticationInFirebase.uid || authenticatedInCentralspace)
+          ? <Component {...props} />  // : <Redirect to="/signin" />
+          : <ErrorPage headerText="Not Authorized"
+            message="You are not authorized to view the requested page. Go to our homepage. We apologize for the inconvenience"
+            goToFunc={() => history.push('/beautysignin')} goToIconName="login"
+          />
       }
     />
   );
 };
 
-const mapStateToProps = state => ({
-  auth: state.firebase.auth
-});
 
-export default connect(mapStateToProps)(PrivateRoute);
+PrivateRoute.propTypes = propTypes;
+
+export default withRouter(enhance(PrivateRoute));

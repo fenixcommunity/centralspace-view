@@ -8,10 +8,11 @@ const propTypes = {
     headerText: PropTypes.string,
     message: PropTypes.string,
     goToFunc: PropTypes.func,
-    goToIconName: PropTypes.string,
+    noIcon: PropTypes.bool,
+    goToIconName: PropTypes.string
 }
 
-const ErrorPage = ({ headerText, message, goToFunc, goToIconName }) => {
+const ErrorPage = ({ headerText, message, goToFunc, noIcon, goToIconName }) => {
     const refreshPage = () => { 
         window.location.reload(); 
     }
@@ -26,6 +27,7 @@ const ErrorPage = ({ headerText, message, goToFunc, goToIconName }) => {
                 headerText={headerText ? headerText : "Oops, an error occured"}
                 message={message ? message : "Please refresh this page"}
                 goToFunc={goToFunc ? goToFunc : refreshPage}
+                noIcon={noIcon}
                 goToIconName={goToIconName ? goToIconName : "refresh"}
                 backgroundImg={treeFogg} />
         </div>

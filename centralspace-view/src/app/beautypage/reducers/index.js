@@ -1,7 +1,9 @@
 import beautypage from "./beautypageReducer";
+import beautysignin from "./beautysigninReducer";
 
 const beautypageGlobalReducer = {
-    beautypage
+    beautypage,
+    beautysignin
 };
 
 export default beautypageGlobalReducer;

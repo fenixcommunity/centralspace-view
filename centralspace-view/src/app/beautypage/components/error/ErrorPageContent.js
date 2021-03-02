@@ -5,13 +5,13 @@ const propTypes = {
     headerText: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
     goToFunc: PropTypes.func.isRequired,
+    noIcon: PropTypes.bool,
     goToIconName: PropTypes.string.isRequired,
     backgroundImg: PropTypes.node.isRequired
 }
 
-const ErrorPageContent = ({ headerText, message, goToFunc, goToIconName, backgroundImg }) => {
+const ErrorPageContent = ({ headerText, message, goToFunc, noIcon, goToIconName, backgroundImg }) => {
   
-
     return (
         <div className="section header">
             <img className="background" src={backgroundImg} alt="description" />
@@ -22,7 +22,7 @@ const ErrorPageContent = ({ headerText, message, goToFunc, goToIconName, backgro
                         {message}
                     </span>
                     <button className="read-more" onClick={goToFunc}>
-                        <i className={`icon-${goToIconName}`} /> {/* simplelineicons */}
+                       {!noIcon && <i className={`icon-${goToIconName}`} />} {/* simplelineicons */}
                     </button>
                 </div>
             </div>

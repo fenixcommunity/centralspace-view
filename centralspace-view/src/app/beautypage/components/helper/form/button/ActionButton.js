@@ -13,6 +13,7 @@ const propTypes = {
   reference: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,
+  hidden: PropTypes.bool,
   buttonLarge: PropTypes.bool,
   buttonFloating: PropTypes.bool,
   buttonFlat: PropTypes.bool,
@@ -22,7 +23,8 @@ const propTypes = {
 }
 
 const ActionButton = ({
-  id, label, classes, icon, iconColor, iconPossition, color, reference, type, disabled, buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
+  id, label, classes, icon, iconColor, iconPossition, color, reference, type, disabled, hidden,
+   buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
 }) => {
   //todo classes -> use another way
   const classesNames = classes ? classes : "";
@@ -38,6 +40,7 @@ const ActionButton = ({
   const onClickActionAttr = actions && actions.onClick ? { "onClick": actions.onClick } : {}
 
   return (
+    !hidden ? (
     <button
       id={id}
       href={hreference}
@@ -50,6 +53,7 @@ const ActionButton = ({
       {label}
       {icon && <Icon icon={icon} iconColor={iconColor} possition={iconPossition} />}
     </button>
+    ) : null
   )
 }
 

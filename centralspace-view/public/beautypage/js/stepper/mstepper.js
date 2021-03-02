@@ -259,6 +259,7 @@ function () {
           activateFeedback = _this.activateFeedback,
           form = _this.form,
           wrongStep = _this.wrongStep,
+          correctStep = _this.correctStep,
           classes = _this.classes,
           _openAction = _this._openAction,
           stepper = _this.stepper,
@@ -351,6 +352,14 @@ function () {
       MStepper.addMultipleEventListeners(inputs, 'input', removeWrongOnInput); // Dispatches the event
 
       stepper.dispatchEvent(events.STEPERROR);
+    });
+
+    _defineProperty(this, "correctStep", function () {
+      var getSteps = _this.getSteps,
+          classes = _this.classes,
+          stepper = _this.stepper;
+          getSteps().active.step.classList.remove(classes.WRONGSTEP);
+
     });
 
     _defineProperty(this, "activateFeedback", function () {
