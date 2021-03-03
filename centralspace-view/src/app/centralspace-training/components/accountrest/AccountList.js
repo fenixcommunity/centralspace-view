@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux' // to bring higher order component
 import axios from 'axios'
-import { authApi } from '../utils/CentralspaceApi'
+import { ApiCaller } from '../../../config/api/centralspaceApi';
+
 import { Link } from 'react-router-dom'
 import daVinciImg from '../../../../resources/da_vinci.jpg'
 
@@ -19,7 +20,7 @@ class AccountList extends React.Component {
     }
 
     componentDidMount() { // or use effect? hook
-        const Api = authApi();
+        const Api = ApiCaller();
 
         axios.all([Api.get('/app/api/account/all'), Api.get('/cross/centralspace-view-test')])
             .then( // returs promise

@@ -13,7 +13,7 @@ const propTypes = {
 
 const mapStateToProps = state => ({
   authenticationInFirebase: state.firebase.auth,
-  authenticatedInCentralspace: state.beautysignin.authenticatedInCentralspace
+  authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace
 });
 
 const mapDispatchToProps = {};

@@ -1,4 +1,5 @@
-import { authApi } from '../../../app/centralspace-training/components/utils/CentralspaceApi';
+import { ApiCaller, Api } from '../../config/api/centralspaceApi';
+import { setAuthenticatedInCentralspace } from './authActions';
 
 export const handleSignInAction = (event, history) => (dispatch) => {
     event.preventDefault();
@@ -11,15 +12,14 @@ export const handleSignInAction = (event, history) => (dispatch) => {
     bodyFormData.append(password.id, password.value);
 
     const mstepper = document.mstepper;
-    authApi().post(
-        '/app/public/users/signin',
-        bodyFormData,
+    ApiCaller().post(Api.auth.signin, bodyFormData,
         {
             headers: { 'Content-Type': 'multipart/form-data' }
         })
-        .then(function (response) {
+        .then((response) => {
             if (response.status === 200) {
                 dispatch(setAuthenticatedInCentralspace(true));
+                dispatch(setAuthenticationAttemptFailed(false));
                 if (mstepper) {
                     mstepper.correctStep()
                 }
@@ -28,18 +28,18 @@ export const handleSignInAction = (event, history) => (dispatch) => {
                 }, 1500)
             }
         })
-        .catch(function (response) {
+        .catch(() => {
             dispatch(setAuthenticatedInCentralspace(false));
+            dispatch(setAuthenticationAttemptFailed(true));
             if (mstepper) {
                 mstepper.wrongStep();
             }
         });
 }
 
-
-const setAuthenticatedInCentralspace = (authenticatedInCentralspace) => (dispatch) => {
+const setAuthenticationAttemptFailed = (authenticationAttemptFailed) => (dispatch) => {
     dispatch({
-        type: "BSIGN_SET_AUTHENTICATED_IN_CENTRALSPACE",
-        authenticatedInCentralspace
+        type: "BSIGN_SET_AUTHENTICATION_ATTEMPT_FAILED",
+        authenticationAttemptFailed
     });
 };

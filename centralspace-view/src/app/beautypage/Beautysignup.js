@@ -13,9 +13,10 @@ import Gallery from './components/gallery/Gallery';
 
 const propTypes = {}
 class Beautysignup extends React.Component {
+
+    // old solution, only example
     constructor(props) {
         super(props)
-
         this.state = this.initialState = {}
     }
 

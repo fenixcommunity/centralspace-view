@@ -1,6 +1,6 @@
+import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from 'prop-types';
-import React, { useEffect } from "react";
 import { connect as connectRedux } from "react-redux";
 import { compose } from "recompose";
 import '../../resources/beautypage/css/search.css';
@@ -19,7 +19,7 @@ const propTypes = {
 
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
-    authenticatedInCentralspace: state.beautysignin.authenticatedInCentralspace,
+    authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace,
     authenticationAttemptFailed: state.beautysignin.authenticationAttemptFailed
 });
 
@@ -36,14 +36,14 @@ const enhance = compose(
 
 const BeautysigninContainer = ({ history, authenticationInFirebase, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction }) => {
     return (
-        <>
+        <div>
             <Beautysignin
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}
                 authenticationAttemptFailed={authenticationAttemptFailed}
                 authenticationInFirebase={authenticationInFirebase}
                 handleSignInAction={handleSignInAction} />
-        </>
+        </div>
     )
 }
 
