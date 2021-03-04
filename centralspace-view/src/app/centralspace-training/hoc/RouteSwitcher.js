@@ -39,7 +39,7 @@ const RouteSwitcher = ({ checkUserAuth }) => {
     }, [location]);
 
     return (
-        <Switch> 
+        <Switch>
             {/*switch only one component from top to bottom*/}
             {/* all this route objects have props, look at Contact  */}
             {/* In Nabbar we have empty props. But we can add withRouter */}
@@ -58,13 +58,13 @@ const RouteSwitcher = ({ checkUserAuth }) => {
             <PrivateRoute path='/account/:id' component={AccountDetails} /> {/*or remove account-list and use switch order*/}
             {/* <Route path='/account/:login' component={AccountDetails} /> */}
             <PrivateRoute path='/create-account' component={CreateAccount} />
-            <ThemeContextProvider>
-                <PrivateRoute path='/address-list' component={AddressList} />
-            </ThemeContextProvider>
             <Route path="*"
                 children={
                     <ErrorPage headerText="Page Not Found" message="We can't seem to find the page you're looking for." noIcon={true} />
                 } /> {/* PageNotFound */}
+            <ThemeContextProvider>
+                <PrivateRoute path='/address-list' component={AddressList} />
+            </ThemeContextProvider>
         </Switch>
 
     );

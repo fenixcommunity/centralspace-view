@@ -68,8 +68,14 @@ const SigninSection = ({ history, authenticatedInCentralspace, authenticationAtt
                                     stepActions={
                                         [
                                             <ActionButton
-                                                id="login_step_2" key="login_step_2" type="submit" label="Log in"
+                                                id="login_step_2" key="login_step_2" type="submit" label="Log in to Centralspace"
                                                 color="blue" hasWaves={true}
+                                            /* data-feedback="someFunction">Log in</button> */
+                                            // actions={{ onClick: () => "" }}
+                                            />,
+                                            <ActionButton
+                                                id="login_step_2_firebase" key="login_step_2_firebase" type="submit" label="Log in to Firebase"
+                                                color="teal lighten-2" hasWaves={true}
                                             /* data-feedback="someFunction">Log in</button> */
                                             // actions={{ onClick: () => "" }}
                                             />,
