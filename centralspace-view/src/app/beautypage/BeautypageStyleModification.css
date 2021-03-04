@@ -14,37 +14,45 @@
 
 button {
     margin-right: 10px;
-  }
+}
 
-  .select-wrapper .caret {
-      display: none;
-  }
+.select-wrapper .caret {
+    display: none;
+}
 
-  .select-wrapper input.select-dropdown {
-      border-bottom:  1px solid #9e9e9e;
-      border-color: rgba(255, 255, 255, 0.5);
-      border-width: 2px;
-  }
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #9e9e9e;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-width: 2px;
+}
 
-  nav .nav-wrapper i {
+nav .nav-wrapper i {
     line-height: inherit !important;
-  }
+}
 
-  .top-media-icon button {
-      background-color: rgb(29, 233, 195) !important;
-  }
-
-  .notification-icon button {
+.top-media-icon button {
     background-color: rgb(29, 233, 195) !important;
 }
 
- .collection-item .avatar-wrapper.circle {
-       overflow: inherit !important;
-       height: 50px !important;
-       width: 50px !important;
-  }
+.notification-icon button {
+    background-color: rgb(29, 233, 195)
+}
 
-  .collection-item .avatar-wrapper .avatar {
+.logout-icon button {
+    background-color: #fff !important;
+}
+
+.logout-icon i {
+   color: rgb(29, 233, 195)
+}
+
+.collection-item .avatar-wrapper.circle {
+    overflow: inherit !important;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.collection-item .avatar-wrapper .avatar {
     left: 0px !important;
     height: 50px !important;
     width: 50px !important;
@@ -52,9 +60,9 @@ button {
 
 .pulse.btn-floating i {
     color: #fff !important;
-  }
+}
 
-  nav .badge {
+nav .badge {
     position: relative;
     top: 20px;
     right: 20px;
@@ -67,7 +75,7 @@ button {
 
 :focus {
     outline: none !important;
-  }
+}
 
 label[for=autocomplete-input] {
     color: rgba(255, 255, 255, 0.5);
@@ -78,6 +86,7 @@ label[for=autocomplete-input].active {
 }
 
 /*input focus start */
+
 .chips.input-field.focus {
     color: #fff;
     border-bottom: 2px solid #fff !important;
@@ -93,52 +102,56 @@ input:focus::-webkit-input-placeholder {
 }
 
 /* Firefox < 19 */
+
 input:focus:-moz-placeholder {
     color: #fff;
 }
 
 /* Firefox > 19 */
+
 input:focus::-moz-placeholder {
     color: #fff;
 }
 
 /* Internet Explorer 10 */
+
 input:focus:-ms-input-placeholder {
     color: #fff;
 }
+
 /*input focus end */
 
 /* Style Placeholders start */
+
 ::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
-  }
-  
-  :-moz-placeholder {
+}
+
+:-moz-placeholder {
     /* Firefox 18- */
     color: rgba(255, 255, 255, 0.5);
-  }
-  
-  ::-moz-placeholder {
+}
+
+::-moz-placeholder {
     /* Firefox 19+ */
     color: rgba(255, 255, 255, 0.5);
-  }
-  
-  :-ms-input-placeholder {
+}
+
+:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
-  }
-  /* Style Placeholders end */
+}
+
+/* Style Placeholders end */
 
 /* disable autofill style */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
 }
 
 .input-field .select-wrapper label {
-position: relative ;
+    position: relative;
 }
 
 #flow-toggle {
@@ -146,24 +159,15 @@ position: relative ;
 }
 
 /* browser autocomplete style disabled */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus 
-{
-   -webkit-box-shadow: 0 0 0px 1000px inherit inset!important;
-   transition: background-color 5000s ease-in-out 0s !important;
-} 
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset!important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
 
 .section-large-size {
     height: fit-content
-} 
+}
 
 #portfolio {
     padding: 10px;

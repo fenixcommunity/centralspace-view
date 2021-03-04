@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
@@ -14,9 +15,11 @@ import LeafletMapEmbedded from './components/map/LeafletMapEmbedded';
 import SignUpForm from './components/signup/SignUpForm';
 import Footer from './components/footer/Footer';
 
-const propTypes = {}
+const propTypes = {
+    logoutUser: PropTypes.func
+}
 
-const Beautypage = () => {
+const Beautypage = ({logoutUser}) => {
     //TODO
     // 1.
     // <Component>
@@ -29,7 +32,8 @@ const Beautypage = () => {
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
                 basicSearchIsActive={true}
-                fullScreenSearchIsActive={false} />
+                fullScreenSearchIsActive={false} 
+                logoutUser={logoutUser}/>
             <Header
                 headerImg={treeFogg}
                 headerMessage="Beauty Page"

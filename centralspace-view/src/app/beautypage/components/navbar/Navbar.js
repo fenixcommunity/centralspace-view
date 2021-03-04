@@ -9,13 +9,15 @@ import NotificationIcon from "./NotificationIcon";
 import NavbarPagesList from "./NavbarPagesList";
 import HamburgerMenu from "./slideout/HamburgerMenu";
 import NavbarSlideOut from "./slideout/NavbarSlideOut";
+import LogoutIcon from "./LogoutIcon";
 
 const propTypes = {
   isDarkMode: PropTypes.bool,
   isPrimaryColor: PropTypes.bool,
   basicSearchIsActive: PropTypes.bool,
   fullScreenSearchIsActive: PropTypes.bool,
-  isNavbarSolidTransition: PropTypes.bool
+  isNavbarSolidTransition: PropTypes.bool,
+  logoutUser: PropTypes.func
 }
 
 const Navbar = ({
@@ -23,7 +25,8 @@ const Navbar = ({
   isPrimaryColor,
   basicSearchIsActive,
   fullScreenSearchIsActive,
-  isNavbarSolidTransition
+  isNavbarSolidTransition,
+  logoutUser
 }) => {
   const darkMode = isDarkMode;
   const navbarStyle = darkMode ? 'dark' : '';
@@ -43,6 +46,7 @@ const Navbar = ({
             <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
             <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
             <NotificationIcon notificationIconName="notifications" notificationCount={5} />
+            {logoutUser && <LogoutIcon logoutUser={logoutUser}/>}
           </ul>
           {/* HamburgerMenu refers to NavbarSlideOut */}
           <HamburgerMenu textStyle={textStyle} />

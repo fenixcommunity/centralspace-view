@@ -9,16 +9,18 @@ const propTypes = {
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
     authenticationInFirebase: PropTypes.object.isRequired,
-    handleSignInAction: PropTypes.func.isRequired
+    handleSignInAction: PropTypes.func.isRequired,
+    logoutUser: PropTypes.func
 }
 
-const Beautysignin = ({ history, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction }) => {
+const Beautysignin = ({ history, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction, logoutUser }) => {
     return (
         <>
             <Navbar
                 isNavbarSolidTransition={false}
                 isDarkMode={true}
-                fullScreenSearchIsActive={true} />
+                fullScreenSearchIsActive={true}
+                logoutUser={logoutUser} />
             <SigninSection
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}

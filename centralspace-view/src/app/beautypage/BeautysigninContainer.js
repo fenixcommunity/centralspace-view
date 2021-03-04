@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from 'prop-types';
 import { connect as connectRedux } from "react-redux";
@@ -8,22 +8,29 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
 import { handleSignInAction } from "./actions/beautysigninActions";
+import { setExternalScriptsLoaded } from "./actions/beautypageActions";
+import { loadExternalScripts } from "./loader/scriptLoader";
 
 const propTypes = {
+    location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
     authenticationInFirebase: PropTypes.object.isRequired,
-    handleSignInAction: PropTypes.func.isRequired
+    handleSignInAction: PropTypes.func.isRequired,
+    externalScriptsLoaded: PropTypes.bool.isRequired,
+    setExternalScriptsLoaded: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
     authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace,
-    authenticationAttemptFailed: state.beautysignin.authenticationAttemptFailed
+    authenticationAttemptFailed: state.beautysignin.authenticationAttemptFailed,
+    externalScriptsLoaded: state.beautypage.externalScriptsLoaded
 });
 
 const mapDispatchToProps = {
+    setExternalScriptsLoaded,
     handleSignInAction
 };
 
@@ -34,7 +41,26 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautysigninContainer = ({ history, authenticationInFirebase, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction }) => {
+const BeautysigninContainer = ({
+    location,
+    history,
+    authenticationInFirebase,
+    authenticatedInCentralspace,
+    authenticationAttemptFailed,
+    handleSignInAction,
+    externalScriptsLoaded,
+    setExternalScriptsLoaded
+}) => {
+ //todo remove scriptLoader
+    useEffect(() => {
+        loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
+    }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
+    
+    if (authenticationInFirebase.uid || authenticatedInCentralspace) {
+        history.push("/beautypage")
+        return null;
+    }
+
     return (
         <div>
             <Beautysignin
@@ -42,7 +68,8 @@ const BeautysigninContainer = ({ history, authenticationInFirebase, authenticate
                 authenticatedInCentralspace={authenticatedInCentralspace}
                 authenticationAttemptFailed={authenticationAttemptFailed}
                 authenticationInFirebase={authenticationInFirebase}
-                handleSignInAction={handleSignInAction} />
+                handleSignInAction={handleSignInAction}
+            />
         </div>
     )
 }

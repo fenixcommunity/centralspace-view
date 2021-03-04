@@ -17,6 +17,7 @@ import BeautypageContainer from '../../beautypage/BeautypageContainer';
 import ErrorPage from '../../beautypage/components/error/ErrorPage';
 import { checkUserAuth } from '../auth/actions/authActions'
 import ThemeContextProvider from '../contexts/ThemeContext';
+import BeautysigninContainer from '../../beautypage/BeautysigninContainer';
 
 const propTypes = {
     checkUserAuth: PropTypes.func.isRequired
@@ -47,7 +48,7 @@ const RouteSwitcher = ({ checkUserAuth }) => {
             <PrivateRoute exact path='/beautyfeatures' component={BeautypageContainer} />
             <PrivateRoute exact path='/beautywall' component={BeautypageContainer} />
             <PrivateRoute exact path='/beautyteam' component={BeautypageContainer} />
-            <Route exact path='/beautysignin' component={BeautypageContainer} />
+            <Route exact path='/beautysignin' component={BeautysigninContainer} />
             <PrivateRoute exact path='/beautysignup' component={BeautypageContainer} />
             <Route path='/contact' component={Contact} />
             <Route path='/signup' component={SignUp} />

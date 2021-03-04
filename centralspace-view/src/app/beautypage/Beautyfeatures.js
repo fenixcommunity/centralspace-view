@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Features from './components/feature/Features';
@@ -10,15 +11,18 @@ import Feature3 from './components/feature/animated/Feature3';
 import Feature4 from './components/feature/animated/Feature4';
 import SliderHeader from './components/header/SliderHeader';
 
-const propTypes = {}
+const propTypes = {
+    logoutUser: PropTypes.func
+}
 
-const Beautyfeatures = () => {
+const Beautyfeatures = ({logoutUser}) => {
     return (
         <div>
             <Navbar
                 isNavbarSolidTransition={true}
                 isDarkMode={false}
-                fullScreenSearchIsActive={true} />
+                fullScreenSearchIsActive={true} 
+                logoutUser={logoutUser}/>
 
             <SliderHeader />
 

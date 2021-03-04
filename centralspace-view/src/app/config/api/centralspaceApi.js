@@ -18,6 +18,7 @@ export const ApiCaller = () => {
 export const Api = {
     auth: {
         isAuthenticated: `${APP_BASIC_URL}/public/users/authenticated`,
-        signin: `${APP_BASIC_URL}/public/users/signin`
+        signin: `${APP_BASIC_URL}/public/users/signin`,
+        logout: `${APP_BASIC_URL}/public/users/logout-call`
     }
 };

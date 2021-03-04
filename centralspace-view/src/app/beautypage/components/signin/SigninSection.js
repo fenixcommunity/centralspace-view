@@ -34,7 +34,7 @@ const SigninSection = ({ history, authenticatedInCentralspace, authenticationAtt
             theme="white" large={true}
             wrappedSection={
                 <>
-                    <FormCard header="Sign up" theme="light" themeColor="blue" onSubmit={(event) => handleSignInAction(event, history)}
+                    <FormCard header="Sign in" theme="light" themeColor="blue" onSubmit={(event) => handleSignInAction(event, history)}
                         content={
                             <StepperLinear steps={[
                                 <Step id="step_1" key="step_1" active={true} header="Basic data" headerWaves={true}

@@ -10,3 +10,13 @@ export const checkUserAuth = (location) => (dispatch) => {
             dispatch(setAuthenticatedInCentralspace(false));
         });
 }
+
+export const logoutUser = (history) => (dispatch) => {
+    ApiCaller().post(Api.auth.logout)
+        .then((response) => {
+            if(response.status === 200) {
+                dispatch(setAuthenticatedInCentralspace(false));
+                history.push("/beautysignin");
+            }
+        });
+}

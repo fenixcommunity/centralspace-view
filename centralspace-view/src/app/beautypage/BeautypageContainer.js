@@ -7,7 +7,7 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import { setExternalScriptsLoaded } from "./actions/beautypageActions";
-import { loadExternalScripts } from "./loader/scriptLoader"
+import { loadExternalScripts } from "./loader/scriptLoader";
 import Beautypage from "./Beautypage";
 import Beautywall from "./Beautywall";
 import Beautyblog from "./Beautyblog";
@@ -15,22 +15,25 @@ import Beautyteam from "./Beautyteam";
 import Beautysignup from "./Beautysignup";
 import Beautyfeatures from "./Beautyfeatures";
 import ErrorPage from "./components/error/ErrorPage";
-import BeautysigninContainer from "./BeautysigninContainer";
+import { logoutUser } from '../centralspace-training/auth/actions/authActions'
 
 const propTypes = {
-    history: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
     externalScriptsLoaded: PropTypes.bool.isRequired,
-    setExternalScriptsLoaded: PropTypes.func.isRequired
+    setExternalScriptsLoaded: PropTypes.func.isRequired,
+    logoutUser: PropTypes.func,
+    authenticatedInCentralspace: PropTypes.bool.isRequired
 }
 
 const mapStateToProps = state => ({
-    externalScriptsLoaded: state.beautypage.externalScriptsLoaded
-
+    externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
+    authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace
 }); // state from reducers
 
 const mapDispatchToProps = {
-    setExternalScriptsLoaded
+    setExternalScriptsLoaded,
+    logoutUser
 }; //imported dispatchers
 
 const styles = theme => ({});
@@ -40,33 +43,31 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautypageContainer = ({ history, location, externalScriptsLoaded, setExternalScriptsLoaded }) => {
+const BeautypageContainer = ({ location, history, externalScriptsLoaded, setExternalScriptsLoaded, logoutUser, authenticatedInCentralspace }) => {
     useEffect(() => {
         loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
     }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
     let beautypageContext;
+    const logoutUserForLoggedUser = authenticatedInCentralspace ? () => logoutUser(history) : null;
     switch (location.pathname) {
         case "/beautypage":
-            beautypageContext = <Beautypage />
+            beautypageContext = <Beautypage logoutUser={logoutUserForLoggedUser} />
             break
         case "/beautyblog":
-            beautypageContext = <Beautyblog />
+            beautypageContext = <Beautyblog logoutUser={logoutUserForLoggedUser} />
             break
         case "/beautyteam":
-            beautypageContext = <Beautyteam />
+            beautypageContext = <Beautyteam logoutUser={logoutUserForLoggedUser} />
             break
         case "/beautyfeatures":
-            beautypageContext = <Beautyfeatures />
+            beautypageContext = <Beautyfeatures logoutUser={logoutUserForLoggedUser} />
             break
         case "/beautywall":
-            beautypageContext = <Beautywall />
+            beautypageContext = <Beautywall logoutUser={logoutUserForLoggedUser} />
             break
         case "/beautysignup":
             beautypageContext = <Beautysignup />
-            break
-        case "/beautysignin":
-            beautypageContext = <BeautysigninContainer history={history} />
             break
         default:
             beautypageContext = <ErrorPage />
