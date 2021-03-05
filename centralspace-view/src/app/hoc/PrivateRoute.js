@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { connect as connectRedux } from "react-redux";
-import ErrorPage from "../../beautypage/components/error/ErrorPage";
+import ErrorPage from "../beautypage/components/error/ErrorPage";
 
 const propTypes = {
   history: PropTypes.object.isRequired,

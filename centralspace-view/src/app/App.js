@@ -1,9 +1,8 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
-import './centralspace-training/styles/resource.css';
 import Navbar from './centralspace-training/components/navigation/Navbar';
-import ScrollToTop from './utils/ScrollToTop';
-import RouteSwitcher from './centralspace-training/hoc/RouteSwitcher';
+import ScrollToTop from '../app/beautypage/components/utils/ScrollToTop';
+import RouteSwitcher from './hoc/RouteSwitcher';
 
 const App = () => {
   return (

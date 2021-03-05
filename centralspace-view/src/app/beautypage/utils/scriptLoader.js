@@ -1,6 +1,6 @@
 import loadjs from 'loadjs';
 import { refreshLoadedScripts } from "./scriptRefresher"
-import { APP_BASIC_URL } from "../../../app/config/appConfig"
+import { APP_BASIC_URL } from "../../config/appConfig"
 
 export const loadExternalScripts = (
     contextOfScripts,

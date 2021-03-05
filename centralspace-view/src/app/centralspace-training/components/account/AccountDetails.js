@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
 import { archiveAccount, deleteAccount } from '../../store/actions/accountActions';
-import Loader from '../../../utils/Loader'
+import Loader from '../../../beautypage/components/utils/Loader'
 
 function AccountDetails(props) {
 

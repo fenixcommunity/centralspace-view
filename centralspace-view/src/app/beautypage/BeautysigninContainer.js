@@ -9,7 +9,7 @@ import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
 import { handleSignInAction } from "./actions/beautysigninActions";
 import { setExternalScriptsLoaded } from "./actions/beautypageActions";
-import { loadExternalScripts } from "./loader/scriptLoader";
+import { loadExternalScripts } from "./utils/scriptLoader";
 
 const propTypes = {
     location: PropTypes.object.isRequired,

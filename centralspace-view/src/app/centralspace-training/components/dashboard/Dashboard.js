@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import StyleWrapper from '../../hoc/StyleWrapper';
+import StyleWrapper from '../../../hoc/StyleWrapper';
 import Notifications from './Notifications';
 import AccountsPanel from '../account/AccountsPanel';
 

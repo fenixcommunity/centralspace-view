@@ -27,29 +27,3 @@ function ThemeContextProvider(props) {
 }
 
 export default ThemeContextProvider;
-//// we can also create clas component context creator:
-
-// class ThemeContextProvider extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = this.initialState = {
-//         ...
-//         }
-//     }
-
-//     toggleTheme= () => {
-//         this.setState({ isLightTheme: !this.state.isLightTheme });
-//       }
-
-//     render() {
-//         return (
-//             // wrapper
-//             <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme}}>
-//                 {this.props.children}
-//             </ThemeContext.Provider>
-//         )
-//     }
-// }
-
-// export default ThemeContextProvider;

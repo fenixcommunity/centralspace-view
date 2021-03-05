@@ -7,7 +7,7 @@ import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import { setExternalScriptsLoaded } from "./actions/beautypageActions";
-import { loadExternalScripts } from "./loader/scriptLoader";
+import { loadExternalScripts } from "./utils/scriptLoader";
 import Beautypage from "./Beautypage";
 import Beautywall from "./Beautywall";
 import Beautyblog from "./Beautyblog";
@@ -15,7 +15,7 @@ import Beautyteam from "./Beautyteam";
 import Beautysignup from "./Beautysignup";
 import Beautyfeatures from "./Beautyfeatures";
 import ErrorPage from "./components/error/ErrorPage";
-import { logoutUser } from '../centralspace-training/auth/actions/authActions'
+import { logoutUser } from './actions/authActions';
 
 const propTypes = {
     location: PropTypes.object.isRequired,

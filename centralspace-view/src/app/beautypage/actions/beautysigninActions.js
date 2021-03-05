@@ -1,4 +1,4 @@
-import { ApiCaller, Api } from '../../config/api/centralspaceApi';
+import { ApiCaller, Api } from '../../api/centralspaceApi';
 import { setAuthenticatedInCentralspace } from './authActions';
 
 export const handleSignInAction = (event, history) => (dispatch) => {

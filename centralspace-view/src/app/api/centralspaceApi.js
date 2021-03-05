@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { APP_BASIC_URL } from '../appConfig';
+import { APP_BASIC_URL } from '../config/appConfig';
 
 export const ApiCaller = () => {
     const apiAuth = axios.create({

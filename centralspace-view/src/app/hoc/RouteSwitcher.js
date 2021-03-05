@@ -3,21 +3,20 @@ import PropTypes from 'prop-types';
 import { connect as connectRedux } from "react-redux";
 import { compose } from "recompose";
 import { Route, Switch, useLocation } from 'react-router-dom';
-import '../styles/resource.css';
-import Dashboard from '../components/dashboard/Dashboard';
-import Contact from '../components/dashboard/Contact';
-import AccountList from '../components/accountrest/AccountList';
-import AddressList from '../components/address/AddressList';
-import AccountDetails from '../components/account/AccountDetails';
-import SignIn from '../components/auth/SignIn';
-import SignUp from '../components/auth/SignUp';
-import CreateAccount from '../components/account/CreateAccount';
-import PrivateRoute from '../hoc/PrivateRoute';
-import BeautypageContainer from '../../beautypage/BeautypageContainer';
-import ErrorPage from '../../beautypage/components/error/ErrorPage';
-import { checkUserAuth } from '../auth/actions/authActions'
-import ThemeContextProvider from '../contexts/ThemeContext';
-import BeautysigninContainer from '../../beautypage/BeautysigninContainer';
+import Dashboard from '../centralspace-training/components/dashboard/Dashboard';
+import Contact from '../centralspace-training/components/dashboard/Contact';
+import AccountList from '../centralspace-training/components/accountrest/AccountList';
+import AddressList from '../centralspace-training/components/address/AddressList';
+import AccountDetails from '../centralspace-training/components/account/AccountDetails';
+import SignIn from '../centralspace-training/components/auth/SignIn';
+import SignUp from '../centralspace-training/components/auth/SignUp';
+import CreateAccount from '../centralspace-training/components/account/CreateAccount';
+import PrivateRoute from './PrivateRoute';
+import BeautypageContainer from '../beautypage/BeautypageContainer';
+import ErrorPage from '../beautypage/components/error/ErrorPage';
+import { checkUserAuth } from '../beautypage/actions/authActions'
+import ThemeContextProvider from '../centralspace-training/contexts/ThemeContext';
+import BeautysigninContainer from '../beautypage/BeautysigninContainer';
 
 const propTypes = {
     checkUserAuth: PropTypes.func.isRequired

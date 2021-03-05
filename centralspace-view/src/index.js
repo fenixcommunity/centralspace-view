@@ -18,7 +18,7 @@ import {
 import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from "react-redux-firebase";
 import firebase from "firebase/app";
 import firebaseConfig from './env/firebaseConfig';
-import Loader from './app/utils/Loader';
+import Loader from './app/beautypage/components/utils/Loader';
 
 // appling middleware(redux thunk) // list of middleware
 const store = createStore(
