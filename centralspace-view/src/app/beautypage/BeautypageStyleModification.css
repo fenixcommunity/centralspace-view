@@ -172,3 +172,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 #portfolio {
     padding: 10px;
 }
+
+.section.white .btn, .btn-large,
+.btn-large,
+.btn-floating {
+  border: 0px solid #eee !important;
+}

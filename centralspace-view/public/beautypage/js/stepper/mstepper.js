@@ -100,11 +100,11 @@ function () {
       if (!_this._validationFunctionCaller()) e.preventDefault();
     });
 
-    _defineProperty(this, "resetStepper", function () {
+    _defineProperty(this, "resetStepper", function (step) {
       if (_this.form) {
         _this.form.reset();
 
-        _this.openStep(_this.options.firstActive);
+        _this.openStep(step ? step : _this.options.firstActive);
       }
     });
 

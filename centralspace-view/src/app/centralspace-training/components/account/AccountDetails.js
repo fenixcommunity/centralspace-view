@@ -39,9 +39,10 @@ function AccountDetails(props) {
             </div>
         </div>
 
-    ) : (
-            <Loader />
-        )
+    ) : 
+    (
+        <Loader />
+    )
 
     return (
         <div className="container section account-details">

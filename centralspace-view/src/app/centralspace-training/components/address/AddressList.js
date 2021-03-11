@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { v4 as uuid } from 'uuid';
-import CreateAddress from './CreateAddress';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import ThemeToggle from '../theme/ThemeToggle';
 
@@ -49,7 +48,6 @@ function AddressList() {
                             })}
                         </div>
                         <div className="card-action">
-                            <CreateAddress addAddress={addAddress} />
                             <button className="btn red" onClick={changeRegion}>Change region</button>
                             <ThemeToggle />
                         </div>

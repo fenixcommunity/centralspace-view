@@ -4,6 +4,7 @@ import Icon from '../../Icon';
 
 const propTypes = {
   id: PropTypes.string.isRequired,
+  value: PropTypes.string,
   label: PropTypes.string,
   classes: PropTypes.string,
   icon: PropTypes.string,
@@ -23,8 +24,8 @@ const propTypes = {
 }
 
 const ActionButton = ({
-  id, label, classes, icon, iconColor, iconPossition, color, reference, type, disabled, hidden,
-   buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
+  id, value, label, classes, icon, iconColor, iconPossition, color, reference, type, disabled, 
+  hidden, buttonLarge, buttonFloating, buttonFlat, hasWaves, pulseEffect, actions
 }) => {
   //todo classes -> use another way
   const classesNames = classes ? classes : "";
@@ -43,6 +44,7 @@ const ActionButton = ({
     !hidden ? (
     <button
       id={id}
+      value={value}
       href={hreference}
       className={`btn${buttonFlatClass} ${wavesEffect} ${pulseEffectClass} ${buttonColor} ${buttonLargeClass} ${buttonFloatingClass} ${classesNames}`}
       type={buttonType}

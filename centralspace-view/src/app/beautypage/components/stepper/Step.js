@@ -6,23 +6,24 @@ const propTypes = {
     headerWaves: PropTypes.bool,
     active: PropTypes.bool,
     content: PropTypes.node.isRequired,
-    stepActions: PropTypes.array
+    stepActions: PropTypes.array,
+    onClickNextStep: PropTypes.func
 }
 
-const Step = ({ header, headerWaves, active, content, stepActions }) => {
+const Step = ({ header, headerWaves, active, content, onClickNextStep, stepActions }) => {
     const headerWavesClass = headerWaves ? "waves-effect waves-dark" : "";
     const contentSection = typeof (content) === 'string' ? content : (<div className="row">{content}</div>);
     return (
         <li className={`step ${active ? "active" : ""}`}>
-            <div className={`step-title ${headerWavesClass}`}>{header}</div>
+            <div onClick={onClickNextStep} className={`step-title ${headerWavesClass}`}>{header}</div>
             <div className="step-content">
                 {typeof (content) === 'string'}
-                    {contentSection}
-                <div className="step-actions">
-                    {stepActions && stepActions.map(action => (
-                        action
-                    ))}
-                </div>
+                {contentSection}
+                {stepActions && stepActions.map(action => (
+                    <div key={action.key} className="step-actions">
+                        {action}
+                    </div>
+                ))}
             </div>
         </li>
     )

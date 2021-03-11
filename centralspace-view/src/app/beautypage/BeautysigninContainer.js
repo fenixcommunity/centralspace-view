@@ -7,19 +7,23 @@ import '../../resources/beautypage/css/search.css';
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
-import { handleSignInAction } from "./actions/beautysigninActions";
+import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "./actions/beautysigninActions";
 import { setExternalScriptsLoaded } from "./actions/beautypageActions";
 import { loadExternalScripts } from "./utils/scriptLoader";
+import { Redirect } from "react-router";
+
 
 const propTypes = {
     location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
+    authenticationInFirebase: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
-    authenticationInFirebase: PropTypes.object.isRequired,
-    handleSignInAction: PropTypes.func.isRequired,
+    signIn: PropTypes.func.isRequired,
     externalScriptsLoaded: PropTypes.bool.isRequired,
-    setExternalScriptsLoaded: PropTypes.func.isRequired
+    setExternalScriptsLoaded: PropTypes.func.isRequired,
+    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    setSignInMethod: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
@@ -31,7 +35,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
     setExternalScriptsLoaded,
-    handleSignInAction
+    signIn,
+    setAuthenticationAttemptFailed,
+    setSignInMethod
 };
 
 const styles = theme => ({});
@@ -47,9 +53,11 @@ const BeautysigninContainer = ({
     authenticationInFirebase,
     authenticatedInCentralspace,
     authenticationAttemptFailed,
-    handleSignInAction,
+    setAuthenticationAttemptFailed,
     externalScriptsLoaded,
-    setExternalScriptsLoaded
+    setExternalScriptsLoaded,
+    signIn,
+    setSignInMethod
 }) => {
  //todo remove scriptLoader
     useEffect(() => {
@@ -57,8 +65,7 @@ const BeautysigninContainer = ({
     }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
     
     if (authenticationInFirebase.uid || authenticatedInCentralspace) {
-        history.push("/beautypage")
-        return null;
+        return <Redirect to='/beautypage' />;
     }
 
     return (
@@ -66,9 +73,11 @@ const BeautysigninContainer = ({
             <Beautysignin
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}
-                authenticationAttemptFailed={authenticationAttemptFailed}
                 authenticationInFirebase={authenticationInFirebase}
-                handleSignInAction={handleSignInAction}
+                authenticationAttemptFailed={authenticationAttemptFailed}
+                setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                signIn={signIn}
+                setSignInMethod={setSignInMethod}
             />
         </div>
     )

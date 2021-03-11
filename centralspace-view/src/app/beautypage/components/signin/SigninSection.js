@@ -6,24 +6,54 @@ import InputText from "../helper/form/input/InputText";
 import ActionButton from "../helper/form/button/ActionButton";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
+import { LOG_IN_METHOD } from "../../../config/appConfig"
 
 const propTypes = {
     history: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
-    handleSignInAction: PropTypes.func.isRequired
+    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    signIn: PropTypes.func.isRequired,
+    setSignInMethod: PropTypes.func.isRequired
 }
 
-const SigninSection = ({ history, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction }) => {
-    const onReturn = () => {
-        const mstepper = document.mstepper;
+const SigninSection = ({
+    history,
+    authenticatedInCentralspace,
+    authenticationAttemptFailed,
+    setAuthenticationAttemptFailed,
+    signIn,
+    setSignInMethod
+}) => {
+    const mstepper = document.mstepper;
+    const returnActionIfWrongCredentials = () => {
+        resetStepper();
+        setAuthenticationAttemptFailed(false)
+    }
+    const setCentralspaceSignInMethod = () => {
+        setSignInMethod(LOG_IN_METHOD.CENTRALSPACE);
+        nextStep();
+    };
+    const setFirebaseSignInMethod = () => {
+        setSignInMethod(LOG_IN_METHOD.FIREBASE);
+        nextStep();
+    };
+    const nextStep = () => {
         if (mstepper) {
-            mstepper.resetStepper();
+            mstepper.nextStep()
         }
     }
+    const resetStepper = () => {
+        if (mstepper) {
+            const step2Index = 1;
+            mstepper.resetStepper(step2Index);
+        }
+    }
+
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
         : (authenticationAttemptFailed ? "Not authorized, please try with other credentials"
-            : "Please log in to Centralspace");
+            : "Please sign in");
+
     // Remember me on this computer
     // <p><input type="checkbox" name="remember-me"> Remember me on this computer.</p>
     // <input name="_csrf" type="hidden" value="1cc69667-05e5-497c-b1d8-e44d45adfda4">
@@ -34,15 +64,36 @@ const SigninSection = ({ history, authenticatedInCentralspace, authenticationAtt
             theme="white" large={true}
             wrappedSection={
                 <>
-                    <FormCard header="Sign in" theme="light" themeColor="blue" onSubmit={(event) => handleSignInAction(event, history)}
+                    <FormCard header="Sign in" theme="light" themeColor="blue" onSubmit={(event) => signIn(event, history)}
                         content={
                             <StepperLinear steps={[
-                                <Step id="step_1" key="step_1" active={true} header="Basic data" headerWaves={true}
+                                <Step id="step_1" key="step_1" active={true} header="Login method" headerWaves={true}
+                                    content="Please choose the login method"
+                                    stepActions={
+                                        [
+                                            <ActionButton
+                                                id="login_step_1" value="centralspace" key="login_step_1"
+                                                classes="next-step"
+                                                label="By Centralspace" color="blue" hasWaves={true}
+                                                actions={{ onClick: setCentralspaceSignInMethod }}
+                                                hidden={authenticationAttemptFailed}
+                                            />,
+                                            <ActionButton
+                                                id="login_step_1_firebase" value="firebase" key="login_step_1_firebase"
+                                                classes="next-step"
+                                                label="By Firebase" color="teal lighten-2" hasWaves={true}
+                                                actions={{ onClick: setFirebaseSignInMethod }}
+                                                hidden={authenticationAttemptFailed}
+
+                                            />
+                                        ]
+                                    } />,
+                                <Step id="step_2" key="step_2" header="Credentials" headerWaves={true}
                                     content={
                                         <>
                                             <InputText
                                                 id="username" label="Your username"
-                                                validate={{ minLength: 2, maxLength: 10, dataLength: 10 }}
+                                                validate={{ minLength: 3, maxLength: 20, dataLength: 20 }}
                                                 required={true}
                                                 autocomplete={false}
                                             />
@@ -57,32 +108,31 @@ const SigninSection = ({ history, authenticatedInCentralspace, authenticationAtt
                                     stepActions={
                                         [
                                             <ActionButton
-                                                id="continue_step_1" key="continue_step_1" label="Continue"
+                                                id="continue_step_2" key="continue_step_2" label="Continue"
                                                 classes="next-step"
                                                 color="blue" hasWaves={true}
-                                                actions={{ onClick: () => "" }} />
+                                                actions={{ onClick: () => setAuthenticationAttemptFailed(false) }}
+                                            />
                                         ]
-                                    } />,
-                                <Step id="step_2" key="step_2" header="Confirmation" headerWaves={true}
+                                    }
+                                    onClickNextStep={() => setAuthenticationAttemptFailed(false)}
+                                />,
+                                <Step id="step_3" key="step_3" header="Confirmation" headerWaves={true}
                                     content={confirmationMessage}
                                     stepActions={
                                         [
                                             <ActionButton
-                                                id="login_step_2" key="login_step_2" type="submit" label="Log in to Centralspace"
-                                                color="blue" hasWaves={true}
+                                                id="login_step_3" value="centralspace" key="login_step_3" type="submit"
+                                                label="Log in" color="blue" hasWaves={true}
+                                                actions={{}}
+                                                hidden={authenticationAttemptFailed}
                                             /* data-feedback="someFunction">Log in</button> */
                                             // actions={{ onClick: () => "" }}
                                             />,
                                             <ActionButton
-                                                id="login_step_2_firebase" key="login_step_2_firebase" type="submit" label="Log in to Firebase"
-                                                color="teal lighten-2" hasWaves={true}
-                                            /* data-feedback="someFunction">Log in</button> */
-                                            // actions={{ onClick: () => "" }}
-                                            />,
-                                            <ActionButton
-                                                id="login_step_2_return" key="login_step_2_return" label="Return"
+                                                id="login_step_3_return" key="login_step_3_return" label="Return"
                                                 color="grey" hasWaves={true}
-                                                actions={{ onClick: onReturn }}
+                                                actions={{ onClick: returnActionIfWrongCredentials }}
                                                 hidden={!authenticationAttemptFailed}
                                             />
                                         ]

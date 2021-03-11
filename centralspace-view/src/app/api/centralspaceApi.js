@@ -22,3 +22,11 @@ export const Api = {
         logout: `${APP_BASIC_URL}/public/users/logout-call`
     }
 };
+
+// example
+// axios.all([Api.get('/app/api/account/all'), Api.get('/cross/centralspace-view-test')])
+// .then( 
+//     axios.spread((accounts, cross) => {
+//     ...
+//     })
+// )

@@ -23,12 +23,14 @@ const propTypes = {
     externalScriptsLoaded: PropTypes.bool.isRequired,
     setExternalScriptsLoaded: PropTypes.func.isRequired,
     logoutUser: PropTypes.func,
-    authenticatedInCentralspace: PropTypes.bool.isRequired
+    authenticatedInCentralspace: PropTypes.bool.isRequired,
+    authenticationInFirebase: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
     externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
-    authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace
+    authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace,
+    authenticationInFirebase: state.firebase.auth
 }); // state from reducers
 
 const mapDispatchToProps = {
@@ -43,28 +45,52 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautypageContainer = ({ location, history, externalScriptsLoaded, setExternalScriptsLoaded, logoutUser, authenticatedInCentralspace }) => {
+
+import moment from 'moment';
+moment(account.createdAt.toDate()).calendar()}
+
+loaded if API call
+Redirect zamiast history
+
+jesli
+to error i nic nie rob
+Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
+
+
+
+const BeautypageContainer = ({
+    location,
+    history,
+    externalScriptsLoaded,
+    setExternalScriptsLoaded,
+    logoutUser,
+    authenticatedInCentralspace,
+    authenticationInFirebase
+}) => {
     useEffect(() => {
         loadExternalScripts("galleryTheme", externalScriptsLoaded, setExternalScriptsLoaded);
     }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
     let beautypageContext;
-    const logoutUserForLoggedUser = authenticatedInCentralspace ? () => logoutUser(history) : null;
+    const logoutActionForLoggedUser = authenticatedInCentralspace || authenticationInFirebase.uid ?
+        () => logoutUser(authenticatedInCentralspace, authenticationInFirebase, history)
+        : null;
     switch (location.pathname) {
         case "/beautypage":
-            beautypageContext = <Beautypage logoutUser={logoutUserForLoggedUser} />
+            beautypageContext = <Beautypage logoutUser={logoutActionForLoggedUser} />
             break
         case "/beautyblog":
-            beautypageContext = <Beautyblog logoutUser={logoutUserForLoggedUser} />
+            beautypageContext = <Beautyblog logoutUser={logoutActionForLoggedUser} />
             break
         case "/beautyteam":
-            beautypageContext = <Beautyteam logoutUser={logoutUserForLoggedUser} />
+            beautypageContext = <Beautyteam logoutUser={logoutActionForLoggedUser} />
             break
         case "/beautyfeatures":
-            beautypageContext = <Beautyfeatures logoutUser={logoutUserForLoggedUser} />
+            beautypageContext = <Beautyfeatures logoutUser={logoutActionForLoggedUser} />
             break
         case "/beautywall":
-            beautypageContext = <Beautywall logoutUser={logoutUserForLoggedUser} />
+            beautypageContext = <Beautywall logoutUser={logoutActionForLoggedUser} />
             break
         case "/beautysignup":
             beautypageContext = <Beautysignup />

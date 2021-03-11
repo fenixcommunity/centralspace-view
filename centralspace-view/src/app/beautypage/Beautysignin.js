@@ -8,12 +8,21 @@ const propTypes = {
     history: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
-    authenticationInFirebase: PropTypes.object.isRequired,
-    handleSignInAction: PropTypes.func.isRequired,
-    logoutUser: PropTypes.func
+    signIn: PropTypes.func.isRequired,
+    logoutUser: PropTypes.func,
+    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    setSignInMethod: PropTypes.func.isRequired
 }
 
-const Beautysignin = ({ history, authenticatedInCentralspace, authenticationAttemptFailed, handleSignInAction, logoutUser }) => {
+const Beautysignin = ({
+    history,
+    authenticatedInCentralspace,
+    authenticationAttemptFailed,
+    signIn,
+    logoutUser,
+    setAuthenticationAttemptFailed,
+    setSignInMethod
+ }) => {
     return (
         <>
             <Navbar
@@ -25,7 +34,10 @@ const Beautysignin = ({ history, authenticatedInCentralspace, authenticationAtte
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}
                 authenticationAttemptFailed={authenticationAttemptFailed}
-                handleSignInAction={handleSignInAction} />
+                setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                signIn={signIn}
+                setSignInMethod={setSignInMethod}
+                 />
             <Footer />
         </>
     )

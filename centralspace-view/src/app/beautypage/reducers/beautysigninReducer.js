@@ -1,5 +1,6 @@
 export const initialState = {
-    authenticationAttemptFailed: false
+    authenticationAttemptFailed: false,
+    signInMethod: null
 };
 
 const beautysigninReducer = (state = initialState, action) => {
@@ -10,6 +11,14 @@ const beautysigninReducer = (state = initialState, action) => {
             return {
                 ...state,
                 authenticationAttemptFailed
+            };
+        }
+
+        case "BSIGN_SIGN_IN_METHOD": {
+            const { signInMethod } = action;
+            return {
+                ...state,
+                signInMethod
             };
         }
 

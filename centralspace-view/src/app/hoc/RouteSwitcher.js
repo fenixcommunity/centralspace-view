@@ -4,8 +4,6 @@ import { connect as connectRedux } from "react-redux";
 import { compose } from "recompose";
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Dashboard from '../centralspace-training/components/dashboard/Dashboard';
-import Contact from '../centralspace-training/components/dashboard/Contact';
-import AccountList from '../centralspace-training/components/accountrest/AccountList';
 import AddressList from '../centralspace-training/components/address/AddressList';
 import AccountDetails from '../centralspace-training/components/account/AccountDetails';
 import SignIn from '../centralspace-training/components/auth/SignIn';
@@ -14,27 +12,35 @@ import CreateAccount from '../centralspace-training/components/account/CreateAcc
 import PrivateRoute from './PrivateRoute';
 import BeautypageContainer from '../beautypage/BeautypageContainer';
 import ErrorPage from '../beautypage/components/error/ErrorPage';
-import { checkUserAuth } from '../beautypage/actions/authActions'
+import { isLoggedUserStillAuthenticated } from '../beautypage/actions/authActions'
 import ThemeContextProvider from '../centralspace-training/contexts/ThemeContext';
 import BeautysigninContainer from '../beautypage/BeautysigninContainer';
 
 const propTypes = {
-    checkUserAuth: PropTypes.func.isRequired
+    isLoggedUserStillAuthenticated: PropTypes.func.isRequired,
+    authenticationInFirebase: PropTypes.object.isRequired
 }
 
+const mapStateToProps = state => ({
+    authenticationInFirebase: state.firebase.auth
+});
+
 const mapDispatchToProps = {
-    checkUserAuth
+    isLoggedUserStillAuthenticated
 };
 
 const enhance = compose(
-    connectRedux(null, mapDispatchToProps)
+    connectRedux(mapStateToProps, mapDispatchToProps)
 );
 
-const RouteSwitcher = ({ checkUserAuth }) => {
+const RouteSwitcher = ({ isLoggedUserStillAuthenticated, authenticationInFirebase }) => {
 
     const location = useLocation();
     useEffect(() => {
-        checkUserAuth(location);
+        // we don't verify auth for firebase
+        if (!authenticationInFirebase.uid) {
+            isLoggedUserStillAuthenticated(location);
+        }
     }, [location]);
 
     return (
@@ -49,11 +55,9 @@ const RouteSwitcher = ({ checkUserAuth }) => {
             <PrivateRoute exact path='/beautyteam' component={BeautypageContainer} />
             <Route exact path='/beautysignin' component={BeautysigninContainer} />
             <PrivateRoute exact path='/beautysignup' component={BeautypageContainer} />
-            <Route path='/contact' component={Contact} />
             <Route path='/signup' component={SignUp} />
             <Route path='/signin' component={SignIn} />
             <PrivateRoute exact path='/' component={Dashboard} />
-            <PrivateRoute exact path='/account-list' component={AccountList} />
             <PrivateRoute path='/account/:id' component={AccountDetails} /> {/*or remove account-list and use switch order*/}
             {/* <Route path='/account/:login' component={AccountDetails} /> */}
             <PrivateRoute path='/create-account' component={CreateAccount} />
