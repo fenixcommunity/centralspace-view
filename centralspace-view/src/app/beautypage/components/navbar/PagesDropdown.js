@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import {  withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import M from 'materialize-css/dist/js/materialize.js';
 import PagesListForDropdown from "./dropdown/PagesListForDropdown";
 
-const propTypes = {}
+const propTypes = {
+    isLogged: PropTypes.bool.isRequired
+}
 
-const PagesDropdown = ({location}) => {
+const PagesDropdown = ({ location, isLogged }) => {
     const dropdownRef = useRef(null);
     const isActive = location.pathname === "/beautypage";
     useEffect(() => {
@@ -29,7 +32,7 @@ const PagesDropdown = ({location}) => {
             </li>
 
             <ul id="pages" className="dropdown-content">
-                <PagesListForDropdown />
+                <PagesListForDropdown isLogged={isLogged} />
             </ul>
         </>
     )

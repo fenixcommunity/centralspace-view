@@ -7,8 +7,7 @@ import App from './app/App';
 import * as serviceWorker from './env/serviceWorker';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider, useSelector } from 'react-redux';
-import centralspaceTrainingReducer from './app/centralspace-training/store/reducers/globalReducer';
-import beautypageGlobalReducer from './app/beautypage/reducers';
+import  globalReducer from './app/beautypage/reducers';
 import thunk from 'redux-thunk';
 import {
   reduxFirestore,
@@ -22,7 +21,7 @@ import Loader from './app/beautypage/components/utils/Loader';
 
 // appling middleware(redux thunk) // list of middleware
 const store = createStore(
-  combineReducers({...centralspaceTrainingReducer, ...beautypageGlobalReducer}),
+  globalReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirestore, getFirebase })),
     reduxFirestore(firebase, firebaseConfig)

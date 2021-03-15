@@ -7,6 +7,7 @@ import ActionButton from "../helper/form/button/ActionButton";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
 import { LOG_IN_METHOD } from "../../../config/appConfig"
+import StyleWrapper from "../../../hoc/StyleWrapper";
 
 const propTypes = {
     history: PropTypes.object.isRequired,
@@ -14,7 +15,8 @@ const propTypes = {
     authenticationAttemptFailed: PropTypes.bool,
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
     signIn: PropTypes.func.isRequired,
-    setSignInMethod: PropTypes.func.isRequired
+    setSignInMethod: PropTypes.func.isRequired,
+    firebaseAuthError: PropTypes.string
 }
 
 const SigninSection = ({
@@ -23,7 +25,8 @@ const SigninSection = ({
     authenticationAttemptFailed,
     setAuthenticationAttemptFailed,
     signIn,
-    setSignInMethod
+    setSignInMethod,
+    firebaseAuthError
 }) => {
     const mstepper = document.mstepper;
     const returnActionIfWrongCredentials = () => {
@@ -50,9 +53,14 @@ const SigninSection = ({
         }
     }
 
+    const authenticationAttemptFailedMessage = authenticationAttemptFailed ? "Please sign in"
+        : (firebaseAuthError ? firebaseAuthError : "Not authorized, please try with other credentials");
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
-        : (authenticationAttemptFailed ? "Not authorized, please try with other credentials"
-            : "Please sign in");
+        : authenticationAttemptFailedMessage;
+
+    // handleInputChange = (e) => {
+    //     xxx({ [e.target.id]: e.target.value })
+    // }
 
     // Remember me on this computer
     // <p><input type="checkbox" name="remember-me"> Remember me on this computer.</p>
@@ -154,4 +162,4 @@ const SigninSection = ({
 
 SigninSection.propTypes = propTypes;
 
-export default SigninSection;
+export default StyleWrapper(SigninSection);

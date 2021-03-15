@@ -1,15 +1,8 @@
-import React from "react";
 import PropTypes from 'prop-types';
+import React from "react";
 import '../../../../resources/gallery/css/full-search.css';
-import Searcher from './searcher/Searcher';
-import Logo from "./Logo";
-import PagesDropdown from "./PagesDropdown";
-import NavbarTooltip from "./NavbarTooltip";
-import NotificationIcon from "./NotificationIcon";
-import NavbarPagesList from "./NavbarPagesList";
-import HamburgerMenu from "./slideout/HamburgerMenu";
-import NavbarSlideOut from "./slideout/NavbarSlideOut";
-import LogoutIcon from "./LogoutIcon";
+import SignedOutNavbar from './SignedOutNavbar';
+import SignedInNavbar from './SignedInNavbar';
 
 const propTypes = {
   isDarkMode: PropTypes.bool,
@@ -33,27 +26,28 @@ const Navbar = ({
   const textStyle = isPrimaryColor ? 'primary-color-text' : (darkMode ? 'black-text' : 'white-text')
   const navbarSolidTransitionStyle = isNavbarSolidTransition ? 'navbar-solid-transition' : '';
 
+  const navbarToRender = !logoutUser ? (
+    <SignedOutNavbar
+      basicSearchIsActive={basicSearchIsActive}
+      fullScreenSearchIsActive={fullScreenSearchIsActive}
+      navbarStyle={navbarStyle}
+      textStyle={textStyle}
+      navbarSolidTransitionStyle={navbarSolidTransitionStyle}
+    />
+  ) : (
+    <SignedInNavbar
+      logoutUser={logoutUser}
+      basicSearchIsActive={basicSearchIsActive}
+      fullScreenSearchIsActive={fullScreenSearchIsActive}
+      navbarStyle={navbarStyle}
+      textStyle={textStyle}
+      navbarSolidTransitionStyle={navbarSolidTransitionStyle}
+    />
+  )
+
   return (
-    <>
-      <nav className={`navbar ${navbarStyle} ${navbarSolidTransitionStyle}`}>
-        <div className="nav-wrapper">
-          <Logo textStyle={textStyle} />
-          <ul id="mobile-menu" className="right hide-on-med-and-down">
-            <Searcher basicSearchIsActive={basicSearchIsActive} fullScreenSearchIsActive={fullScreenSearchIsActive} />
-            <PagesDropdown />
-            <NavbarPagesList />
-            <NavbarTooltip tooltipText="Instagram" tooltipIconName="fab fa-instagram" />
-            <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
-            <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
-            <NotificationIcon notificationIconName="notifications" notificationCount={5} />
-            {logoutUser && <LogoutIcon logoutUser={logoutUser}/>}
-          </ul>
-          {/* HamburgerMenu refers to NavbarSlideOut */}
-          <HamburgerMenu textStyle={textStyle} />
-        </div>
-      </nav>
-      <NavbarSlideOut />
-    </>
+    // { auth.isLoaded && navbar }
+    navbarToRender
   );
 }
 

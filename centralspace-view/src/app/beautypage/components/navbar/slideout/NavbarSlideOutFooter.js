@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavbarPagesList from '../NavbarPagesList'
 
-const propTypes = {}
+const propTypes = {
+    isLogged: PropTypes.bool.isRequired
+}
 
-const NavbarSlideOutFooter = () => {
+const NavbarSlideOutFooter = ({ isLogged }) => {
     return (
-        <NavbarPagesList waves={true} />
+        <NavbarPagesList isLogged={isLogged} waves={true} />
     )
 }
 

@@ -9,7 +9,7 @@ export const signIn = (data) => {
             data.email,
             data.password
         ).then(() => {
-            dispatch({ type: 'LOGIN_SUCCESS' });
+            dispatch({ type: 'FIREBASE_LOGIN_SUCCESS' });
             dispatch(setAuthenticationAttemptFailed(false));
             if (mstepper) {
                 mstepper.correctStep()
@@ -18,13 +18,13 @@ export const signIn = (data) => {
                 data.history.push("/beautypage");
             }, 1500)
         }).catch((error) => {
-            dispatch({ type: 'LOGIN_ERROR', error });
+            dispatch({ type: 'FIREBASE_LOGIN_ERROR', error });
             dispatch(setAuthenticationAttemptFailed(true));
             if (mstepper) {
                 mstepper.wrongStep();
             }
         })
-        
+
         firebase.auth().onAuthStateChanged(user => {
             if (user) {
                 console.log("onAuthStateChanged")
@@ -38,9 +38,9 @@ export const signOut = () => {
         const firebase = getFirebase();
 
         firebase.auth().signOut().then(() => {
-            dispatch({ type: 'SIGNOUT_SUCCESS' });
+            dispatch({ type: 'FIREBASE_SIGNOUT_SUCCESS' });
         }).catch((error) => {
-            dispatch({ type: 'SIGNOUT_ERROR', error });
+            dispatch({ type: 'FIREBASE_SIGNOUT_ERROR', error });
         })
     }
 }
@@ -60,9 +60,9 @@ export const signUp = (newUser) => {
                 initials: newUser.firstName[0] + newUser.lastName[0]
             });
         }).then(() => {
-            dispatch({ type: 'SIGNUP_SUCCESS' });
+            dispatch({ type: 'FIREBASE_SIGNUP_SUCCESS' });
         }).catch(error => {
-            dispatch({ type: 'SIGNUP_ERROR', error });
+            dispatch({ type: 'FIREBASE_SIGNUP_ERROR', error });
         })
     }
 }

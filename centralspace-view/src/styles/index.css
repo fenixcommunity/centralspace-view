@@ -20,36 +20,3 @@ body {
 html {
   min-height: 100%;
 }
-
-.sign-in form, .sign-up form, .create-account form {
-  padding: 20px;
-  margin-top: 60px;
-}
-.sign-in form button, .sign-up form button, .create-account form button {
-  margin: 20px 0;
-}
-
-.sign-in form h5, .sign-up form h5, .create-account form h5 {
-  margin: 20px 0;
-}
-
-
-
-/* input[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]), */
-/* 
-textarea.materialize-textarea:focus:not([readonly]){
-  border-color: green;
-  box-shadow: none;
-} */
-
-.progress {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  /* background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif')  */
-}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext'
+import { ThemeContext } from './ThemeContext'
 
 class ThemeToggle extends React.Component {
   // or refactoring to functional component and using useContext(ThemeContext)

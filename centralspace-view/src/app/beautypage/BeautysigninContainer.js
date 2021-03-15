@@ -23,14 +23,16 @@ const propTypes = {
     externalScriptsLoaded: PropTypes.bool.isRequired,
     setExternalScriptsLoaded: PropTypes.func.isRequired,
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
-    setSignInMethod: PropTypes.func.isRequired
+    setSignInMethod: PropTypes.func.isRequired,
+    firebaseAuthError: PropTypes.string
 }
 
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
-    authenticatedInCentralspace: state.authReducer.authenticatedInCentralspace,
+    authenticatedInCentralspace: state.centralspaceAuth.authenticatedInCentralspace,
     authenticationAttemptFailed: state.beautysignin.authenticationAttemptFailed,
-    externalScriptsLoaded: state.beautypage.externalScriptsLoaded
+    externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
+    firebaseAuthError: state.firebaseAuth.authError
 });
 
 const mapDispatchToProps = {
@@ -57,7 +59,8 @@ const BeautysigninContainer = ({
     externalScriptsLoaded,
     setExternalScriptsLoaded,
     signIn,
-    setSignInMethod
+    setSignInMethod,
+    firebaseAuthError
 }) => {
  //todo remove scriptLoader
     useEffect(() => {
@@ -78,6 +81,7 @@ const BeautysigninContainer = ({
                 setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
                 signIn={signIn}
                 setSignInMethod={setSignInMethod}
+                firebaseAuthError={firebaseAuthError}
             />
         </div>
     )

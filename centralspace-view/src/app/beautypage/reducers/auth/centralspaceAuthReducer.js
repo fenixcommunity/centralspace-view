@@ -2,7 +2,7 @@ export const initialState = {
     authenticatedInCentralspace: false
 };
 
-const authReducer = (state = initialState, action) => {
+const centralspaceAuthReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case "AUTH_SET_AUTHENTICATED_IN_CENTRALSPACE": {
@@ -18,4 +18,4 @@ const authReducer = (state = initialState, action) => {
     }
 };
 
-export default authReducer;
+export default centralspaceAuthReducer;

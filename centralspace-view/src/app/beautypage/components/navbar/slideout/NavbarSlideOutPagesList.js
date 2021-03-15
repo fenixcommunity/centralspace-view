@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PagesListForDropdown from "../dropdown/PagesListForDropdown";
 
-const propTypes = {}
+const propTypes = {
+    isLogged: PropTypes.bool.isRequired
+}
 
-const NavbarSlideOutPagesList = () => {    
+const NavbarSlideOutPagesList = ({ isLogged }) => {
     return (
         <li className="bold">
             <a className="collapsible-header waves-effect waves-teal" href="#!">
@@ -11,7 +14,7 @@ const NavbarSlideOutPagesList = () => {
               </a>
             <div className="collapsible-body">
                 <ul>
-             <PagesListForDropdown />
+                    <PagesListForDropdown isLogged={isLogged} />
                 </ul>
             </div>
         </li>

@@ -11,7 +11,8 @@ const propTypes = {
     signIn: PropTypes.func.isRequired,
     logoutUser: PropTypes.func,
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
-    setSignInMethod: PropTypes.func.isRequired
+    setSignInMethod: PropTypes.func.isRequired,
+    firebaseAuthError: PropTypes.string
 }
 
 const Beautysignin = ({
@@ -21,8 +22,9 @@ const Beautysignin = ({
     signIn,
     logoutUser,
     setAuthenticationAttemptFailed,
-    setSignInMethod
- }) => {
+    setSignInMethod,
+    firebaseAuthError
+}) => {
     return (
         <>
             <Navbar
@@ -37,7 +39,8 @@ const Beautysignin = ({
                 setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
                 signIn={signIn}
                 setSignInMethod={setSignInMethod}
-                 />
+                firebaseAuthError={firebaseAuthError}
+            />
             <Footer />
         </>
     )
