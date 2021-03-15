@@ -15,7 +15,7 @@ export const signIn = (data) => {
                 mstepper.correctStep()
             }
             setTimeout(() => {
-                data.history.push("/main");
+                data.history.push("/");
             }, 1500)
         }).catch((error) => {
             dispatch({ type: 'FIREBASE_LOGIN_ERROR', error });

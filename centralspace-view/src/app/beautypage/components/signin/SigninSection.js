@@ -100,13 +100,15 @@ const SigninSection = ({
                                     content={
                                         <>
                                             <InputText
-                                                id="username" label="Your username"
+                                                id="username" label="Your username" 
+                                                icon="message" iconColor="blue-text"
                                                 validate={{ minLength: 3, maxLength: 20, dataLength: 20 }}
                                                 required={true}
                                                 autocomplete={false} // never for username!
                                             />
                                             <InputText
                                                 id="password" label="Your password" type="password"
+                                                icon="password" iconColor="blue-text"
                                                 validate={{}}
                                                 required={true}
                                                 autocomplete={false}

@@ -18,7 +18,7 @@ export const signInToCentralspace = (username, password, history) => (dispatch) 
                     mstepper.correctStep()
                 }
                 setTimeout(() => {
-                    history.push("/main");
+                    history.push("/");
                 }, 1500)
             }
         })

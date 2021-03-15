@@ -68,23 +68,23 @@ const enhance = compose(
 
 
 
-// import moment from 'moment';
-// moment(account.createdAt.toDate()).calendar()}
+    // import moment from 'moment';
+    // moment(account.createdAt.toDate()).calendar()}
 
-// loaded if API call
+    // loaded if API call
 
-// - login message 
-// - hamburger
-// - navbar -> duplikaty
+    // - login message 
+    // - hamburger
+    // - navbar -> duplikaty
 
-// wywal skrypt loadera
+    // wywal skrypt loadera
 
-// jesli
-// to error i nic nie rob
-// Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
-// See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
+    // jesli
+    // to error i nic nie rob
+    // Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
+    // See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
 
-// https://reactjs.org/docs/error-boundaries.html
+    // https://reactjs.org/docs/error-boundaries.html
 
 
 
@@ -110,9 +110,6 @@ const BeautypageContainer = ({
 
     switch (location.pathname) {
         case "/":
-            beautypageContext = <Beautypage logoutUser={logoutActionForLoggedUser} />
-            break
-        case "/main":
             beautypageContext = <Beautypage logoutUser={logoutActionForLoggedUser} />
             break
         case "/blog":

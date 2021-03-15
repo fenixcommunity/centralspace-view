@@ -18,12 +18,12 @@ const createNotification = (notification => {
 
 
 exports.accountCreated = functions.firestore
-    .document('accounts/{acccountId}')
+    .document('appLogs/{appLogId}')
     .onCreate(doc => {
-        const account = doc.data();
+        const appLog = doc.data();
         const notification = {
-            content: 'Added a new account',
-            user: `${account.createdBy}`,
+            content: 'Added a new app log',
+            user: `${appLog.accountId}`,
             time: admin.firestore.FieldValue.serverTimestamp()
         }
 

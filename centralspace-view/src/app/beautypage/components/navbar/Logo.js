@@ -10,7 +10,7 @@ const Logo = ({ textStyle }) => {
     return (
         <>
             {textStyle && (
-                <NavLink className="brand-logo" to="/main">
+                <NavLink className="brand-logo" to="/">
                     <i className={`icon-diamond ${textStyle}`} />
                 </NavLink>
             )}
