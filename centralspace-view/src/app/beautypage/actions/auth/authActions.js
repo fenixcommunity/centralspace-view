@@ -3,7 +3,7 @@ import { signOutCentralspaceUser, signInToCentralspace } from './centralspaceAut
 import { LOG_IN_METHOD } from "../../../config/appConfig";
 
 export const signInUser = (username, password, history) => (dispatch, getState) => {
-    const signInMethod = getState().beautysignin.signInMethod;
+    const signInMethod = getState().signin.signInMethod;
     if (signInMethod === LOG_IN_METHOD.CENTRALSPACE) {
         dispatch(signInToCentralspace(username, password, history));
     } else if (signInMethod === LOG_IN_METHOD.FIREBASE) {

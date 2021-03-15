@@ -1,4 +1,4 @@
-import { setAuthenticationAttemptFailed } from "../../../beautypage/actions/beautysigninActions";
+import { setAuthenticationAttemptFailed } from "../signinActions";
 
 export const signIn = (data) => {
     return (dispatch, getState, { getFirebase }) => {
@@ -15,7 +15,7 @@ export const signIn = (data) => {
                 mstepper.correctStep()
             }
             setTimeout(() => {
-                data.history.push("/beautypage");
+                data.history.push("/main");
             }, 1500)
         }).catch((error) => {
             dispatch({ type: 'FIREBASE_LOGIN_ERROR', error });

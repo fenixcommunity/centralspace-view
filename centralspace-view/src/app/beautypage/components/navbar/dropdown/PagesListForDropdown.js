@@ -16,7 +16,7 @@ const PagesListForDropdown = ({ isLogged, waves }) => {
                 <NavLink className={wavesEffect} exact to="/"><i className="material-icons">home</i>Main App</NavLink>
             </li>
             <li>
-                <NavLink className={`${wavesEffect}`} exact to="/beautypage"><i className="material-icons">all_inclusive</i>Beautypage</NavLink>
+                <NavLink className={`${wavesEffect}`} exact to="/main"><i className="material-icons">all_inclusive</i>Beautypage</NavLink>
             </li>
             {isLogged &&
                 <li>

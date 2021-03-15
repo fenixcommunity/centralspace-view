@@ -14,21 +14,21 @@ const NavbarPagesList = ({ isLogged, waves }) => {
             {isLogged &&
                 <>
                     <li>
-                        <NavLink className={wavesEffect} to="/beautyblog">Blog</NavLink>
+                        <NavLink className={wavesEffect} to="/blog">Blog</NavLink>
                     </li>
                     <li>
-                        <NavLink className={wavesEffect} to="/beautyteam">Team</NavLink>
+                        <NavLink className={wavesEffect} to="/team">Team</NavLink>
                     </li>
                     <li>
-                        <NavLink className={wavesEffect} to="/beautyfeatures">Features</NavLink>
+                        <NavLink className={wavesEffect} to="/features">Features</NavLink>
                     </li>
                     <li>
-                        <NavLink className={wavesEffect} to="/beautywall">Phone Wall</NavLink>
+                        <NavLink className={wavesEffect} to="/wall">Phone Wall</NavLink>
                     </li>
                 </>
             }
             <li>
-                <NavLink className={wavesEffect} to="/beautysignup">Sign Up</NavLink>
+                <NavLink className={wavesEffect} to="/signup">Sign Up</NavLink>
             </li>
         </>
     )

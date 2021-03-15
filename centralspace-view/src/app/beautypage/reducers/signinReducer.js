@@ -3,7 +3,7 @@ export const initialState = {
     signInMethod: null
 };
 
-const beautysigninReducer = (state = initialState, action) => {
+const signinReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case "BSIGN_SET_AUTHENTICATION_ATTEMPT_FAILED": {
@@ -27,4 +27,4 @@ const beautysigninReducer = (state = initialState, action) => {
     }
 };
 
-export default beautysigninReducer;
+export default signinReducer;

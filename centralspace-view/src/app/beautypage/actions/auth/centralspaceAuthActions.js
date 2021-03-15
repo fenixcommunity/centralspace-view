@@ -1,5 +1,5 @@
 import { ApiCaller, Api } from '../../../api/centralspaceApi';
-import { setAuthenticationAttemptFailed } from '../beautysigninActions';
+import { setAuthenticationAttemptFailed } from '../signinActions';
 
 export const signInToCentralspace = (username, password, history) => (dispatch) => {
     const mstepper = document.mstepper;
@@ -18,7 +18,7 @@ export const signInToCentralspace = (username, password, history) => (dispatch) 
                     mstepper.correctStep()
                 }
                 setTimeout(() => {
-                    history.push("/beautypage");
+                    history.push("/main");
                 }, 1500)
             }
         })
@@ -46,7 +46,7 @@ export const signOutCentralspaceUser = (history) => (dispatch) => {
         .then((response) => {
             if (response.status === 200) {
                 dispatch(setAuthenticatedInCentralspace(false));
-                history.push("/beautysignin");
+                history.push("/signin");
             }
         });
 }

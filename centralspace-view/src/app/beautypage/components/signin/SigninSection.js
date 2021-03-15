@@ -103,7 +103,7 @@ const SigninSection = ({
                                                 id="username" label="Your username"
                                                 validate={{ minLength: 3, maxLength: 20, dataLength: 20 }}
                                                 required={true}
-                                                autocomplete={false}
+                                                autocomplete={false} // never for username!
                                             />
                                             <InputText
                                                 id="password" label="Your password" type="password"

@@ -31,7 +31,7 @@ const PrivateRoute = ({ history, component: Component, authenticationInFirebase,
           ? <Component {...props} />  // : <Redirect to="/signin" />
           : <ErrorPage headerText="Not Authorized"
             message="You are not authorized to view the requested page. Go to our homepage. We apologize for the inconvenience"
-            goToFunc={() => history.push('/beautysignin')} goToIconName="login"
+            goToFunc={() => history.push('/signin')} goToIconName="login"
           />
       }
     />

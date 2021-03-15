@@ -4,8 +4,8 @@ import firebaseAuthReducer from "./auth/firebaseAuthReducer";
 import appLogsReducer from './appLogsReducer';
 import { firestoreReducer } from 'redux-firestore'
 import { firebaseReducer } from 'react-redux-firebase'
-import beautypage from "./beautypageReducer";
-import beautysignin from "./beautysigninReducer";
+import general from "./generalReducer";
+import signin from "./signinReducer";
 
 const globalReducer = combineReducers({
     centralspaceAuth: centralspaceAuthReducer,
@@ -13,8 +13,8 @@ const globalReducer = combineReducers({
     appLogs: appLogsReducer,
     firestore: firestoreReducer, // synchronization with real db
     firebase: firebaseReducer,
-    beautypage,
-    beautysignin
+    general,
+    signin
 });
 
 export default globalReducer;

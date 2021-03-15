@@ -45,13 +45,13 @@ const RouteSwitcher = ({ isLoggedUserStillAuthenticated, authenticationInFirebas
             {/* In Nabbar we have empty props. But we can add withRouter */}
             <PrivateRoute exact path='/' component={BeautypageContainer} />
             {/* <PrivateRoute path='beautypage/:id' component={BeautypageContainer} /> {/* */}
-            <PrivateRoute exact path='/beautypage' component={BeautypageContainer} onEnter onUpdate />
-            <PrivateRoute exact path='/beautyblog' component={BeautypageContainer} />
-            <PrivateRoute exact path='/beautyfeatures' component={BeautypageContainer} />
-            <PrivateRoute exact path='/beautywall' component={BeautypageContainer} />
-            <PrivateRoute exact path='/beautyteam' component={BeautypageContainer} />
-            <Route exact path='/beautysignin' component={BeautysigninContainer} />
-            <PrivateRoute exact path='/beautysignup' component={BeautypageContainer} />
+            <PrivateRoute exact path='/main' component={BeautypageContainer} onEnter onUpdate />
+            <PrivateRoute exact path='/blog' component={BeautypageContainer} />
+            <PrivateRoute exact path='/features' component={BeautypageContainer} />
+            <PrivateRoute exact path='/wall' component={BeautypageContainer} />
+            <PrivateRoute exact path='/team' component={BeautypageContainer} />
+            <Route exact path='/signin' component={BeautysigninContainer} />
+            <PrivateRoute exact path='/signup' component={BeautypageContainer} />
             <Route path="*"
                 children={
                     <ErrorPage headerText="Page Not Found" message="We can't seem to find the page you're looking for." noIcon={true} />

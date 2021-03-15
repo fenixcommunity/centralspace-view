@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
-import ScrollToTop from '../app/beautypage/components/utils/ScrollToTop';
+import ScrollToTop from './hoc/ScrollToTop';
 import RouteSwitcher from './hoc/RouteSwitcher';
 
 const App = () => {

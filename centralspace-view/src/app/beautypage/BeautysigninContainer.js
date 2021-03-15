@@ -7,8 +7,8 @@ import '../../resources/beautypage/css/search.css';
 import '../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
-import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "./actions/beautysigninActions";
-import { setExternalScriptsLoaded } from "./actions/beautypageActions";
+import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "./actions/signinActions";
+import { setExternalScriptsLoaded } from "./actions/generalActions";
 import { loadExternalScripts } from "./utils/scriptLoader";
 import { Redirect } from "react-router";
 
@@ -30,8 +30,8 @@ const propTypes = {
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
     authenticatedInCentralspace: state.centralspaceAuth.authenticatedInCentralspace,
-    authenticationAttemptFailed: state.beautysignin.authenticationAttemptFailed,
-    externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
+    authenticationAttemptFailed: state.signin.authenticationAttemptFailed,
+    externalScriptsLoaded: state.general.externalScriptsLoaded,
     firebaseAuthError: state.firebaseAuth.authError
 });
 
@@ -68,7 +68,7 @@ const BeautysigninContainer = ({
     }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
     
     if (authenticationInFirebase.uid || authenticatedInCentralspace) {
-        return <Redirect to='/beautypage' />;
+        return <Redirect to='/main' />;
     }
 
     return (

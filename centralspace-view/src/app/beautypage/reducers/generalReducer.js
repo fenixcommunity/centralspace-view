@@ -3,7 +3,7 @@ export const initialState = {
 };
 
 
-const beautypageReducer = (state = initialState, action) => {
+const generalReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case "BP_SET_EXTERNAL_SCRIPTS_LOADED": {
@@ -26,4 +26,4 @@ const beautypageReducer = (state = initialState, action) => {
     }
 };
 
-export default beautypageReducer;
+export default generalReducer;

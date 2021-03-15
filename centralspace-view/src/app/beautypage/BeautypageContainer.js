@@ -7,7 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import '../../resources/beautypage/css/startup-materialize.css';
 import '../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
-import { setExternalScriptsLoaded } from "./actions/beautypageActions";
+import { setExternalScriptsLoaded } from "./actions/generalActions";
 import { loadExternalScripts } from "./utils/scriptLoader";
 import { logoutUser } from './actions/auth/authActions';
 import Beautypage from "./Beautypage";
@@ -35,7 +35,7 @@ const mapStateToProps = (state, props) => {
     const notifications = state.firestore.ordered.notifications;
     const notification = notifications ? notifications[id] : null;
     return {
-        externalScriptsLoaded: state.beautypage.externalScriptsLoaded,
+        externalScriptsLoaded: state.general.externalScriptsLoaded,
         authenticatedInCentralspace: state.centralspaceAuth.authenticatedInCentralspace,
         authenticationInFirebase: state.firebase.auth,
         notification,
@@ -68,23 +68,23 @@ const enhance = compose(
 
 
 
-import moment from 'moment';
-moment(account.createdAt.toDate()).calendar()}
+// import moment from 'moment';
+// moment(account.createdAt.toDate()).calendar()}
 
-loaded if API call
+// loaded if API call
 
-- login message 
-- hamburger
-- navbar -> duplikaty
+// - login message 
+// - hamburger
+// - navbar -> duplikaty
 
-wywal skrypt loadera
+// wywal skrypt loadera
 
-jesli
-to error i nic nie rob
-Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
+// jesli
+// to error i nic nie rob
+// Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
+// See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
 
-https://reactjs.org/docs/error-boundaries.html
+// https://reactjs.org/docs/error-boundaries.html
 
 
 
@@ -112,22 +112,22 @@ const BeautypageContainer = ({
         case "/":
             beautypageContext = <Beautypage logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautypage":
+        case "/main":
             beautypageContext = <Beautypage logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautyblog":
+        case "/blog":
             beautypageContext = <Beautyblog logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautyteam":
+        case "/team":
             beautypageContext = <Beautyteam logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautyfeatures":
+        case "/features":
             beautypageContext = <Beautyfeatures logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautywall":
+        case "/wall":
             beautypageContext = <Beautywall logoutUser={logoutActionForLoggedUser} />
             break
-        case "/beautysignup":
+        case "/signup":
             beautypageContext = <Beautysignup />
             break
         default:
