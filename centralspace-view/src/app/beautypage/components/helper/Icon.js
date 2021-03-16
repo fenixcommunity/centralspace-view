@@ -7,6 +7,7 @@ const propTypes = {
     possition: PropTypes.string
 }
 
+// https://material.io/resources/icons/?style=baseline
 const Icon = ({ icon, iconColor, possition }) => {
     return (
         <i className={`material-icons  ${iconColor ? iconColor : ""} ${possition ? possition : "prefix"}`}>

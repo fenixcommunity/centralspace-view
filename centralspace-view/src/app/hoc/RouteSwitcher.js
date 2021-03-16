@@ -50,8 +50,8 @@ const RouteSwitcher = ({ isLoggedUserStillAuthenticated, authenticationInFirebas
             <PrivateRoute exact path='/features' component={BeautypageContainer} />
             <PrivateRoute exact path='/wall' component={BeautypageContainer} />
             <PrivateRoute exact path='/team' component={BeautypageContainer} />
+            <PrivateRoute exact path='/other' component={BeautypageContainer} />
             <Route exact path='/signin' component={BeautysigninContainer} />
-            <PrivateRoute exact path='/signup' component={BeautypageContainer} />
             <Route path="*"
                 children={
                     <ErrorPage headerText="Page Not Found" message="We can't seem to find the page you're looking for." noIcon={true} />

@@ -34,6 +34,11 @@ const firebaseAuthReducer = (state = initState, action) => {
                 ...state,
                 authError: action.error.message
             }
+        case 'FIREBASE_CLEAR_AUTH_ERROR':
+            return {
+                ...state,
+                authError: initState.authError
+            }
         default:
             return state;
     }

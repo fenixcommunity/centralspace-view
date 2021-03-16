@@ -22,3 +22,10 @@ export const setSignInMethod = (signInMethod) => (dispatch) => {
         signInMethod
     });
 };
+
+export const setMainTheme = (mainThemeColor) => (dispatch) => {
+    dispatch({
+        type: "BSIGN_SWITCH_MAIN_THEME",
+        mainThemeColor
+    });
+};

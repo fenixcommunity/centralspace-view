@@ -7,9 +7,11 @@ const propTypes = {
 }
 
 const NavbarSlideOutPagesList = ({ isLogged }) => {
+    const preventDefault = (event) => event.preventDefault();
     return (
         <li className="bold">
-            <a className="collapsible-header waves-effect waves-teal" href="#!">
+            <a className="collapsible-header waves-effect waves-teal" href="#!"
+                onClick={preventDefault}>
                 Pages
               </a>
             <div className="collapsible-body">

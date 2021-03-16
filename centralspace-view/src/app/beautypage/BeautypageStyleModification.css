@@ -178,3 +178,27 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .btn-floating {
   border: 0px solid #eee !important;
 }
+
+ ul.stepper.blue-step .step.active::before  {
+    background-color: #2196F3 
+}
+
+ ul.stepper.teal-lighten-2-step .step.active::before  {
+    background-color: #4db6ac 
+}
+
+ul.stepper.blue-step .step.done::before  {
+    background-color: #2196F3 
+}
+
+ ul.stepper.teal-lighten-2-step .step.done::before  {
+    background-color: #4db6ac 
+}
+
+.primary-color {
+    background-color: #1de9c3;
+  }
+  
+  .primary-color-text {
+    color: #1de9c3;
+  }

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
 import Navbar from './components/navbar/Navbar';
 import ContactUs from './components/contact/ContactUs';
@@ -11,7 +12,9 @@ import SignUpSummary from './components/signup/SignUpSummary';
 // import MaterialUiStepper from './components/other/MaterialUiStepper';
 import Gallery from './components/gallery/Gallery';
 
-const propTypes = {}
+const propTypes = {
+    logoutUser: PropTypes.func
+}
 class Beautysignup extends React.Component {
 
     // old solution, only example
@@ -28,7 +31,8 @@ class Beautysignup extends React.Component {
                 <Navbar
                     isNavbarSolidTransition={true}
                     isDarkMode={false}
-                    fullScreenSearchIsActive={true} />
+                    fullScreenSearchIsActive={true}
+                    logoutUser={this.props.logoutUser} />
                 <Header
                     headerImg={backgroundStars}
                     headerMessage="Sign Up"

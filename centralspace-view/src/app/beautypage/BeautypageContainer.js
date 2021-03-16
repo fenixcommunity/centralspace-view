@@ -73,9 +73,7 @@ const enhance = compose(
 
     // loaded if API call
 
-    // - login message 
-    // - hamburger
-    // - navbar -> duplikaty
+// moze przejsc z 1 do 2 bez wyboru a to nie dobrze
 
     // wywal skrypt loadera
 
@@ -124,8 +122,8 @@ const BeautypageContainer = ({
         case "/wall":
             beautypageContext = <Beautywall logoutUser={logoutActionForLoggedUser} />
             break
-        case "/signup":
-            beautypageContext = <Beautysignup />
+        case "/other":
+            beautypageContext = <Beautysignup logoutUser={logoutActionForLoggedUser}/>
             break
         default:
             beautypageContext = <ErrorPage />

@@ -3,7 +3,7 @@ import { setAuthenticationAttemptFailed } from "../signinActions";
 export const signIn = (data) => {
     return (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase();
-        const mstepper = data.mstepper;
+        const mstepper = document.mstepper;
 
         firebase.auth().signInWithEmailAndPassword(
             data.email,
@@ -65,4 +65,8 @@ export const signUp = (newUser) => {
             dispatch({ type: 'FIREBASE_SIGNUP_ERROR', error });
         })
     }
+}
+
+export const clearAuthError = () => (dispatch) => {
+    dispatch({ type: 'FIREBASE_CLEAR_AUTH_ERROR' });
 }

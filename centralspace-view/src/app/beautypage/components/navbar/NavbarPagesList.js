@@ -11,8 +11,8 @@ const NavbarPagesList = ({ isLogged, waves }) => {
     const wavesEffect = waves ? "waves-effect waves-teal" : ""
     return (
         <>
-            {isLogged &&
-                <>
+            {isLogged ?
+                (<>
                     <li>
                         <NavLink className={wavesEffect} to="/blog">Blog</NavLink>
                     </li>
@@ -25,11 +25,19 @@ const NavbarPagesList = ({ isLogged, waves }) => {
                     <li>
                         <NavLink className={wavesEffect} to="/wall">Phone Wall</NavLink>
                     </li>
+                    <li>
+                        <NavLink className={wavesEffect} to="/other">Other</NavLink>
+                    </li>
                 </>
+                )
+                :
+                (
+                    <li>
+                        <NavLink className={wavesEffect} to="/signin">Sign In</NavLink>
+                    </li>
+                )
             }
-            <li>
-                <NavLink className={wavesEffect} to="/signup">Sign Up</NavLink>
-            </li>
+
         </>
     )
 }

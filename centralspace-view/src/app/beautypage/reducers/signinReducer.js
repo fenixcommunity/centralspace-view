@@ -1,6 +1,9 @@
+import { LOG_IN_METHOD } from "../../config/appConfig"
+
 export const initialState = {
     authenticationAttemptFailed: false,
-    signInMethod: null
+    signInMethod: null,
+    mainTheme: "blue"
 };
 
 const signinReducer = (state = initialState, action) => {
@@ -18,7 +21,16 @@ const signinReducer = (state = initialState, action) => {
             const { signInMethod } = action;
             return {
                 ...state,
-                signInMethod
+                signInMethod,
+                mainTheme: signInMethod === LOG_IN_METHOD.FIREBASE ? "teal lighten-2" : initialState.mainTheme
+            };
+        }
+
+        case "BSIGN_SWITCH_MAIN_THEME": {
+            const { mainThemeColor } = action;
+            return {
+                ...state,
+                mainTheme: mainThemeColor
             };
         }
 

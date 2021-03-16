@@ -108,7 +108,7 @@
         content: '\e001';
         font-size: 24px;
         font-family: 'Material Icons';
-        background-color: red; }
+        background-color: red !important;}
       ul.stepper .step.feedbacking .step-content > *:not(.wait-feedback) {
         opacity: 0.1; }
       ul.stepper .step:not(:last-of-type)::after {
@@ -201,7 +201,7 @@
             content: '\e001';
             font-size: 24px;
             font-family: 'Material Icons';
-            background-color: red; }
+            background-color: red !important}
           ul.stepper.horizontal .step .step-content {
             position: absolute;
             height: calc(100% - 84px);

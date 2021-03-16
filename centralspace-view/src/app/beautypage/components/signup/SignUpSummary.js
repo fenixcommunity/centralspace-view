@@ -1,34 +1,31 @@
 
-import React, { useRef } from "react";
 import M from 'materialize-css/dist/js/materialize.js';
+import React, { useRef } from "react";
 //todo css where?
 import '../../../../resources/beautypage/css/nouislider.css';
 import avatar1 from '../../../../resources/beautypage/images/people/avatar1.jpg';
 import avatar2 from '../../../../resources/beautypage/images/people/avatar2.jpg';
 import avatar4 from '../../../../resources/beautypage/images/people/avatar4.jpg';
-import BasicSection from "../helper/section/BasicSection";
-import FormTemplate from "../helper/form/FormTemplate";
-import FormCard from "../helper/form/FormCard";
-import Table from "../helper/form/table/Table";
-import Pagination from "../helper/form/table/Pagination";
-import InputTextArea from "../helper/form/input/InputTextArea";
-import InputText from "../helper/form/input/InputText";
-import InputTimepicker from "../helper/form/input/InputTimepicker";
-import InputTags from "../helper/form/tag/InputTags";
-import DisplayTags from "../helper/form/tag/DisplayTags";
-import InputSelect from "../helper/form/input/InputSelect";
+import Comment from "../blog/Comment";
+import Collapsible from "../collapsible/Collapsible";
 import ActionButton from "../helper/form/button/ActionButton";
+import FormTemplate from "../helper/form/FormTemplate";
 import InputFile from "../helper/form/input/InputFile";
+import InputSelect from "../helper/form/input/InputSelect";
+import InputSwitch from "../helper/form/input/InputSwitch";
+import InputText from "../helper/form/input/InputText";
+import InputTextArea from "../helper/form/input/InputTextArea";
+import InputTimepicker from "../helper/form/input/InputTimepicker";
+import Pagination from "../helper/form/table/Pagination";
+import Table from "../helper/form/table/Table";
+import DisplayTags from "../helper/form/tag/DisplayTags";
+import InputTags from "../helper/form/tag/InputTags";
+import BasicSection from "../helper/section/BasicSection";
+import Modal from "../modal/Modal";
+import RangePointer from "../rangeslider/RangePointer";
+import RangeSlider from "../rangeslider/RangeSlider";
 import TapTargetButton from "../taptarget/TapTargetButton";
 import TapTargetModal from "../taptarget/TapTargetModal";
-import Comment from "../blog/Comment";
-import Modal from "../modal/Modal";
-import Collapsible from "../collapsible/Collapsible";
-import RangeSlider from "../rangeslider/RangeSlider";
-import RangePointer from "../rangeslider/RangePointer";
-import InputSwitch from "../helper/form/input/InputSwitch";
-import Step from "../stepper/Step";
-import StepperLinear from "../stepper/StepperLinear";
 
 const propTypes = {}
 
@@ -43,11 +40,6 @@ const SignUpSummary = () => {
 
     const getImg = (id) => {
         return selectImages.find(img => img.id === id);
-    }
-
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        console.log("submit")
     }
 
     const handleOnClickTapTargetAction = () => {
@@ -356,94 +348,6 @@ const SignUpSummary = () => {
                             </>
                         } />
                 )}
-            />
-
-            <BasicSection
-                theme="white" large={true}
-                wrappedSection={
-                    <>
-                        <FormCard header="Sign up" theme="light" themeColor="blue" onSubmit={handleFormSubmit}
-                            content={
-                                <StepperLinear steps={[
-                                    <Step id="step_1" key="step_1" active={true} header="Basic data" headerWaves={true}
-                                        content={
-                                            <>
-                                                <InputText
-                                                    id="login_first_name" label="Your login"
-                                                    icon="message" iconColor="blue-text"
-                                                    validate={{ minLength: 2, maxLength: 10, dataLength: 10 }}
-                                                    required={true}
-                                                    autocomplete={false}
-                                                />
-                                                <InputText
-                                                    id="login_email" type="email" label="Your e-mail"
-                                                    validate={{ successMessage: "Right email", errorMessage: "Wrong email" }}
-                                                    required={true}
-                                                    autocomplete={false}
-                                                />
-                                            </>
-                                        }
-                                        stepActions={
-                                            [
-                                                <ActionButton
-                                                    id="continue_step_1" key="continue_step_1" label="Continue"
-                                                    classes="next-step"
-                                                    color="blue" hasWaves={true}
-                                                    actions={{ onClick: () => "" }} />
-                                            ]
-                                        } />,
-                                    <Step id="step_2" key="step_2" header="Password" headerWaves={true}
-                                        content={
-                                            <>
-                                                <InputText
-                                                    id="login_password" label="Your password" type="password"
-                                                    validate={{}}
-                                                    required={true}
-                                                    autocomplete={false}
-                                                />
-                                                <InputText
-                                                    id="login_password_repeat" label="Repeat password" type="password"
-                                                    validate={{}}
-                                                    required={true}
-                                                    autocomplete={false}
-                                                />
-                                            </>
-                                        }
-                                        stepActions={
-                                            [
-                                                <ActionButton
-                                                    id="continue_step_2" key="continue_step_2" label="Continue"
-                                                    classes="next-step"
-                                                    color="blue" hasWaves={true}
-                                                    actions={{ onClick: () => "" }} />,
-                                                <ActionButton
-                                                    id="back_step_2" key="back_step_2" label="Back"
-                                                    classes="previous-step" buttonFlat={true}
-                                                    hasWaves={true}
-                                                    actions={{ onClick: () => "" }} />
-                                            ]
-                                        } />,
-                                    <Step id="step_3" key="step_3" header="Summary" headerWaves={true}
-                                        content="We've just sent you an activation email"
-                                        stepActions={
-                                            [
-                                                <ActionButton
-                                                    id="login_step_3" key="login_step_3" type="submit" label="Log in"
-                                                    color="blue" hasWaves={true}
-                                                    /* data-feedback="someFunction">Log in</button> */
-                                                    actions={{ onClick: () => "" }} />
-                                            ]
-                                        } />
-                                ]} />
-                            }
-                            footerActions={[
-                                <ActionButton
-                                    id="controlled_reset" key="controlled_reset" label="Clear form data"
-                                    color="grey" hasWaves={true}
-                                    actions={{}} />
-                            ]} />
-                    </>
-                }
             />
         </>
     );

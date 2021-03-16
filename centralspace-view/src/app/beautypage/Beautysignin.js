@@ -11,8 +11,10 @@ const propTypes = {
     signIn: PropTypes.func.isRequired,
     logoutUser: PropTypes.func,
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    clearAuthError: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
-    firebaseAuthError: PropTypes.string
+    firebaseAuthError: PropTypes.string,
+    mainTheme: PropTypes.string
 }
 
 const Beautysignin = ({
@@ -22,8 +24,10 @@ const Beautysignin = ({
     signIn,
     logoutUser,
     setAuthenticationAttemptFailed,
+    clearAuthError,
     setSignInMethod,
-    firebaseAuthError
+    firebaseAuthError,
+    mainTheme
 }) => {
     return (
         <>
@@ -37,9 +41,11 @@ const Beautysignin = ({
                 authenticatedInCentralspace={authenticatedInCentralspace}
                 authenticationAttemptFailed={authenticationAttemptFailed}
                 setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                clearAuthError={clearAuthError}
                 signIn={signIn}
                 setSignInMethod={setSignInMethod}
                 firebaseAuthError={firebaseAuthError}
+                mainTheme={mainTheme}
             />
             <Footer />
         </>

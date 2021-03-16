@@ -8,15 +8,18 @@ import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
 import { LOG_IN_METHOD } from "../../../config/appConfig"
 import StyleWrapper from "../../../hoc/StyleWrapper";
+import { setTextColor, replaceBlank } from "../../../beautypage/utils/styleUtils"
 
 const propTypes = {
     history: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    clearAuthError: PropTypes.func.isRequired,
     signIn: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
-    firebaseAuthError: PropTypes.string
+    firebaseAuthError: PropTypes.string,
+    mainTheme: PropTypes.string.isRequired
 }
 
 const SigninSection = ({
@@ -24,14 +27,20 @@ const SigninSection = ({
     authenticatedInCentralspace,
     authenticationAttemptFailed,
     setAuthenticationAttemptFailed,
+    clearAuthError,
     signIn,
     setSignInMethod,
-    firebaseAuthError
+    firebaseAuthError,
+    mainTheme
 }) => {
     const mstepper = document.mstepper;
+    const clearAuthenticationAttemptInfo = () => {
+        setAuthenticationAttemptFailed(false);
+        clearAuthError();
+    }
     const returnActionIfWrongCredentials = () => {
         resetStepper();
-        setAuthenticationAttemptFailed(false)
+        clearAuthenticationAttemptInfo()
     }
     const setCentralspaceSignInMethod = () => {
         setSignInMethod(LOG_IN_METHOD.CENTRALSPACE);
@@ -53,11 +62,13 @@ const SigninSection = ({
         }
     }
 
-    const authenticationAttemptFailedMessage = authenticationAttemptFailed ? "Please sign in"
-        : (firebaseAuthError ? firebaseAuthError : "Not authorized, please try with other credentials");
+    const authenticationAttemptFailedMessage = authenticationAttemptFailed ?
+        (firebaseAuthError ? firebaseAuthError : "Not authorized, please try with other credentials")
+        : "Please sign in"
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
         : authenticationAttemptFailedMessage;
-
+    const textColor = setTextColor(mainTheme);
+    const stepColor = replaceBlank(mainTheme, "-") + "-step";
     // handleInputChange = (e) => {
     //     xxx({ [e.target.id]: e.target.value })
     // }
@@ -72,82 +83,83 @@ const SigninSection = ({
             theme="white" large={true}
             wrappedSection={
                 <>
-                    <FormCard header="Sign in" theme="light" themeColor="blue" onSubmit={(event) => signIn(event, history)}
+                    <FormCard header="Sign in" theme="light" themeColor={textColor} onSubmit={(event) => signIn(event, history)}
                         content={
-                            <StepperLinear steps={[
-                                <Step id="step_1" key="step_1" active={true} header="Login method" headerWaves={true}
-                                    content="Please choose the login method"
-                                    stepActions={
-                                        [
-                                            <ActionButton
-                                                id="login_step_1" value="centralspace" key="login_step_1"
-                                                classes="next-step"
-                                                label="By Centralspace" color="blue" hasWaves={true}
-                                                actions={{ onClick: setCentralspaceSignInMethod }}
-                                                hidden={authenticationAttemptFailed}
-                                            />,
-                                            <ActionButton
-                                                id="login_step_1_firebase" value="firebase" key="login_step_1_firebase"
-                                                classes="next-step"
-                                                label="By Firebase" color="teal lighten-2" hasWaves={true}
-                                                actions={{ onClick: setFirebaseSignInMethod }}
-                                                hidden={authenticationAttemptFailed}
+                            <StepperLinear customClass={stepColor}
+                                steps={[
+                                    <Step id="step_1" key="step_1" active={true} header="Login method" headerWaves={true}
+                                        content="Please choose the login method"
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id="login_step_1" value="centralspace" key="login_step_1"
+                                                    classes="next-step"
+                                                    label="By Centralspace" color="blue" hasWaves={true}
+                                                    actions={{ onClick: setCentralspaceSignInMethod }}
+                                                    hidden={authenticationAttemptFailed}
+                                                />,
+                                                <ActionButton
+                                                    id="login_step_1_firebase" value="firebase" key="login_step_1_firebase"
+                                                    classes="next-step"
+                                                    label="By Firebase" color="teal lighten-2" hasWaves={true}
+                                                    actions={{ onClick: setFirebaseSignInMethod }}
+                                                    hidden={authenticationAttemptFailed}
 
-                                            />
-                                        ]
-                                    } />,
-                                <Step id="step_2" key="step_2" header="Credentials" headerWaves={true}
-                                    content={
-                                        <>
-                                            <InputText
-                                                id="username" label="Your username" 
-                                                icon="message" iconColor="blue-text"
-                                                validate={{ minLength: 3, maxLength: 20, dataLength: 20 }}
-                                                required={true}
-                                                autocomplete={false} // never for username!
-                                            />
-                                            <InputText
-                                                id="password" label="Your password" type="password"
-                                                icon="password" iconColor="blue-text"
-                                                validate={{}}
-                                                required={true}
-                                                autocomplete={false}
-                                            />
-                                        </>
-                                    }
-                                    stepActions={
-                                        [
-                                            <ActionButton
-                                                id="continue_step_2" key="continue_step_2" label="Continue"
-                                                classes="next-step"
-                                                color="blue" hasWaves={true}
-                                                actions={{ onClick: () => setAuthenticationAttemptFailed(false) }}
-                                            />
-                                        ]
-                                    }
-                                    onClickNextStep={() => setAuthenticationAttemptFailed(false)}
-                                />,
-                                <Step id="step_3" key="step_3" header="Confirmation" headerWaves={true}
-                                    content={confirmationMessage}
-                                    stepActions={
-                                        [
-                                            <ActionButton
-                                                id="login_step_3" value="centralspace" key="login_step_3" type="submit"
-                                                label="Log in" color="blue" hasWaves={true}
-                                                actions={{}}
-                                                hidden={authenticationAttemptFailed}
-                                            /* data-feedback="someFunction">Log in</button> */
-                                            // actions={{ onClick: () => "" }}
-                                            />,
-                                            <ActionButton
-                                                id="login_step_3_return" key="login_step_3_return" label="Return"
-                                                color="grey" hasWaves={true}
-                                                actions={{ onClick: returnActionIfWrongCredentials }}
-                                                hidden={!authenticationAttemptFailed}
-                                            />
-                                        ]
-                                    } />
-                            ]} />
+                                                />
+                                            ]
+                                        } />,
+                                    <Step id="step_2" key="step_2" header="Credentials" headerWaves={true}
+                                        content={
+                                            <>
+                                                <InputText
+                                                    id="username" label="Your username"
+                                                    icon="message" iconColor={textColor}
+                                                    validate={{ minLength: 3, maxLength: 20, dataLength: 20 }}
+                                                    required={true}
+                                                    autocomplete={false} // never for username!
+                                                />
+                                                <InputText
+                                                    id="password" label="Your password" type="password"
+                                                    icon="password" iconColor={textColor}
+                                                    validate={{}}
+                                                    required={true}
+                                                    autocomplete={false}
+                                                />
+                                            </>
+                                        }
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id="continue_step_2" key="continue_step_2" label="Continue"
+                                                    classes="next-step"
+                                                    color={mainTheme} hasWaves={true}
+                                                    actions={{ onClick: clearAuthenticationAttemptInfo }}
+                                                />
+                                            ]
+                                        }
+                                        onClickNextStep={clearAuthenticationAttemptInfo}
+                                    />,
+                                    <Step id="step_3" key="step_3" header="Confirmation" headerWaves={true}
+                                        content={confirmationMessage}
+                                        stepActions={
+                                            [
+                                                <ActionButton
+                                                    id="login_step_3" key="login_step_3" type="submit"
+                                                    label="Log in" color={mainTheme} hasWaves={true}
+                                                    actions={{}}
+                                                    hidden={authenticationAttemptFailed}
+                                                /* data-feedback="someFunction">Log in</button> */
+                                                // actions={{ onClick: () => "" }}
+                                                />,
+                                                <ActionButton
+                                                    id="login_step_3_return" key="login_step_3_return" label="Return"
+                                                    color="grey" hasWaves={true}
+                                                    actions={{ onClick: returnActionIfWrongCredentials }}
+                                                    hidden={!authenticationAttemptFailed}
+                                                />
+                                            ]
+                                        } />
+                                ]} />
                         }
                         footerActions={[
                             <ActionButton
