@@ -36,7 +36,7 @@ const RouteSwitcher = ({ isLoggedUserStillAuthenticated, authenticationInFirebas
         if (!authenticationInFirebase.uid) {
             isLoggedUserStillAuthenticated(location);
         }
-    }, [location]);
+    }, [location]);  // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <Switch>

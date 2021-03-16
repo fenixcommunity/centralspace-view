@@ -1,5 +1,6 @@
 export const initialState = {
-    externalScriptsLoaded: false
+    externalScriptsLoaded: false,
+    loaderLoaded: false
 };
 
 
@@ -18,6 +19,14 @@ const generalReducer = (state = initialState, action) => {
             return {
                 ...initialState,
                 externalScriptsLoaded: initialState.externalScriptsLoaded
+            };
+        }
+
+        case "BP_SET_LOADER_LOADED": {
+            const { isLoaderLoaded } = action;
+            return {
+                ...initialState,
+                loaderLoaded: isLoaderLoaded
             };
         }
 

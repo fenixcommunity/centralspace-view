@@ -12,7 +12,7 @@ const firebaseAuthReducer = (state = initState, action) => {
         case 'FIREBASE_LOGIN_ERROR':
             return {
                 ...state,
-                authError: 'Login failed'
+                authError: action.error.message
             }
         case 'FIREBASE_SIGNUP_SUCCESS':
             return {

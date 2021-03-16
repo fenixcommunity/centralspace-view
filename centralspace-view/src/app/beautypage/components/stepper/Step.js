@@ -27,9 +27,9 @@ const Step = ({ header, headerWaves, active, content, onClickNextStep, stepActio
                 {typeof (content) === 'string'}
                 {contentSection}
                 {stepActions && stepActions.map(action => (
-                    <div key={action.key} className="step-actions">
+                    (!action.props.hidden && <div key={action.key} className="step-actions">
                         {action}
-                    </div>
+                    </div>)
                 ))}
             </div>
         </li>

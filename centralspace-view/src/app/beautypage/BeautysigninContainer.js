@@ -26,9 +26,10 @@ const propTypes = {
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
     clearAuthError: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
-    signInMethod: PropTypes.object,
+    signInMethod: PropTypes.symbol,
     firebaseAuthError: PropTypes.string,
-    mainTheme: PropTypes.string
+    mainTheme: PropTypes.string,
+    loaderLoaded: PropTypes.bool
 }
 
 const mapStateToProps = state => ({
@@ -38,7 +39,8 @@ const mapStateToProps = state => ({
     externalScriptsLoaded: state.general.externalScriptsLoaded,
     firebaseAuthError: state.firebaseAuth.authError,
     mainTheme: state.signin.mainTheme,
-    signInMethod: state.signin.signInMethod
+    signInMethod: state.signin.signInMethod,
+    loaderLoaded: state.general.loaderLoaded
 });
 
 const mapDispatchToProps = {
@@ -70,7 +72,8 @@ const BeautysigninContainer = ({
     setSignInMethod,
     signInMethod,
     firebaseAuthError,
-    mainTheme
+    mainTheme,
+    loaderLoaded
 }) => {
  //todo remove scriptLoader
     useEffect(() => {
@@ -95,6 +98,7 @@ const BeautysigninContainer = ({
                 signInMethod={signInMethod}
                 firebaseAuthError={firebaseAuthError}
                 mainTheme={mainTheme}
+                loaderLoaded={loaderLoaded}
             />
         </div>
     )

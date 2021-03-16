@@ -4,8 +4,8 @@ export const refreshLoadedScripts = (includeGalleryThemeScripts) => {
         document.launchBeautypageInitScript();
         document.launchBeautypageMaterializeScript();
         if (includeGalleryThemeScripts) {
-            document.launchGalleryThemeScript();
             document.launchGalleryInitScript();
+            document.launchGalleryThemeScript();
         }
     }
 }

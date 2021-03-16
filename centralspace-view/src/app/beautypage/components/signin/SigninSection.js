@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { setTextColor, replaceBlank } from "../../../beautypage/utils/styleUtils"
+import { LOG_IN_METHOD } from "../../../config/appConfig"
 import BasicSection from "../helper/section/BasicSection";
 import FormCard from "../helper/form/FormCard";
 import InputText from "../helper/form/input/InputText";
 import ActionButton from "../helper/form/button/ActionButton";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
-import { LOG_IN_METHOD } from "../../../config/appConfig"
 import StyleWrapper from "../../../hoc/StyleWrapper";
-import { setTextColor, replaceBlank } from "../../../beautypage/utils/styleUtils"
+import Loader from "../utils/Loader"
 
 const propTypes = {
     history: PropTypes.object.isRequired,
@@ -18,9 +19,10 @@ const propTypes = {
     clearAuthError: PropTypes.func.isRequired,
     signIn: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
-    signInMethod: PropTypes.object,
+    signInMethod: PropTypes.symbol,
     firebaseAuthError: PropTypes.string,
-    mainTheme: PropTypes.string.isRequired
+    mainTheme: PropTypes.string.isRequired,
+    loaderLoaded: PropTypes.bool
 }
 
 const SigninSection = ({
@@ -33,7 +35,8 @@ const SigninSection = ({
     setSignInMethod,
     signInMethod,
     firebaseAuthError,
-    mainTheme
+    mainTheme,
+    loaderLoaded
 }) => {
     const mstepper = document.mstepper;
     const clearAuthenticationAttemptInfo = () => {
@@ -71,6 +74,8 @@ const SigninSection = ({
         : "Please sign in"
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
         : authenticationAttemptFailedMessage;
+    const finalStepContent = loaderLoaded ? <Loader /> : confirmationMessage;
+   
     const textColor = setTextColor(mainTheme);
     const stepColor = replaceBlank(mainTheme, "-") + "-step";
     // handleInputChange = (e) => {
@@ -145,7 +150,7 @@ const SigninSection = ({
                                         onClickNextStep={clearAuthenticationAttemptInfo}
                                     />,
                                     <Step id="step_3" key="step_3" header="Confirmation" headerWaves={true}
-                                        content={confirmationMessage}
+                                        content={finalStepContent}
                                         stepActions={
                                             [
                                                 <ActionButton

@@ -5,3 +5,10 @@ export const setExternalScriptsLoaded = (scriptsLoaded) => (dispatch) => {
         scriptsLoaded
     });
 };
+
+export const setLoaderLoaded = (isLoaderLoaded) => (dispatch) => {
+    dispatch({
+        type: "BP_SET_LOADER_LOADED",
+        isLoaderLoaded
+    });
+};

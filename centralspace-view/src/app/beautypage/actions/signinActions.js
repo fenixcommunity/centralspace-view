@@ -1,4 +1,5 @@
 import { signInUser } from './auth/authActions';
+import { setLoaderLoaded } from './generalActions';
 
 export const signIn = (event, history) => (dispatch) => {
     event.preventDefault();
@@ -10,6 +11,7 @@ export const signIn = (event, history) => (dispatch) => {
 }
 
 export const setAuthenticationAttemptFailed = (authenticationAttemptFailed) => (dispatch) => {
+    dispatch(setLoaderLoaded(false));
     dispatch({
         type: "BSIGN_SET_AUTHENTICATION_ATTEMPT_FAILED",
         authenticationAttemptFailed

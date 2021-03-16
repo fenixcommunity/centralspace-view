@@ -8,23 +8,14 @@ export const loadExternalScripts = (
     setExternalScriptsLoaded
 ) => {
     const includeGalleryThemeScripts = contextOfScripts && contextOfScripts === "galleryTheme";
-    if (externalScriptsLoaded) {
         refreshLoadedScripts(includeGalleryThemeScripts);
         return;
-    }
+    // not needed to load -> all scripts placed in index.html
 
-    const basicScripts = [
-        '/beautypage/js/main/materialize_v2.min.js',
-        '/beautypage/js/main/init.js',
-        '/beautypage/js/helper/nouislider.js',
-        '/beautypage/js/stepper/mstepper.js'
-    ]
+    const basicScripts = []
     let contextPageScripts = [];
     if (includeGalleryThemeScripts) {
-        contextPageScripts = contextPageScripts.concat([
-            '/beautypage/js/gallery/init.js',
-            '/beautypage/js/gallery/theme.js'
-        ])
+        contextPageScripts = contextPageScripts.concat([])
     }
 
     loadScripts([...basicScripts, ...contextPageScripts], setExternalScriptsLoaded)
@@ -41,8 +32,9 @@ const loadScripts = (scripts, setExternalScriptsLoaded) => {
     loadjs.ready('foobar', {
         success: function () {
             setExternalScriptsLoaded(true);
-            console.log("scripts loading successed")
         },
-        error: function () { console.error("scripts loading failed") },
+        error: function () {
+            setExternalScriptsLoaded(false)
+        }
     });
 }

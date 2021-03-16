@@ -5,7 +5,7 @@ import './styles/index.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './app/App';
 import * as serviceWorker from './env/serviceWorker';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider, useSelector } from 'react-redux';
 import  globalReducer from './app/beautypage/reducers';
 import thunk from 'redux-thunk';
