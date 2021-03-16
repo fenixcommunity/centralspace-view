@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const propTypes = {
     header: PropTypes.string,
@@ -7,15 +7,22 @@ const propTypes = {
     active: PropTypes.bool,
     content: PropTypes.node.isRequired,
     stepActions: PropTypes.array,
-    onClickNextStep: PropTypes.func
+    onClickNextStep: PropTypes.func,
+    disableNextStep: PropTypes.bool
 }
 
-const Step = ({ header, headerWaves, active, content, onClickNextStep, stepActions }) => {
+const Step = ({ header, headerWaves, active, content, onClickNextStep, stepActions, disableNextStep }) => {
     const headerWavesClass = headerWaves ? "waves-effect waves-dark" : "";
     const contentSection = typeof (content) === 'string' ? content : (<div className="row">{content}</div>);
+    const handleOnClick = (e) => {
+        if (onClickNextStep) {
+            onClickNextStep();
+        }
+    }
+
     return (
-        <li className={`step ${active ? "active" : ""}`}>
-            <div onClick={onClickNextStep} className={`step-title ${headerWavesClass}`}>{header}</div>
+        <li className={`step ${active ? "active" : ""} ${disableNextStep ? "not-valid" : ""}`}>
+            <div onClick={handleOnClick} className={`step-title ${headerWavesClass}`}>{header}</div>
             <div className="step-content">
                 {typeof (content) === 'string'}
                 {contentSection}

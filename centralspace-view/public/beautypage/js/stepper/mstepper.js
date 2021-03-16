@@ -244,7 +244,9 @@ function () {
         // Get the index of the active step
         var clickedStepIndex = Array.prototype.indexOf.call(steps, clickedStep); // If the step clicked is the next one, calls nextStep(), if it's the previous one, calls prevStep(), otherwise do nothing
 
-        if (clickedStepIndex == active.index + 1) nextStep();else if (clickedStepIndex == active.index - 1) prevStep();
+        if(!clickedStep.classList.contains('not-valid')) {
+          if (clickedStepIndex == active.index + 1) nextStep();else if (clickedStepIndex == active.index - 1) prevStep();
+        }
       } else {
         // Non-linear stepper detected
         // Opens the step clicked

@@ -26,6 +26,7 @@ const propTypes = {
     setAuthenticationAttemptFailed: PropTypes.func.isRequired,
     clearAuthError: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
+    signInMethod: PropTypes.object,
     firebaseAuthError: PropTypes.string,
     mainTheme: PropTypes.string
 }
@@ -36,7 +37,8 @@ const mapStateToProps = state => ({
     authenticationAttemptFailed: state.signin.authenticationAttemptFailed,
     externalScriptsLoaded: state.general.externalScriptsLoaded,
     firebaseAuthError: state.firebaseAuth.authError,
-    mainTheme: state.signin.mainTheme
+    mainTheme: state.signin.mainTheme,
+    signInMethod: state.signin.signInMethod
 });
 
 const mapDispatchToProps = {
@@ -66,6 +68,7 @@ const BeautysigninContainer = ({
     setExternalScriptsLoaded,
     signIn,
     setSignInMethod,
+    signInMethod,
     firebaseAuthError,
     mainTheme
 }) => {
@@ -89,6 +92,7 @@ const BeautysigninContainer = ({
                 clearAuthError={clearAuthError}
                 signIn={signIn}
                 setSignInMethod={setSignInMethod}
+                signInMethod={signInMethod}
                 firebaseAuthError={firebaseAuthError}
                 mainTheme={mainTheme}
             />

@@ -12,7 +12,7 @@ const PagesDropdown = ({ location, isLogged }) => {
     const dropdownRef = useRef(null);
     const isActive = location.pathname === "/";
     useEffect(() => {
-        M.Dropdown.init(dropdownRef.current, {});
+        M.Dropdown.init(dropdownRef.current, {hover: true});
     }, []);
 
     return (

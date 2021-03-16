@@ -18,6 +18,7 @@ const propTypes = {
     clearAuthError: PropTypes.func.isRequired,
     signIn: PropTypes.func.isRequired,
     setSignInMethod: PropTypes.func.isRequired,
+    signInMethod: PropTypes.object,
     firebaseAuthError: PropTypes.string,
     mainTheme: PropTypes.string.isRequired
 }
@@ -30,6 +31,7 @@ const SigninSection = ({
     clearAuthError,
     signIn,
     setSignInMethod,
+    signInMethod,
     firebaseAuthError,
     mainTheme
 }) => {
@@ -62,6 +64,8 @@ const SigninSection = ({
         }
     }
 
+    const step1HeaderText = !signInMethod ? "Login method" :
+        (signInMethod === LOG_IN_METHOD.FIREBASE ? "Login to Firebase" : "Login to Centralspace");
     const authenticationAttemptFailedMessage = authenticationAttemptFailed ?
         (firebaseAuthError ? firebaseAuthError : "Not authorized, please try with other credentials")
         : "Please sign in"
@@ -87,7 +91,7 @@ const SigninSection = ({
                         content={
                             <StepperLinear customClass={stepColor}
                                 steps={[
-                                    <Step id="step_1" key="step_1" active={true} header="Login method" headerWaves={true}
+                                    <Step id="step_1" key="step_1" active={true} header={step1HeaderText} headerWaves={true}
                                         content="Please choose the login method"
                                         stepActions={
                                             [
@@ -109,6 +113,7 @@ const SigninSection = ({
                                             ]
                                         } />,
                                     <Step id="step_2" key="step_2" header="Credentials" headerWaves={true}
+                                        disableNextStep={signInMethod === null}
                                         content={
                                             <>
                                                 <InputText

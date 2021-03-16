@@ -73,8 +73,6 @@ const enhance = compose(
 
     // loaded if API call
 
-// moze przejsc z 1 do 2 bez wyboru a to nie dobrze
-
     // wywal skrypt loadera
 
     // jesli
