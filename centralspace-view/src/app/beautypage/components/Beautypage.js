@@ -1,19 +1,19 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import '../../resources/beautypage/css/startup-materialize.css';
-import '../../resources/beautypage/css/search.css';
+import '../../../resources/beautypage/css/startup-materialize.css';
+import '../../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
-import treeFogg from '../../resources/beautypage/images/background.jpg';
-import Navbar from './components/navbar/Navbar';
-import Header from './components/header/Header';
-import Features from './components/feature/Features';
-import Clients from './components/client/Clients';
-import PricingTables from './components/pricing/PricingTables';
-import Blog from './components/blogsection/BlogSection';
+import treeFogg from '../../../resources/beautypage/images/background.jpg';
+import Navbar from '../components/navbar/Navbar';
+import Header from '../components/header/Header';
+import Features from '../components/feature/Features';
+import Clients from '../components/client/Clients';
+import PricingTables from '../components/pricing/PricingTables';
+import Blog from '../components/blogsection/BlogSection';
 // import GoogleMaps from './components/map/GoogleMaps';
-import LeafletMapEmbedded from './components/map/LeafletMapEmbedded';
-import SignUpForm from './components/signup/SignUpForm';
-import Footer from './components/footer/Footer';
+import LeafletMapEmbedded from '../components/map/LeafletMapEmbedded';
+import SignUpForm from '../components/signup/SignUpForm';
+import Footer from '../components/footer/Footer';
 
 const propTypes = {
     logoutUser: PropTypes.func

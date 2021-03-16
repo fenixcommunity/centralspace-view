@@ -3,14 +3,14 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from 'prop-types';
 import { connect as connectRedux } from "react-redux";
 import { compose } from "recompose";
-import '../../resources/beautypage/css/search.css';
-import '../../resources/beautypage/css/startup-materialize.css';
+import '../../../resources/beautypage/css/search.css';
+import '../../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
-import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "./actions/signinActions";
-import { clearAuthError } from "./actions/auth/firebaseAuthActions";
-import { setExternalScriptsLoaded } from "./actions/generalActions";
-import { loadExternalScripts } from "./utils/scriptLoader";
+import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "../actions/signinActions";
+import { clearAuthError } from "../actions/auth/firebaseAuthActions";
+import { setExternalScriptsLoaded } from "../actions/generalActions";
+import { loadExternalScripts } from "../utils/scriptLoader";
 import { Redirect } from "react-router";
 
 

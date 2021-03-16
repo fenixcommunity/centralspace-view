@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import backgroundStars from '../../resources/beautypage/images/backgroundStars.jpg';
-import Navbar from './components/navbar/Navbar';
-import ContactUs from './components/contact/ContactUs';
-import Footer from './components/footer/Footer';
-import StarsParallax from './components/parallax/StarsParallax';
-import TabsSection from './components/other/TabsSection';
-import Header from "./components/header/Header";
-import SignUpForm from './components/signup/SignUpForm';
-import SignUpSummary from './components/signup/SignUpSummary';
-// import MaterialUiStepper from './components/other/MaterialUiStepper';
-import Gallery from './components/gallery/Gallery';
+import backgroundStars from '../../../resources/beautypage/images/backgroundStars.jpg';
+import Navbar from '../components/navbar/Navbar';
+import ContactUs from '../components/contact/ContactUs';
+import Footer from '../components/footer/Footer';
+import StarsParallax from '../components/parallax/StarsParallax';
+import TabsSection from '../components/other/TabsSection';
+import Header from "../components/header/Header";
+import SignUpForm from '../components/signup/SignUpForm';
+import SignUpSummary from '../components/signup/SignUpSummary';
+// import MaterialUiStepper from '../components/other/MaterialUiStepper';
+import Gallery from '../components/gallery/Gallery';
 
 const propTypes = {
     logoutUser: PropTypes.func

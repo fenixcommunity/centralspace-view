@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { setTextColor, replaceBlank } from "../../../beautypage/utils/styleUtils"
-import { LOG_IN_METHOD } from "../../../config/appConfig"
+import { LOG_IN_METHOD } from "../../../beautypage/config/appConfig"
 import BasicSection from "../helper/section/BasicSection";
 import FormCard from "../helper/form/FormCard";
 import InputText from "../helper/form/input/InputText";

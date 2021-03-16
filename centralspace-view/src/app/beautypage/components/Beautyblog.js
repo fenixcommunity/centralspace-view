@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import IntroductionAnimation from './components/blog/IntroductionAnimation';
-import Blog from './components/blog/Blog';
+import Navbar from './navbar/Navbar';
+import Footer from './footer/Footer';
+import IntroductionAnimation from './blog/IntroductionAnimation';
+import Blog from './blog/Blog';
 
 const propTypes = {
     logoutUser: PropTypes.func

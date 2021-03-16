@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import headerImg from '../../resources/beautypage/images/team/office.jpg';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import Team from './components/team/Team';
-import Header from "./components/header/Header";
+import headerImg from '../../../resources/beautypage/images/team/office.jpg';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
+import Team from '../components/team/Team';
+import Header from "../components/header/Header";
 
 const propTypes = {
     logoutUser: PropTypes.func

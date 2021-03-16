@@ -1,7 +1,7 @@
 import { signOut as signOutFirebaseUser, signIn as signInToFirebase } from './firebaseAuthActions';
 import { signOutCentralspaceUser, signInToCentralspace } from './centralspaceAuthActions';
 import { setLoaderLoaded } from '../generalActions';
-import { LOG_IN_METHOD } from "../../../config/appConfig";
+import { LOG_IN_METHOD } from "../../../beautypage/config/appConfig";
 
 export const signInUser = (username, password, history) => (dispatch, getState) => {
     const signInMethod = getState().signin.signInMethod;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
 import ScrollToTop from './hoc/ScrollToTop';
-import RouteSwitcher from './hoc/RouteSwitcher';
+import RouteSwitcher from './beautypage/hoc/RouteSwitcher';
 
 const App = () => {
   return (

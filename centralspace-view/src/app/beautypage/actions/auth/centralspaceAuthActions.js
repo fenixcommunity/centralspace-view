@@ -1,4 +1,4 @@
-import { ApiCaller, Api } from '../../../api/centralspaceApi';
+import { ApiCaller, Api } from '../../../beautypage/api/centralspaceApi';
 import { setAuthenticationAttemptFailed } from '../signinActions';
 
 export const signInToCentralspace = (username, password, history) => (dispatch) => {

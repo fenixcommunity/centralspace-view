@@ -4,19 +4,19 @@ import { compose } from "recompose";
 import { connect as connectRedux } from "react-redux";
 import { firestoreConnect } from 'react-redux-firebase';
 import { withStyles } from "@material-ui/core/styles";
-import '../../resources/beautypage/css/startup-materialize.css';
-import '../../resources/beautypage/css/search.css';
+import '../../../resources/beautypage/css/startup-materialize.css';
+import '../../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
-import { setExternalScriptsLoaded } from "./actions/generalActions";
-import { loadExternalScripts } from "./utils/scriptLoader";
-import { logoutUser } from './actions/auth/authActions';
+import { setExternalScriptsLoaded } from "../actions/generalActions";
+import { loadExternalScripts } from "../utils/scriptLoader";
+import { logoutUser } from '../actions/auth/authActions';
 import Beautypage from "./Beautypage";
 import Beautywall from "./Beautywall";
 import Beautyblog from "./Beautyblog";
 import Beautyteam from "./Beautyteam";
-import Beautysignup from "./Beautysignup";
+import Beautysignup from "./Beautyothers";
 import Beautyfeatures from "./Beautyfeatures";
-import ErrorPage from "./components/error/ErrorPage";
+import ErrorPage from "../components/error/ErrorPage";
 
 const propTypes = {
     location: PropTypes.object.isRequired,
@@ -64,24 +64,7 @@ const enhance = compose(
 );
 
 
-
-
-
-
-    // import moment from 'moment';
-    // moment(account.createdAt.toDate()).calendar()}
-
-    // loaded if API call
-
-    // wywal skrypt loadera
-
-    // jesli
-    // to error i nic nie rob
-    // Proxy error: Could not proxy request /app/public/users/authenticated from localhost:7777 to http://localhost:8088/.
-    // See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-    // https://reactjs.org/docs/error-boundaries.html
-
+// sign in
 
 
 const BeautypageContainer = ({

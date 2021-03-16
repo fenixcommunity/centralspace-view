@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { connect as connectRedux } from "react-redux";
 import { compose } from "recompose";
 import { Route, Switch, useLocation } from 'react-router-dom';
-import TrainingExample from '../training/components/TrainingExample';
+import TrainingExample from '../../training/components/TrainingExample';
 import PrivateRoute from './PrivateRoute';
-import BeautypageContainer from '../beautypage/BeautypageContainer';
-import ErrorPage from '../beautypage/components/error/ErrorPage';
-import { isLoggedUserStillAuthenticated } from '../beautypage/actions/auth/centralspaceAuthActions'
-import ThemeContextProvider from '../training/components/ThemeContext';
-import BeautysigninContainer from '../beautypage/BeautysigninContainer';
+import BeautypageContainer from '../components/BeautypageContainer';
+import ErrorPage from '../components/error/ErrorPage';
+import { isLoggedUserStillAuthenticated } from '../actions/auth/centralspaceAuthActions'
+import ThemeContextProvider from '../../training/components/ThemeContext';
+import BeautysigninContainer from '../components/BeautysigninContainer';
 
 const propTypes = {
     isLoggedUserStillAuthenticated: PropTypes.func.isRequired,

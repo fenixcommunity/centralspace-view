@@ -1,4 +1,4 @@
-import { LOG_IN_METHOD } from "../../config/appConfig"
+import { LOG_IN_METHOD } from "../../beautypage/config/appConfig"
 
 export const initialState = {
     authenticationAttemptFailed: false,
