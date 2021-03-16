@@ -32,9 +32,14 @@ const NavbarPagesList = ({ isLogged, waves }) => {
                 )
                 :
                 (
-                    <li>
-                        <NavLink className={wavesEffect} to="/signin">Sign In</NavLink>
-                    </li>
+                    <>
+                        <li>
+                            <NavLink className={wavesEffect} to="/signin">Sign In</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className={wavesEffect} to="/signup">Sign Up</NavLink>
+                        </li>
+                    </>
                 )
             }
 

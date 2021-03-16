@@ -12,7 +12,7 @@ import PricingTables from '../components/pricing/PricingTables';
 import Blog from '../components/blogsection/BlogSection';
 // import GoogleMaps from './components/map/GoogleMaps';
 import LeafletMapEmbedded from '../components/map/LeafletMapEmbedded';
-import SignUpForm from '../components/signup/SignUpForm';
+import SignUpForm from './mix/MixForm';
 import Footer from '../components/footer/Footer';
 
 const propTypes = {

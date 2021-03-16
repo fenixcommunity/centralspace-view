@@ -1,0 +1,96 @@
+import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import PropTypes from 'prop-types';
+import { connect as connectRedux } from "react-redux";
+import { compose } from "recompose";
+import '../../../resources/beautypage/css/search.css';
+import '../../../resources/beautypage/css/startup-materialize.css';
+import './BeautypageStyleModification.css';
+import Beautysignin from "./Beautysignin";
+import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "../actions/signinActions";
+import { clearAuthError } from "../actions/auth/firebaseAuthActions";
+import { Redirect } from "react-router";
+
+
+const propTypes = {
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+    authenticationInFirebase: PropTypes.object.isRequired,
+    authenticatedInCentralspace: PropTypes.bool.isRequired,
+    authenticationAttemptFailed: PropTypes.bool,
+    signIn: PropTypes.func.isRequired,
+    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    clearAuthError: PropTypes.func.isRequired,
+    setSignInMethod: PropTypes.func.isRequired,
+    signInMethod: PropTypes.symbol,
+    firebaseAuthError: PropTypes.string,
+    mainTheme: PropTypes.string,
+    loaderLoaded: PropTypes.bool
+}
+
+const mapStateToProps = state => ({
+    authenticationInFirebase: state.firebase.auth,
+    authenticatedInCentralspace: state.centralspaceAuth.authenticatedInCentralspace,
+    authenticationAttemptFailed: state.signin.authenticationAttemptFailed,
+    firebaseAuthError: state.firebaseAuth.authError,
+    mainTheme: state.signin.mainTheme,
+    signInMethod: state.signin.signInMethod,
+    loaderLoaded: state.general.loaderLoaded
+});
+
+const mapDispatchToProps = {
+    signIn,
+    setAuthenticationAttemptFailed,
+    clearAuthError,
+    setSignInMethod
+};
+
+const styles = theme => ({});
+
+const enhance = compose(
+    connectRedux(mapStateToProps, mapDispatchToProps),
+    withStyles(styles)
+);
+
+const BeautysigninContainer = ({
+    location,
+    history,
+    authenticationInFirebase,
+    authenticatedInCentralspace,
+    authenticationAttemptFailed,
+    setAuthenticationAttemptFailed,
+    clearAuthError,
+    signIn,
+    setSignInMethod,
+    signInMethod,
+    firebaseAuthError,
+    mainTheme,
+    loaderLoaded
+}) => {
+    if (authenticationInFirebase.uid || authenticatedInCentralspace) {
+        return <Redirect to='/' />;
+    }
+
+    return (
+        <div>
+            <Beautysignin
+                history={history}
+                authenticatedInCentralspace={authenticatedInCentralspace}
+                authenticationInFirebase={authenticationInFirebase}
+                authenticationAttemptFailed={authenticationAttemptFailed}
+                setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                clearAuthError={clearAuthError}
+                signIn={signIn}
+                setSignInMethod={setSignInMethod}
+                signInMethod={signInMethod}
+                firebaseAuthError={firebaseAuthError}
+                mainTheme={mainTheme}
+                loaderLoaded={loaderLoaded}
+            />
+        </div>
+    )
+}
+
+BeautysigninContainer.propTypes = propTypes;
+
+export default enhance(BeautysigninContainer);
