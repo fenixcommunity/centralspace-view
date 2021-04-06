@@ -38,7 +38,7 @@ const SignedOutNavbar = ({
                         <NavbarTooltip tooltipText="Instagram" tooltipIconName="fab fa-instagram" />
                         <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
                         {/* <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter"/> */}
-                        <NavbarTooltip tooltipText="Twitter" animated={(
+                        <NavbarTooltip tooltipText="Twitter" animatedIcon={(
                             <UseAnimations animation={twitter} strokeColor="#1de9c3" size={32}
                                 autoplay={true} loop={true} speed={1}
                                 wrapperStyle={{ height: "60px", marginLeft: "-5px" }} />
