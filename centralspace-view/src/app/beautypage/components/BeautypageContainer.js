@@ -76,18 +76,14 @@ const BeautypageContainer = ({
             if (event.data.type !== "postMessageEventExampleType") {
                 return;
             }
-            const { xxx } = event.data.payload;
+            const { payload } = event.data.payload;
         });
         useEvent("message", postMessageEventExample);
 
 
 
-        
 
-        // Vercel + NextJs 
-// ruchome ikonki
-// https://www.npmjs.com/package/react-animated-social-icons
-// https://reactjsexample.com/a-collection-of-free-animated-open-source-icons-for-react-js/
+//  TODO         Vercel + NextJs 
 
 
     switch (location.pathname) {

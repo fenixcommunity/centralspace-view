@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  tooltipText: PropTypes.string.isRequired,
-  tooltipIconName: PropTypes.string.isRequired
+  tooltipText: PropTypes.string,
+  tooltipIconName: PropTypes.string,
+  animatedIcon: PropTypes.node
 }
 
-const NavbarTooltip = ({ tooltipText, tooltipIconName }) => {
+const NavbarTooltip = ({ tooltipText, tooltipIconName, animatedIcon }) => {
   return (
     <li>
       <a
@@ -15,7 +16,7 @@ const NavbarTooltip = ({ tooltipText, tooltipIconName }) => {
         data-position="bottom"
         data-tooltip={tooltipText}
       >
-        <i className={tooltipIconName} />
+        {animatedIcon ? ( animatedIcon ) : (<i className={tooltipIconName} />)}
       </a>
     </li>
   )

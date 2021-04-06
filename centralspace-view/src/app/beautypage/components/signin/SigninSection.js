@@ -100,12 +100,14 @@ const SignInSection = ({
                                                 <ActionButton
                                                     id="login_step_1" value="centralspace" key="login_step_1"
                                                     classes="next-step"
+                                                    icon="double_arrow" iconPossition="left"
                                                     label="By Centralspace" color="blue" hasWaves={true}
                                                     actions={{ onClick: setCentralspaceSignInMethod }}
                                                 />,
                                                 <ActionButton
                                                     id="login_step_1_firebase" value="firebase" key="login_step_1_firebase"
                                                     classes="next-step"
+                                                    icon="double_arrow" iconPossition="left"
                                                     label="By Firebase" color="teal lighten-2" hasWaves={true}
                                                     actions={{ onClick: setFirebaseSignInMethod }}
                                                 />
@@ -136,6 +138,7 @@ const SignInSection = ({
                                                 <ActionButton
                                                     id="continue_step_2" key="continue_step_2" label="Continue"
                                                     classes="next-step"
+                                                    icon="send" iconPossition="right"
                                                     color={mainTheme} hasWaves={true}
                                                     actions={{ onClick: clearAuthenticationAttemptInfo }}
                                                 />
@@ -150,6 +153,7 @@ const SignInSection = ({
                                                 <ActionButton
                                                     id="login_step_3" key="login_step_3" type="submit"
                                                     label="Log in" color={mainTheme} hasWaves={true}
+                                                    icon="login" iconPossition="right"
                                                     actions={{}}
                                                     hidden={authenticationAttemptFailed}
                                                 /* data-feedback="someFunction">Log in</button> */
@@ -158,6 +162,7 @@ const SignInSection = ({
                                                 <ActionButton
                                                     id="login_step_3_return" key="login_step_3_return" label="Return"
                                                     color="grey" hasWaves={true}
+                                                    icon="clear_all" iconPossition="right"  
                                                     actions={{ onClick: returnActionIfWrongCredentials }}
                                                     hidden={!authenticationAttemptFailed}
                                                 />

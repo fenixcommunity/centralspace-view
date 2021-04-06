@@ -93,6 +93,8 @@ Env:
 - Express vs Axios
 - npm i recompose
 - npm i redux
+- npm install react-device-detect
+- npm install react-useanimations
 
 Shortcut:
 shift + alt + down arrow

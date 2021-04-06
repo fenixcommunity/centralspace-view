@@ -8,6 +8,8 @@ import PagesDropdown from "./PagesDropdown";
 import Searcher from './searcher/Searcher';
 import HamburgerMenu from "./slideout/HamburgerMenu";
 import NavbarSlideOut from "./slideout/NavbarSlideOut";
+import twitter from 'react-useanimations/lib/twitter'
+import UseAnimations from 'react-useanimations';
 
 const propTypes = {
     basicSearchIsActive: PropTypes.bool,
@@ -35,7 +37,12 @@ const SignedOutNavbar = ({
                         <NavbarPagesList isLogged={false} />
                         <NavbarTooltip tooltipText="Instagram" tooltipIconName="fab fa-instagram" />
                         <NavbarTooltip tooltipText="Facebook" tooltipIconName="fab fa-facebook" />
-                        <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter" />
+                        {/* <NavbarTooltip tooltipText="Twitter" tooltipIconName="fab fa-twitter"/> */}
+                        <NavbarTooltip tooltipText="Twitter" animated={(
+                            <UseAnimations animation={twitter} strokeColor="#1de9c3" size={32}
+                                autoplay={true} loop={true} speed={1}
+                                wrapperStyle={{ height: "60px", marginLeft: "-5px" }} />
+                        )} />
                     </ul>
                     {/* HamburgerMenu refers to NavbarSlideOut */}
                     <HamburgerMenu textStyle={textStyle} />

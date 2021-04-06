@@ -167,12 +167,14 @@ const SignUpSection = ({
                                                 <ActionButton
                                                     id="register_step_1" value="centralspace" key="register_step_1"
                                                     classes="next-step"
+                                                    icon="double_arrow" iconPossition="left"
                                                     label="By Centralspace" color="blue" hasWaves={true}
                                                     actions={{ onClick: setCentralspaceSignUpMethod }}
                                                 />,
                                                 <ActionButton
                                                     id="register_step_1_firebase" value="firebase" key="register_step_1_firebase"
                                                     classes="next-step"
+                                                    icon="double_arrow" iconPossition="left"
                                                     label="By Firebase" color="teal lighten-2" hasWaves={true}
                                                     actions={{ onClick: setFirebaseSignUpMethod }}
                                                 />
@@ -230,6 +232,7 @@ const SignUpSection = ({
                                                     id="continue_step_2" key="continue_step_2" label="Continue"
                                                     classes="next-step"
                                                     color={mainTheme} hasWaves={true}
+                                                    icon="send" iconPossition="right"
                                                     actions={{ onClick: clearAuthenticationAttemptInfo }}
                                                     disabled={signUpFormNotValid}
                                                 />
@@ -245,12 +248,14 @@ const SignUpSection = ({
                                                 <ActionButton
                                                     id="register_step_3" key="register_step_3" type="submit"
                                                     label="Register" color={mainTheme} hasWaves={true}
+                                                    icon="app_registration" iconPossition="right"
                                                     actions={{}}
                                                     hidden={registrationAttemptFailed}
                                                 />,
                                                 <ActionButton
                                                     id="register_step_3_return" key="register_step_3_return" label="Return"
                                                     color="grey" hasWaves={true}
+                                                    icon="clear_all" iconPossition="right"  
                                                     actions={{ onClick: returnActionIfWrongCredentials }}
                                                     hidden={!registrationAttemptFailed}
                                                 />
