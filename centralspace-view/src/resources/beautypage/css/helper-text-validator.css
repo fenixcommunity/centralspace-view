@@ -80,7 +80,7 @@ textarea.materialize-textarea:focus.invalid ~ .helper-text[data-error], .select-
           user-select: none;
   pointer-events: none;
   /* show only when error or success message */
-  min-height: 18px;
+  min-height: 25px;
 }
 
 input:not([type]).valid ~ .helper-text:after,
@@ -144,7 +144,7 @@ textarea.materialize-textarea:focus.invalid ~ .helper-text:after, .select-wrappe
 }
 
 .input-field .prefix ~ .helper-text {
-  margin-left: 3rem;
+  margin-left: 3rem !important;
   width: 92%;
   width: calc(100% - 3rem);
 }

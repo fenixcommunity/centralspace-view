@@ -1,4 +1,4 @@
-import { LOG_IN_METHOD } from "../../beautypage/config/appConfig"
+import { AUTH_METHOD } from "../config/appConfig"
 
 export const initialState = {
     authenticationAttemptFailed: false,
@@ -22,7 +22,7 @@ const signinReducer = (state = initialState, action) => {
             return {
                 ...state,
                 signInMethod,
-                mainTheme: signInMethod === LOG_IN_METHOD.FIREBASE ? "teal lighten-2" : initialState.mainTheme
+                mainTheme: signInMethod === AUTH_METHOD.FIREBASE ? "teal lighten-2" : initialState.mainTheme
             };
         }
 

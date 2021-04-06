@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PropTypes from 'prop-types';
 import { compose } from "recompose";
 import { connect as connectRedux } from "react-redux";
@@ -8,6 +8,7 @@ import '../../../resources/beautypage/css/startup-materialize.css';
 import '../../../resources/beautypage/css/search.css';
 import './BeautypageStyleModification.css';
 import { logoutUser } from '../actions/auth/authActions';
+import useEvent from '../utils/hooksHelper'
 import Beautypage from "./Beautypage";
 import Beautywall from "./Beautywall";
 import Beautyblog from "./Beautyblog";
@@ -57,10 +58,6 @@ const enhance = compose(
     withStyles(styles)
 );
 
-
-// sign in
-
-
 const BeautypageContainer = ({
     location,
     history,
@@ -74,6 +71,24 @@ const BeautypageContainer = ({
     const logoutActionForLoggedUser = authenticatedInCentralspace || authenticationInFirebase.uid ?
         () => logoutUser(authenticatedInCentralspace, authenticationInFirebase, history)
         : null;
+
+        const postMessageEventExample = useCallback((event) => {
+            if (event.data.type !== "postMessageEventExampleType") {
+                return;
+            }
+            const { xxx } = event.data.payload;
+        });
+        useEvent("message", postMessageEventExample);
+
+
+
+        
+
+        // Vercel + NextJs 
+// ruchome ikonki
+// https://www.npmjs.com/package/react-animated-social-icons
+// https://reactjsexample.com/a-collection-of-free-animated-open-source-icons-for-react-js/
+
 
     switch (location.pathname) {
         case "/":

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { APP_BASIC_URL } from '../config/appConfig';
+import { APP_BASIC_URL, API_BASIC_URL } from '../config/appConfig';
 
 export const ApiCaller = () => {
     const apiAuth = axios.create({
@@ -19,7 +19,11 @@ export const Api = {
     auth: {
         isAuthenticated: `${APP_BASIC_URL}/public/users/authenticated`,
         signin: `${APP_BASIC_URL}/public/users/signin`,
-        logout: `${APP_BASIC_URL}/public/users/logout-call`
+        logout: `${APP_BASIC_URL}/public/users/logout-call`,
+        signup: `${API_BASIC_URL}/register/submit`
+    },
+    utils: { 
+        userTracker: 'https://ipapi.co/json/'
     }
 };
 

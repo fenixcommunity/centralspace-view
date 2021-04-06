@@ -6,8 +6,14 @@ import { compose } from "recompose";
 import '../../../resources/beautypage/css/search.css';
 import '../../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
-import Beautysignin from "./Beautysignin";
-import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "../actions/signinActions";
+import Beautysignup from "./Beautysignup";
+import {
+    signUp,
+    setRegistrationAttemptFailed,
+    setSignUpMethod,
+    setPassword,
+    setSignUpFormNotValid
+} from "../actions/signUpActions";
 import { clearAuthError } from "../actions/auth/firebaseAuthActions";
 import { Redirect } from "react-router";
 
@@ -18,31 +24,41 @@ const propTypes = {
     authenticationInFirebase: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
-    signIn: PropTypes.func.isRequired,
-    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    signUp: PropTypes.func.isRequired,
+    setRegistrationAttemptFailed: PropTypes.func.isRequired,
     clearAuthError: PropTypes.func.isRequired,
-    setSignInMethod: PropTypes.func.isRequired,
-    signInMethod: PropTypes.symbol,
+    setSignUpMethod: PropTypes.func.isRequired,
+    signUpMethod: PropTypes.symbol,
     firebaseAuthError: PropTypes.string,
     mainTheme: PropTypes.string,
-    loaderLoaded: PropTypes.bool
+    loaderLoaded: PropTypes.bool,
+    password: PropTypes.string,
+    passwordRepeated: PropTypes.string,
+    setPassword: PropTypes.func,
+    signUpFormNotValid: PropTypes.bool,
+    setSignUpFormNotValid: PropTypes.func
 }
 
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
     authenticatedInCentralspace: state.centralspaceAuth.authenticatedInCentralspace,
-    authenticationAttemptFailed: state.signin.authenticationAttemptFailed,
+    registrationAttemptFailed: state.signup.registrationAttemptFailed,
     firebaseAuthError: state.firebaseAuth.authError,
-    mainTheme: state.signin.mainTheme,
-    signInMethod: state.signin.signInMethod,
-    loaderLoaded: state.general.loaderLoaded
+    mainTheme: state.signup.mainTheme,
+    signUpMethod: state.signup.signUpMethod,
+    loaderLoaded: state.general.loaderLoaded,
+    password: state.signup.password,
+    passwordRepeated: state.signup.passwordRepeated,
+    signUpFormNotValid: state.signup.signUpFormNotValid
 });
 
 const mapDispatchToProps = {
-    signIn,
-    setAuthenticationAttemptFailed,
+    signUp,
+    setRegistrationAttemptFailed,
     clearAuthError,
-    setSignInMethod
+    setSignUpMethod,
+    setPassword,
+    setSignUpFormNotValid
 };
 
 const styles = theme => ({});
@@ -52,20 +68,24 @@ const enhance = compose(
     withStyles(styles)
 );
 
-const BeautysigninContainer = ({
-    location,
+const BeautysignupContainer = ({
     history,
     authenticationInFirebase,
     authenticatedInCentralspace,
-    authenticationAttemptFailed,
-    setAuthenticationAttemptFailed,
+    registrationAttemptFailed,
+    setRegistrationAttemptFailed,
     clearAuthError,
-    signIn,
-    setSignInMethod,
-    signInMethod,
+    signUp,
+    setSignUpMethod,
+    signUpMethod,
     firebaseAuthError,
     mainTheme,
-    loaderLoaded
+    loaderLoaded,
+    setPassword,
+    password,
+    passwordRepeated,
+    signUpFormNotValid,
+    setSignUpFormNotValid
 }) => {
     if (authenticationInFirebase.uid || authenticatedInCentralspace) {
         return <Redirect to='/' />;
@@ -73,24 +93,29 @@ const BeautysigninContainer = ({
 
     return (
         <div>
-            <Beautysignin
+            <Beautysignup
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}
                 authenticationInFirebase={authenticationInFirebase}
-                authenticationAttemptFailed={authenticationAttemptFailed}
-                setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                registrationAttemptFailed={registrationAttemptFailed}
+                setRegistrationAttemptFailed={setRegistrationAttemptFailed}
                 clearAuthError={clearAuthError}
-                signIn={signIn}
-                setSignInMethod={setSignInMethod}
-                signInMethod={signInMethod}
+                signUp={signUp}
+                setSignUpMethod={setSignUpMethod}
+                signUpMethod={signUpMethod}
                 firebaseAuthError={firebaseAuthError}
                 mainTheme={mainTheme}
                 loaderLoaded={loaderLoaded}
+                setPassword={setPassword}
+                password={password}
+                passwordRepeated={passwordRepeated}
+                signUpFormNotValid={signUpFormNotValid}
+                setSignUpFormNotValid={setSignUpFormNotValid}
             />
         </div>
     )
 }
 
-BeautysigninContainer.propTypes = propTypes;
+BeautysignupContainer.propTypes = propTypes;
 
-export default enhance(BeautysigninContainer);
+export default enhance(BeautysignupContainer);

@@ -2,36 +2,46 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
-import SigninSection from '../components/signin/SigninSection';
+import SignUpSection from './signup/SignUpSection';
 
 const propTypes = {
     history: PropTypes.object.isRequired,
     authenticatedInCentralspace: PropTypes.bool.isRequired,
     authenticationAttemptFailed: PropTypes.bool,
-    signIn: PropTypes.func.isRequired,
+    signUp: PropTypes.func.isRequired,
     logoutUser: PropTypes.func,
-    setAuthenticationAttemptFailed: PropTypes.func.isRequired,
+    setRegistrationAttemptFailed: PropTypes.func.isRequired,
     clearAuthError: PropTypes.func.isRequired,
-    setSignInMethod: PropTypes.func.isRequired,
-    signInMethod: PropTypes.symbol,
+    setSignUpMethod: PropTypes.func.isRequired,
+    signUpMethod: PropTypes.symbol,
     firebaseAuthError: PropTypes.string,
     mainTheme: PropTypes.string,
-    loaderLoaded: PropTypes.bool
+    loaderLoaded: PropTypes.bool,
+    password: PropTypes.string,
+    passwordRepeated: PropTypes.string,
+    setPassword: PropTypes.func,
+    signUpFormNotValid: PropTypes.bool,
+    setSignUpFormNotValid: PropTypes.func
 }
 
 const Beautysignup = ({
     history,
     authenticatedInCentralspace,
-    authenticationAttemptFailed,
-    signIn,
+    registrationAttemptFailed,
+    signUp,
     logoutUser,
-    setAuthenticationAttemptFailed,
+    setRegistrationAttemptFailed,
     clearAuthError,
-    setSignInMethod,
-    signInMethod,
+    setSignUpMethod,
+    signUpMethod,
     firebaseAuthError,
     mainTheme,
-    loaderLoaded
+    loaderLoaded,
+    setPassword,
+    password,
+    passwordRepeated,
+    signUpFormNotValid,
+    setSignUpFormNotValid
 }) => {
     return (
         <>
@@ -40,18 +50,23 @@ const Beautysignup = ({
                 isDarkMode={true}
                 fullScreenSearchIsActive={true}
                 logoutUser={logoutUser} />
-            <SigninSection
+            <SignUpSection
                 history={history}
                 authenticatedInCentralspace={authenticatedInCentralspace}
-                authenticationAttemptFailed={authenticationAttemptFailed}
-                setAuthenticationAttemptFailed={setAuthenticationAttemptFailed}
+                registrationAttemptFailed={registrationAttemptFailed}
+                setRegistrationAttemptFailed={setRegistrationAttemptFailed}
                 clearAuthError={clearAuthError}
-                signIn={signIn}
-                setSignInMethod={setSignInMethod}
-                signInMethod={signInMethod}
+                signUp={signUp}
+                setSignUpMethod={setSignUpMethod}
+                signUpMethod={signUpMethod}
                 firebaseAuthError={firebaseAuthError}
                 mainTheme={mainTheme}
                 loaderLoaded={loaderLoaded}
+                setPassword={setPassword}
+                password={password}
+                passwordRepeated={passwordRepeated}
+                signUpFormNotValid={signUpFormNotValid}
+                setSignUpFormNotValid={setSignUpFormNotValid}
             />
             <Footer />
         </>

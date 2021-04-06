@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { setTextColor, replaceBlank } from "../../../beautypage/utils/styleUtils"
-import { LOG_IN_METHOD } from "../../../beautypage/config/appConfig"
+import { setTextColor, replaceBlank } from "../../utils/styleUtils"
+import { AUTH_METHOD } from "../../config/appConfig"
 import BasicSection from "../helper/section/BasicSection";
 import FormCard from "../helper/form/FormCard";
 import InputText from "../helper/form/input/InputText";
 import ActionButton from "../helper/form/button/ActionButton";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
-import StyleWrapper from "../../../hoc/StyleWrapper";
+import StyleWrapper from "../../hoc/StyleWrapper";
 import Loader from "../utils/Loader"
 
 const propTypes = {
@@ -25,7 +25,7 @@ const propTypes = {
     loaderLoaded: PropTypes.bool
 }
 
-const SigninSection = ({
+const SignInSection = ({
     history,
     authenticatedInCentralspace,
     authenticationAttemptFailed,
@@ -39,6 +39,7 @@ const SigninSection = ({
     loaderLoaded
 }) => {
     const mstepper = document.mstepper;
+
     const clearAuthenticationAttemptInfo = () => {
         setAuthenticationAttemptFailed(false);
         clearAuthError();
@@ -48,34 +49,30 @@ const SigninSection = ({
         clearAuthenticationAttemptInfo()
     }
     const setCentralspaceSignInMethod = () => {
-        setSignInMethod(LOG_IN_METHOD.CENTRALSPACE);
+        setSignInMethod(AUTH_METHOD.CENTRALSPACE);
         nextStep();
     };
     const setFirebaseSignInMethod = () => {
-        setSignInMethod(LOG_IN_METHOD.FIREBASE);
+        setSignInMethod(AUTH_METHOD.FIREBASE);
         nextStep();
     };
     const nextStep = () => {
-        if (mstepper) {
-            mstepper.nextStep()
-        }
+        if (mstepper) mstepper.nextStep()
     }
     const resetStepper = () => {
-        if (mstepper) {
-            const step2Index = 1;
-            mstepper.resetStepper(step2Index);
-        }
+        const step2Index = 1;
+        mstepper.resetStepper(step2Index);
     }
 
     const step1HeaderText = !signInMethod ? "Login method" :
-        (signInMethod === LOG_IN_METHOD.FIREBASE ? "Login to Firebase" : "Login to Centralspace");
+        (signInMethod === AUTH_METHOD.FIREBASE ? "Login to Firebase" : "Login to Centralspace");
     const authenticationAttemptFailedMessage = authenticationAttemptFailed ?
         (firebaseAuthError ? firebaseAuthError : "Not authorized, please try with other credentials")
         : "Please sign in"
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
         : authenticationAttemptFailedMessage;
     const finalStepContent = loaderLoaded ? <Loader /> : confirmationMessage;
-   
+
     const textColor = setTextColor(mainTheme);
     const stepColor = replaceBlank(mainTheme, "-") + "-step";
     // handleInputChange = (e) => {
@@ -105,15 +102,12 @@ const SigninSection = ({
                                                     classes="next-step"
                                                     label="By Centralspace" color="blue" hasWaves={true}
                                                     actions={{ onClick: setCentralspaceSignInMethod }}
-                                                    hidden={authenticationAttemptFailed}
                                                 />,
                                                 <ActionButton
                                                     id="login_step_1_firebase" value="firebase" key="login_step_1_firebase"
                                                     classes="next-step"
                                                     label="By Firebase" color="teal lighten-2" hasWaves={true}
                                                     actions={{ onClick: setFirebaseSignInMethod }}
-                                                    hidden={authenticationAttemptFailed}
-
                                                 />
                                             ]
                                         } />,
@@ -184,6 +178,6 @@ const SigninSection = ({
     );
 }
 
-SigninSection.propTypes = propTypes;
+SignInSection.propTypes = propTypes;
 
-export default StyleWrapper(SigninSection);
+export default StyleWrapper(SignInSection);

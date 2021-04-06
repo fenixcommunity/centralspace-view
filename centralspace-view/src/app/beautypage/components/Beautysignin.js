@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
-import SigninSection from '../components/signin/SigninSection';
+import SigninSection from './signin/SignInSection';
 
 const propTypes = {
     history: PropTypes.object.isRequired,

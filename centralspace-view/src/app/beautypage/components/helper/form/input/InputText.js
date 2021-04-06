@@ -8,6 +8,7 @@ const propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.string,
     type: PropTypes.string,
+    value: PropTypes.string,
     defaultValue: PropTypes.string,
     icon: PropTypes.string,
     iconColor: PropTypes.string,
@@ -18,13 +19,26 @@ const propTypes = {
     ]),
     required: PropTypes.bool,
     disabled: PropTypes.bool,
-    validate: PropTypes.object
+    validate: PropTypes.object,
+    formRegister: PropTypes.shape({
+        register: PropTypes.func.isRequired,
+        errors: PropTypes.object.isRequired,
+        validate: PropTypes.func.isRequired
+    }),
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func
 }
 
-const InputText = ({ id, label, type, defaultValue, icon, iconColor, isDuplicated, autocomplete, required, disabled, validate }) => {
+const InputText = ({ id, label, type, value, defaultValue, icon, iconColor, isDuplicated,
+    autocomplete, required, disabled, validate, formRegister, onChange, onBlur }) => {
     const duplicatedClass = isDuplicated ? "s6" : "s12"
     const defaultValueAttr = defaultValue ? { "defaultValue": defaultValue } : {}
     const autoCompleteAttr = autocomplete === false ? { "autoComplete": "off" } : {}
+
+    const customErrors = formRegister ? formRegister.errors : null;
+    const inputError = customErrors && customErrors[id];
+    const customValidationClass = formRegister ? "custom-validation" : "";
+    const invalidClass = inputError ? "invalid" : "";
 
     const validateLengthAttr = validate && validate.dataLength ? { "data-length": validate.dataLength } : {}
     const validateMinLengthAttr = validate && validate.minLength ? { "minLength": validate.minLength } : {}
@@ -55,15 +69,33 @@ const InputText = ({ id, label, type, defaultValue, icon, iconColor, isDuplicate
         );
     }
 
+    const reference = (e) => {
+        if (formRegister && formRegister.register) {
+            formRegister.register(e, {
+                // required: "This field is required",
+                validate: formRegister.validate
+                // pattern: {
+                //     value: /^[A-Za-z]+$/i,
+                //     message: 'This input is number only.'
+                // }
+            });
+        }
+        autocompleteRef.current = e;
+    };
+
     return (
         <div className={`input-field col ${duplicatedClass}`}>
             {icon && <Icon icon={icon} iconColor={iconColor} />}
             <input
                 id={id}
+                name={id}
                 type={`${type ? type : "text"}`}
                 {...defaultValueAttr}
+                value={value}
                 className={`
                 ${validate ? "validate" : ""} 
+                ${customValidationClass} 
+                ${invalidClass}
                 ${autocomplete ? "autocomplete" : ""}
                 `}
                 required={required}
@@ -72,10 +104,13 @@ const InputText = ({ id, label, type, defaultValue, icon, iconColor, isDuplicate
                 {...validateLengthAttr}
                 {...validateMinLengthAttr}
                 {...validateMaxLengthAttr}
-                ref={autocompleteRef}
+                ref={reference}
+                onChange={onChange}
+                onBlur={onBlur}
             />
             <label htmlFor={id}>{label}</label>
-            <ValidateMessage validate={validate} />
+
+            <ValidateMessage error={inputError} validate={validate} />
         </div>
     )
 }

@@ -3,17 +3,23 @@ import PropTypes from 'prop-types';
 import '../../../../../../resources/beautypage/css/helper-text-validator.css';
 
 const propTypes = {
-    validate: PropTypes.object.isRequired
+    validate: PropTypes.shape({
+        errorMessage: PropTypes.string,
+        successMessage: PropTypes.string
+    }),
+    error: PropTypes.object
 }
 
-const ValidateMessage = ({ validate }) => {
+const ValidateMessage = ({ validate, error }) => {
+    const successMessage = validate ? validate.successMessage : null;
+    const errorMessage = error ? error.message : (validate ? validate.errorMessage : null);
     return (
         <>
-            {validate.successMessage && (
+            {successMessage && (
                 <span className="helper-text" data-success={validate.successMessage} />
             )}
-            {validate.errorMessage && (
-                <span className="helper-text" data-error={validate.errorMessage} />
+            {errorMessage && (
+                <span className="helper-text" data-error={errorMessage} />
             )}
         </>
     )

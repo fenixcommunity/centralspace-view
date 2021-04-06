@@ -9,7 +9,8 @@ import TrainingExample from '../../training/components/TrainingExample';
 import PrivateRoute from './PrivateRoute';
 import BeautypageContainer from '../components/BeautypageContainer';
 import ErrorPage from '../components/error/ErrorPage';
-import { isLoggedUserStillAuthenticated } from '../actions/auth/centralspaceAuthActions'
+import { isLoggedUserStillAuthenticated } from '../actions/auth/centralspaceAuthActions';
+import { getUserData } from '../actions/userInfoActions';
 import ThemeContextProvider from '../../training/components/ThemeContext';
 import BeautysigninContainer from '../components/BeautysigninContainer';
 import BeautysignupContainer from '../components/BeautysignupContainer';
@@ -24,11 +25,13 @@ const propTypes = {
 const mapStateToProps = state => ({
     authenticationInFirebase: state.firebase.auth,
     externalScriptsLoaded: state.general.externalScriptsLoaded,
+    userInfoNotLoaded: state.userInfo.ip == null
 });
 
 const mapDispatchToProps = {
     isLoggedUserStillAuthenticated,
-    setExternalScriptsLoaded
+    setExternalScriptsLoaded,
+    getUserData
 };
 
 const enhance = compose(
@@ -39,7 +42,9 @@ const RouteSwitcher = ({
     isLoggedUserStillAuthenticated,
     authenticationInFirebase,
     externalScriptsLoaded,
-    setExternalScriptsLoaded
+    setExternalScriptsLoaded,
+    getUserData,
+    userInfoNotLoaded
 }) => {
 
     const location = useLocation();
@@ -48,6 +53,9 @@ const RouteSwitcher = ({
         // we don't verify auth for firebase
         if (!authenticationInFirebase.uid) {
             isLoggedUserStillAuthenticated(location);
+        }
+        if (userInfoNotLoaded) {
+            getUserData();
         }
     }, [location]);  // eslint-disable-line react-hooks/exhaustive-deps
 

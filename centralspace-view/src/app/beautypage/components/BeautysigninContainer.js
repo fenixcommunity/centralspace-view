@@ -7,7 +7,7 @@ import '../../../resources/beautypage/css/search.css';
 import '../../../resources/beautypage/css/startup-materialize.css';
 import './BeautypageStyleModification.css';
 import Beautysignin from "./Beautysignin";
-import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "../actions/signinActions";
+import { signIn, setAuthenticationAttemptFailed, setSignInMethod } from "../actions/signInActions";
 import { clearAuthError } from "../actions/auth/firebaseAuthActions";
 import { setExternalScriptsLoaded } from "../actions/generalActions";
 import { loadExternalScripts } from "../utils/scriptLoader";

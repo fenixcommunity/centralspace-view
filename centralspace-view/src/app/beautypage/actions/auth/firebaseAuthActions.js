@@ -1,4 +1,5 @@
-import { setAuthenticationAttemptFailed } from "../signinActions";
+import { setAuthenticationAttemptFailed } from "../signInActions";
+import { setRegistrationAttemptFailed } from "../signUpActions";
 
 export const signIn = (data) => {
     return (dispatch, getState, { getFirebase }) => {
@@ -45,26 +46,43 @@ export const signOut = () => {
     }
 }
 
-export const signUp = (newUser) => {
+export const signUp = (newUser, history) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         const firebase = getFirebase();
         const firestore = getFirestore();
+        const mstepper = document.mstepper;
 
         firebase.auth().createUserWithEmailAndPassword(
             newUser.email,
             newUser.password
         ).then((response) => {
+            dispatch(signUpSuccess(history, mstepper))
             return firestore.collection('users').doc(response.user.uid).set({
                 firstName: newUser.firstName,
                 lastName: newUser.lastName,
                 initials: newUser.firstName[0] + newUser.lastName[0]
             });
         }).then(() => {
-            dispatch({ type: 'FIREBASE_SIGNUP_SUCCESS' });
+            dispatch(signUpSuccess(history, mstepper))
         }).catch(error => {
             dispatch({ type: 'FIREBASE_SIGNUP_ERROR', error });
+            dispatch(setRegistrationAttemptFailed(true));
+            if (mstepper) {
+                mstepper.wrongStep();
+            }
         })
     }
+}
+
+const signUpSuccess = (history, mstepper) => (dispatch) => {
+    dispatch({ type: 'FIREBASE_SIGNUP_SUCCESS' });
+    dispatch(setRegistrationAttemptFailed(false));
+    if (mstepper) {
+        mstepper.correctStep()
+    }
+    setTimeout(() => {
+        history.push("/");
+    }, 1500)
 }
 
 export const clearAuthError = () => (dispatch) => {
