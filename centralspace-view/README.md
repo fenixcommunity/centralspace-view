@@ -1,4 +1,5 @@
-# centralspace-view
+# The main goal of the project is to collect all the knowledge about React(and related topics) and organize it in a logical way.
+# The current project is part of backend-frontend communication
 
 RULES:
 - use arrow functions instead function()
@@ -95,6 +96,8 @@ Env:
 - npm i redux
 - npm install react-device-detect
 - npm install react-useanimations
+- npm install react-loadingg
+- example react https://reactjsexample.com/tag/loading/
 
 Shortcut:
 shift + alt + down arrow

@@ -79,11 +79,13 @@ const BeautypageContainer = ({
             const { payload } = event.data.payload;
         });
         useEvent("message", postMessageEventExample);
+        // useLayoutEffect 
 
 
 
 
 //  TODO         Vercel + NextJs 
+// https://reactjsexample.com/tag/loading/ -> examples
 
 
     switch (location.pathname) {

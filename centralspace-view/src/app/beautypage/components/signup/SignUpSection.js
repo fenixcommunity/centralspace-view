@@ -14,6 +14,8 @@ import BasicSection from "../helper/section/BasicSection";
 import Step from "../stepper/Step";
 import StepperLinear from "../stepper/StepperLinear";
 import Loader from "../utils/Loader";
+import { SemipolarLoading } from 'react-loadingg';
+
 
 const propTypes = {
     history: PropTypes.object.isRequired,
@@ -112,6 +114,7 @@ const SignUpSection = ({
         : "Please sign up";
     const confirmationMessage = authenticatedInCentralspace ? "Success, feel invited and enjoy."
         : authenticationAttemptFailedMessage;
+    // const finalStepContent = loaderLoaded ? <SemipolarLoading /> : confirmationMessage;
     const finalStepContent = loaderLoaded ? <Loader /> : confirmationMessage;
 
     const textColor = setTextColor(mainTheme);
