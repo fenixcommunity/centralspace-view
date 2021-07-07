@@ -53,6 +53,16 @@ for Visual Studio Code:
 - TabNine
 - Git history
 - CSS Formatter
+- Rainbow Brackets
+- Visual Studio Intellicode
+- Javascript (ES6) Code Snippets
+- Path Autocomplete
+- Import Cost
+- Paste and Indent
+- Turbo Console
+- Code Spell Check
+- TODO Highlights
+
 
 Links:
 - http://localhost:7777/
